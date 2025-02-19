@@ -1,0 +1,301 @@
+{
+  "test_date": "2025-02-18T13:42:45.875582",
+  "total_cases": 21,
+  "summary": {
+    "average_confidence": 0.7180952380952381,
+    "handoff_rate": 1.0,
+    "esi_distribution": {
+      "1": 1,
+      "2": 5,
+      "3": 9,
+      "4": 6,
+      "5": 0
+    }
+  },
+  "cases": [
+    {
+      "case_id": "30000012",
+      "chief_complaint": "I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.",
+      "esi_level": 2,
+      "confidence": 0.62,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High-risk condition: confusion",
+        "High-risk condition: encephalopathy",
+        "Ambulance arrival",
+        "High acuity: 2.0"
+      ],
+      "wait_time": 0.125,
+      "original_acuity": "2.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000017",
+      "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
+      "esi_level": 4,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 2,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ELOPED"
+    },
+    {
+      "case_id": "30000038",
+      "chief_complaint": "I've been experiencing a persistent cough and feeling congested, making it hard for me to take a deep breath.",
+      "esi_level": 3,
+      "confidence": 0.68,
+      "needs_handoff": true,
+      "risk_factors": [
+        "Ambulance arrival"
+      ],
+      "wait_time": 1,
+      "original_acuity": "3.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000039",
+      "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
+      "esi_level": 3,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High-risk condition: fall"
+      ],
+      "wait_time": 1,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000055",
+      "chief_complaint": "I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.",
+      "esi_level": 4,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 2,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000094",
+      "chief_complaint": "I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.",
+      "esi_level": 2,
+      "confidence": 0.62,
+      "needs_handoff": true,
+      "risk_factors": [
+        "Ambulance arrival",
+        "High acuity: 2.0"
+      ],
+      "wait_time": 0.125,
+      "original_acuity": "2.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000112",
+      "chief_complaint": "I've been feeling weak and tired lately, and sometimes I get dizzy, like the room is spinning around me.",
+      "esi_level": 4,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 2,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000177",
+      "chief_complaint": "I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.",
+      "esi_level": 3,
+      "confidence": 0.72,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High acuity: 2.0"
+      ],
+      "wait_time": 1,
+      "original_acuity": "2.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000202",
+      "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
+      "esi_level": 3,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High acuity: 2.0"
+      ],
+      "wait_time": 1,
+      "original_acuity": "2.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000204",
+      "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
+      "esi_level": 2,
+      "confidence": 0.68,
+      "needs_handoff": true,
+      "risk_factors": [
+        "Ambulance arrival"
+      ],
+      "wait_time": 0.25,
+      "original_acuity": "3.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000252",
+      "chief_complaint": "I've lost my appetite and feel empty inside, but not because I'm hungry, it's more like I have no desire to eat at all.",
+      "esi_level": 2,
+      "confidence": 0.62,
+      "needs_handoff": true,
+      "risk_factors": [
+        "Ambulance arrival",
+        "High acuity: 2.0"
+      ],
+      "wait_time": 0.125,
+      "original_acuity": "2.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000254",
+      "chief_complaint": "I have a sharp, aching pain in my lower back that feels like it's been throbbing all day and is really hurting when I move.",
+      "esi_level": 4,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 2,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000262",
+      "chief_complaint": "I have been experiencing severe bowel movements with rectal bleeding and constipation, which is causing me a lot of discomfort and anxiety.",
+      "esi_level": 3,
+      "confidence": 0.68,
+      "needs_handoff": true,
+      "risk_factors": [
+        "Ambulance arrival"
+      ],
+      "wait_time": 1,
+      "original_acuity": "3.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000275",
+      "chief_complaint": "I have a sharp, stabbing pain in my upper abdomen that radiates to my back, accompanied by nausea and vomiting, which feels similar to the pancreatitis flares I've had before.",
+      "esi_level": 4,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 2,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000279",
+      "chief_complaint": "I feel overwhelmed by a deep sadness that's been weighing me down, making it hard to find interest or pleasure in things I normally enjoy.",
+      "esi_level": 2,
+      "confidence": 0.62,
+      "needs_handoff": true,
+      "risk_factors": [
+        "Ambulance arrival",
+        "High acuity: 2.0"
+      ],
+      "wait_time": 0.125,
+      "original_acuity": "2.0",
+      "arrival_method": "AMBULANCE",
+      "disposition": "TRANSFER"
+    },
+    {
+      "case_id": "30000291",
+      "chief_complaint": "I'm experiencing a nosebleed that won't stop, and it's scary to see all the blood coming out, but thankfully, I don't feel any pain.",
+      "esi_level": 4,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 2,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000317",
+      "chief_complaint": "My stomach feels bloated and painful, especially in the upper right area, and I have not been able to pass gas or have a bowel movement for a while, which is really uncomfortable and worrying.",
+      "esi_level": 3,
+      "confidence": 0.72,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High acuity: 2.0"
+      ],
+      "wait_time": 1,
+      "original_acuity": "2.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000368",
+      "chief_complaint": "I had a severe back pain that started after a physical strain, which has since resolved, but I'm now being treated for a dissection of my thoracic aorta, and I need to be careful to control my blood pressure to prevent further complications.",
+      "esi_level": 3,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High acuity: 2.0"
+      ],
+      "wait_time": 1,
+      "original_acuity": "2.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000379",
+      "chief_complaint": "My stomach feels bloated and tender, and I have a constant, gnawing pain that makes it hard for me to eat, which is making my overall weakness and fatigue even worse.",
+      "esi_level": 3,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 1,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "ADMITTED"
+    },
+    {
+      "case_id": "30000389",
+      "chief_complaint": "I feel like I haven't had a bowel movement in a while and it's getting really hard to go, with a constant feeling of fullness and discomfort in my abdomen.",
+      "esi_level": 1,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [],
+      "wait_time": 0,
+      "original_acuity": "3.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    },
+    {
+      "case_id": "30000417",
+      "chief_complaint": "I have a sharp, stabbing pain in my right eye, and my vision is blurry and distorted, like something is clouding my sight.",
+      "esi_level": 3,
+      "confidence": 0.76,
+      "needs_handoff": true,
+      "risk_factors": [
+        "High acuity: 2.0"
+      ],
+      "wait_time": 1,
+      "original_acuity": "2.0",
+      "arrival_method": "WALK IN",
+      "disposition": "HOME"
+    }
+  ]
+}

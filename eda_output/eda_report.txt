@@ -1,0 +1,76 @@
+
+Medical Records EDA Report
+=========================
+Generated on: 2025-02-18 13:32:21
+
+Basic Statistics
+---------------
+Total Records: 21
+
+Chief Complaint Statistics:
+count    21.000000
+mean     26.571429
+std       6.160937
+min      18.000000
+25%      23.000000
+50%      24.000000
+75%      30.000000
+max      43.000000
+
+Q&A Interaction Statistics:
+count    21.0
+mean     10.0
+std       0.0
+min      10.0
+25%      10.0
+50%      10.0
+75%      10.0
+max      10.0
+
+Risk Terms Statistics:
+count    21.000000
+mean      3.809524
+std       0.980767
+min       2.000000
+25%       3.000000
+50%       4.000000
+75%       5.000000
+max       5.000000
+
+Transport Method Distribution:
+----------------------------
+transport
+WALK IN      14
+AMBULANCE     7
+
+Disposition Distribution:
+------------------------
+disposition
+HOME        11
+ADMITTED     8
+ELOPED       1
+TRANSFER     1
+
+Acuity Level Distribution:
+-------------------------
+acuity
+3.0    12
+2.0     9
+
+Advanced Analysis
+----------------
+Transport-Admission Association:
+Odds Ratio: 1.88
+P-value: 0.6557
+
+Feature Importance for Admission:
+            feature  importance
+1  Complaint Length    0.587462
+0        Risk Terms    0.325311
+2            Acuity    0.087226
+
+Severity Analysis:
+severity_category
+Low        4
+Medium    12
+High       5

@@ -1,13 +1,13 @@
 {
-  "test_date": "2025-02-18T13:42:45.875582",
+  "test_date": "2025-03-04T12:50:56.590668",
   "total_cases": 21,
   "summary": {
     "average_confidence": 0.7180952380952381,
     "handoff_rate": 1.0,
     "esi_distribution": {
       "1": 1,
-      "2": 5,
-      "3": 9,
+      "2": 4,
+      "3": 10,
       "4": 6,
       "5": 0
     }
@@ -33,11 +33,11 @@
     {
       "case_id": "30000017",
       "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
-      "esi_level": 4,
+      "esi_level": 3,
       "confidence": 0.76,
       "needs_handoff": true,
       "risk_factors": [],
-      "wait_time": 2,
+      "wait_time": 1,
       "original_acuity": "3.0",
       "arrival_method": "WALK IN",
       "disposition": "ELOPED"
@@ -59,13 +59,13 @@
     {
       "case_id": "30000039",
       "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
-      "esi_level": 3,
+      "esi_level": 1,
       "confidence": 0.76,
       "needs_handoff": true,
       "risk_factors": [
         "High-risk condition: fall"
       ],
-      "wait_time": 1,
+      "wait_time": 0,
       "original_acuity": "3.0",
       "arrival_method": "WALK IN",
       "disposition": "ADMITTED"
@@ -140,13 +140,13 @@
     {
       "case_id": "30000204",
       "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
-      "esi_level": 2,
+      "esi_level": 3,
       "confidence": 0.68,
       "needs_handoff": true,
       "risk_factors": [
         "Ambulance arrival"
       ],
-      "wait_time": 0.25,
+      "wait_time": 1,
       "original_acuity": "3.0",
       "arrival_method": "AMBULANCE",
       "disposition": "HOME"
@@ -274,11 +274,11 @@
     {
       "case_id": "30000389",
       "chief_complaint": "I feel like I haven't had a bowel movement in a while and it's getting really hard to go, with a constant feeling of fullness and discomfort in my abdomen.",
-      "esi_level": 1,
+      "esi_level": 4,
       "confidence": 0.76,
       "needs_handoff": true,
       "risk_factors": [],
-      "wait_time": 0,
+      "wait_time": 2,
       "original_acuity": "3.0",
       "arrival_method": "WALK IN",
       "disposition": "HOME"

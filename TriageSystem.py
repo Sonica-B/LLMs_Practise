@@ -2,7 +2,7 @@ from langchain_ollama import OllamaLLM
 from langchain.prompts.prompt import PromptTemplate
 from langchain.chains import LLMChain
 import re
-
+import json
 
 class MedicalTriageSystem:
     def __init__(self):

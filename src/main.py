@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 from triage_system import TriageSystem
 from confidence_analyzer import ConfidenceAnalyzer
+from extended_confidence_analyzer import ExtendedConfidenceAnalyzer
 from utils import parse_xml_case, get_xml_files, ensure_output_dirs
 from evaluation_pipeline import TriageEvaluator
 import json
@@ -23,7 +24,8 @@ def main():
     
     # Initialize systems
     triage_system = TriageSystem()
-    analyzer = ConfidenceAnalyzer(triage_system)
+    # analyzer = ConfidenceAnalyzer(triage_system)
+    analyzer = ExtendedConfidenceAnalyzer(triage_system, output_dir)
     evaluator = TriageEvaluator(triage_system)
     
 
@@ -52,13 +54,22 @@ def main():
         eval_result = evaluator.evaluate_case(case_id, parsed_case, case_data)
         
         # Analyze confidence progression
-        conf_result = analyzer.analyze_case(case_data, parsed_case['annotations'])
+        # conf_result = analyzer.analyze_case(case_data, parsed_case['annotations'])
+        conf_result = analyzer.analyze_case_with_elicitation(case_data, parsed_case['annotations'])
         conf_result['case_id'] = case_id
         analyzer.results.append(conf_result)
         
-        print("Generating comprehensive visualizations...")
-        analyzer.generate_comprehensive_analysis()
-        print(f"Advanced visualizations saved to output/visualizations/")
+        # print("Generating comprehensive visualizations...")
+        # analyzer.generate_comprehensive_analysis()
+        # print(f"Advanced visualizations saved to output/visualizations/")
+        
+        print("Generating confidence elicitation visualizations...")
+        analyzer.generate_all_visualizations(
+            {case_result.get('case_id', f'case_{i}'): case_result 
+            for i, case_result in enumerate(analyzer.results)},
+            "TrigageSystem",  # Model name
+            "MedicalCases"    # Dataset name
+        )
 
         # Generate plot
         plot_path = analyzer.plot_confidence_progression(case_id, conf_result)

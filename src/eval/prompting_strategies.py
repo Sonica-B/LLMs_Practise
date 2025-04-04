@@ -1,181 +1,165 @@
+# prompting_strategies.py
 import re
 
 class PromptingStrategies:
     """
-    Implements various prompting strategies for confidence elicitation as described in the paper:
-    "Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs"
+    Implements various prompting strategies for confidence elicitation in medical triage.
     """
     
     @staticmethod
-    def vanilla_prompt(question, is_multi_choice=False):
-        """
-        Basic prompt asking for an answer and confidence level.
-        """
-        if is_multi_choice:
-            prompt = f"""Read the question, provide your answer and your confidence in this answer.
-Note: The confidence indicates how likely you think your answer is true.
+    def vanilla_prompt(case_data):
+        """Basic prompt asking for ESI level and confidence."""
+        prompt = f"""Read the following patient information and determine the appropriate Emergency Severity Index (ESI) level (1-5):
 
-Use the following format to answer:
-```Answer and Confidence (0-100): [ONLY the option letter; not a complete sentence], [Your confidence level, please only include the numerical number in the range of 0-100]%```
+Chief Complaint: {case_data.get('chief_complaint', '')}
+Summary: {case_data.get('summary', '')}
+Patient History: {case_data.get('history', '')}
 
-Only the answer and confidence, don't give me the explanation.
-Question: {question}
-
-Now, please answer this question and provide your confidence level."""
-        else:
-            prompt = f"""Read the question, provide your answer and your confidence in this answer.
-Note: The confidence indicates how likely you think your answer is true.
-
-Use the following format to answer:
-```Answer and Confidence (0-100): [ONLY the number; not a complete sentence], [Your confidence level, please only include the numerical number in the range of 0-100]%```
-
-Only the answer and confidence, don't give me the explanation.
-Question: {question}
-
-Now, please answer this question and provide your confidence level."""
+Provide your ESI level assessment (1-5) and your confidence level (0-100%) in this format:
+ESI Level: [number]
+Confidence: [number]%
+Brief explanation: [your reasoning]
+"""
         return prompt
     
     @staticmethod
-    def cot_prompt(question, is_multi_choice=False):
-        """
-        Chain-of-Thought prompt asking for step-by-step reasoning before answer and confidence.
-        """
-        if is_multi_choice:
-            prompt = f"""Read the question, analyze step by step, provide your answer and your confidence in this answer.
-Note: The confidence indicates how likely you think your answer is true.
+    def cot_prompt(case_data):
+        """Chain-of-Thought prompt for ESI determination with confidence."""
+        prompt = f"""Read the following patient information and determine the appropriate Emergency Severity Index (ESI) level (1-5):
 
-Use the following format to answer:
-```Explanation: [insert step-by-step analysis here]
-Answer and Confidence (0-100): [ONLY the option letter; not a complete sentence], [Your confidence level, please only include the numerical number in the range of 0-100]%```
+Chief Complaint: {case_data.get('chief_complaint', '')}
+Summary: {case_data.get('summary', '')}
+Patient History: {case_data.get('history', '')}
 
-Only give me the reply according to this format, don't give me any other words.
-Question: {question}
+Think step by step about the following factors:
+1. Is this patient dying or about to die? (ESI 1)
+2. Is this a high-risk situation or severe pain/distress? (ESI 2)
+3. How many resources will this patient need? (For ESI 3-5)
+4. Are vital signs concerning? (Can affect ESI level)
 
-Now, please answer this question and provide your confidence level. Let's think it step by step."""
-        else:
-            prompt = f"""Read the question, analyze step by step, provide your answer and your confidence in this answer.
-Note: The confidence indicates how likely you think your answer is true.
-
-Use the following format to answer:
-```Explanation: [insert step-by-step analysis here]
-Answer and Confidence (0-100): [ONLY the number; not a complete sentence], [Your confidence level, please only include the numerical number in the range of 0-100]%```
-
-Only give me the reply according to this format, don't give me any other words.
-Question: {question}
-
-Now, please answer this question and provide your confidence level. Let's think it step by step."""
+After your analysis, provide:
+ESI Level: [number]
+Confidence: [number]%
+Step-by-step reasoning: [your detailed analysis]
+"""
         return prompt
     
     @staticmethod
-    def self_probing_prompt(question, answer_candidate):
-        """
-        Self-probing prompt that asks how likely a given answer is correct.
-        """
-        prompt = f"""Question: {question}
-Possible Answer: {answer_candidate}
+    def self_probing_prompt(case_data, preliminary_esi):
+        """Self-probing prompt that asks how likely a preliminary ESI assessment is correct."""
+        prompt = f"""Review the following patient case:
 
-Q: How likely is the above answer to be correct? Please first show your reasoning concisely and then answer with the following format:
-```Confidence: [the probability of answer {answer_candidate} to be correct, not the one you think correct, please only include the numerical number]```"""
+Chief Complaint: {case_data.get('chief_complaint', '')}
+Summary: {case_data.get('summary', '')}
+Patient History: {case_data.get('history', '')}
+
+Preliminary ESI Level Assessment: {preliminary_esi}
+
+Q: How likely is the above ESI level assessment to be correct? Analyze the assessment, 
+provide your reasoning, and give your confidence in this assessment.
+
+Confidence: [number]%
+Reasoning: [your explanation]
+"""
         return prompt
     
     @staticmethod
-    def multi_step_prompt(question):
-        """
-        Multi-step prompt that breaks down the problem with confidence in each step.
-        """
-        prompt = f"""Read the question, break down the problem into K steps, think step by step, give your confidence in each step, and then derive your final answer and your confidence in this answer.
-Note: The confidence indicates how likely you think your answer is true.
+    def multi_step_prompt(case_data):
+        """Multi-step prompt for ESI determination with confidence at each step."""
+        prompt = f"""Read the following patient information:
 
-Use the following format to answer:
-```Step 1: [Your reasoning], Confidence: [ONLY the confidence value that this step is correct]%
-...
-Step K: [Your reasoning], Confidence: [ONLY the confidence value that this step is correct]%
-Final Answer and Overall Confidence (0-100): [ONLY the answer type; not a complete sentence], [Your confidence value]%```
+Chief Complaint: {case_data.get('chief_complaint', '')}
+Summary: {case_data.get('summary', '')}
+Patient History: {case_data.get('history', '')}
 
-Question: {question}"""
+Break down the ESI level determination into steps and evaluate your confidence in each step:
+
+Step 1: Assess if this is a life-threatening condition requiring immediate intervention (ESI 1).
+Confidence in this assessment: [number]%
+
+Step 2: Assess if this is a high-risk situation or involves severe pain/distress (ESI 2).
+Confidence in this assessment: [number]%
+
+Step 3: Determine how many resources this patient will need (for ESI 3-5).
+Confidence in this assessment: [number]%
+
+Step 4: Evaluate if vital signs are within normal limits (can affect ESI level).
+Confidence in this assessment: [number]%
+
+Final ESI Level: [number]
+Overall Confidence: [number]%
+Reasoning: [your explanation]
+"""
         return prompt
     
     @staticmethod
-    def top_k_prompt(question, k=3):
-        """
-        Top-K prompt that asks for k best guesses with associated confidence.
-        """
-        prompt = f"""Provide your {k} best guesses and the probability that each is correct (0% to 100%) for the following question. Give ONLY the task output description of your guesses and probabilities, no other words or explanation. For example:
+    def top_k_prompt(case_data, k=3):
+        """Top-K prompt for ESI determination with ranked confidences."""
+        prompt = f"""Review the following patient case:
 
-G1: <ONLY the task output description of first most likely guess; not a complete sentence, just the guess!> P1: <ONLY the probability that G1 is correct, without any extra commentary whatsoever; just the probability!>
-...
-G{k}: <ONLY the task output description of {k}-th most likely guess> P{k}: <ONLY the probability that G{k} is correct, without any extra commentary whatsoever; just the probability!>
+Chief Complaint: {case_data.get('chief_complaint', '')}
+Summary: {case_data.get('summary', '')}
+Patient History: {case_data.get('history', '')}
 
-Question: {question}"""
-        return prompt
+Provide your {k} most likely ESI level assessments and the probability that each is correct (0-100%):
+
+G1: [ESI level] P1: [probability]%
+G2: [ESI level] P2: [probability]%
+G3: [ESI level] P3: [probability]%
+
+Brief reasoning for your top assessment: [concise explanation]
+"""
+        return prompt[:k]
     
     @staticmethod
-    def parse_vanilla_response(response):
-        """Parse the response from vanilla prompt to extract answer and confidence."""
-        pattern = r"Answer and Confidence.*?:.*?([^,]+),\s*(\d+)%"
-        match = re.search(pattern, response, re.DOTALL)
+    def parse_response(response, prompt_type="vanilla"):
+        """Parse ESI level and confidence from response based on prompt type."""
+        if prompt_type in ["vanilla", "cot"]:
+            esi_pattern = r"ESI Level:\s*(\d)"
+            conf_pattern = r"Confidence:\s*(\d+)"
+            
+            esi_match = re.search(esi_pattern, response)
+            conf_match = re.search(conf_pattern, response)
+            
+            if esi_match and conf_match:
+                esi_level = int(esi_match.group(1))
+                confidence = int(conf_match.group(1))
+                return esi_level, confidence
+                
+        elif prompt_type == "self_probing":
+            conf_pattern = r"Confidence:\s*(\d+)"
+            conf_match = re.search(conf_pattern, response)
+            
+            if conf_match:
+                confidence = int(conf_match.group(1))
+                return confidence
+                
+        elif prompt_type == "multi_step":
+            # Extract step confidences
+            step_pattern = r"Confidence in this assessment:\s*(\d+)"
+            step_confidences = [int(conf) for conf in re.findall(step_pattern, response)]
+            
+            # Extract final ESI and confidence
+            esi_pattern = r"Final ESI Level:\s*(\d)"
+            conf_pattern = r"Overall Confidence:\s*(\d+)"
+            
+            esi_match = re.search(esi_pattern, response)
+            conf_match = re.search(conf_pattern, response)
+            
+            if esi_match and conf_match and step_confidences:
+                esi_level = int(esi_match.group(1))
+                confidence = int(conf_match.group(1))
+                return esi_level, confidence, step_confidences
+                
+        elif prompt_type == "top_k":
+            # Parse ESI levels and confidences
+            pattern = r"G\d+:\s*(\d)\s*P\d+:\s*(\d+)"
+            matches = re.findall(pattern, response)
+            
+            if matches:
+                esi_levels = [int(m[0]) for m in matches]
+                confidences = [int(m[1]) for m in matches]
+                return esi_levels, confidences
         
-        if match:
-            answer = match.group(1).strip()
-            confidence = int(match.group(2))
-            return answer, confidence
-        return None, None
-    
-    @staticmethod
-    def parse_cot_response(response):
-        """Parse the response from CoT prompt to extract answer and confidence."""
-        pattern = r"Answer and Confidence.*?:.*?([^,]+),\s*(\d+)%"
-        match = re.search(pattern, response, re.DOTALL)
-        
-        if match:
-            answer = match.group(1).strip()
-            confidence = int(match.group(2))
-            return answer, confidence
-        return None, None
-    
-    @staticmethod
-    def parse_self_probing_response(response):
-        """Parse the response from self-probing prompt to extract confidence."""
-        pattern = r"Confidence:\s*(\d+)"
-        match = re.search(pattern, response)
-        
-        if match:
-            confidence = int(match.group(1))
-            return confidence
+        # Default return if parsing fails
         return None
-    
-    @staticmethod
-    def parse_multi_step_response(response):
-        """Parse the response from multi-step prompt to extract step confidences and final answer."""
-        # Extract step confidences
-        step_pattern = r"Step \d+:.*?Confidence:\s*(\d+)%"
-        step_confidences = [int(conf) for conf in re.findall(step_pattern, response)]
-        
-        # Extract final answer and confidence
-        final_pattern = r"Final Answer and Overall Confidence.*?:.*?([^,]+),\s*(\d+)%"
-        final_match = re.search(final_pattern, response, re.DOTALL)
-        
-        if final_match:
-            answer = final_match.group(1).strip()
-            confidence = int(final_match.group(2))
-            return answer, confidence, step_confidences
-        return None, None, step_confidences
-    
-    @staticmethod
-    def parse_top_k_response(response, k=3):
-        """Parse the response from top-k prompt to extract k guesses and confidences."""
-        guesses = []
-        confidences = []
-        
-        # Match all G#: guess P#: confidence patterns
-        pattern = r"G\d+:\s*([^\n]+)\s*P\d+:\s*(\d+)%?"
-        matches = re.findall(pattern, response)
-        
-        if matches:
-            for match in matches[:k]:  # Limit to k matches
-                guess = match[0].strip()
-                confidence = int(match[1])
-                guesses.append(guess)
-                confidences.append(confidence)
-        
-        return guesses, confidences

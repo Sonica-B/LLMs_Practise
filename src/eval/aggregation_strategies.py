@@ -1,134 +1,80 @@
+# aggregation_strategies.py
 import numpy as np
-import math
+from collections import Counter
 from scipy.optimize import minimize
 
 class AggregationStrategies:
-    """
-    Implements various aggregation strategies for combining multiple responses.
-    """
+    """Implements aggregation strategies for combining multiple responses."""
     
     @staticmethod
-    def consistency_aggregation(answers, original_answer=None):
-        """
-        Measure the degree of agreement among candidate outputs.
+    def consistency_aggregation(esi_levels):
+        """Measure agreement among ESI assessments."""
+        if not esi_levels:
+            return None, 0.0
         
-        Args:
-            answers: List of candidate answers
-            original_answer: Original answer (if available)
-            
-        Returns:
-            Aggregated confidence based on consistency
-        """
-        if not answers:
-            return 0.0
-            
-        # If original answer is provided, use it as reference
-        reference = original_answer if original_answer is not None else answers[0]
+        # Find most common ESI level
+        esi_counter = Counter(esi_levels)
+        most_common_esi, count = esi_counter.most_common(1)[0]
         
-        # Count matches
-        matches = sum(1 for answer in answers if answer == reference)
+        # Calculate consistency
+        consistency = count / len(esi_levels)
         
-        # Compute consistency
-        consistency = matches / len(answers)
-        
-        return consistency
+        return most_common_esi, consistency * 100  # Convert to percentage
     
     @staticmethod
-    def avg_conf_aggregation(answers, confidences, original_answer=None):
-        """
-        Average verbalized confidences weighted by matches.
+    def avg_conf_aggregation(esi_levels, confidences):
+        """Average confidences weighted by ESI level matches."""
+        if not esi_levels or not confidences or len(esi_levels) != len(confidences):
+            return None, 0.0
         
-        Args:
-            answers: List of candidate answers
-            confidences: List of verbalized confidences for each answer
-            original_answer: Original answer (if available)
-            
-        Returns:
-            Aggregated confidence based on avg-conf method
-        """
-        if not answers or not confidences or len(answers) != len(confidences):
-            return 0.0
-            
-        # If original answer is provided, use it as reference
-        reference = original_answer if original_answer is not None else answers[0]
+        # Find most common ESI level
+        esi_counter = Counter(esi_levels)
+        most_common_esi, _ = esi_counter.most_common(1)[0]
         
-        # Sum confidences of matching answers
-        matching_conf_sum = sum(conf for ans, conf in zip(answers, confidences) if ans == reference)
-        total_conf_sum = sum(confidences)
+        # Sum confidences for the most common ESI level
+        matching_confidences = [conf for esi, conf in zip(esi_levels, confidences) 
+                              if esi == most_common_esi]
         
-        # Compute average confidence
-        if total_conf_sum == 0:
-            return 0.0
-            
-        avg_conf = matching_conf_sum / total_conf_sum
+        # Calculate average confidence
+        if matching_confidences:
+            avg_confidence = sum(matching_confidences) / len(matching_confidences)
+        else:
+            avg_confidence = 0.0
         
-        return avg_conf
+        return most_common_esi, avg_confidence
     
     @staticmethod
-    def pair_rank_aggregation(top_k_responses):
-        """
-        Use ranking information from top-k responses to estimate confidence.
+    def pair_rank_aggregation(ranked_esi_levels):
+        """Use ranking to estimate ESI level probabilities."""
+        if not ranked_esi_levels:
+            return None, 0.0
         
-        Args:
-            top_k_responses: List of (guesses, confidences) tuples from top-k prompts
-            
-        Returns:
-            Dictionary mapping answers to their estimated probabilities
-        """
-        # Extract all unique answers
-        all_answers = set()
-        for guesses, _ in top_k_responses:
-            all_answers.update(guesses)
+        # Extract all unique ESI levels
+        all_esi_levels = set()
+        for esi_list, _ in ranked_esi_levels:
+            all_esi_levels.update(esi_list)
         
-        # Create a mapping from answer to index
-        answer_to_idx = {answer: i for i, answer in enumerate(all_answers)}
-        n_answers = len(all_answers)
+        # Count total occurrences and first-place occurrences
+        esi_counts = {esi: 0 for esi in all_esi_levels}
+        first_place_counts = {esi: 0 for esi in all_esi_levels}
         
-        # Initialize parameters for softmax (one per answer)
-        initial_params = np.zeros(n_answers)
+        for esi_list, _ in ranked_esi_levels:
+            if esi_list:
+                # Count first place
+                first_place_counts[esi_list[0]] += 1
+                
+                # Count all occurrences
+                for esi in esi_list:
+                    esi_counts[esi] += 1
         
-        # Define the loss function (negative log-likelihood)
-        def loss_func(params):
-            # Convert to probabilities using softmax
-            exp_params = np.exp(params - np.max(params))  # Subtract max for numerical stability
-            probs = exp_params / np.sum(exp_params)
-            
-            total_loss = 0.0
-            
-            # For each top-k response
-            for guesses, _ in top_k_responses:
-                # For each pair of answers in the ranking
-                for i in range(len(guesses)):
-                    for j in range(i+1, len(guesses)):
-                        # Get the answers and their indices
-                        answer_i = guesses[i]
-                        answer_j = guesses[j]
-                        idx_i = answer_to_idx[answer_i]
-                        idx_j = answer_to_idx[answer_j]
-                        
-                        # Probability of ranking answer_i above answer_j
-                        p_i = probs[idx_i]
-                        p_j = probs[idx_j]
-                        
-                        # Avoid division by zero
-                        if p_i + p_j > 0:
-                            p_i_given_i_or_j = p_i / (p_i + p_j)
-                            # Add negative log-likelihood
-                            total_loss -= math.log(p_i_given_i_or_j)
-            
-            return total_loss
+        # Compute score based on both metrics
+        esi_scores = {}
+        for esi in all_esi_levels:
+            # Weight first place more heavily
+            score = (first_place_counts[esi] * 2 + esi_counts[esi]) / (2 * len(ranked_esi_levels) + len(ranked_esi_levels) * len(all_esi_levels))
+            esi_scores[esi] = score * 100  # Convert to percentage
         
-        # Optimize the parameters
-        constraints = {'type': 'eq', 'fun': lambda x: np.sum(np.exp(x)) - 1.0}
-        result = minimize(loss_func, initial_params, method='SLSQP', 
-                         constraints=[constraints], options={'disp': False})
+        # Find ESI with highest score
+        best_esi = max(esi_scores.items(), key=lambda x: x[1])
         
-        # Convert optimal parameters to probabilities
-        optimal_params = result.x
-        exp_params = np.exp(optimal_params - np.max(optimal_params))
-        probs = exp_params / np.sum(exp_params)
-        
-        # Create mapping from answer to probability
-        answer_probs = {answer: probs[answer_to_idx[answer]] for answer in all_answers}
-        
-        return answer_probs
+        return best_esi[0], best_esi[1]

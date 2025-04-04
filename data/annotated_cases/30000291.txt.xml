@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged white male, presented to the emergency department with a diagnosis of epistaxis (ICD Code: R040). He arrived as a walk-in reporting a nosebleed. Vital signs showed a temperature of 98.2°F, heart rate of 96 bpm, respiratory rate of 18/min, oxygen saturation of 100%, and elevated blood pressure of 142/113 mmHg. The patient denied pain or other associated symptoms. The acuity level was rated at 3.0, indicating a moderately severe presentation. The patient was treated and stabilized in the emergency department. Following management of the epistaxis, he was discharged home with instructions for follow-up care and blood pressure monitoring, as hypertension may have contributed to his condition.
+
+============== Medical History ==============
+The patient has a history of recurrent epistaxis, with multiple visits documented in the past for similar presentations. On October 17, 2130, he was treated for epistaxis with elevated blood pressure recorded at 171/92 mmHg. This episode was followed by a visit on October 18, 2130, also for epistaxis, during which blood pressure remained elevated at 156/98 mmHg. A subsequent visit on October 20, 2130, involved nasal packing removal, during which blood pressure was 144/91 mmHg. The pattern of recurrent nosebleeds and consistently elevated blood pressure highlights the need for ongoing management of hypertension to reduce the risk of future episodes and associated complications.
+
+==================================== ER Visit Info ====================================
+ICD Code: R040
+Diagnosis: Epistaxis
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I'm experiencing a nosebleed that won't stop, and it's scary to see all the blood coming out, but thankfully, I don't feel any pain.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: How long have you been experiencing the nosebleed?
+ - Answer 1: It started about 30 minutes ago.
+
+2.
+ - Question 2: Have you had nosebleeds before, and if so, how often?
+ - Answer 2: Yes, I've had a few nosebleeds before, but they were rare and usually stopped on their own; this is the first time it's been this persistent.
+
+3.
+ - Question 3: Did you injure your nose or face recently?
+ - Answer 3: No, I didn't injure my nose or face recently.
+
+4.
+ - Question 4: Are you taking any medications, such as anticoagulants or aspirin?
+ - Answer 4: No, I'm not taking any medications like that.
+
+5.
+ - Question 5: Have you recently traveled to high altitudes or experienced significant changes in air pressure?
+ - Answer 5: No, I haven't traveled to high altitudes or experienced significant changes in air pressure recently.
+
+6.
+ - Question 6: Do you have a history of bleeding disorders, such as hemophilia?
+ - Answer 6: No, I don't have a history of bleeding disorders.
+
+7.
+ - Question 7: Are you experiencing any other symptoms, like fever, headache, or difficulty breathing?
+ - Answer 7: No, I'm not experiencing any other symptoms like fever, headache, or difficulty breathing.
+
+8.
+ - Question 8: Have you tried applying pressure to your nose to stop the bleeding, and if so, for how long?
+ - Answer 8: Yes, I tried applying pressure for about 10 minutes, but the bleeding didn't stop.
+
+9.
+ - Question 9: Is the bleeding coming from one nostril or both?
+ - Answer 9: The bleeding seems to be coming from my left nostril.
+
+10.
+ - Question 10: Have you noticed any blood flowing down the back of your throat?
+ - Answer 10: Yes, I have noticed some blood flowing down the back of my throat, which is a bit concerning.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1791~1804" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="1805~1827" text="Lab Recommendation: []" id="L0" comment="cbc, coag"/>
+<ER_recommendation spans="1828~1849" text="ER Recommendation: []" id="ER0" comment="nasal packing"/>
+<Recommended_waiting_time spans="1850~1884" text="Recommended Waiting Time: []/hours" id="R0" comment="1"/>
+<QA spans="2216~2281" text=" - Question 1: How long have you been experiencing the nosebleed?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2332~2400" text=" - Question 2: Have you had nosebleeds before, and if so, how often?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2560~2617" text=" - Question 3: Did you injure your nose or face recently?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2681~2762" text=" - Question 4: Are you taking any medications, such as anticoagulants or aspirin?" id="Q3" relevance="Essential" comment="what if the patient is taking any other medication?"/>
+<QA spans="2826~2937" text=" - Question 5: Have you recently traveled to high altitudes or experienced significant changes in air pressure?" id="Q4" relevance="Optionl" comment=""/>
+<QA spans="3057~3136" text=" - Question 6: Do you have a history of bleeding disorders, such as hemophilia?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3204~3306" text=" - Question 7: Are you experiencing any other symptoms, like fever, headache, or difficulty breathing?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3415~3522" text=" - Question 8: Have you tried applying pressure to your nose to stop the bleeding, and if so, for how long?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3623~3686" text=" - Question 9: Is the bleeding coming from one nostril or both?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="3759~3839" text=" - Question 10: Have you noticed any blood flowing down the back of your throat?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[==================================== Summary of Current ER Visit ====================================
+The patient, a female with a history of alcoholic cirrhosis, presented to the ER with confusion, disorientation, and forgetfulness, noticed by her husband and visiting nurse earlier that morning. Her symptoms, including difficulty with short-term memory and word-finding, were attributed to hepatic encephalopathy, likely triggered by a urinary tract infection as urinalysis showed leukocytes and bacteria. Lab tests revealed anemia, elevated BUN, mild acute kidney injury with creatinine of 1.4 (baseline 1.1), and stable thrombocytopenia. Imaging confirmed stable portal vein thrombosis and no new hepatic lesions. Treatment included lactulose to address confusion by inducing bowel movements, ceftriaxone for the UTI, and albumin to improve kidney function. Her mental status improved during hospitalization, and her kidney function normalized. Diuretics were adjusted to lower doses, and she was discharged on lactulose, antibiotics, and other home medications. She was instructed to follow up with her hepatologist and transplant team to continue evaluation for liver transplant and initiate treatment for hepatocellular carcinoma.
+
+==================================== Patient History Summary: ====================================
+The patient has a complex medical history primarily centered around alcoholic cirrhosis, diagnosed years earlier and currently classified as Child-Pugh Class C. Her cirrhosis has led to complications such as hepatic encephalopathy, esophageal varices (previously treated with banding), portal vein thrombosis, and hepatocellular carcinoma (HCC), with a biopsy-confirmed 2.6 cm lesion under ongoing treatment planning. She also has a history of GI bleeding, coagulopathy, myelodysplastic syndrome, and chronic back pain. She has experienced recurrent severe muscle cramps and underwent cataract surgery in the past. Her family history is notable for her father’s alcoholic liver disease. Currently, she is in the process of liver transplant evaluation, and her care involves close coordination with her hepatology and transplant teams to manage both her cirrhosis and liver cancer.
+
+==================================== ER Visit Info ====================================
+ICD Code: 5722
+Diagnosis: HEPATIC ENCEPHALOPATHY
+Acuity: 2.0
+Arrival Transport: AMBULANCE
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice these symptoms of mental fogginess and confusion?
+ - Answer 1: I first noticed these symptoms of mental fogginess and confusion this morning, my husband said I was acting strangely and couldn't remember things.
+
+2.
+ - Question 2: Have you experienced any recent head injuries or trauma?
+ - Answer 2: No, I haven't had any recent head injuries or trauma.
+
+3.
+ - Question 3: Are you currently taking any new medications or supplements?
+ - Answer 3: I've been taking my usual medications, but I did stop taking lactulose for a while after my last discharge, and I'm only taking rifaximin as prescribed.
+
+4.
+ - Question 4: Do you have a history of neurological disorders, such as dementia or Alzheimer's disease?
+ - Answer 4: No, I don't have a history of neurological disorders like dementia or Alzheimer's disease, but I do have a history of hepatic encephalopathy due to my liver condition.
+
+5.
+ - Question 5: Have you been feeling unusually stressed, anxious, or depressed lately?
+ - Answer 5: Yes, I've been feeling stressed and anxious about my health and the upcoming transplant evaluation, but I wouldn't say I'm depressed.
+
+6.
+ - Question 6: Are you having trouble with everyday activities due to your memory issues and confusion?
+ - Answer 6: Yes, my confusion and memory issues are affecting my daily activities; for example, I started putting in my dentures and couldn't remember why, and I had trouble cooking, which is something I normally do with ease.
+
+7.
+ - Question 7: Have you noticed any changes in your sleep patterns or appetite?
+ - Answer 7: I haven't noticed significant changes in my sleep patterns, but my appetite has been a bit off, though that's not unusual for me given my liver condition.
+
+8.
+ - Question 8: Do you have a history of substance abuse or have you recently used recreational drugs?
+ - Answer 8: I have a history of alcohol use disorder, which led to my liver disease, but I've been sober since my diagnosis.
+
+9.
+ - Question 9: Have you been exposed to anyone with a similar illness or infection recently?
+ - Answer 9: I don't think I've been exposed to anyone with a similar illness or infection recently, but I did have a urinary tract infection, which might be related to my current condition.
+
+10.
+ - Question 10: Are there any specific situations or times when your symptoms seem to worsen or improve?
+ - Answer 10: My symptoms seem to worsen when I'm tired or when I haven't taken my medications as prescribed, and they seem to improve when I'm well-rested and have taken my medications, especially lactulose, which helps with my hepatic encephalopathy.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2513~2526" text="ESI Level: []" id="E0" ESI_LEVEL="2" comment=""/>
+<Lab_recommendation spans="2527~2549" text="Lab Recommendation: []" id="L0" comment="LFT, CBC, BMP, LA, UA,"/>
+<ER_recommendation spans="2550~2571" text="ER Recommendation: []" id="ER0" comment="full lab, brain CT, antibiotics, admisison"/>
+<Recommended_waiting_time spans="2572~2606" text="Recommended Waiting Time: []/hours" id="R0" comment="1"/>
+<QA spans="2974~3063" text="- Question 1: When did you first notice these symptoms of mental fogginess and confusion?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="3229~3300" text=" - Question 2: Have you experienced any recent head injuries or trauma?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3372~3447" text=" - Question 3: Are you currently taking any new medications or supplements?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3618~3722" text=" - Question 4: Do you have a history of neurological disorders, such as dementia or Alzheimer's disease?" id="Q3" relevance="Optionl" comment="The question with the example of dementia is  out of context.  And, also you are asking two things together that may confuse people. For example, in this case, the patient had neurologicl disorder but it was not dementia. Better to ask &quot;do you have a history of  neurological disorders&quot; And, the term of &quot;neurological disorder&quot; is not layman's term."/>
+<QA spans="3910~3994" text=" Question 5: Have you been feeling unusually stressed, anxious, or depressed lately?" id="Q4" relevance="Wrong" comment="Not necessary in emergency setting"/>
+<QA spans="4146~4249" text=" - Question 6: Are you having trouble with everyday activities due to your memory issues and confusion?" id="Q5" relevance="Wrong" comment="Not necessary in emergency setting"/>
+<QA spans="4482~4561" text=" - Question 7: Have you noticed any changes in your sleep patterns or appetite?" id="Q6" relevance="Wrong" comment="Not necessary in emergency setting"/>
+<QA spans="4734~4835" text=" - Question 8: Do you have a history of substance abuse or have you recently used recreational drugs?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="4966~5058" text=" - Question 9: Have you been exposed to anyone with a similar illness or infection recently?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="5255~5359" text=" - Question 10: Are there any specific situations or times when your symptoms seem to worsen or improve?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

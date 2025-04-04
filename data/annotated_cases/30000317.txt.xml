@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged Hispanic/Latino female of Puerto Rican descent, presented to the emergency department with a diagnosis of unspecified intestinal obstruction (ICD Code: K56609). She arrived as a walk-in, reporting severe abdominal pain rated 8/10, with no associated nausea or vomiting. Vital signs included a temperature of 98.4°F, heart rate of 89 bpm, respiratory rate of 17/min, oxygen saturation of 98%, and blood pressure of 127/77 mmHg. Laboratory findings revealed elevated alanine aminotransferase (ALT) at 54 IU/L, alkaline phosphatase at 204 IU/L, and urea nitrogen at 22 mg/dL, with abnormalities in urinalysis including significant white blood cells (93/hpf), protein (30 mg/dL), and hyaline casts (84/lpf). Imaging showed no definitive signs of bowel obstruction, although nonspecific bowel gas patterns were noted. She was admitted for further evaluation and management, including intravenous fluids, pain control, and close monitoring for potential progression of obstruction.
+
+============== Medical History ==============
+The patient has a history of recurrent abdominal pain and gastrointestinal complications, including past diagnoses of right and left upper quadrant pain (ICD Codes: R1011, R1012), epigastric pain, and hyperkalemia. Notable episodes include visits for abdominal pain with hypokalemia, unspecified ventral hernia with potential obstruction, and ileus. She also has a history of coronary artery disease with coronary vasospasm, type 2 diabetes mellitus, migraines, restless leg syndrome, and GERD. Previous imaging has revealed ventral hernias and nonspecific bowel gas patterns. Her chronic conditions necessitate careful coordination of care, particularly with her history of liver transplantation, treated HCV cirrhosis, and previous TIPS placement. Follow-up with her primary care provider and hepatology team is crucial for continued monitoring and management of her complex medical issues.
+
+==================================== ER Visit Info ====================================
+ICD Code: K56609
+Diagnosis: Unsp intestnl obst, unsp as to partial versus complete obst
+Acuity: 2.0
+Arrival Transport: WALK IN
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+My stomach feels bloated and painful, especially in the upper right area, and I have not been able to pass gas or have a bowel movement for a while, which is really uncomfortable and worrying.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice the bloating and pain in your upper right abdomen?
+ - Answer 1: I first noticed the bloating and pain a few days ago, but it has been getting worse with lightbulge 
+
+2.
+ - Question 2: Can you describe the pain - is it sharp, dull, constant, or does it come and go?
+  
+
+3.
+ - Question 3: Have you experienced any nausea or vomiting along with the abdominal pain?
+ Answer  to palpable to palpation symptoms?
+
+4.
+ - Question 4: How long has it been since you last had a bowel movement or passed gas?
+ 
+
+5.
+ - Question 5: Have you noticed any changes in your appetite or been able to eat normally?
+ - Question  ____
+
+6.
+ - Question 6: Are you experiencing any fever or chills along with the abdominal symptoms?
+ 
+
+7.
+ - Question 7: Have you recently traveled, eaten something unusual, or been exposed to anyone with similar symptoms?
+ ### 
+
+8.
+ - Question 8: Do you have a history of gastrointestinal issues, such as gallstones, ulcers, or inflammatory bowel disease?
+ 
+
+9.
+ - Question 9: Have you noticed any blood in your stool or black, tarry stools?
+ - Question:PRN/AErospect your response: 
+
+10.
+ - Question 10: Are you experiencing any severe tenderness or guarding in the abdominal area when touched or pressed?
+ 
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2332~2345" text="ESI Level: []" id="E0" ESI_LEVEL="2" comment=""/>
+<Lab_recommendation spans="2346~2368" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, LA, UA, lipase"/>
+<ER_recommendation spans="2369~2390" text="ER Recommendation: []" id="ER0" comment="X-ray, IV hydration"/>
+<Recommended_waiting_time spans="2391~2425" text="Recommended Waiting Time: []/hours" id="R0" comment="1"/>
+<QA spans="2817~2908" text=" - Question 1: When did you first notice the bloating and pain in your upper right abdomen?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="3027~3122" text=" - Question 2: Can you describe the pain - is it sharp, dull, constant, or does it come and go?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3130~3219" text=" - Question 3: Have you experienced any nausea or vomiting along with the abdominal pain?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3268~3354" text=" - Question 4: How long has it been since you last had a bowel movement or passed gas?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3361~3451" text=" - Question 5: Have you noticed any changes in your appetite or been able to eat normally?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3474~3564" text=" - Question 6: Are you experiencing any fever or chills along with the abdominal symptoms?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3571~3687" text=" - Question 7: Have you recently traveled, eaten something unusual, or been exposed to anyone with similar symptoms?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3698~3821" text=" - Question 8: Do you have a history of gastrointestinal issues, such as gallstones, ulcers, or inflammatory bowel disease?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3828~3907" text=" - Question 9: Have you noticed any blood in your stool or black, tarry stools?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="3955~4072" text=" - Question 10: Are you experiencing any severe tenderness or guarding in the abdominal area when touched or pressed?" id="Q9" relevance="Wrong" comment="this is something the provider has to check through physical exam"/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

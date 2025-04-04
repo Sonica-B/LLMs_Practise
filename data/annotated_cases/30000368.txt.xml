@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged Asian Indian male, presented to the emergency department with a diagnosis of a type B aortic dissection (ICD Code: I7101). He reported a history of back pain following a strenuous activity a week prior, which had since resolved. Imaging conducted after his symptoms raised suspicion of dissection revealed the condition. Upon arrival, he denied chest pain, abdominal pain, or neurological symptoms. Vital signs were notable for elevated blood pressure of 170/103 mmHg, with a heart rate of 83 bpm, respiratory rate of 18/min, oxygen saturation of 100%, and no reported pain. Lab work was largely unremarkable, though platelet count was slightly elevated at 426 K/uL. The patient was admitted for management, and blood pressure was tightly controlled using IV antihypertensive therapy, transitioning to oral medications once stabilized.
+
+============== Medical History ==============
+The patient has a history of hypertension, hyperlipidemia, GERD, and branch retinal vein occlusion. His family history is significant for hypertension. He does not report prior incidents of aortic dissection or connective tissue disorders but has been referred to rheumatology to evaluate for underlying connective tissue diseases as a potential etiology for the dissection. He has no documented prior surgical history. Social history is not detailed in the record. Follow-up care with cardiology, vascular surgery, and rheumatology is planned to monitor the stable dissection and manage his hypertension.
+
+==================================== ER Visit Info ====================================
+ICD Code: I7101
+Diagnosis: Dissection of thoracic aorta
+Acuity: 2.0
+Arrival Transport: WALK IN
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I had a severe back pain that started after a physical strain, which has since resolved, but I'm now being treated for a dissection of my thoracic aorta, and I need to be careful to control my blood pressure to prevent further complications.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: Can you describe the initial back pain you experienced and how it compared to any back pain you've had before?
+ - Answer 1: The initial back pain was severe and started after a physical strain, it was constant and resolved on its own after a few days with NSAIDs and vicodin, which is different from any back pain I've had before in terms of intensity and duration.
+
+2.
+ - Question 2: How long after the physical strain did the back pain start, and did it come on suddenly or gradually?
+ - Answer 2: The back pain started immediately after the physical strain, which occurred when I was playing in the waves and got hit from behind, becoming very anxious and straining my back.
+
+3.
+ - Question 3: Have you noticed any changes in the back pain since it started, such as changes in intensity, location, or radiation to other areas?
+ - Answer 3: Yes, the back pain has changed since it started; it was constant for a few days and then resolved, but now I'm being monitored for the thoracic aorta dissection and have to be careful about my blood pressure.
+
+4.
+ - Question 4: What were you doing when you experienced the physical strain that preceded the back pain?
+ - Answer 4: I was playing in the waves when I experienced the physical strain that preceded the back pain, got hit from behind, and became very anxious and strained my back.
+
+5.
+ - Question 5: Have you had any follow-up imaging or tests since the diagnosis of the thoracic aorta dissection, and if so, what were the results?
+ - Answer 5: Yes, I had a repeat CTA that showed a stable appearance of the type B aortic dissection, which was done before I was discharged from the hospital.
+
+6.
+ - Question 6: What is your current blood pressure, and how often are you monitoring it?
+ - Answer 6: My current blood pressure is being controlled with medication, and I'm not sure of the exact reading right now, but I've been advised to monitor it closely and follow up with cardiology.
+
+7.
+ - Question 7: Are you experiencing any symptoms that could indicate a worsening of the aortic dissection, such as severe chest pain, difficulty breathing, or fainting spells?
+ - Answer 7: No, I'm not currently experiencing any symptoms that could indicate a worsening of the aortic dissection, such as severe chest pain, difficulty breathing, or fainting spells.
+
+8.
+ - Question 8: Are you taking any medications as part of your treatment for the aortic dissection, and if so, what are they and what are the dosages?
+ - Answer 8: Yes, I'm taking several medications, including aspirin, captopril, labetalol, and others, as prescribed by my doctor for the management of my blood pressure and the aortic dissection.
+
+9.
+ - Question 9: Have you been advised on any specific lifestyle modifications to manage your condition, such as dietary changes, exercise restrictions, or stress reduction techniques?
+ - Answer 9: Yes, I've been advised to avoid activities that excessively raise my blood pressure, such as scuba diving, and to remain calm, as extreme anger, fear, or anxiety can cause increases in blood pressure.
+
+10.
+ - Question 10: Do you have a plan in place for seeking immediate medical attention if you experience any signs of complications, such as sudden severe pain or a significant increase in blood pressure?
+ - Answer 10: Yes, I have a plan in place to seek immediate medical attention if I experience any signs of complications, such as recurrent back pain like what I had before hospitalization, and I've been told to return to the emergency department if that happens.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1873~1886" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="1887~1909" text="Lab Recommendation: []" id="L0" comment="CBC BMP, LA"/>
+<ER_recommendation spans="1910~1931" text="ER Recommendation: []" id="ER0" comment="X-ray, pain control"/>
+<Recommended_waiting_time spans="1932~1966" text="Recommended Waiting Time: []/hours" id="R0" comment="2"/>
+<QA spans="2407~2532" text=" - Question 1: Can you describe the initial back pain you experienced and how it compared to any back pain you've had before?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2793~2908" text="- Question 2: How long after the physical strain did the back pain start, and did it come on suddenly or gradually?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3107~3251" text="Question 3: Have you noticed any changes in the back pain since it started, such as changes in intensity, location, or radiation to other areas?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3478~3582" text=" - Question 4: What were you doing when you experienced the physical strain that preceded the back pain?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3762~3908" text=" - Question 5: Have you had any follow-up imaging or tests since the diagnosis of the thoracic aorta dissection, and if so, what were the results?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="4073~4161" text=" - Question 6: What is your current blood pressure, and how often are you monitoring it?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="4366~4541" text=" - Question 7: Are you experiencing any symptoms that could indicate a worsening of the aortic dissection, such as severe chest pain, difficulty breathing, or fainting spells?" id="Q6" relevance="Essential" comment="pt is less likely know the symptoms indicating worsening of aortic dissection"/>
+<QA spans="4735~4883" text="- Question 8: Are you taking any medications as part of your treatment for the aortic dissection, and if so, what are they and what are the dosages?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="5086~5267" text="- Question 9: Have you been advised on any specific lifestyle modifications to manage your condition, such as dietary changes, exercise restrictions, or stress reduction techniques?" id="Q8" relevance="Wrong" comment=""/>
+<QA spans="5487~5688" text=" - Question 10: Do you have a plan in place for seeking immediate medical attention if you experience any signs of complications, such as sudden severe pain or a significant increase in blood pressure?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

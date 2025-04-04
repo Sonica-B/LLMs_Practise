@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged female of unspecified race, presented to the emergency department with complaints of ear discomfort. She was diagnosed with impacted cerumen (ICD Code: 3804), a condition she has previously been treated for. On examination, her vital signs were stable with a temperature of 99.4°F, heart rate of 85 bpm, respiratory rate of 16 breaths per minute, and oxygen saturation of 100%. Blood pressure was not recorded during this visit. The patient was ambulatory and exhibited no acute distress. She was treated for cerumen impaction and discharged home in stable condition with instructions for follow-up care as needed.
+
+============== Medical History ==============
+The patient has a prior documented history of impacted cerumen, having presented previously on October 25, 2154, with left ear pain. During that visit, her vital signs included a temperature of 97.4°F, heart rate of 89 bpm, respiratory rate of 16 breaths per minute, oxygen saturation of 100%, and elevated blood pressure of 160/93 mmHg. The acuity level at that time was rated at 4.0. No additional chronic conditions or significant medical history are documented. The patient’s recurrent cerumen impaction suggests the need for preventive strategies, such as routine ear hygiene or scheduled earwax removal, to avoid further discomfort or complications.
+
+==================================== ER Visit Info ====================================
+ICD Code: 3804
+Diagnosis: IMPACTED CERUMEN
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did the ear pain start?
+ - Answer 1: The pain started a little while ago, but I'm not really sure exactly when, it just seemed to come on and won't go away.
+
+2.
+ - Question 2: Is the pain constant or does it come and go?
+ - Answer 2: It's pretty constant, but sometimes it feels sharper than others.
+
+3.
+ - Question 3: Have you had a cold, flu, or sinus infection recently?
+ - Answer 3: No, I haven't had any recent cold, flu, or sinus infections that I'm aware of.
+
+4.
+ - Question 4: Do you have a history of ear infections or ear problems?
+ - Answer 4: Actually, yes, I've had issues with impacted cerumen before, which is why I came in.
+
+5.
+ - Question 5: Are you experiencing any discharge or bleeding from the ear?
+ - Answer 5: No, I'm not experiencing any discharge or bleeding from the ear.
+
+6.
+ - Question 6: Have you noticed any hearing loss or difficulty hearing in the affected ear?
+ - Answer 6: I haven't really noticed any hearing loss, but it does feel like my ear is plugged up.
+
+7.
+ - Question 7: Does the pain worsen when you swallow, chew, or blow your nose?
+ - Answer 7: Yes, swallowing and chewing seem to make the pain a bit worse.
+
+8.
+ - Question 8: Have you recently traveled by air or been diving, which could cause pressure changes?
+ - Answer 8: No, I haven't traveled by air or gone diving recently.
+
+9.
+ - Question 9: Are you experiencing any fever or headache along with the ear pain?
+ - Answer 9: I don't have a fever, but my temperature was taken and it's a bit elevated at 99.4°F, and I don't have a headache.
+
+10.
+ - Question 10: Have you tried any remedies, such as ear drops or pain relievers, and if so, did they help?
+ - Answer 10: I haven't tried any specific remedies for this episode yet, but I'm hoping to get some relief today.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1685~1698" text="ESI Level: []" id="E0" ESI_LEVEL="5" comment=""/>
+<Lab_recommendation spans="1699~1721" text="Lab Recommendation: []" id="L0" comment="undetermined until physical exam"/>
+<ER_recommendation spans="1722~1743" text="ER Recommendation: []" id="ER0" comment="undetermined until physical exam"/>
+<Recommended_waiting_time spans="1744~1778" text="Recommended Waiting Time: []/hours" id="R0" comment="4"/>
+<QA spans="2063~2106" text=" - Question 1: When did the ear pain start?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2244~2303" text=" - Question 2: Is the pain constant or does it come and go?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2387~2456" text=" - Question 3: Have you had a cold, flu, or sinus infection recently?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2553~2624" text=" - Question 4: Do you have a history of ear infections or ear problems?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="2727~2802" text=" - Question 5: Are you experiencing any discharge or bleeding from the ear?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="2885~2976" text=" - Question 6: Have you noticed any hearing loss or difficulty hearing in the affected ear?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3081~3159" text=" - Question 7: Does the pain worsen when you swallow, chew, or blow your nose?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3240~3340" text=" - Question 8: Have you recently traveled by air or been diving, which could cause pressure changes?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3413~3495" text=" - Question 9: Are you experiencing any fever or headache along with the ear pain?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="3629~3736" text=" - Question 10: Have you tried any remedies, such as ear drops or pain relievers, and if so, did they help?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

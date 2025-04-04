@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged South East Asian male with a history of Type I Diabetes Mellitus complicated by neuropathy and gastroparesis, presented to the emergency department with nausea, vomiting, and abdominal pain. He was diagnosed with diabetic neuropathy with manifestations (ICD Code: 25061). His vital signs on admission included a temperature of 97.8°F, heart rate of 106 bpm, respiratory rate of 18 breaths per minute, oxygen saturation of 100%, and significantly elevated blood pressure of 190/112 mmHg. Laboratory tests revealed hyperglycemia with a glucose level of 330 mg/dL, an elevated alkaline phosphatase level of 330 IU/L, and a urea nitrogen level of 89 mg/dL, indicating underlying renal dysfunction. The acuity level was rated at 2.0. The patient was stabilized with IV fluids and medications to manage his symptoms, and he was admitted for further evaluation and treatment.
+
+============== Medical History ==============
+The patient has an extensive medical history including Type I Diabetes Mellitus with complications such as gastroparesis, retinopathy, nephropathy with end-stage renal disease (ESRD) requiring home hemodialysis, and recurrent diabetic ketoacidosis (DKA). He also has a history of hypertension, hyperlipidemia, and chronic anemia. Previous admissions document episodes of abdominal pain, nausea, and vomiting attributed to gastroparesis and esophagitis, as well as poorly controlled diabetes with hyperglycemia. He has undergone evaluations such as EGD and CT imaging, revealing severe esophagitis and gastroparesis. Despite compliance with an optimized regimen including Reglan, erythromycin, and ondansetron, recurrent flares continue to impact his quality of life. His medical management involves regular hemodialysis, insulin therapy, and medications for gastroparesis and hypertension, along with preparations for a potential kidney-pancreas transplant. Comprehensive care, including careful blood pressure and glucose monitoring and regular follow-ups with his healthcare team, remains critical.
+
+==================================== ER Visit Info ====================================
+ICD Code: 25061
+Diagnosis: DIAB NEURO MANIF IDDM
+Acuity: 2.0
+Arrival Transport: WALK IN
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did your nausea, vomiting, and abdominal pain first start?
+ - Answer 1: My nausea, vomiting, and abdominal pain started about 3 days ago.
+
+2.
+ - Question 2: Can you describe the nature of your abdominal pain, such as sharp, dull, or crampy?
+ - Answer 2: The abdominal pain feels like a dull ache, but it can become sharp at times, especially after I try to eat or drink something.
+
+3.
+ - Question 3: Is the abdominal pain localized to a specific area or is it diffuse throughout your abdomen?
+ - Answer 3: The pain is mainly in the upper part of my abdomen, but sometimes it feels like it's spreading to the simulation overr
+
+4.
+ - Question 4: Have you vomited blood or seen blood in your stool?
+ ... (tral, 
+
+5.
+ - Question 5: Are you experiencing any fever or chills along with your other symptoms?
+  
+
+6.
+ - Question 6: Have you recently traveled or been exposed to anyone with similar symptoms?
+ 
+
+7.
+ - Question 7: Do you have a history of gastrointestinal conditions, such as ulcers, gastritis, or inflammatory bowel disease?
+ You arentss
+
+8.
+ - Question 8: Have you eaten anything unusual or out of the ordinary in the past few days?
+  
+
+9.
+ - Question 9: Are you experiencing any symptoms of dehydration, such as excessive thirst or dark urine?
+ 
+
+10.
+ - Question 10: Have you noticed any relief from your symptoms with certain positions, foods, or over-the-counter medications?
+ Here is not provided some responses with T  T waveforms medical record.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2394~2407" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="2408~2430" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, UA, LA"/>
+<ER_recommendation spans="2431~2452" text="ER Recommendation: []" id="ER0" comment="IV hydration"/>
+<Recommended_waiting_time spans="2453~2487" text="Recommended Waiting Time: []/hours" id="R0" comment="3"/>
+<QA spans="2890~2968" text=" - Question 1: When did your nausea, vomiting, and abdominal pain first start?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="3052~3150" text=" - Question 2: Can you describe the nature of your abdominal pain, such as sharp, dull, or crampy?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3295~3402" text=" - Question 3: Is the abdominal pain localized to a specific area or is it diffuse throughout your abdomen?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3539~3605" text=" - Question 4: Have you vomited blood or seen blood in your stool?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3624~3710" text="- Question 5: Are you experiencing any fever or chills along with your other symptoms?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3719~3809" text=" - Question 6: Have you recently traveled or been exposed to anyone with similar symptoms?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3817~3956" text=" - Question 7: Do you have a history of gastrointestinal conditions, such as ulcers, gastritis, or inflammatory bowel disease?&#10; You arentss" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3961~4052" text=" - Question 8: Have you eaten anything unusual or out of the ordinary in the past few days?" id="Q7" relevance="Optionl" comment=""/>
+<QA spans="4060~4164" text=" - Question 9: Are you experiencing any symptoms of dehydration, such as excessive thirst or dark urine?" id="Q8" relevance="Essential" comment="adding decreased amount of urine?"/>
+<QA spans="4172~4298" text=" - Question 10: Have you noticed any relief from your symptoms with certain positions, foods, or over-the-counter medications?" id="Q9" relevance="Optionl" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

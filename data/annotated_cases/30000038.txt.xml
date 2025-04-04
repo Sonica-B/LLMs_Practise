@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, an elderly white female, presented to the emergency department via ambulance with a diagnosis of pneumonia caused by an unspecified organism (ICD Code: J189). Her chief complaint included a productive cough lasting 10 days, chills, and dyspnea. She reported mild fatigue and a headache but denied chest pain, nausea, or vomiting. On admission, vital signs were stable with a temperature of 97.1°F, heart rate of 54 bpm, respiratory rate of 18/min, oxygen saturation of 95%, and blood pressure of 143/73 mmHg. Laboratory findings indicated elevated urea nitrogen levels at 30 mg/dL, suggestive of mild dehydration or renal stress. Imaging revealed right lower lobe consolidation consistent with community-acquired pneumonia (CAP). The patient was treated with a combination of azithromycin and cefpodoxime for CAP and a five-day prednisone burst for inflammation. Her hospital stay was uneventful, and she remained afebrile and stable. She was admitted for observation and discharged to an extended care facility with instructions for a six-week follow-up chest X-ray and continued management of her chronic conditions.
+
+============== Medical History ==============
+The patient has a complex medical history, including left breast invasive ductal carcinoma treated with partial mastectomy and radiation therapy. She also has a diagnosis of IgA kappa multiple myeloma, managed with regimens such as Velcade, dexamethasone, and Revlimid. Past oncologic treatments were complicated by neuropathy and required adjustments in therapy. She has a history of recurrent melanoma, which required surgical excision and skin grafting. Additional chronic conditions include essential hypertension, chronic kidney disease (Stage 3), multiple sclerosis, fibromyalgia, arthritis, obstructive sleep apnea, and hypercholesterolemia. Other notable diagnoses include osteoporosis, depression, age-related macular degeneration, and restless leg syndrome. Her social history indicates she resides in an independent living facility. The patient’s complex medical background necessitates ongoing multidisciplinary care, particularly for the management of her oncologic and chronic medical conditions.
+
+==================================== ER Visit Info ====================================
+ICD Code: J189
+Diagnosis: Pneumonia, unspecified organism
+Acuity: 3.0
+Arrival Transport: AMBULANCE
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I've been experiencing a persistent cough and feeling congested, making it hard for me to take a deep breath.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice the cough and congestion starting?
+ - Answer 1: I'd say about a week and a half ago, I started noticing the cough and feeling congested.
+
+2.
+ - Question 2: Is your cough productive, meaning are you bringing up mucus or phlegm?
+ - Answer 2: Only last night was my cough productive.
+
+3.
+ - Question 3: Have you had a fever or felt feverish in the past 24 hours?
+ - Answer 3: Yes, I was found to have a fever when I went to the doctor, it was 100.3 degrees.
+
+4.
+ - Question 4: Are you experiencing any chest pain or discomfort when you cough?
+ - Answer 4: No, I don't have any chest pain or pressure.
+
+5.
+ - Question 5: Do you have difficulty breathing when you lie down or does your breathing improve when you sit up?
+ - Answer 5: I feel congested, so it's hard to take a deep breath, but I don't notice a significant difference when I lie down or sit up.
+
+6.
+ - Question 6: Have you recently been around anyone who is sick or had a similar illness?
+ - Answer 6: Yes, I live in an elderly independent living facility, so there are multiple possible sick contacts.
+
+7.
+ - Question 7: Do you have a history of respiratory conditions such as asthma, COPD, or bronchitis?
+ - Answer 7: I have a history of chronic conditions, but not specifically respiratory ones like asthma or COPD, though I do have a mention of COPD suggested in my hyperinflated lungs from the chest X-ray.
+
+8.
+ - Question 8: Are you experiencing any wheezing, stridor, or other unusual sounds when you breathe?
+ - Answer 8: No, I'm not experiencing any wheezing or unusual sounds when I breathe.
+
+9.
+ - Question 9: Have you tried any over-the-counter medications or remedies for your symptoms, and if so, what were they?
+ - Answer 9: Before coming to the hospital, I hadn't tried any specific over-the-counter medications for these symptoms.
+
+10.
+ - Question 10: Are you having any difficulty speaking or finding it hard to catch your breath when speaking in full sentences?
+ - Answer 10: Yes, I find it a bit hard to catch my breath when speaking, but I can still speak in full sentences.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2551~2564" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="2565~2587" text="Lab Recommendation: []" id="L0" comment="CBC. CMP, UA, LA, respiratory viral panel, "/>
+<ER_recommendation spans="2588~2609" text="ER Recommendation: []" id="ER0" comment="CXR, EKG, antibiotics, oxygen if needed"/>
+<Recommended_waiting_time spans="2610~2644" text="Recommended Waiting Time: []/hours" id="R0" comment="3"/>
+<QA spans="2954~3028" text="- Question 1: When did you first notice the cough and congestion starting?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="3136~3220" text="- Question 2: Is your cough productive, meaning are you bringing up mucus or phlegm?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3279~3353" text=" - Question 3: Have you had a fever or felt feverish in the past 24 hours?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3453~3533" text=" - Question 4: Are you experiencing any chest pain or discomfort when you cough?" id="Q3" relevance="Essential" comment="better not limiting &quot;when you cough&quot;  chest pain is an important symptom but not necessarily associated with breathing"/>
+<QA spans="3596~3709" text=" - Question 5: Do you have difficulty breathing when you lie down or does your breathing improve when you sit up?" id="Q4" relevance="Essential" comment="there is no reason to ask &quot;or ....&quot; "/>
+<QA spans="3853~3941" text="- Question 6: Have you recently been around anyone who is sick or had a similar illness?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="4060~4159" text=" - Question 7: Do you have a history of respiratory conditions such as asthma, COPD, or bronchitis?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="4369~4469" text=" - Question 8: Are you experiencing any wheezing, stridor, or other unusual sounds when you breathe?" id="Q7" relevance="Wrong" comment="This usually is evaluated by a physician. Wheezing or stridor are medical terms.  But you may ask do you hear wheezing sound when you breath? - in layman's term"/>
+<QA spans="4559~4679" text=" - Question 9: Have you tried any over-the-counter medications or remedies for your symptoms, and if so, what were they?" id="Q8" relevance="Optionl" comment=""/>
+<QA spans="4806~4933" text=" - Question 10: Are you having any difficulty speaking or finding it hard to catch your breath when speaking in full sentences?" id="Q9" relevance="Optionl" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

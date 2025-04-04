@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, an elderly white female, presented to the emergency department as a walk-in with a chief complaint of generalized abdominal pain (ICD Code: 78907) and a reported pain level of 7. Her vital signs were largely stable with a temperature of 97.6°F, heart rate of 56 bpm, respiratory rate of 18/min, and blood pressure of 112/66 mmHg. Laboratory tests revealed elevated alkaline phosphatase (169 IU/L) and gamma-glutamyltransferase (79 IU/L), indicative of potential liver dysfunction, but other markers, including ALT, AST, and lipase, were within normal limits. Sodium levels measured at the low end of normal at 133 mEq/L. A brief hospital course included admission for further evaluation of her abdominal pain and potential underlying causes. The patient remained stable throughout her evaluation and was admitted for further observation and management.
+
+============== Medical History ==============
+The patient has a history of recurrent abdominal pain, as indicated by previous ED visits, including a notable visit on 2136-06-14 where she reported abdominal pain with a pain level of 8, and another on 2136-05-02 where she experienced significant unintentional weight loss of 40 lbs. Her prior diagnoses include complications of the digestive system (ICD Code: 99749) and abnormal weight loss (ICD Code: 78321). During these encounters, her vital signs showed a pattern of stable blood pressure and slightly elevated heart rates, consistent with possible chronic malnutrition or gastrointestinal distress. The patient has also undergone a significant outpatient workup for malnutrition, which included imaging and endoscopy. Social stressors, depression, and a history of alcohol use were noted as contributing factors to her nutritional deficits, although she denied recent alcohol use during prior evaluations. Her complex medical and social history underscores the need for multidisciplinary care, including nutritional support and mental health resources.
+
+==================================== ER Visit Info ====================================
+ICD Code: 78907
+Diagnosis: ABDOMINAL PAIN GENERALIZED
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+My stomach feels bloated and tender, and I have a constant, gnawing pain that makes it hard for me to eat, which is making my overall weakness and fatigue even worse.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice the bloating and stomach pain?
+ - Answer 1: The bloating and stomach pain started a while ago, but it's been getting worse over the past few months.
+
+2.
+ - Question 2: Can you describe the location of the pain - is it in the upper, middle, or lower part of your stomach?
+ - Answer 2: The pain is mostly in the middle and lower part of my stomach, and it feels like it's all over.
+
+3.
+ - Question 3: Have you experienced any vomiting or nausea along with the pain?
+ - Answer 3: Sometimes I feel nauseous, but I haven't been vomiting.
+
+4.
+ - Question 4: Are you having diarrhea or constipation?
+ - Answer 4: I've been having some constipation, but nothing too out of the ordinary for me.
+
+5.
+ - Question 5: Have you recently eaten something that might have triggered the pain, such as spicy or fatty foods?
+ - Answer 5: I don't think it's related to specific foods, but eating in general has become really hard for me because of the pain.
+
+6.
+ - Question 6: Do you have a history of stomach ulcers, gastroesophageal reflux disease (GERD), or inflammatory bowel disease?
+ - Answer 6: I don't have a history of stomach ulcers or inflammatory bowel disease, but I have had some issues with my digestive system in the past.
+
+7.
+ - Question 7: Are you currently taking any medications that could be irritating your stomach?
+ - Answer 7: I'm taking a few medications, including gabapentin for nerve pain and mirtazapine to help with my appetite, but I'm not sure if they're irritating my stomach.
+
+8.
+ - Question 8: Have you noticed any blood in your stool or black, tarry stools?
+ - Answer 8: I haven't noticed any blood in my stool, but I do get worried about my bowel movements because of my history of digestive issues.
+
+9.
+ - Question 9: How long have you been experiencing weakness and fatigue, and have you noticed any recent weight loss?
+ - Answer 9: The weakness and fatigue have been going on for a long time, and I've lost a significant amount of weight unintentionally, which is really concerning to me.
+
+10.
+ - Question 10: Have you had a fever or felt generally unwell in addition to the stomach symptoms?
+ - Answer 10: I haven't had a fever recently, but I do feel generally unwell most of the time, which is why I'm here seeking help.
+
+]]></TEXT>
+<TAGS>
+<QA spans="2789~2860" text=" - Question 1: When did you first notice the bloating and stomach pain?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2983~3100" text=" - Question 2: Can you describe the location of the pain - is it in the upper, middle, or lower part of your stomach?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3214~3293" text=" - Question 3: Have you experienced any vomiting or nausea along with the pain?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3367~3422" text=" - Question 4: Are you having diarrhea or constipation?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3520~3634" text=" - Question 5: Have you recently eaten something that might have triggered the pain, such as spicy or fatty foods?" id="Q4" relevance="Optionl" comment=""/>
+<QA spans="3771~3897" text=" - Question 6: Do you have a history of stomach ulcers, gastroesophageal reflux disease (GERD), or inflammatory bowel disease?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="4052~4146" text=" - Question 7: Are you currently taking any medications that could be irritating your stomach?" id="Q6" relevance="Wrong" comment="just any medication. The patient would not know what medications are irritating his/her stomach"/>
+<QA spans="4323~4402" text=" - Question 8: Have you noticed any blood in your stool or black, tarry stools?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="4550~4667" text=" - Question 9: How long have you been experiencing weakness and fatigue, and have you noticed any recent weight loss?" id="Q8" relevance="Essential" comment="two questions in one sentence"/>
+<QA spans="4843~4941" text=" - Question 10: Have you had a fever or felt generally unwell in addition to the stomach symptoms?" id="Q9" relevance="Essential" comment="two questions in one sentence"/>
+<ESI spans="2330~2343" text="ESI Level: []" id="E0" ESI_LEVEL="4" comment=""/>
+<Lab_recommendation spans="2344~2366" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, Lipase"/>
+<ER_recommendation spans="2367~2388" text="ER Recommendation: []" id="ER0" comment="IV hydration, imaging study"/>
+<Recommended_waiting_time spans="2389~2423" text="Recommended Waiting Time: []/hours" id="R0" comment="3"/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

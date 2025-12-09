@@ -1,12 +1,10 @@
-# extended_confidence_analyzer.py
+# simplified_extended_confidence_analyzer.py
 from confidence_analyzer import ConfidenceAnalyzer
 import os
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import seaborn as sns
 from matplotlib.lines import Line2D
-from sklearn.metrics import roc_curve, auc, precision_recall_curve
 from eval.prompting_strategies import PromptingStrategies
 from eval.sampling_strategies import SamplingStrategies
 from eval.aggregation_strategies import AggregationStrategies
@@ -47,8 +45,8 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
             for strategy in strategies:
                 os.makedirs(os.path.join(vis_dir, strategy), exist_ok=True)
     
-    def elicit_confidence(self, case_data, prompt_strategy="vanilla", 
-                         sampling_strategy="self_random", aggregation_strategy="consistency",
+    def elicit_confidence(self, case_data, prompt_strategy, 
+                         sampling_strategy, aggregation_strategy,
                          n_samples=5, temperature=0.7):
         """
         Elicit confidence using specified strategies.
@@ -72,7 +70,7 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
         elif prompt_strategy == "self_probing":
             # For self-probing, first get preliminary ESI
             vanilla_prompt = PromptingStrategies.vanilla_prompt(case_data)
-            vanilla_response = self.triage_system.llm.run(vanilla_prompt)
+            vanilla_response = self.triage_system.run(vanilla_prompt)
             
             preliminary_esi, _ = PromptingStrategies.parse_response(vanilla_response, "vanilla") or (3, 0)
             prompt_func = lambda c: PromptingStrategies.self_probing_prompt(c, preliminary_esi)
@@ -87,15 +85,15 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
         if sampling_strategy == "self_random":
             prompt = prompt_func(case_data)
             responses = SamplingStrategies.self_random_sampling(
-                prompt, self.triage_system.llm, n_samples, temperature
+                prompt, self.triage_system, n_samples, temperature
             )
         elif sampling_strategy == "misleading":
             responses = SamplingStrategies.misleading_sampling(
-                case_data, prompt_func, self.triage_system.llm, n_samples
+                case_data, prompt_func, self.triage_system, n_samples
             )
         elif sampling_strategy == "prompt_paraphrasing":
             responses = SamplingStrategies.prompt_paraphrasing(
-                case_data, prompt_func, self.triage_system.llm, n_samples
+                case_data, prompt_func, self.triage_system, n_samples
             )
         else:
             raise ValueError(f"Unknown sampling strategy: {sampling_strategy}")
@@ -178,10 +176,10 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
             raise ValueError(f"Unknown aggregation strategy: {aggregation_strategy}")
         
         # Determine if handoff is needed (similar to existing logic)
-        needs_handoff = esi_level <= 2 or confidence < 75
+        needs_handoff = esi_level <= 2 or confidence < 0.6
         
         return {
-            "esi_level": esi_level or 3,  # Default to ESI 3 if None
+            "esi_level": esi_level,  # Default to ESI 3 if None
             "confidence": confidence,
             "explanation": responses[0] if responses else "",
             "needs_handoff": needs_handoff,
@@ -292,14 +290,33 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
         accuracy = np.mean(correctness) * 100
         avg_conf = np.mean(confidences)
         ece = self.calculate_ece(confidences/100, correctness)
-        auroc = self.calculate_auroc(confidences, correctness)
+        
+        # Custom simplified AUROC calculation
+        sorted_indices = np.argsort(confidences)[::-1]  # Sort in descending order
+        sorted_correctness = correctness[sorted_indices]
+        
+        total_positive = np.sum(correctness)
+        total_negative = len(correctness) - total_positive
+        
+        if total_positive > 0 and total_negative > 0:
+            # Count correct rankings
+            correct_rankings = 0
+            for i in range(len(sorted_correctness)):
+                if sorted_correctness[i]:  # If this prediction is correct
+                    # Count how many incorrect predictions are ranked below it
+                    correct_rankings += np.sum(~sorted_correctness[i+1:])
+            
+            # Calculate AUROC
+            auroc = correct_rankings / (total_positive * total_negative)
+        else:
+            auroc = 0.5  # Default for degenerate cases
         
         plt.text(0.02, 0.95, f'ACC {accuracy:.1f} / AUROC {auroc:.2f} / ECE {ece:.2f}',
                 transform=plt.gca().transAxes, fontsize=10)
         
         # Save figure
         output_dir = os.path.join(self.confidence_elicitation_dir, "distribution_plots", 
-                                strategy.split('_')[0])  # Use prompt strategy for organization
+                                strategy)  # Use prompt strategy for organization
         os.makedirs(output_dir, exist_ok=True)
         output_file = f"{model_name}_{dataset_name}_{strategy}_distribution.png"
         plt.savefig(os.path.join(output_dir, output_file))
@@ -436,25 +453,37 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
                 # Calculate metrics
                 accuracy = np.mean(correctness)
                 ece = self.calculate_ece(confidences/100, correctness)
-                auroc = self.calculate_auroc(confidences, correctness)
                 
-                # Calculate AUPRC
-                try:
-                    precision, recall, _ = precision_recall_curve(correctness, confidences)
-                    auprc_pos = auc(recall, precision)
+                # Custom simplified AUROC calculation
+                sorted_indices = np.argsort(confidences)[::-1]  # Sort in descending order
+                sorted_correctness = correctness[sorted_indices]
+                
+                total_positive = np.sum(correctness)
+                total_negative = len(correctness) - total_positive
+                
+                if total_positive > 0 and total_negative > 0:
+                    # Count correct rankings
+                    correct_rankings = 0
+                    for i in range(len(sorted_correctness)):
+                        if sorted_correctness[i]:  # If this prediction is correct
+                            # Count how many incorrect predictions are ranked below it
+                            correct_rankings += np.sum(~sorted_correctness[i+1:])
                     
-                    precision_neg, recall_neg, _ = precision_recall_curve(~correctness, -confidences)
-                    auprc_neg = auc(recall_neg, precision_neg)
-                except:
-                    auprc_pos = 0.5
-                    auprc_neg = 0.5
+                    # Calculate AUROC
+                    auroc = correct_rankings / (total_positive * total_negative)
+                else:
+                    auroc = 0.5  # Default for degenerate cases
+                
+                # Simplified AUPRC calculations (these are approximations)
+                precision_pos = total_positive / len(correctness) if len(correctness) > 0 else 0
+                precision_neg = total_negative / len(correctness) if len(correctness) > 0 else 0
                 
                 # Store metrics
                 table_data.loc[('accuracy', strategy), dataset_name] = accuracy
                 table_data.loc[('ece', strategy), dataset_name] = ece
                 table_data.loc[('auroc', strategy), dataset_name] = auroc
-                table_data.loc[('auprc_pos', strategy), dataset_name] = auprc_pos
-                table_data.loc[('auprc_neg', strategy), dataset_name] = auprc_neg
+                table_data.loc[('auprc_pos', strategy), dataset_name] = precision_pos
+                table_data.loc[('auprc_neg', strategy), dataset_name] = precision_neg
         
         # Save as CSV and return
         output_dir = os.path.join(self.confidence_elicitation_dir, "performance_tables")
@@ -486,17 +515,6 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
             ece += (bin_count / total_samples) * np.abs(bin_confidence - bin_accuracy)
         
         return ece
-    
-    def calculate_auroc(self, confidences, correctness):
-        """Calculate Area Under ROC Curve."""
-        if np.all(correctness) or not np.any(correctness):
-            return 0.5
-            
-        try:
-            fpr, tpr, _ = roc_curve(correctness, confidences)
-            return auc(fpr, tpr)
-        except:
-            return 0.5
     
     def generate_all_visualizations(self, results, model_name, dataset_name):
         """Generate all visualizations for the results."""

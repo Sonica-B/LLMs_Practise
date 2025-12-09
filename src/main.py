@@ -7,16 +7,16 @@ from utils import parse_xml_case, get_xml_files, ensure_output_dirs
 from evaluation_pipeline import TriageEvaluator
 import json
 
+
 import sys
 sys.path.insert(0, "./site-packages")
 
 def main():
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Medical Triage Confidence Analysis')
-    parser.add_argument('--data-dir', default='LLMs_Practise/data/annotated_cases', 
-                       help='Directory containing XML case files')
-    parser.add_argument('--max-cases', type=int, default=10,
-                       help='Maximum number of cases to analyze')
+    parser.add_argument('--data-dir', default='../data/annotated_cases',help='Directory containing XML case files')
+    print(f"Data directory: {parser.parse_args().data_dir}")
+    parser.add_argument('--max-cases', type=int, default=10, help='Maximum number of cases to analyze')
     args = parser.parse_args()
     
     # Create output directories
@@ -25,12 +25,12 @@ def main():
     # Initialize systems
     triage_system = TriageSystem()
     # analyzer = ConfidenceAnalyzer(triage_system)
-    analyzer = ExtendedConfidenceAnalyzer(triage_system, output_dir)
+    analyzer = ExtendedConfidenceAnalyzer(triage_system, output_dir="output/visualizations")
     evaluator = TriageEvaluator(triage_system)
     
 
     data_dir = Path(args.data_dir)
-    print(f"Looking for files in: {data_dir.absolute()}")
+    print(f"Looking for files in: {data_dir.absolute()}") 
     all_files = list(data_dir.glob('*'))
     print(f"All files in directory: {[f.name for f in all_files]}")
     
@@ -71,8 +71,15 @@ def main():
             "MedicalCases"    # Dataset name
         )
 
+      # Generate plot for the incremental analysis part of the results
+        if "incremental" in conf_result and "progression" in conf_result["incremental"]:
+            plot_path = analyzer.plot_confidence_progression(case_id, conf_result["incremental"])
+            print(f"Confidence progression plot saved to {plot_path}")
+        else:
+            print(f"Warning: Could not generate confidence progression plot for case {case_id}")
+        
         # Generate plot
-        plot_path = analyzer.plot_confidence_progression(case_id, conf_result)
+        # plot_path = analyzer.plot_confidence_progression(case_id, conf_result)
         
         # Save results
         with open(f"output/reports/{case_id}_detailed.json", 'w') as f:

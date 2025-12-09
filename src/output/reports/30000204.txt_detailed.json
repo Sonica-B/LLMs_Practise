@@ -1,0 +1,186 @@
+{
+  "case_id": "30000204.txt",
+  "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
+  "predicted": {
+    "esi_level": 2,
+    "confidence": 0.95,
+    "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient is expressing significant emotional distress, has thoughts of self-harm, and is struggling with sleep and appetite changes following a recent assault. While they are currently in a safe environment, their mental health condition appears to be severe and requires immediate attention from multiple resources.\n  4. Handoff to human provider: Yes",
+    "risk_factors": [
+      "Ambulance arrival"
+    ],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 4,
+  "correct": false,
+  "arrival_method": "AMBULANCE",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Unknown",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Unknown",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Optionl",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Optionl",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Optionl",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Optionl",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Optionl",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        }
+      ],
+      "ground_truth": 4
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 4,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 4\n   Confidence: 95%\n   Brief explanation: The patient is presenting with significant emotional distress, feelings of hopelessness and ongoing psychological trauma related to an assault. This could potentially lead to self-harm or suicide ideation. Therefore, the ESI level is appropriately assigned as a 4 (Immediate or High Acuity - Life Threatening). A timely psychiatric evaluation and intervention is needed due to the patient's emotional state and history of trauma.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 4\n   Confidence: 95%\n   Brief explanation: The patient is presenting with significant emotional distress, feelings of hopelessness and ongoing psychological trauma related to an assault. This could potentially lead to self-harm or suicide ideation. Therefore, the ESI level is appropriately assigned as a 4 (Immediate or High Acuity - Life Threatening). A timely psychiatric evaluation and intervention is needed due to the patient's emotional state and history of trauma.",
+          " ESI Level: 4\n   Confidence: 90%\n   Brief explanation: The patient is expressing severe emotional distress and suicidal ideation due to the ongoing effects of an assault. This suggests a significant psychological crisis that requires immediate attention, as indicated by ESI level 4. The patient's inability to find relief from their pain further supports this assessment.",
+          " ESI Level: 4\n   Confidence: 90%\n   Brief explanation: The patient is expressing significant emotional distress, including feelings of overwhelming emotional pain and hopelessness. This level of mental distress is indicative of a higher acuity level, as it may be impacting the patient's ability to function or pose a danger to themselves or others. The mention of an assault suggests potential physical harm that requires further evaluation. However, without more specific information about the immediacy of the situation and the risk for suicide or violence, I cannot provide a full confidence rating of 100%.",
+          " ESI Level: 4\n   Confidence: 95%\n   Brief explanation: The patient presents with a high level of emotional distress due to the aftermath of an assault. This level of emotional pain and hopelessness, as well as the mention of a prolonged period (since the assault) of these feelings, suggests a significant psychological impact requiring urgent attention. However, there is no immediate threat to physical safety, which would elevate the ESI to a 5. The patient does not appear to be actively suicidal or homicidal at this time.",
+          " ESI Level: 4\n   Confidence: 95%\n   Brief explanation: The patient is experiencing severe emotional distress and expresses hopelessness, which suggests a significant mental health issue. The mention of an assault suggests a potential physical trauma as well. These symptoms require immediate attention from a mental health professional and potentially medical treatment if physical injuries are present. This situation could escalate rapidly if not addressed promptly, making it a level 4 emergency."
+        ],
+        "parsed_data": [
+          [
+            4,
+            95
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            4,
+            95
+          ],
+          [
+            4,
+            95
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 2\n   Confidence: 90%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient's vital signs are not indicated in the information provided, but there is no immediate threat of death due to emotional distress alone.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing overwhelming emotional pain and hopelessness, which can be severe and require urgent attention. The patient also mentions feelings of being crushed by a heavy weight and darkness, indicating significant distress.\n\n3. How many resources will this patient need? (For ESI 3-5) - While the number of resources needed may vary depending on the specific interventions required, it is likely that this patient will require at least moderate resources for psychological support and possibly medication management. This suggests an ESI level of 2 or 3.\n\n4. Are vital signs concerning? (Can affect ESI level) - Not specified in the information provided. However, given the emotional distress described, there is no immediate concern about life-threatening changes in vital signs.\n\nConsidering all factors, an appropriate ESI level for this patient would be 2, indicating a high acuity patient who requires expedited care but not necessarily immediate life support.",
+        "needs_handoff": true,
+        "responses": [
+          " ESI Level: 2\n   Confidence: 90%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient's vital signs are not indicated in the information provided, but there is no immediate threat of death due to emotional distress alone.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing overwhelming emotional pain and hopelessness, which can be severe and require urgent attention. The patient also mentions feelings of being crushed by a heavy weight and darkness, indicating significant distress.\n\n3. How many resources will this patient need? (For ESI 3-5) - While the number of resources needed may vary depending on the specific interventions required, it is likely that this patient will require at least moderate resources for psychological support and possibly medication management. This suggests an ESI level of 2 or 3.\n\n4. Are vital signs concerning? (Can affect ESI level) - Not specified in the information provided. However, given the emotional distress described, there is no immediate concern about life-threatening changes in vital signs.\n\nConsidering all factors, an appropriate ESI level for this patient would be 2, indicating a high acuity patient who requires expedited care but not necessarily immediate life support.",
+          " ESI Level: 2\n   Confidence: 90%\n\n   Step-by-step reasoning:\n   1. The patient is not dying or about to die as stated in the chief complaint. (ESI 1 does not apply)\n   2. The patient's emotional distress and hopelessness can be considered high risk, especially considering the mention of feelings of being crushed and following the assault. Additionally, this level of emotional pain may also cause significant distress. (ESI 2 applies)\n   3. While the number of resources required for this patient is not explicitly stated, mental health counseling services will likely be necessary. This would suggest an ESI 3 or higher, but given the lack of physical symptoms or immediate risk, we can assume that it may be manageable with appropriate staffing. (ESI 2 still applies)\n   4. There are no vital signs mentioned in this case to suggest concern. However, emotional distress can sometimes manifest physically, so a thorough evaluation should be performed to ensure there are no accompanying physical symptoms requiring immediate attention. (No additional ESI level change is necessary at this time)",
+          " ESI Level: 2\n   Confidence: 95%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - The patient's complaint does not suggest imminent death, nor is there any indication of life-threatening injuries or conditions in the provided information.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient expresses feelings of emotional pain and hopelessness, which could indicate a mental health crisis. Additionally, the patient's description suggests significant distress, and it is important to prioritize addressing their emotional state as soon as possible.\n3. How many resources will this patient need? (For ESI 3-5) - While the patient may require mental health support, they do not appear to have critical physical needs that would demand extensive resources at an emergency department level.\n4. Are vital signs concerning? (Can affect ESI level) - The provided information does not include any vital sign data. However, considering the emotional state described, it is crucial to monitor and stabilize the patient's condition if they are brought into the emergency department.",
+          " ESI Level: 2\n   Confidence: 90%\n\nStep-by-step reasoning:\n1. The patient is not currently dying or about to die. (ESI 1)\n2. This patient presents with a high level of emotional distress and pain, which qualifies as severe pain/distress. (ESI 2)\n3. Although the specific resources needed are not explicitly mentioned in this information, it can be assumed that mental health services will be required, making the case for an ESI level of at least 3. However, given the acute nature of the emotional crisis and need for immediate attention, a higher ESI level (2) is more appropriate as it indicates a higher priority for the patient's needs.\n4. There are no vital signs provided in this information to suggest they are concerning or abnormal. (ESI 3-5)",
+          " ESI Level: 2\n   Confidence: 85%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is experiencing emotional distress but does not appear to be in immediate danger of death.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient describes intense emotional pain and hopelessness that could pose a risk to their mental health if left untreated. They also mention feelings of being crushed by a heavy weight, which may indicate severe distress.\n\n3. How many resources will this patient need? (For ESI 3-5) - While the exact resources needed cannot be determined without further evaluation, it is likely that the patient will require mental health support and possibly medication management. This may involve one or more healthcare providers, depending on the specifics of their case.\n\n4. Are vital signs concerning? (Can affect ESI level) - No, the information provided does not indicate any concerning vital sign abnormalities. However, it is important to note that emotional distress can manifest in various physical symptoms, so a thorough assessment should be conducted to rule out any potential physiological issues.\n\nIn conclusion, given the patient's description of severe emotional pain and distress, along with the need for mental health support and potentially multiple healthcare providers, I have assigned an ESI level of 2. However, it is essential to consider that emotional distress can also present with physical symptoms, so a thorough evaluation should be conducted to ensure proper care and treatment."
+        ],
+        "parsed_data": [
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 4,
+    "case_id": "30000204.txt"
+  }
+}

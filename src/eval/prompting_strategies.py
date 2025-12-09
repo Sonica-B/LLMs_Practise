@@ -109,7 +109,7 @@ G3: [ESI level] P3: [probability]%
 
 Brief reasoning for your top assessment: [concise explanation]
 """
-        return prompt[:k]
+        return prompt
     
     @staticmethod
     def parse_response(response, prompt_type="vanilla"):

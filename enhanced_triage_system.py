@@ -3,7 +3,6 @@ from langchain.prompts.prompt import PromptTemplate
 from langchain.chains import LLMChain
 import re
 import json
-# Import original triage system
 from LLMs_Practise.LLMs_Practise.TriageSystem import MedicalTriageSystem
 
 
@@ -34,72 +33,120 @@ class EnhancedMedicalTriageSystem(MedicalTriageSystem):
 
     def determine_esi_level(self, case_data):
         """Enhanced ESI level determination with detailed handoff analysis"""
+        # Get base ESI result from parent method
         result = super().determine_esi_level(case_data)
 
-        # Add detailed handoff analysis
-        result['handoff_analysis'] = self.analyze_handoff_requirements(result, case_data)
+        # Replace simple handoff logic with enhanced decision system
+        handoff_analysis = self.determine_handoff_requirement(result, case_data)
+        result['handoff_analysis'] = handoff_analysis
+
+        # Update the needs_handoff flag based on the detailed analysis
+        result['needs_handoff'] = handoff_analysis['required']
 
         # Add possible diagnoses
         result['possible_diagnoses'] = self.predict_possible_diagnoses(case_data, result)
 
         return result
 
-    def analyze_handoff_requirements(self, esi_result, case_data):
-        """Analyze and explain handoff requirements in detail"""
-        if not esi_result['needs_handoff']:
-            return {"required": False, "reasons": ["Patient stable and within AI system capabilities"]}
+    def determine_handoff_requirement(self, esi_result, case_data):
+        """
+        Determine if a handoff to a human provider is required based on multiple factors
+        """
+        # Extract key decision factors
+        esi_level = esi_result['esi_level']
+        confidence = esi_result['confidence']
+        risk_factors = esi_result.get('risk_factors', [])
+        risk_score = esi_result.get('risk_score', 0)
 
-        prompt = PromptTemplate(
-            template="""Based on the following patient information, explain WHY a handoff to a human medical provider is required:
+        # 1. Critical cases always require handoff (ESI 1-2)
+        if esi_level <= 2:
+            return {
+                "required": True,
+                "primary_reason": f"High acuity case (ESI level {esi_level})",
+                "confidence_score": 0.95,
+                "reasons": [
+                    {"category": "Critical physiological instability",
+                     "explanation": "ESI levels 1-2 indicate potentially life-threatening conditions requiring immediate physician evaluation"}
+                ]
+            }
 
-            Chief Complaint: {chief_complaint}
-            Summary: {summary}
-            Risk Factors: {risk_factors}
-            ESI Level: {esi_level}
+        # 2. Check for critical risk factors that would necessitate handoff
+        critical_keywords = ["altered mental status", "chest pain", "shortness of breath",
+                             "severe pain", "confusion", "encephalopathy"]
+        critical_risks = [factor for factor in risk_factors
+                          if any(keyword in factor.lower() for keyword in critical_keywords)]
 
-            For each applicable reason below, provide a brief explanation of how it applies to this case:
-            1. Critical physiological instability
-            2. Complex medical history requiring expert interpretation
-            3. Diagnostic uncertainty with high risk
-            4. Resource limitations for critical care
-            5. Patient deterioration risk
-            6. Special population considerations (pediatric, geriatric, pregnant)
-            7. Protocol-mandated physician assessment
+        if critical_risks and esi_level == 3:
+            return {
+                "required": True,
+                "primary_reason": "Critical risk factors present",
+                "confidence_score": 0.90,
+                "reasons": [
+                    {"category": "Patient deterioration risk",
+                     "explanation": f"Critical symptoms detected: {', '.join(critical_risks)}"}
+                ]
+            }
 
-            Format your response as a structured JSON with "primary_reason" and "reasons" as an array of objects with "category" and "explanation" fields.
-            """,
-            input_variables=["chief_complaint", "summary", "risk_factors", "esi_level"]
-        )
-
-        chain = LLMChain(llm=self.llm, prompt=prompt)
-        response = chain.run(
-            chief_complaint=case_data['chief_complaint'],
-            summary=case_data['summary'][:400],
-            risk_factors="\n".join(esi_result['risk_factors']),
-            esi_level=esi_result['esi_level']
-        )
-
-        try:
-            # Extract JSON from response
-            json_str = re.search(r'({.*})', response.replace('\n', ' '), re.DOTALL)
-            if json_str:
-                handoff_data = json.loads(json_str.group(1))
-                return {
-                    "required": True,
-                    "primary_reason": handoff_data.get("primary_reason", "High risk situation"),
-                    "reasons": handoff_data.get("reasons", [{"category": "High risk situation",
-                                                             "explanation": "ESI level and risk factors indicate handoff is required"}])
-                }
-        except:
-            pass
-
-        # Fallback if JSON parsing fails
-        return {
-            "required": True,
-            "primary_reason": "High risk patient (ESI level " + str(esi_result['esi_level']) + ")",
-            "reasons": [{"category": c, "explanation": "May apply based on risk factors"} for c in
-                        self.HANDOFF_CATEGORIES[:3]]
+        # 3. Confidence-based decision making with escalating thresholds by ESI level
+        confidence_thresholds = {
+            3: 0.70,  # ESI 3 requires higher confidence to avoid handoff
+            4: 0.65,  # ESI 4 can be handled with moderate confidence
+            5: 0.60  # ESI 5 can be handled with lower confidence
         }
+
+        if confidence < confidence_thresholds.get(esi_level, 0.75):
+            return {
+                "required": True,
+                "primary_reason": "Low confidence in AI assessment",
+                "confidence_score": 0.80,
+                "reasons": [
+                    {"category": "Diagnostic uncertainty with high risk",
+                     "explanation": f"AI confidence ({confidence:.2f}) below acceptable threshold for ESI {esi_level}"}
+                ]
+            }
+
+        # 4. Special case handling - arrival method
+        arrival_method = case_data.get('visit_info', {}).get('Arrival Transport', '').upper()
+        if arrival_method == 'AMBULANCE' and esi_level <= 3:
+            return {
+                "required": True,
+                "primary_reason": "Protocol-mandated assessment for ambulance arrivals",
+                "confidence_score": 0.85,
+                "reasons": [
+                    {"category": "Protocol-mandated physician assessment",
+                     "explanation": "Ambulance arrival with ESI ≤ 3 requires physician evaluation per protocol"}
+                ]
+            }
+
+        # 5. Lower ESI level (4-5) with good confidence and no critical factors - no handoff required
+        if esi_level >= 4 and confidence >= 0.75 and not critical_risks:
+            return {
+                "required": False,
+                "primary_reason": "Stable non-urgent case within AI capabilities",
+                "confidence_score": 0.85,
+                "reasons": [
+                    "Low acuity case (ESI 4-5) with high AI confidence",
+                    "No critical risk factors identified",
+                    "Case suitable for algorithmic management with standard protocols"
+                ]
+            }
+
+        # Default conservative approach for edge cases
+        return {
+            "required": esi_level <= 3,
+            "primary_reason": f"ESI level {esi_level} case with standard protocols",
+            "confidence_score": 0.75,
+            "reasons": [
+                {"category": "Standard protocol application",
+                 "explanation": f"Following standard handoff guidelines for ESI level {esi_level} cases"}
+            ]
+        }
+
+    def analyze_handoff_requirements(self, esi_result, case_data):
+        """Analyze and explain handoff requirements in detail - deprecated, use determine_handoff_requirement instead"""
+        # This method is kept for backward compatibility
+        handoff_analysis = self.determine_handoff_requirement(esi_result, case_data)
+        return handoff_analysis
 
     def predict_possible_diagnoses(self, case_data, esi_result):
         """Predict possible diagnoses based on symptoms and risk factors"""
@@ -195,10 +242,21 @@ class EnhancedMedicalTriageSystem(MedicalTriageSystem):
                 "consults": []
             }
 
+        # Get handoff requirement information
+        handoff_required = esi_result['needs_handoff']
+        handoff_analysis = esi_result.get('handoff_analysis', {})
+
         # Combine with base recommendations
-        return {
+        recommendations = {
             **base_recs,
             "structured_recommendations": structured_recs,
-            "handoff_required": esi_result['needs_handoff'],
-            "handoff_analysis": esi_result.get('handoff_analysis', {})
+            "handoff_required": handoff_required,
+            "handoff_analysis": handoff_analysis
         }
+
+        # Adjust wait time based on handoff decision for a more nuanced approach
+        if handoff_required and recommendations['estimated_wait_time'] > 0.5:
+            # Reduce wait time for handoff cases to ensure they're seen sooner
+            recommendations['estimated_wait_time'] *= 0.8
+
+        return recommendations

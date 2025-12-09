@@ -1,18 +1,43 @@
-from langchain_ollama import OllamaLLM
-from langchain.prompts.prompt import PromptTemplate
-from langchain.chains import LLMChain
 import re
+import json
+import requests
 
 class TriageSystem:
-    def __init__(self):
-        # Initialize LLM
-        self.llm = OllamaLLM(model="mistral")
+    def __init__(self, api_base="http://localhost:11434"):
+        # Ollama API base URL
+        self.api_base = api_base
         
         # Define risk conditions
         self.HIGH_RISK_CONDITIONS = [
             "chest pain", "shortness of breath", "confusion",
             "altered mental status", "severe pain"
         ]
+    
+    def run(self, prompt, temperature=0.7):
+        """Run the LLM with the given prompt"""
+        url = f"{self.api_base}/api/generate"
+        payload = {
+            "model": "mistral",
+            "prompt": prompt,
+            "temperature": temperature
+        }
+        
+        response = requests.post(url, json=payload)
+        
+        if response.status_code == 200:
+            # Parse streaming response
+            full_text = ""
+            for line in response.text.splitlines():
+                if not line:
+                    continue
+                try:
+                    data = json.loads(line)
+                    full_text += data.get("response", "")
+                except:
+                    pass
+            return full_text
+        else:
+            return f"Error: {response.status_code} - {response.text}"
     
     def parse_medical_case(self, case_text):
         """Parse medical case from raw text"""
@@ -62,16 +87,15 @@ class TriageSystem:
         # Analyze risk factors
         risk_factors = self.identify_risk_factors(case_data)
         
-        # Prepare context for LLM
-        prompt = PromptTemplate(
-            template="""Determine the appropriate Emergency Severity Index (ESI) level (1-5) for this patient:
+        # Prepare prompt for LLM
+        prompt = f"""Determine the appropriate Emergency Severity Index (ESI) level (1-5) for this patient:
 
-            Chief Complaint: {chief_complaint}
-            Summary: {summary}
-            Risk Factors: {risk_factors}
+            Chief Complaint: {case_data['chief_complaint']}
+            Summary: {case_data['summary'][:500]}
+            Risk Factors: {"\n".join(risk_factors)}
             
             Q&A Information:
-            {qa_info}
+            {"\n".join([f"Q: {qa['question']}\nA: {qa['answer']}" for qa in case_data.get('qa_pairs', [])])}
 
             Guidelines:
             ESI 1: Immediate life-saving intervention required
@@ -84,22 +108,10 @@ class TriageSystem:
             1. ESI level (1-5)
             2. Confidence level (0.0-1.0)
             3. Brief explanation
-            4. Whether a handoff to human provider is needed (yes/no)""",
-            input_variables=["chief_complaint", "summary", "risk_factors", "qa_info"]
-        )
-        
-        # Format QA pairs
-        qa_info = "\n".join([f"Q: {qa['question']}\nA: {qa['answer']}" 
-                            for qa in case_data.get('qa_pairs', [])])
+            4. Whether a handoff to human provider is needed (yes/no)"""
         
         # Get LLM prediction
-        chain = LLMChain(llm=self.llm, prompt=prompt)
-        response = chain.run(
-            chief_complaint=case_data['chief_complaint'],
-            summary=case_data['summary'][:500],
-            risk_factors="\n".join(risk_factors),
-            qa_info=qa_info
-        )
+        response = self.run(prompt)
         
         # Extract ESI level first - fix for the error
         esi_match = re.search(r'ESI level.*?(\d)', response, re.IGNORECASE)

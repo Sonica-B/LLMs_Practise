@@ -100,17 +100,7 @@ class TriageEvaluationSystem:
             }
 
         # Handoff analysis
-        handoff_cases = [c for c in cases if c['predicted']['needs_handoff']]
-        if handoff_cases:
-            primary_reasons = {}
-            for case in handoff_cases:
-                reason = case['predicted']['handoff_analysis'].get('primary_reason', 'Unspecified')
-                primary_reasons[reason] = primary_reasons.get(reason, 0) + 1
-
-            metrics['handoff_analysis'] = {
-                'total_handoffs': len(handoff_cases),
-                'primary_reasons': {reason: count / len(handoff_cases) for reason, count in primary_reasons.items()}
-            }
+        metrics['handoff_analysis'] = self.analyze_handoff_decisions()
 
         # By arrival method
         arrival_methods = set(c['actual']['arrival_method'] for c in cases)
@@ -145,6 +135,45 @@ class TriageEvaluationSystem:
         self.evaluation_results['metrics'] = metrics
         return metrics
 
+    def analyze_handoff_decisions(self):
+        """Analyze the distribution and effectiveness of handoff decisions"""
+        cases = self.evaluation_results['cases']
+
+        # Skip if no cases
+        if not cases:
+            return {"error": "No cases to analyze"}
+
+        # Calculate handoff rate by ESI level
+        handoff_by_esi = {}
+        for level in range(1, 6):
+            level_cases = [c for c in cases if c['predicted']['esi_level'] == level]
+            if level_cases:
+                handoff_rate = sum(1 for c in level_cases if c['predicted']['needs_handoff']) / len(level_cases)
+                handoff_by_esi[str(level)] = {
+                    'count': len(level_cases),
+                    'handoff_rate': round(handoff_rate, 2),
+                    'avg_confidence': round(sum(c['predicted']['confidence'] for c in level_cases) / len(level_cases),
+                                            2)
+                }
+
+        # Calculate handoff reasons distribution
+        reasons = {}
+        handoff_cases = [c for c in cases if c['predicted']['needs_handoff']]
+        for case in handoff_cases:
+            reason = case['predicted']['handoff_analysis'].get('primary_reason', 'Unspecified')
+            reasons[reason] = reasons.get(reason, 0) + 1
+
+        reason_distribution = {reason: round(count / max(1, len(handoff_cases)), 2)
+                               for reason, count in reasons.items()}
+
+        return {
+            'total_cases': len(cases),
+            'total_handoffs': len(handoff_cases),
+            'overall_handoff_rate': round(len(handoff_cases) / len(cases), 2) if cases else 0,
+            'handoff_by_esi': handoff_by_esi,
+            'reason_distribution': reason_distribution
+        }
+
     def print_evaluation_summary(self, case_result=None):
         """Print evaluation summary for a case or overall metrics"""
         if case_result:
@@ -162,11 +191,15 @@ class TriageEvaluationSystem:
                 print(
                     f"Primary Reason: {case_result['predicted']['handoff_analysis'].get('primary_reason', 'Unspecified')}")
                 print("\nHandoff Reasons:")
-                for reason in case_result['predicted']['handoff_analysis'].get('reasons', []):
-                    if isinstance(reason, dict):
-                        print(f"- {reason.get('category', '')}: {reason.get('explanation', '')}")
-                    else:
-                        print(f"- {reason}")
+                reasons = case_result['predicted']['handoff_analysis'].get('reasons', [])
+                if reasons:
+                    for reason in reasons:
+                        if isinstance(reason, dict):
+                            print(f"- {reason.get('category', '')}: {reason.get('explanation', '')}")
+                        else:
+                            print(f"- {reason}")
+            else:
+                print("Case can be handled autonomously by AI system")
 
             print("\nTop Possible Diagnoses:")
             for diag in case_result['predicted']['possible_diagnoses'][:3]:
@@ -178,12 +211,15 @@ class TriageEvaluationSystem:
 
             print("\nRecommended Tests:")
             for lab in case_result['recommendations'].get('structured_recommendations', {}).get('labs', [])[:3]:
-                print(f"- {lab.get('name', '')}: {lab.get('rationale', '')}")
+                if isinstance(lab, dict):
+                    print(f"- {lab.get('name', '')}: {lab.get('rationale', '')}")
+                else:
+                    print(f"- {lab}")
 
             print(f"\nEstimated Wait Time: {case_result['recommendations']['wait_time']} hours")
         else:
             # Print overall metrics if available
-            if self.evaluation_results['metrics']:
+            if self.evaluation_results.get('metrics'):
                 metrics = self.evaluation_results['metrics']
                 print("\n===== Overall Evaluation Metrics =====")
                 print(f"Total Cases: {metrics['overall']['total_cases']}")
@@ -199,18 +235,25 @@ class TriageEvaluationSystem:
                     print(f"Accuracy within one level: {metrics['accuracy']['within_one_level'] * 100:.1f}%")
 
                 if 'handoff_analysis' in metrics:
+                    handoff = metrics['handoff_analysis']
+                    print(f"\nOverall Handoff Rate: {handoff['overall_handoff_rate'] * 100:.1f}%")
+
+                    print("\nHandoff Rate by ESI Level:")
+                    for level, data in handoff['handoff_by_esi'].items():
+                        print(f"ESI {level}: {data['handoff_rate'] * 100:.1f}% of {data['count']} cases")
+
                     print("\nTop Handoff Reasons:")
-                    for reason, percent in sorted(metrics['handoff_analysis']['primary_reasons'].items(),
+                    for reason, percent in sorted(handoff['reason_distribution'].items(),
                                                   key=lambda x: x[1], reverse=True)[:3]:
                         print(f"- {reason}: {percent * 100:.1f}%")
 
                 print("\nMost Common Risk Factors:")
-                for factor, percent in metrics['common_risk_factors'].items():
+                for factor, percent in list(metrics['common_risk_factors'].items())[:5]:
                     print(f"- {factor}: {percent * 100:.1f}%")
 
     def generate_detailed_report(self, output_path="triage_evaluation_report.json"):
         """Generate and save detailed evaluation report"""
-        if not self.evaluation_results['metrics']:
+        if not self.evaluation_results.get('metrics'):
             self.generate_metrics()
 
         with open(output_path, 'w') as f:

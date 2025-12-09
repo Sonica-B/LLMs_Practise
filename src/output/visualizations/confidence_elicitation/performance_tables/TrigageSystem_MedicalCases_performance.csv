@@ -1,0 +1,16 @@
+Metric,Strategy,MedicalCases
+accuracy,vanilla_self_random_consistency,0.5
+accuracy,cot_self_random_consistency,0.5
+accuracy,top_k_self_random_pair_rank,0.5
+ece,vanilla_self_random_consistency,0.23333333333333342
+ece,cot_self_random_consistency,0.033333333333333326
+ece,top_k_self_random_pair_rank,0.5
+auroc,vanilla_self_random_consistency,0.5555555555555556
+auroc,cot_self_random_consistency,0.5555555555555556
+auroc,top_k_self_random_pair_rank,0.3333333333333333
+auprc_pos,vanilla_self_random_consistency,0.5
+auprc_pos,cot_self_random_consistency,0.5
+auprc_pos,top_k_self_random_pair_rank,0.5
+auprc_neg,vanilla_self_random_consistency,0.5
+auprc_neg,cot_self_random_consistency,0.5
+auprc_neg,top_k_self_random_pair_rank,0.5

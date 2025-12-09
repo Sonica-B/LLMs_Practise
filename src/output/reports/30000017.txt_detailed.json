@@ -1,0 +1,184 @@
+{
+  "case_id": "30000017.txt",
+  "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
+  "predicted": {
+    "esi_level": 2,
+    "confidence": 0.95,
+    "explanation": "1. ESI level: 2\n   2. Confidence level: 0.95\n   3. Brief explanation: The patient presents with symptoms of vertigo, disorientation, nausea, visual disturbances, and leg instability after drinking alcohol, which may indicate acute vestibular syndrome or intoxication-related imbalance. Although the patient denies any recent head injury or trauma, and there is no evidence of neurological deficit or hearing loss, their need for immediate support to avoid falling suggests a moderate level of risk.\n   4. Whether a handoff to human provider is needed: yes",
+    "risk_factors": [],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 3,
+  "correct": false,
+  "arrival_method": "WALK IN",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Optionl",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        }
+      ],
+      "ground_truth": 3
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing significant symptoms of neurological disturbance (disorientation, unsteadiness, and inability to walk) which may indicate a serious condition like stroke or inner ear problem. Given these symptoms, the ESI level is appropriate for a semi-urgent case that requires assessment within 15 minutes but not an immediate emergency. However, the exact severity can only be determined after thorough examination by a healthcare professional.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing significant symptoms of neurological disturbance (disorientation, unsteadiness, and inability to walk) which may indicate a serious condition like stroke or inner ear problem. Given these symptoms, the ESI level is appropriate for a semi-urgent case that requires assessment within 15 minutes but not an immediate emergency. However, the exact severity can only be determined after thorough examination by a healthcare professional.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient is experiencing significant symptoms such as severe disorientation, unsteadiness, and inability to walk, which suggest a potential neurological or vestibular issue. These symptoms can indicate a serious condition requiring prompt attention, but the lack of known allergies, current medications, or chronic illnesses makes it less urgent than an ESI level 1 or 2 case. The patient's vital signs and further evaluation will help determine the exact level of emergency care needed.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient's symptoms suggest an altered mental status and ataxia, which could indicate a neurological issue such as a stroke or intoxication. While the specific etiology is not immediately clear, these symptoms are concerning enough to warrant expedited care. Level 3 ESI indicates \"Severe illness or injury requiring urgent attention; may require immediate intervention or treatment within 15 minutes of arrival.\"",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient is experiencing severe neurological symptoms (disorientation, unsteadiness, difficulty walking) which may indicate a serious condition such as a stroke or inner ear problem. The inability to walk is particularly concerning and requires urgent evaluation and treatment.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief Explanation: The patient is experiencing significant disorientation, unsteadiness, and difficulty walking, which could indicate a neurological issue or acute condition such as vertigo, concussion, or stroke. This requires urgent evaluation by a healthcare provider to rule out serious conditions and provide appropriate care. The ESI 3 level indicates an Emergency Department (ED) patient who will require monitoring, diagnostic tests, or treatment within 15 minutes of arrival to the ED."
+        ],
+        "parsed_data": [
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            95
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 2\n   Confidence: 90%\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient's condition is not immediately life-threatening.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient describes significant disorientation, unsteadiness, and inability to walk, which suggests a neurological issue that needs prompt attention and can cause distress.\n   3. How many resources will this patient need? (For ESI 3-5) - This patient likely requires immediate evaluation by a medical professional, possibly a neurologist or neurosurgeon, as well as potential imaging studies like CT or MRI scans. They may also require supportive care for symptoms such as nausea, vomiting, or intravenous fluids.\n   4. Are vital signs concerning? (Can affect ESI level) - Not specified in the given information. However, concerning vital signs could further elevate the urgency of this case. For instance, a low blood pressure or abnormal heart rate might indicate a more severe condition. But without that information, it is not possible to determine whether additional resources will be needed for this patient beyond ESI 2.",
+        "needs_handoff": true,
+        "responses": [
+          " ESI Level: 2\n   Confidence: 90%\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient's condition is not immediately life-threatening.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient describes significant disorientation, unsteadiness, and inability to walk, which suggests a neurological issue that needs prompt attention and can cause distress.\n   3. How many resources will this patient need? (For ESI 3-5) - This patient likely requires immediate evaluation by a medical professional, possibly a neurologist or neurosurgeon, as well as potential imaging studies like CT or MRI scans. They may also require supportive care for symptoms such as nausea, vomiting, or intravenous fluids.\n   4. Are vital signs concerning? (Can affect ESI level) - Not specified in the given information. However, concerning vital signs could further elevate the urgency of this case. For instance, a low blood pressure or abnormal heart rate might indicate a more severe condition. But without that information, it is not possible to determine whether additional resources will be needed for this patient beyond ESI 2.",
+          " ESI Level: 2\n   Confidence: 95%\n\n   Step-by-step reasoning:\n   1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and inability to walk without assistance, but there's no immediate indication that the patient is dying or about to die.\n   2. The patient presents with a high-risk situation due to the severity of symptoms, which could potentially be indicative of a neurological emergency or other serious medical conditions requiring prompt attention and intervention.\n   3. Although resources will likely be needed for proper evaluation and management, this does not seem to require an immediate large-scale allocation of resources compared to ESI 1 or 4.\n   4. No vital signs are provided in the given information; however, if the patient's blood pressure, heart rate, respiratory rate, or oxygen saturation levels were extremely abnormal, it could affect the ESI level upwards. As is, the given information does not indicate concerning vital signs.",
+          " ESI Level: 2\n   Confidence: 95%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - The patient's symptoms, such as disorientation and unsteadiness, do not indicate an immediate life-threatening condition (e.g., heart attack, stroke, severe trauma). However, it is essential to assess the patient promptly due to the potential for underlying serious conditions.\n\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient's complaint of extreme disorientation and unsteadiness suggests that they may be experiencing a neurological emergency, such as a brain bleed, which can be life-altering if not promptly treated. Additionally, the inability to walk or maintain balance could indicate severe inner ear problems, which can also require immediate attention due to the risk of falls and injuries.\n\n   3. How many resources will this patient need? (For ESI 3-5) - Given the potential for neurological emergencies and the need for a specialized examination (e.g., CT scan), this patient will likely require more resources than a lower ESI level patient. However, since it does not appear that the patient's condition is immediately life-threatening, they can be triaged to a less urgent area within the emergency department until further assessment and tests are completed.\n\n   4. Are vital signs concerning? - Vital sign information was not provided in the given patient history; however, assessing the patient's vital signs (blood pressure, heart rate, respiratory rate, oxygen saturation) will help determine if they require immediate intervention or can be managed in a less urgent setting. For example, low blood pressure, fast heart rate, or abnormal breathing patterns could indicate a more serious underlying condition and require prompt attention.\n\nIn summary, this patient presents with symptoms suggesting a possible neurological emergency and requires further assessment and potential imaging studies; thus, they should be triaged as an ESI level 2 patient. A thorough evaluation of the patient's vital signs is necessary to determine if any immediate interventions are required.",
+          " ESI Level: 2\n   Confidence: 90%\n\nStep-by-step reasoning:\n1. The patient is not dying or about to die, as there are no indications of life-threatening conditions such as cardiac arrest, severe hemorrhage, or respiratory distress.\n\n2. This situation seems to be a high-risk one due to the patient's symptoms of extreme disorientation, unsteadiness, spinning sensation, and difficulty walking. These could indicate serious neurological issues or inner ear problems that require urgent attention. The patient also experiences significant distress due to their symptoms.\n\n3. While it is not clear how many resources this patient will need, they likely require immediate evaluation by a medical professional, possibly imaging studies such as an MRI or CT scan, and potentially hospitalization for further monitoring and treatment.\n\n4. Vital signs are concerning as the patient's ability to walk is impaired, which might indicate low blood pressure or other abnormalities that warrant urgent attention. However, without specific data on vital signs, it is not possible to definitively classify them as very concerning. Nevertheless, the presence of significant symptoms and potential need for hospitalization suggest an ESI level of 2.",
+          " ESI Level: 2\n   Confidence: 95%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - The patient's symptoms do not seem immediately life-threatening, such as those associated with cardiac arrest, severe bleeding, or anaphylactic shock. Thus, ESI 1 does not apply here.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient is experiencing significant disorientation, unsteadiness, and difficulty walking, which suggests a potential neurological issue. This could be a high-risk situation as it may affect the patient's ability to maintain their own safety and airway.\n\n3. How many resources will this patient need? (For ESI 3-5) - Given the symptoms described, initial assessment, stabilization, and potential imaging studies such as CT scan might be needed. However, these requirements do not seem to exceed those typically required for an ESI level 2 patient.\n\n4. Are vital signs concerning? (Can affect ESI level) - Vital signs are not provided in the given information. If the patient's blood pressure, heart rate, respiratory rate, or oxygen saturation levels were significantly abnormal, it might affect the ESI level. But since these values are not provided, an assumption cannot be made about their impact on the ESI level.\n\nIn the absence of more detailed information, such as vital signs and results from any necessary diagnostic tests, I would categorize this patient's ESI level as a 2, which indicates a moderate acuity level requiring expedited assessment and care."
+        ],
+        "parsed_data": [
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            95
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 3,
+    "case_id": "30000017.txt"
+  }
+}

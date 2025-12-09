@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged white female, presented to the emergency department with complaints of low back pain (ICD Code: M545) rated at a pain level of 7. Vital signs on arrival included a temperature of 98.9°F, heart rate of 78 bpm, respiratory rate of 19 breaths per minute, oxygen saturation of 100%, and blood pressure of 155/56 mmHg. The acuity level was rated at 3.0. No laboratory tests were performed during this visit. After evaluation and symptom management, the patient was discharged home with instructions to follow up with her primary care provider if symptoms persist or worsen.
+
+============== Medical History ==============
+The patient’s medical history includes visits for acute pharyngitis (ICD Code: J029) in 2114, where she reported a sore throat with a pain level of 6, and for a blister on the right foot (ICD Code: S90821A) in the same year, with associated right ankle pain. Additionally, she reported lower abdominal pain (ICD Code: 78909) in 2113, with a pain level of 4. These prior conditions appear unrelated to the current complaint of low back pain. However, her history highlights a pattern of musculoskeletal and soft tissue issues that may require further evaluation if recurrent pain persists. Follow-up care should focus on pain management and assessment for any underlying structural or chronic conditions contributing to her back pain.
+
+==================================== ER Visit Info ====================================
+ICD Code: M545
+Diagnosis: Low back pain
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I have a sharp, aching pain in my lower back that feels like it's been throbbing all day and is really hurting when I move.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: Can you point to the exact location of the pain in your lower back?
+ - Answer 1: It's right in the middle of my lower back, a bit to the left, I can point to it if you'd like.
+
+2.
+ - Question 2: How long have you been experiencing this sharp, aching pain?
+ - Answer 2: The pain started this morning, so it's been about 8 hours now.
+
+3.
+ - Question 3: Did the pain start suddenly or come on gradually?
+ - Answer 3: It came on gradually, I woke up with it, but it's gotten worse throughout the day.
+
+4.
+ - Question 4: Are there any specific movements or activities that make the pain worse?
+ - Answer 4: Yes, bending, lifting, or even just standing up straight makes it worse, it feels like it's pulling or straining something.
+
+5.
+ - Question 5: Have you had any recent injuries, falls, or accidents that might be related to the pain?
+ - Answer 5: No, I haven't had any recent injuries or accidents, just the usual daily activities.
+
+6.
+ - Question 6: Do you have a history of back problems, such as herniated discs or sciatica?
+ - Answer 6: I've had some lower back issues before, but nothing too serious, just occasional strains from lifting or overexertion.
+
+7.
+ - Question 7: Are you experiencing any numbness, tingling, or weakness in your legs or feet?
+ - Answer 7: No, I'm not experiencing any numbness, tingling, or weakness in my legs or feet, just the pain in my lower back.
+
+8.
+ - Question 8: Have you noticed any changes in your bowel or bladder habits, such as difficulty urinating or loss of control?
+ - Answer 8: No changes in my bowel or bladder habits, everything seems normal there.
+
+9.
+ - Question 9: Are you feeling feverish or experiencing any other symptoms like nausea or vomiting?
+ - Answer 9: I don't feel feverish, and I'm not experiencing nausea or vomiting, just the pain and discomfort in my back.
+
+10.
+ - Question 10: Have you tried any treatments or remedies so far, such as pain relievers, heat, or ice, and did they help?
+ - Answer 10: I took some ibuprofen earlier, but it didn't seem to help much, and I've been trying to rest and avoid making it worse, but so far, nothing's really helped alleviate the pain.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1714~1727" text="ESI Level: []" id="E0" ESI_LEVEL="4" comment=""/>
+<Lab_recommendation spans="1728~1750" text="Lab Recommendation: []" id="L0" comment=""/>
+<ER_recommendation spans="1751~1772" text="ER Recommendation: []" id="ER0" comment="pain control IV med, imaging study including x-ray or mri"/>
+<Recommended_waiting_time spans="1773~1807" text="Recommended Waiting Time: []/hours" id="R0" comment="4"/>
+<QA spans="2130~2212" text=" - Question 1: Can you point to the exact location of the pain in your lower back?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2325~2400" text=" - Question 2: How long have you been experiencing this sharp, aching pain?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2481~2545" text=" - Question 3: Did the pain start suddenly or come on gradually?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2646~2733" text=" - Question 4: Are there any specific movements or activities that make the pain worse?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="2875~2978" text=" - Question 5: Have you had any recent injuries, falls, or accidents that might be related to the pain?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3081~3172" text=" - Question 6: Do you have a history of back problems, such as herniated discs or sciatica?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3309~3402" text=" - Question 7: Are you experiencing any numbness, tingling, or weakness in your legs or feet?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3533~3658" text=" - Question 8: Have you noticed any changes in your bowel or bladder habits, such as difficulty urinating or loss of control?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3749~3848" text=" - Question 9: Are you feeling feverish or experiencing any other symptoms like nausea or vomiting?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="3976~4098" text=" - Question 10: Have you tried any treatments or remedies so far, such as pain relievers, heat, or ice, and did they help?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

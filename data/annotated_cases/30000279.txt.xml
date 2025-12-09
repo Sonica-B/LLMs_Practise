@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged Black/African American male, presented to the emergency department with a diagnosis of depressive disorder (ICD Code: 311). He arrived via ambulance and was evaluated for depressive symptoms. His vital signs were stable, including a temperature of 96.9°F, heart rate of 78 bpm, respiratory rate of 16/min, oxygen saturation of 98%, and blood pressure of 129/92 mmHg. The patient denied any physical pain or acute distress. Laboratory tests, including blood chemistry and hematology, were unremarkable, with normal electrolyte levels, urea nitrogen at 10 mg/dL, and anion gap at 13 mEq/L. Urinalysis showed no significant abnormalities, with white blood cell count within the normal range. The patient’s acuity level was rated at 2.0, indicating a non-critical condition. Following evaluation and stabilization, the patient was transferred for further psychiatric care and management.
+
+============== Medical History ==============
+The patient’s past medical history is not documented in the available records, but the primary diagnosis of depressive disorder suggests a chronic or recurrent mental health condition. No additional information regarding previous hospitalizations, psychiatric treatment, or coexisting medical conditions is provided. Comprehensive evaluation and follow-up in a psychiatric care setting are essential for managing his depressive disorder and addressing any underlying or contributing factors.
+
+==================================== ER Visit Info ====================================
+ICD Code: 311
+Diagnosis: DEPRESSIVE DISORDER
+Acuity: 2.0
+Arrival Transport: AMBULANCE
+Disposition: TRANSFER
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I feel overwhelmed by a deep sadness that's been weighing me down, making it hard to find interest or pleasure in things I normally enjoy.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: How long have you been feeling this overwhelming sadness?
+ - Answer 1: It feels like it's been going on for a few weeks now, but it's gotten worse over the past week.
+
+2.
+ - Question 2: Have you experienced any significant life changes or stressful events recently?
+ - Answer 2: Yes, I recently lost my job and I've been struggling to find a new one, which has been really stressful for me.
+
+3.
+ - Question 3: Are you having thoughts of self-harm or suicide?
+ - Answer 3: Sometimes I think about how I wish I didn’t have to deal with this, but I wouldn’t say I have thoughts of self-harm or suicide.
+
+4.
+ - Question 4: Have you noticed any changes in your sleep patterns or appetite?
+ - Answer 4: I've been having trouble sleeping and I don’t feel like eating much anymore, which is unusual for me because I normally have a good appetite.
+
+5.
+ - Question 5: Are you currently taking any medications for depression or anxiety?
+ - Answer 5: No, I'm not currently taking any medications for depression or anxiety, but I've been thinking I should probably talk to someone about it.
+
+6.
+ - Question 6: Have you had any previous episodes of depression or mental health treatment?
+ - Answer 6: Yes, I had an episode a few years ago after my mother passed away, and I went to therapy for a while.
+
+7.
+ - Question 7: Do you have a family history of depression or other mental health conditions?
+ - Answer 7: My mother struggled with depression, and I have a cousin who has been dealing with bipolar disorder.
+
+8.
+ - Question 8: Are there any specific situations or activities that seem to worsen or improve your mood?
+ - Answer 8: Being around supportive friends and family seems to help a little, but even things I used to enjoy, like playing music, don’t seem to lift my mood like they used to.
+
+9.
+ - Question 9: Have you noticed any physical symptoms like headaches, fatigue, or pain accompanying your sadness?
+ - Answer 9: I've been feeling really fatigued all the time, and sometimes I get headaches, but I wouldn’t say it’s pain exactly, just a general feeling of being unwell.
+
+10.
+ - Question 10: Are you able to perform your daily routines and responsibilities, or has your sadness impacted your ability to function?
+ - Answer 10: It's been really hard to do even simple tasks, like getting out of bed or going to the grocery store, and I've been putting off a lot of responsibilities because everything feels so overwhelming.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1798~1811" text="ESI Level: []" id="E0" ESI_LEVEL="4" comment=""/>
+<Lab_recommendation spans="1812~1834" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, drug screening, UA"/>
+<ER_recommendation spans="1835~1856" text="ER Recommendation: []" id="ER0" comment="psychiatric evaluation, and medication"/>
+<Recommended_waiting_time spans="1857~1891" text="Recommended Waiting Time: []/hours" id="R0" comment="4"/>
+<QA spans="2229~2301" text=" - Question 1: How long have you been feeling this overwhelming sadness?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2415~2509" text=" - Question 2: Have you experienced any significant life changes or stressful events recently?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2639~2702" text=" - Question 3: Are you having thoughts of self-harm or suicide?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2848~2927" text=" - Question 4: Have you noticed any changes in your sleep patterns or appetite?" id="Q3" relevance="Optionl" comment=""/>
+<QA spans="3087~3169" text=" - Question 5: Are you currently taking any medications for depression or anxiety?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3326~3417" text=" - Question 6: Have you had any previous episodes of depression or mental health treatment?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3537~3629" text=" - Question 7: Do you have a family history of depression or other mental health conditions?" id="Q6" relevance="Optionl" comment=""/>
+<QA spans="3748~3852" text=" - Question 8: Are there any specific situations or activities that seem to worsen or improve your mood?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="4036~4149" text=" - Question 9: Have you noticed any physical symptoms like headaches, fatigue, or pain accompanying your sadness?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="4325~4461" text=" - Question 10: Are you able to perform your daily routines and responsibilities, or has your sadness impacted your ability to function?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

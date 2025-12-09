@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged white female, presented to the emergency department via ambulance with a diagnosis of gastrointestinal hemorrhage, unspecified (ICD Code: K922). She reported no pain at the time of evaluation (pain level 0). Vital signs on arrival were stable, with a temperature of 97.3°F, heart rate of 76 bpm, respiratory rate of 18 breaths per minute, oxygen saturation of 99%, and blood pressure of 128/70 mmHg. Laboratory results showed an elevated bicarbonate level (33 mEq/L) and significant hematuria with RBCs at 47/hpf, indicative of potential gastrointestinal or urinary bleeding. The acuity level was rated at 3.0. The patient was stabilized and discharged home with recommendations for follow-up care to determine the source of the bleeding and monitor for potential recurrence or complications.
+
+============== Medical History ==============
+The patient has a complex medical history that includes pulmonary embolism (ICD Code: 41519), hypoxemia (ICD Code: 79902), femoral condyle fracture (ICD Code: 82121), and prior gastrointestinal issues such as bright red blood per rectum (ICD Code: K6289). She has also reported recurrent episodes of chest pain (ICD Code: 78650) and falls resulting in various injuries, such as radial head fractures and neck sprains. This history underscores a pattern of musculoskeletal injuries, cardiovascular concerns, and gastrointestinal issues. Follow-up care is essential to address potential sources of bleeding, manage her underlying conditions, and prevent further episodes. A comprehensive evaluation by her primary care provider and specialists in gastroenterology and cardiology is recommended.
+
+==================================== ER Visit Info ====================================
+ICD Code: K922
+Diagnosis: Gastrointestinal hemorrhage, unspecified
+Acuity: 3.0
+Arrival Transport: AMBULANCE
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I have been experiencing severe bowel movements with rectal bleeding and constipation, which is causing me a lot of discomfort and anxiety.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: Can you describe the severity and frequency of the rectal bleeding you're experiencing?
+ - Answer 1: The rectal bleeding is quite severe, and it's been happening almost every time I have a bowel movement, which is about 3-4 times a day.
+
+2.
+ - Question 2: How long have you been noticing these severe bowel movements and rectal bleeding?
+ - Answer 2: I've been noticing these symptoms for about a week now, but they've gotten much worse over the past 2-3 days.
+
+3.
+ - Question 3: Have you recently traveled or been exposed to anyone with a similar illness?
+ - Answer 3: No, I haven't traveled recently or been exposed to anyone with a similar illness that I'm aware of.
+
+4.
+ - Question 4: Are you experiencing any abdominal pain, and if so, where is it located and how severe is it?
+ - Answer 4: Yes, I am experiencing abdominal pain, mainly in the lower abdomen, and it's quite severe, about an 8 out of 10, especially after bowel movements.
+
+5.
+ - Question 5: Have you noticed any changes in the color or consistency of your stool?
+ - Answer 5: Yes, my stool has been darker than usual, almost black, and it's been more frequent and looser than normal.
+
+6.
+ - Question 6: Do you have a history of gastrointestinal conditions, such as inflammatory bowel disease or diverticulitis?
+ - Answer 6: I don't have a known history of gastrointestinal conditions, but I have had some issues with constipation in the past.
+
+7.
+ - Question 7: Are you currently taking any medications that could be contributing to your symptoms?
+ - Answer 7: I'm currently not taking any medications that I think could be contributing to these symptoms, just some over-the-counter pain relievers for the discomfort.
+
+8.
+ - Question 8: Have you experienced any fever or chills alongside your bowel symptoms?
+ - Answer 8: No, I haven't experienced any fever or chills, just the bowel symptoms and abdominal pain.
+
+9.
+ - Question 9: Can you describe your typical diet and whether you've made any recent changes to it?
+ - Answer 9: My diet is pretty average, I'd say, with a mix of everything, but I haven't made any significant changes recently. However, I have been feeling anxious and stressed, which might be affecting my eating habits.
+
+10.
+ - Question 10: Have you noticed any weight loss or loss of appetite associated with your symptoms?
+ - Answer 10: Yes, I have noticed some weight loss, probably due to the discomfort and anxiety affecting my appetite, but I wouldn't say it's significant yet.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2026~2039" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="2040~2062" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, Type and screen, coag"/>
+<ER_recommendation spans="2063~2084" text="ER Recommendation: []" id="ER0" comment="IV hydration, possible endoscopy, possible transfusion"/>
+<Recommended_waiting_time spans="2085~2119" text="Recommended Waiting Time: []/hours" id="R0" comment="2"/>
+<QA spans="2458~2560" text=" - Question 1: Can you describe the severity and frequency of the rectal bleeding you're experiencing?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2714~2810" text=" - Question 2: How long have you been noticing these severe bowel movements and rectal bleeding?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2938~3029" text=" - Question 3: Have you recently traveled or been exposed to anyone with a similar illness?" id="Q2" relevance="Optionl" comment=""/>
+<QA spans="3147~3255" text=" - Question 4: Are you experiencing any abdominal pain, and if so, where is it located and how severe is it?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3420~3506" text=" - Question 5: Have you noticed any changes in the color or consistency of your stool?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3632~3754" text=" - Question 6: Do you have a history of gastrointestinal conditions, such as inflammatory bowel disease or diverticulitis?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3891~3991" text=" - Question 7: Are you currently taking any medications that could be contributing to your symptoms?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="4166~4252" text=" - Question 8: Have you experienced any fever or chills alongside your bowel symptoms?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="4361~4460" text=" - Question 9: Can you describe your typical diet and whether you've made any recent changes to it?" id="Q8" relevance="Optionl" comment="Not necessary in the ER"/>
+<QA spans="4688~4787" text=" - Question 10: Have you noticed any weight loss or loss of appetite associated with your symptoms?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

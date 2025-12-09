@@ -1,0 +1,184 @@
+{
+  "case_id": "30000202.txt",
+  "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
+  "predicted": {
+    "esi_level": 4,
+    "confidence": 0.95,
+    "explanation": "1. ESI level: 4\n   2. Confidence level: 0.95\n   3. Brief explanation: The patient's symptoms are consistent with an allergic reaction, and while they are experiencing discomfort, they do not appear to be in immediate danger or require life-saving intervention. They have a history of similar reactions, and it seems that a new shampoo and shellfish consumption may be triggers. Although the patient has taken diphenhydramine, further observation and management might be necessary.\n   4. Whether a handoff to human provider is needed (yes/no): Yes, this case requires a handoff to a human provider for evaluation and treatment.",
+    "risk_factors": [],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 2,
+  "correct": false,
+  "arrival_method": "WALK IN",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Essential",
+          "confidence": 0.9,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Optionl",
+          "confidence": 0.85,
+          "esi_level": 3,
+          "needs_handoff": true
+        }
+      ],
+      "ground_truth": 2
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 3\n   Confidence: 90%\n   Brief explanation: This patient is experiencing a moderate acuity level condition (HIVES, an allergic reaction) that requires medical attention. The symptoms are uncomfortable and causing anxiety, but they do not require immediate resuscitation or disposition to another facility. The patient does not present with severe or life-threatening symptoms such as shortness of breath, chest pain, or altered mental status. However, the presence of hives and swelling might indicate an underlying condition that requires monitoring and treatment, making a follow-up appointment less appropriate at this time.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 3\n   Confidence: 90%\n   Brief explanation: This patient is experiencing a moderate acuity level condition (HIVES, an allergic reaction) that requires medical attention. The symptoms are uncomfortable and causing anxiety, but they do not require immediate resuscitation or disposition to another facility. The patient does not present with severe or life-threatening symptoms such as shortness of breath, chest pain, or altered mental status. However, the presence of hives and swelling might indicate an underlying condition that requires monitoring and treatment, making a follow-up appointment less appropriate at this time.",
+          " ESI Level: 3\n   Confidence: 90%\n   Brief explanation: The patient presents with an acute allergic reaction (hives, itching, swelling) that is causing discomfort and anxiety. This condition requires medical attention as it can rapidly progress and potentially become life-threatening if not treated promptly. However, the lack of respiratory symptoms or other vital signs concerns suggests a lower ESI level.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing a significant symptom (hives) that requires medical attention, but it does not appear to be life-threatening or immediately life-threatening. However, the anxiety related to the symptoms might need psychological support as well. A triage nurse would typically assign this case to an area with intermediate resources and staffing levels. The patient may require a dermatologist's consultation for proper treatment of hives.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing severe symptoms such as itchy, swollen skin all over and hives, which may indicate a severe allergic reaction (anaphylaxis). This condition requires immediate medical attention. However, the exact ESI level could vary based on additional factors like vital signs, presence of comorbidities, or severity of symptoms. In this case, it seems less urgent than ESI levels 1 and 2 but more urgent than levels 4 and 5 due to the nature and extent of the physical discomfort described.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: This patient presents with a severe allergic reaction (hives) which can potentially be life-threatening if not treated promptly. The itchiness and swelling suggest an acute onset of symptoms, and the anxiety indicates that the patient is distressed by their condition. However, since no respiratory or cardiovascular compromise has been mentioned, we assume that these symptoms are not currently life-threatening, but still require urgent attention (ESI level 3). The confidence level is high because of the clear presentation of an allergic reaction, but slightly lowered due to the absence of specific details about respiratory or cardiovascular status."
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 60.0,
+        "explanation": "1. Is this patient dying or about to die? (ESI 1): No, the patient is experiencing an allergic reaction, which is uncomfortable but not life-threatening in this situation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2): Yes, the patient is experiencing significant discomfort and distress due to their itchy, swollen skin and hives.\n\n3. How many resources will this patient need? (For ESI 3-5): This patient will require medical attention for diagnosis and treatment of the allergic reaction, but they should not require extensive resources or multiple healthcare providers simultaneously.\n\n4. Are vital signs concerning? (Can affect ESI level): The information provided does not include any vital sign measurements, so it is impossible to determine if they are concerning in this case.\n\nESI Level: 2\nConfidence: 80% (The patient's condition is causing high levels of discomfort and distress, but the absence of information regarding vital signs makes the ESI level less definitive.)\nStep-by-step reasoning: Based on the given description, the patient is experiencing a severe allergic reaction that requires medical attention to alleviate their symptoms. However, the number of resources needed for treatment is not extensive, and the patient does not appear to be in immediate danger or dying. The absence of information regarding vital signs makes it difficult to fully determine the ESI level with confidence.",
+        "needs_handoff": false,
+        "responses": [
+          "1. Is this patient dying or about to die? (ESI 1): No, the patient is experiencing an allergic reaction, which is uncomfortable but not life-threatening in this situation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2): Yes, the patient is experiencing significant discomfort and distress due to their itchy, swollen skin and hives.\n\n3. How many resources will this patient need? (For ESI 3-5): This patient will require medical attention for diagnosis and treatment of the allergic reaction, but they should not require extensive resources or multiple healthcare providers simultaneously.\n\n4. Are vital signs concerning? (Can affect ESI level): The information provided does not include any vital sign measurements, so it is impossible to determine if they are concerning in this case.\n\nESI Level: 2\nConfidence: 80% (The patient's condition is causing high levels of discomfort and distress, but the absence of information regarding vital signs makes the ESI level less definitive.)\nStep-by-step reasoning: Based on the given description, the patient is experiencing a severe allergic reaction that requires medical attention to alleviate their symptoms. However, the number of resources needed for treatment is not extensive, and the patient does not appear to be in immediate danger or dying. The absence of information regarding vital signs makes it difficult to fully determine the ESI level with confidence.",
+          " ESI Level: 2\n   Confidence: 95%\n\nStep-by-step reasoning:\n1. The patient is not currently dying or about to die (ESI 1).\n2. Although the patient's symptoms, such as itchiness, swelling, and hives, may cause significant discomfort and distress, they are not life-threatening in this situation (ESI 2).\n3. The patient will require minimal resources for treatment, such as antihistamines or corticosteroids to manage the allergic reaction (ESI 3-5 range is still possible depending on the severity of the reaction and whether it requires hospitalization; however, given the information provided, it seems unlikely that this patient would require more than a few resources).\n4. Vital signs are not mentioned in the provided information, but since the patient's symptoms do not seem to be life-threatening and the lack of concern about vital signs supports an ESI level of 2. If there were any abnormal vital signs reported, it would likely increase the ESI level.",
+          " ESI Level: 3\n   Confidence: 70%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is experiencing discomfort and anxiety due to hives and itchiness, but there is no indication that they are dying or in immediate danger of death.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, while not life-threatening, the patient's symptoms can cause significant distress and discomfort.\n3. How many resources will this patient need? (For ESI 3-5) - The patient may require dermatological evaluation, possibly medication, and emotional support due to the anxiety caused by their condition. This would likely require the services of a nurse, a dermatologist or primary care provider, and potentially mental health support.\n4. Are vital signs concerning? (Can affect ESI level) - No, there is no information provided about the patient's vital signs, but given the nature of the symptoms, they are unlikely to be significantly altered.\n\nIn summary, the patient presents with a non-life-threatening condition that requires moderate resources and could cause significant distress. Therefore, the ESI level is 3. The confidence in this assessment is 70%, as the information provided is limited and assumes the absence of any other underlying conditions or complications.",
+          " ESI Level: 3\n   Confidence: 80%\n\nStep-by-step reasoning:\n1. The patient is not dying or about to die (ESI 1).\n2. While the itchiness, swelling, and hives may cause significant discomfort and distress, it doesn't pose an immediate high risk or severe pain (ESI 2).\n3. This patient will likely require some medical attention, such as a dermatologist or allergist for further investigation and treatment of the symptoms (ESI 3-5, leaning more towards 3 due to not being an immediate life threat).\n4. Vital signs are not provided in this case, but since the patient's condition is not causing significant respiratory or cardiovascular distress, it is reasonable to assume that their vital signs would be within normal limits (ESI level remains 3).",
+          " ESI Level: 3\n   Confidence: 85%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not experiencing symptoms that would indicate imminent death.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's symptoms are causing significant discomfort and anxiety. However, they do not meet the criteria for a critical emergency.\n3. How many resources will this patient need? (For ESI 3-5) - This patient is likely to require an assessment by a healthcare provider, possibly some medication for symptom relief, and follow-up care if necessary. While not requiring extensive resources, they would still need more than minimal resources.\n4. Are vital signs concerning? (Can affect ESI level) - There is no information provided about the patient's vital signs. However, it can be inferred that given the symptoms described, they may have elevated heart rate or blood pressure due to anxiety. This would not significantly impact the initial ESI level assignment but could influence subsequent care.\n\nIn summary, this patient presents with an allergic reaction causing significant discomfort and requiring medical attention. While not a life-threatening emergency, they still require more resources than a minimal emergency (ESI 3). If vital signs were provided that indicated instability, the ESI level might be higher."
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            3,
+            70
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 2,
+    "case_id": "30000202.txt"
+  }
+}

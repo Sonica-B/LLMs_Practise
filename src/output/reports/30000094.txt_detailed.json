@@ -1,0 +1,186 @@
+{
+  "case_id": "30000094.txt",
+  "chief_complaint": "I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.",
+  "predicted": {
+    "esi_level": 2,
+    "confidence": 0.85,
+    "explanation": "1. ESI level: 2\n  2. Confidence level: 0.85\n  3. Brief explanation: The patient's description of heart palpitations and mild-moderate shortness of breath, along with the fact that it has been worsening over the last day, suggests a high risk situation or severe distress. However, the absence of chest pain, history of heart conditions, and current medication use lowers the severity slightly.\n  4. Whether a handoff to human provider is needed: Yes, given the patient's symptoms and the need for further evaluation and potential interventions.",
+    "risk_factors": [
+      "Ambulance arrival"
+    ],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 2,
+  "correct": true,
+  "arrival_method": "AMBULANCE",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.9,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Essential",
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Wrong",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Wrong",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Optionl",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Optionl",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        }
+      ],
+      "ground_truth": 2
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing symptoms suggestive of a cardiac condition (chest pain, palpitations, shortness of breath), which would place them in the Moderate category (ESI level 3). The absence of any additional high-risk factors such as significant trauma, altered mental status, or severe vital sign changes increases confidence in this assessment. However, a definitive ESI can only be determined after a thorough examination and further evaluation by a healthcare professional.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing symptoms suggestive of a cardiac condition (chest pain, palpitations, shortness of breath), which would place them in the Moderate category (ESI level 3). The absence of any additional high-risk factors such as significant trauma, altered mental status, or severe vital sign changes increases confidence in this assessment. However, a definitive ESI can only be determined after a thorough examination and further evaluation by a healthcare professional.",
+          " ESI Level: 3\n   Confidence: 85%\n\nExplanation: The patient is experiencing symptoms suggestive of cardiovascular distress (racing and skipping heartbeats, shortness of breath), which, while not immediately life-threatening, still require prompt attention due to the potential for rapid deterioration. A triage nurse would want to stabilize this patient quickly as they are at risk for a more severe condition such as arrhythmia or cardiac ischemia.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing symptoms suggestive of a cardiac condition (palpitations, shortness of breath) which warrants an immediate evaluation by the emergency department. However, the lack of specific severity indicators such as chest pain, significant shortness of breath, or loss of consciousness suggests that this may not be a life-threatening emergency but requires urgent assessment.",
+          " ESI Level: 3\n   Confidence: 90%\n   Brief explanation: The patient is experiencing symptoms suggestive of a cardiovascular emergency (chest pain, shortness of breath, and palpitations). However, the absence of other specific cardiac symptoms like crushing chest pain or left arm pain, combined with the fact that these symptoms are not life-threatening at the moment (patient is currently able to speak in full sentences), suggests a slightly lower urgency level. A thorough evaluation by a healthcare provider is necessary to confirm the ESI level.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient presents with symptoms suggestive of a cardiac issue, such as palpitations and shortness of breath. While these symptoms could be indicative of non-emergency conditions like anxiety or hyperthyroidism, the possibility of a more serious cardiac event cannot be ruled out without further evaluation. Therefore, the patient should be triaged as an ESI level 3, which indicates that they require an expedited evaluation within 15 minutes to an hour."
+        ],
+        "parsed_data": [
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 2\n   Confidence: 85%\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not currently in a state of imminent death. However, heart racing and skipping beats could potentially progress to life-threatening situations if left untreated.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing symptoms that suggest possible cardiovascular distress which can cause significant discomfort and distress.\n   3. How many resources will this patient need? (For ESI 3-5) - The patient will likely require urgent evaluation by a healthcare professional, possibly electrocardiogram (ECG), and appropriate treatment based on the findings. However, the number of resources needed is not extensive enough to warrant an ESI level of 3 or higher at this initial assessment.\n   4. Are vital signs concerning? (Can affect ESI level) - The patient's symptoms suggest that their heart rate may be increased and they might experience shortness of breath. Without actual vital sign measurements, it is difficult to definitively say if the vital signs are concerning enough to warrant an ESI level of 1 or 2. If the patient's blood pressure, pulse, respiratory rate, or oxygen saturation were significantly abnormal upon measurement, this could potentially raise the ESI level to 1 or 2. However, based on the provided information, it is reasonable to assign an ESI level of 2.",
+        "needs_handoff": true,
+        "responses": [
+          " ESI Level: 2\n   Confidence: 85%\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not currently in a state of imminent death. However, heart racing and skipping beats could potentially progress to life-threatening situations if left untreated.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing symptoms that suggest possible cardiovascular distress which can cause significant discomfort and distress.\n   3. How many resources will this patient need? (For ESI 3-5) - The patient will likely require urgent evaluation by a healthcare professional, possibly electrocardiogram (ECG), and appropriate treatment based on the findings. However, the number of resources needed is not extensive enough to warrant an ESI level of 3 or higher at this initial assessment.\n   4. Are vital signs concerning? (Can affect ESI level) - The patient's symptoms suggest that their heart rate may be increased and they might experience shortness of breath. Without actual vital sign measurements, it is difficult to definitively say if the vital signs are concerning enough to warrant an ESI level of 1 or 2. If the patient's blood pressure, pulse, respiratory rate, or oxygen saturation were significantly abnormal upon measurement, this could potentially raise the ESI level to 1 or 2. However, based on the provided information, it is reasonable to assign an ESI level of 2.",
+          " ESI Level: 2\n   Confidence: 85%\n\nStep-by-step reasoning:\n1. The patient is not dying or about to die at the moment, as indicated by the symptoms of a racing and skipping heart but no clear signs of imminent collapse.\n\n2. The patient's complaint of a racing heart, anxiety, shortness of breath, and feeling of skipped beats suggests a high-risk situation or severe pain/distress due to potential cardiac issues.\n\n3. While the specific resource requirements are not stated in this case, it can be assumed that initial evaluation and monitoring in an emergency department would be necessary for further examination, potentially requiring a cardiologist's consultation.\n\n4. Vital signs such as blood pressure, pulse, respiratory rate, and oxygen saturation (not provided) could influence the ESI level. However, the patient's description of symptoms suggests some level of physiological distress, which might justify a higher priority for resources. A lower ESI level would be assigned if the vital signs were stable upon initial evaluation.",
+          " ESI Level: 2\n   Confidence: 85%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, based on the symptoms described, it does not seem that the patient is dying or about to die immediately.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's heart palpitations and associated anxiety and shortness of breath suggest a potentially serious condition such as cardiac arrhythmia or panic attack.\n   3. How many resources will this patient need? (For ESI 3-5) - Although not specified in the provided information, it is likely that the patient may require an Electrocardiogram (ECG) to evaluate the heart rhythm, and possibly further cardiac testing or consultation with a cardiologist. However, the urgency is lower compared to higher ESI levels.\n   4. Are vital signs concerning? (Can affect ESI level) - Not specified in the provided information. If vitals such as blood pressure, pulse rate, oxygen saturation, and ECG readings are within normal limits, it might further support an ESI 2 classification. However, abnormal vitals could suggest a more urgent situation.\n\n   In summary, this patient appears to be experiencing symptoms that indicate a potentially serious condition but not an immediate life-threatening emergency. Therefore, the appropriate Emergency Severity Index (ESI) level would be 2.",
+          "1. Is this patient dying or about to die? (ESI 1): No, the patient is not currently dying or about to die based on the information provided. Symptoms such as racing and skipping heartbeats and shortness of breath can be indicative of a cardiovascular issue but do not immediately imply life-threatening conditions.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2): Yes, the patient is experiencing significant distress due to their symptoms, which may qualify as a high-risk situation.\n\n3. How many resources will this patient need? (For ESI 3-5): Given the nature of the patient's symptoms and the possibility that they are experiencing a cardiovascular issue, the patient will likely require immediate evaluation by an experienced healthcare professional, possibly including EKG monitoring and potential admission to the hospital for further tests. This could necessitate significant resources.\n\n4. Are vital signs concerning? (Can affect ESI level): The information provided does not include the patient's vital signs; however, based on the symptoms described, it is reasonable to assume that their heart rate may be elevated or irregular.\n\nESI Level: 2\nConfidence: 80%\nStep-by-step reasoning: Based on the patient's description of racing and skipping heartbeats, anxiety, shortness of breath, and potential cardiovascular issues, it is appropriate to categorize this patient as an ESI 2. This classification is suitable because the patient appears to be in significant distress but not immediately life-threatening. The absence of vital signs data affects the confidence level slightly, as it relies on assumptions about the patient's condition.",
+          " ESI Level: 2\n   Confidence: 80%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - While the symptoms described, such as heart racing and skipping beats, are concerning, they do not immediately indicate that the patient is dying or imminently at risk of death without further evaluation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient's description of anxiety, shortness of breath, and chest discomfort suggests a significant level of distress and potential high risk, especially given the symptoms associated with cardiac issues.\n\n3. How many resources will this patient need? (For ESI 3-5) - This patient may require emergency department resources for evaluation, monitoring, diagnostic tests, and possible treatment. However, the immediate need for critical care is not apparent at this stage, so an ESI level of 3 or higher does not seem appropriate.\n\n4. Are vital signs concerning? (Can affect ESI level) - Vital sign data is not provided in this case. If the patient's blood pressure, heart rate, respiratory rate, or oxygen saturation levels are significantly abnormal, it could push the ESI level up to a 2 or higher.\n\nIn summary, based on the information provided, the Emergency Severity Index (ESI) level for this patient is 2, indicating a moderate acuity level that requires focused assessment and intervention."
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 2,
+    "case_id": "30000094.txt"
+  }
+}

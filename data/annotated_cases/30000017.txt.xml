@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged Black/African American male, presented to the emergency department with a diagnosis of acute alcohol intoxication (ICD Code: 30300). He arrived as a walk-in and exhibited no reported pain or acute distress. Vital signs revealed a heart rate of 73 bpm, respiratory rate of 18 breaths per minute, oxygen saturation of 97%, and significantly elevated blood pressure at 156/112 mmHg, suggesting hypertensive urgency potentially exacerbated by alcohol intoxication. No temperature measurement was recorded. Laboratory tests, if performed, were not documented in the available data. Despite the absence of detailed lab findings, his acuity level was rated at 3.0, indicating a moderately severe presentation. The patient ultimately eloped from the hospital before completing care or receiving discharge instructions. Follow-up care is necessary to address his alcohol use and associated health risks.
+
+============== Medical History ==============
+The patient has a documented history of recurrent episodes of acute alcohol intoxication (ICD Code: 30300). Previous visits occurred on 2185-06-15 and 2185-04-04, both characterized by reported alcohol consumption and associated symptoms. During the June visit, the patient reported an inability to ambulate and presented with tachycardia (heart rate of 104 bpm), a blood pressure of 145/93 mmHg, and an acuity level of 3.0. During the April visit, the patient showed signs of intoxication with a heart rate of 108 bpm and blood pressure of 140/90 mmHg, with an acuity of 4.0. Both instances suggest a pattern of alcohol-related health concerns and potential complications, including hypertension and impaired mobility. Comprehensive management, including counseling and intervention for alcohol use disorder, is strongly recommended.
+
+==================================== ER Visit Info ====================================
+ICD Code: 30300
+Diagnosis: AC ALCOHOL INTOX-UNSPEC
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: ELOPED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice the sensation of the room spinning and feeling disoriented?
+ - Answer 1: It started a few hours ago, after I had been drinking, and it's been getting worse since I got here.
+
+2.
+ - Question 2: Have you experienced any recent head injuries or traumas?
+ - Answer 2: No, I haven't had any recent head injuries or traumas that I can remember.
+
+3.
+ - Question 3: Are you currently feeling nauseous or have you vomited?
+ - Answer 3: Yes, I feel nauseous, but I haven't vomited yet.
+
+4.
+ - Question 4: Do you have a history of inner ear problems, such as vertigo or benign paroxysmal positional vertigo?
+ - Answer 4: I don't think so, I've never been diagnosed with anything like that.
+
+5.
+ - Question 5: Have you recently started any new medications that could be contributing to your symptoms?
+ - Answer 5: No, I haven't started any new medications.
+
+6.
+ - Question 6: Can you describe the sensation in your legs - is it weakness, numbness, or something else that's preventing you from walking?
+ - Answer 6: It's more like my legs feel really unsteady and weak, like I'd fall over if I tried to stand up.
+
+7.
+ - Question 7: Have you noticed any double vision, blurred vision, or other visual disturbances?
+ - Answer 7: Yeah, everything seems a bit blurry, and sometimes I see double.
+
+8.
+ - Question 8: Are you experiencing any hearing loss, ringing in the ears, or fullness in the ears?
+ - Answer 8: I don't think so, my hearing seems fine, no ringing or fullness.
+
+9.
+ - Question 9: Have you had any recent viral illnesses or infections, such as the flu or a cold?
+ - Answer 9: Not that I can remember, I haven't been feeling sick with a virus or anything like that recently.
+
+10.
+ - Question 10: Are you able to sit up or stand with support, or do you feel like you need to lie down to avoid falling?
+ - Answer 10: Honestly, I feel like I need to lie down, sitting up or standing, even with support, feels too risky because the room is spinning so much.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2154~2167" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment="Although the patient has history of alcohol intoxication, medically, the patient's chief complaint qualifies ESI 3 or even 2"/>
+<Lab_recommendation spans="2168~2190" text="Lab Recommendation: []" id="L0" comment="BMP, CBC, VBGA, drug screening, UA"/>
+<ER_recommendation spans="2191~2212" text="ER Recommendation: []" id="ER0" comment="full labs, Brain CT, drug screening, possibly MRI"/>
+<Recommended_waiting_time spans="2213~2247" text="Recommended Waiting Time: []/hours" id="R0" comment="2"/>
+<QA spans="2582~2682" text=" - Question 1: When did you first notice the sensation of the room spinning and feeling disoriented?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2801~2873" text=" - Question 2: Have you experienced any recent head injuries or traumas?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2966~3036" text=" - Question 3: Are you currently feeling nauseous or have you vomited?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3103~3219" text=" - Question 4: Do you have a history of inner ear problems, such as vertigo or benign paroxysmal positional vertigo?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3307~3411" text="- Question 5: Have you recently started any new medications that could be contributing to your symptoms?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3473~3612" text="- Question 6: Can you describe the sensation in your legs - is it weakness, numbness, or something else that's preventing you from walking?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3727~3823" text=" - Question 7: Have you noticed any double vision, blurred vision, or other visual disturbances?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3906~4005" text=" - Question 8: Are you experiencing any hearing loss, ringing in the ears, or fullness in the ears?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="4088~4184" text=" - Question 9: Have you had any recent viral illnesses or infections, such as the flu or a cold?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="4303~4421" text=" Question 10: Are you able to sit up or stand with support, or do you feel like you need to lie down to avoid falling?" id="Q9" relevance="Optionl" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

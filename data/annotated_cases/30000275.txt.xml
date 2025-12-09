@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged white female, presented to the emergency department with a diagnosis of acute pancreatitis, unspecified (ICD Code: K859). She arrived as a walk-in, reporting severe abdominal pain rated at 8 out of 10, accompanied by nausea and vomiting. On examination, her vital signs included a temperature of 97.8°F, heart rate of 88 bpm, respiratory rate of 18/min, oxygen saturation of 99%, and elevated blood pressure of 140/100 mmHg. Laboratory findings were notable for elevated alanine aminotransferase (ALT) at 53 IU/L and alkaline phosphatase at 224 IU/L, indicative of potential hepatobiliary involvement, though lipase levels were normal at 50 IU/L. Imaging and further diagnostics were not detailed in the report. The patient was admitted for further management, including intravenous fluids, pain control, and monitoring for complications related to pancreatitis. Her acuity level was rated at 3.0, reflecting a moderately severe presentation.
+
+============== Medical History ==============
+The patient has a longstanding history of pancreatitis, including both acute and chronic episodes. Previous visits for pancreatitis date back several years, often presenting with similar symptoms of abdominal pain, nausea, and vomiting. Chronic pancreatitis has been attributed to a cystic fibrosis gene mutation, though imaging has not consistently shown structural pancreatic abnormalities. She also has a significant history of other medical conditions, including cardiomyopathy with a preserved ejection fraction, hypertension, depression with past suicide attempts, and polysubstance abuse. Past diagnostic evaluations have ruled out obstructive or mass-related causes of pancreatitis, and her condition has been managed with pancreatic enzyme supplements and pain medications. Socially, she has a complex family history, including heterozygosity for CFTR gene mutations in both biological parents. This recurrent pattern of pancreatitis, combined with her underlying medical conditions, underscores the need for comprehensive and coordinated care.
+
+==================================== ER Visit Info ====================================
+ICD Code: K859
+Diagnosis: Acute pancreatitis, unspecified
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I have a sharp, stabbing pain in my upper abdomen that radiates to my back, accompanied by nausea and vomiting, which feels similar to the pancreatitis flares I've had before.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: Can you rate the severity of your abdominal pain on a scale of 1 to 10?
+ - Answer 1: My pain level is an 8 out of 10.
+
+2.
+ - Question 2: How long have you been experiencing this sharp, stabbing pain in your upper abdomen?
+ - Answer 2: I've had this pain for about 2 days now.
+
+3.
+ - Question 3: Have you had any previous episodes of pancreatitis confirmed by a doctor?
+ - Answer 3: Yes, I've had several episodes of pancreatitis before, and they've been confirmed by doctors.
+
+4.
+ - Question 4: Are you experiencing any triggers that you associate with past pancreatitis flares, such as eating certain foods?
+ - Answer 4: I don't really associate my pancreatitis flares with specific foods, but I do have a history of polysubstance abuse, which might be a factor.
+
+5.
+ - Question 5: How often have you vomited since the pain started, and is the vomit bloody or bile-stained?
+ - Answer 5: I've been vomiting several times since the pain started, but the vomit isn't bloody or bile-stained.
+
+6.
+ - Question 6: Do you have a fever or chills accompanying the pain and nausea?
+ - Answer 6: No, I don't have a fever or chills right now.
+
+7.
+ - Question 7: Have you noticed any changes in your bowel movements, such as diarrhea or constipation?
+ - Answer 7: I haven't had any significant changes in my bowel movements, just the nausea and vomiting.
+
+8.
+ - Question 8: Are you experiencing any pain or discomfort when you take deep breaths or move around?
+ - Answer 8: Yes, the pain does get worse when I move around or take deep breaths, especially because it radiates to my back.
+
+9.
+ - Question 9: Have you recently consumed a large amount of alcohol or made significant changes to your diet?
+ - Answer 9: I haven't consumed a large amount of alcohol recently, but my history of substance abuse is significant.
+
+10.
+ - Question 10: Are you taking any medications, such as enzymes, to manage your pancreatitis, and have you missed any doses recently?
+ - Answer 10: Yes, I take Creon for my pancreatitis, and I've been taking it as prescribed, but I might have missed a dose adjustments to manage my doses were held during this admission, I missed some of my medications were held during this admission, and I missed atermedications, and I've been taking my doctor has been taking my doctor has been taking my doctor's on my doctor's missing doses, and I've had some of  as part of  as needed to manage my primary care of my doctor'son 
+
+]]></TEXT>
+<TAGS>
+<ESI spans="2430~2443" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="2444~2466" text="Lab Recommendation: []" id="L0" comment="CBC, BMP, LFT, Lipase, LA"/>
+<ER_recommendation spans="2467~2488" text="ER Recommendation: []" id="ER0" comment="IV hydration, Abd CT, pain control"/>
+<Recommended_waiting_time spans="2489~2523" text="Recommended Waiting Time: []/hours" id="R0" comment="2"/>
+<QA spans="2898~2984" text=" - Question 1: Can you rate the severity of your abdominal pain on a scale of 1 to 10?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="3035~3134" text=" - Question 2: How long have you been experiencing this sharp, stabbing pain in your upper abdomen?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3193~3281" text=" - Question 3: Have you had any previous episodes of pancreatitis confirmed by a doctor?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3393~3521" text=" - Question 4: Are you experiencing any triggers that you associate with past pancreatitis flares, such as eating certain foods?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3681~3787" text=" - Question 5: How often have you vomited since the pain started, and is the vomit bloody or bile-stained?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3906~3984" text=" - Question 6: Do you have a fever or chills accompanying the pain and nausea?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="4048~4150" text=" - Question 7: Have you noticed any changes in your bowel movements, such as diarrhea or constipation?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="4259~4360" text=" - Question 8: Are you experiencing any pain or discomfort when you take deep breaths or move around?" id="Q7" relevance="Optionl" comment=""/>
+<QA spans="4491~4600" text=" - Question 9: Have you recently consumed a large amount of alcohol or made significant changes to your diet?" id="Q8" relevance="Essential" comment="The first question is essential, but the second one is not essential?"/>
+<QA spans="4724~4857" text=" - Question 10: Are you taking any medications, such as enzymes, to manage your pancreatitis, and have you missed any doses recently?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, an elderly white female, presented to the emergency department as a walk-in with a diagnosis of conjunctival hemorrhage in the right eye (ICD Code: H1131). She reported localized eye discomfort with a pain level of 5. Vital signs were within normal limits, including a temperature of 98.3°F, heart rate of 72 bpm, respiratory rate of 16/min, oxygen saturation of 100%, and blood pressure of 121/72 mmHg. No laboratory tests were documented for this visit. The acuity level was rated as 2.0, indicating mild severity without immediate threat to vision or systemic complications. The patient was discharged home with conservative treatment and instructions for follow-up care if symptoms persist or worsen.
+
+============== Medical History ==============
+The patient has a prior history of dizziness, visual changes, and transfer difficulties, reported during a visit on 2132-05-31. At that time, her vital signs showed slightly lower blood pressure (106/72 mmHg) and a pain level of 6, with an acuity level of 3.0. The underlying causes of these symptoms were not clearly identified. This history, combined with her current presentation, highlights the importance of regular follow-up to monitor for potential underlying vascular or systemic issues that may contribute to both her past and current symptoms. Continued evaluation and preventive care are recommended to address any ongoing or recurring health concerns.
+
+==================================== ER Visit Info ====================================
+ICD Code: H1131
+Diagnosis: Conjunctival hemorrhage, right eye
+Acuity: 2.0
+Arrival Transport: WALK IN
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I have a sharp, stabbing pain in my right eye, and my vision is blurry and distorted, like something is clouding my sight.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did the pain in your right eye start, and was it sudden or gradual?
+ - Answer 1: The pain started suddenly about an hour ago.
+
+2.
+ - Question 2: Have you experienced any trauma or injury to your eye recently?
+ - Answer 2: No, I haven't experienced any trauma or injury to my eye recently.
+
+3.
+ - Question 3: Is the pain constant or does it come and go, and are there any factors that make it worse or better?
+ - Answer 3: The pain is constant and feels sharper when I move my eye or blink, but I haven't noticed anything that makes it better.
+
+4.
+ - Question 4: Can you describe the blurriness and distortion in your vision - is it affecting your peripheral vision, central vision, or both?
+ - Answer 4: The blurriness and distortion are mainly in my central vision, making it hard to focus on things directly in front of me.
+
+5.
+ - Question 5: Are you seeing flashes of light, double vision, or floating spots in your vision?
+ - Answer 5: Yes, I'm seeing some floating spots, but no double vision or flashes of light.
+
+6.
+ - Question 6: Do you have a history of eye conditions, such as glaucoma, cataracts, or retinal detachment?
+ - Answer 6: No, I don't have a history of eye conditions like glaucoma, cataracts, or retinal detachment that I'm aware of.
+
+7.
+ - Question 7: Have you recently started any new medications that could be affecting your vision or causing eye pain?
+ - Answer 7: No, I haven't started any new medications recently.
+
+8.
+ - Question 8: Are you experiencing any discharge, redness, or tearing in the affected eye?
+ - Answer 8: Yes, my right eye is a bit red and teary, but there's no discharge that I've noticed.
+
+9.
+ - Question 9: Have you had any recent infections, such as sinusitis or conjunctivitis, that could be related to your symptoms?
+ - Answer 9: No, I haven't had any recent infections like sinusitis or conjunctivitis.
+
+10.
+ - Question 10: Are you experiencing any headache, fever, or systemic symptoms along with the eye pain and vision changes?
+ - Answer 10: I have a bit of a headache, but no fever, and the rest of my body feels fine except for this eye issue.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1788~1801" text="ESI Level: []" id="E0" ESI_LEVEL="2" comment=""/>
+<Lab_recommendation spans="1802~1824" text="Lab Recommendation: []" id="L0" comment="CBC, Coag, BMP"/>
+<ER_recommendation spans="1825~1846" text="ER Recommendation: []" id="ER0" comment="ophthalmology evaluation, CT scan"/>
+<Recommended_waiting_time spans="1847~1881" text="Recommended Waiting Time: []/hours" id="R0" comment="1"/>
+<QA spans="2203~2290" text=" - Question 1: When did the pain in your right eye start, and was it sudden or gradual?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2353~2431" text=" - Question 2: Have you experienced any trauma or injury to your eye recently?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2516~2631" text=" - Question 3: Is the pain constant or does it come and go, and are there any factors that make it worse or better?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2770~2913" text=" - Question 4: Can you describe the blurriness and distortion in your vision - is it affecting your peripheral vision, central vision, or both?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3053~3149" text=" - Question 5: Are you seeing flashes of light, double vision, or floating spots in your vision?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3246~3353" text=" - Question 6: Do you have a history of eye conditions, such as glaucoma, cataracts, or retinal detachment?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3483~3600" text=" - Question 7: Have you recently started any new medications that could be affecting your vision or causing eye pain?" id="Q6" relevance="Essential" comment="the patient would not know which medication would contribute to the symptoms"/>
+<QA spans="3670~3761" text=" - Question 8: Are you experiencing any discharge, redness, or tearing in the affected eye?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3865~3992" text=" - Question 9: Have you had any recent infections, such as sinusitis or conjunctivitis, that could be related to your symptoms?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="4086~4207" text="- Question 10: Are you experiencing any headache, fever, or systemic symptoms along with the eye pain and vision changes?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

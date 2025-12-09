@@ -1,0 +1,176 @@
+{
+  "metrics": {
+    "total_cases": 10,
+    "accuracy": 0.4,
+    "accuracy_within_one": 0.7,
+    "esi_distribution": {
+      "1": 0.0,
+      "2": 0.6,
+      "3": 0.3,
+      "4": 0.1,
+      "5": 0.0
+    },
+    "handoff_rate": 1.0
+  },
+  "case_results": [
+    {
+      "case_id": "30000012.txt",
+      "chief_complaint": "I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient presents with high-risk condition (confusion) and is an emergency department arrival, indicating a priority status. Additionally, her symptoms are consistent with hepatic encephalopathy triggered by a urinary tract infection, which necessitates immediate attention to manage the infection and prevent worsening of the patient's cognitive impairment.\n  4. Whether a handoff to human provider is needed: Yes",
+        "risk_factors": [
+          "High-risk condition: confusion",
+          "Ambulance arrival"
+        ],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 2,
+      "correct": true,
+      "arrival_method": "AMBULANCE"
+    },
+    {
+      "case_id": "30000017.txt",
+      "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Explanation: The patient's symptoms of disorientation, dizziness, unsteady gait, and blurry vision suggest a possible inner ear problem or alcohol intoxication. While the patient denies any recent head injuries or traumas, it is important to consider that these symptoms could be related to an undiagnosed condition such as benign paroxysmal positional vertigo (BPPV) or another inner ear disorder. The patient's nausea and inability to walk without support further support this ESI level.\n  4. Handoff to human provider: Yes, a handoff to a human provider is needed for further evaluation and possible treatment. This may include coordinating imaging studies, such as an MRI or CT scan, and possibly consulting an ear, nose, and throat (ENT) specialist if the patient's symptoms are suspected to be related to an inner ear problem.",
+        "risk_factors": [],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 3,
+      "correct": false,
+      "arrival_method": "WALK IN"
+    },
+    {
+      "case_id": "30000038.txt",
+      "chief_complaint": "I've been experiencing a persistent cough and feeling congested, making it hard for me to take a deep breath.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.95\n  3. Brief explanation: This patient has been experiencing persistent cough and congestion for about a week and a half, has had a fever, lives in an environment with multiple potential sick contacts, and has chronic conditions but no specific respiratory history. However, the symptoms do not indicate immediate life-threatening conditions as there is no significant chest pain or shortness of breath upon lying down.\n  4. Handoff to human provider: Yes, it would be advisable for a human healthcare provider to assess this patient further due to their persistent cough, fever, and potential chronic respiratory condition (though not specifically respiratory in nature).",
+        "risk_factors": [
+          "Ambulance arrival"
+        ],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 3,
+      "correct": true,
+      "arrival_method": "AMBULANCE"
+    },
+    {
+      "case_id": "30000039.txt",
+      "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Explanation: The patient presents with severe back pain following a fall and reports difficulty in walking or standing due to the pain, which suggests a possible spinal injury. However, there are no signs of neurological deficits (numbness, tingling, weakness) or loss of bladder/bowel control, which lowers the urgency slightly.\n  4. Handoff to human provider: Yes",
+        "risk_factors": [],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 3,
+      "correct": false,
+      "arrival_method": "WALK IN"
+    },
+    {
+      "case_id": "30000055.txt",
+      "chief_complaint": "I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.85,
+        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.85\n  3. Brief explanation: The patient's history of ear problems and the presence of symptoms like constant pain, feeling of a plugged-up ear, and worsening pain during swallowing or chewing suggest an ESI level of 3. While there's no fever or noticeable hearing loss, the elevated temperature might indicate a possible infection.\n  4. Whether a handoff to human provider is needed: Yes",
+        "risk_factors": [],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 5,
+      "correct": false,
+      "arrival_method": "WALK IN"
+    },
+    {
+      "case_id": "30000094.txt",
+      "chief_complaint": "I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient is experiencing symptoms of potential arrhythmia, which can be serious if left untreated. Although the patient denies chest pain or discomfort and has no known history of heart conditions, the palpitations have been worsening over the past day, and the anxiety associated with them suggests a high level of distress. The recent consumption of caffeine may also contribute to the symptoms.\n  4. Whether a handoff to human provider is needed (yes)",
+        "risk_factors": [
+          "Ambulance arrival"
+        ],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 2,
+      "correct": true,
+      "arrival_method": "AMBULANCE"
+    },
+    {
+      "case_id": "30000112.txt",
+      "chief_complaint": "I've been feeling weak and tired lately, and sometimes I get dizzy, like the room is spinning around me.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.85,
+        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.85\n  3. Explanation: The patient presents with symptoms of dizziness, weakness, decreased appetite, and unintended weight loss, which could indicate anemia or other underlying conditions. However, the patient does not report any immediate life-threatening symptoms, such as chest pain, shortness of breath, or neurological deficits. The patient's vital signs were not provided in this case, but considering the nature of the symptoms, they are likely stable.\n  4. Handoff to human provider: Yes, given the non-urgent but still concerning nature of the patient's symptoms, it would be appropriate for a healthcare professional to evaluate and manage the patient.",
+        "risk_factors": [],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 3,
+      "correct": true,
+      "arrival_method": "WALK IN"
+    },
+    {
+      "case_id": "30000177.txt",
+      "chief_complaint": "I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Explanation: This patient's presentation of severe, persistent nausea, vomiting, and abdominal pain accompanied by an inability to consume food or liquids, suggests a possible obstruction or acute gastrointestinal issue that requires immediate attention. While not an immediately life-threatening situation (ESI 1), it is a high risk one due to the potential for rapid deterioration and associated pain/distress (ESI 2).\n  4. Handoff to human provider: yes",
+        "risk_factors": [],
+        "needs_handoff": true,
+        "qa_count": 3
+      },
+      "ground_truth": 3,
+      "correct": false,
+      "arrival_method": "WALK IN"
+    },
+    {
+      "case_id": "30000202.txt",
+      "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 4\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient has a known history of allergies and has recently been exposed to potential triggers such as a new shampoo and shellfish, both of which could be causing the hives and itching. However, the patient does not report any life-threatening symptoms such as difficulty breathing, fever, or swelling in the throat, lips, or tongue. The patient has taken diphenhydramine and the reaction seems to be manageable at this point.\n  4. Whether a handoff to human provider is needed: Yes, it would be beneficial to have a human provider assess the patient for potential further treatment options, monitor the situation, and provide reassurance if necessary.",
+        "risk_factors": [],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 2,
+      "correct": false,
+      "arrival_method": "WALK IN"
+    },
+    {
+      "case_id": "30000204.txt",
+      "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.95,
+        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient is expressing significant emotional distress, has thoughts of self-harm, and is struggling with sleep and appetite changes following a recent assault. While they are currently in a safe environment, their mental health condition appears to be severe and requires immediate attention from multiple resources.\n  4. Handoff to human provider: Yes",
+        "risk_factors": [
+          "Ambulance arrival"
+        ],
+        "needs_handoff": true,
+        "qa_count": 10
+      },
+      "ground_truth": 4,
+      "correct": false,
+      "arrival_method": "AMBULANCE"
+    }
+  ]
+}

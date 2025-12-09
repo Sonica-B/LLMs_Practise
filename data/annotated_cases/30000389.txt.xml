@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[```plaintext
+============== Summary of Current ED Visits ==============
+The patient, an elderly white female, presented to the emergency department as a walk-in with a diagnosis of unspecified constipation (ICD Code: 56400). Her chief complaint involved mild abdominal discomfort, with a reported pain level of 2. Vital signs showed a temperature of 97.6°F, heart rate of 92 bpm, respiratory rate of 16/min, oxygen saturation of 100%, and blood pressure of 144/61 mmHg. The acuity level was rated as 3.0, indicating moderate concern without immediate life-threatening complications. No laboratory tests were documented for this visit. The patient was treated conservatively and discharged home with instructions to follow up as needed. Continued outpatient management is recommended to address the underlying cause of her constipation.
+
+============== Medical History ==============
+The patient has a medical history that includes edema bilaterally (ICD Code: 7823), reported during a prior visit on 2172-07-31, and left shoulder joint pain (ICD Code: 71941), noted during a visit on 2173-02-27. Her prior episodes involved slightly elevated blood pressure (159/92 mmHg and 144/89 mmHg, respectively) and no significant systemic symptoms. Both conditions were managed conservatively. Additionally, the patient has presented with intermittent concerns likely related to chronic musculoskeletal or vascular issues. Her history of mild chronic conditions may suggest underlying factors contributing to her constipation, such as decreased mobility, diet, or medications. A comprehensive outpatient evaluation focusing on lifestyle and underlying contributors is recommended for ongoing care.
+```
+
+==================================== ER Visit Info ====================================
+ICD Code: 56400
+Diagnosis: UNSPECIFIED CONSTIPATION
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I feel like I haven't had a bowel movement in a while and it's getting really hard to go, with a constant feeling of fullness and discomfort in my abdomen.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: How many days has it been since your last bowel movement?
+ - Answer 1: It's been about 5 days since my last bowel movement.
+
+2.
+ - Question 2: Have you experienced any abdominal pain or cramping along with the discomfort?
+ - Answer 2: Yes, I have been experiencing some abdominal pain, more like discomfort and a feeling of fullness, rather than sharp cramping.
+
+3.
+ - Question 3: Can you describe the consistency of your last bowel movement?
+ - Answer 3: My last bowel movement was hard and dry, which is unusual for me.
+
+4.
+ - Question 4: Have you noticed any blood or mucus in your stool?
+ - Answer 4: No, I haven't noticed any blood, but there might have been a little mucus.
+
+5.
+ - Question 5: Are you experiencing nausea or vomiting?
+ - Answer 5: I feel a bit nauseous, but I haven't vomited.
+
+6.
+ - Question 6: Have you had a recent change in your diet or fluid intake?
+ - Answer 6: I haven't changed my diet recently, but I might not have been drinking as much water as I should.
+
+7.
+ - Question 7: Do you have a history of constipation or gastrointestinal conditions like irritable bowel syndrome?
+ - Answer 7: Yes, I have had constipation issues before, but not as severe as this.
+
+8.
+ - Question 8: Are you taking any medications that could be contributing to constipation?
+ - Answer 8: I'm not taking any new medications, but I do take some supplements.
+
+9.
+ - Question 9: Have you recently traveled or been exposed to anyone with a similar illness?
+ - Answer 9: I haven't traveled recently or been around anyone with similar symptoms.
+
+10.
+ - Question 10: Are you experiencing any fever or chills in addition to the abdominal discomfort?
+ - Answer 10: No, I don't have a fever, but I do feel a bit uncomfortable and warm at times, but my temperature was taken and it's normal.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1982~1995" text="ESI Level: []" id="E0" ESI_LEVEL="4" comment=""/>
+<Lab_recommendation spans="1996~2018" text="Lab Recommendation: []" id="L0" comment="cbc, cmp, LA"/>
+<ER_recommendation spans="2019~2040" text="ER Recommendation: []" id="ER0" comment="radiology imaging, xray of ct"/>
+<Recommended_waiting_time spans="2041~2075" text="Recommended Waiting Time: []/hours" id="R0" comment="4"/>
+<QA spans="2430~2502" text=" - Question 1: How many days has it been since your last bowel movement?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2573~2666" text=" - Question 2: Have you experienced any abdominal pain or cramping along with the discomfort?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2811~2887" text=" - Question 3: Can you describe the consistency of your last bowel movement?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2971~3036" text=" - Question 4: Have you noticed any blood or mucus in your stool?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3129~3184" text=" - Question 5: Are you experiencing nausea or vomiting?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3248~3321" text=" - Question 6: Have you had a recent change in your diet or fluid intake?" id="Q5" relevance="Optionl" comment=""/>
+<QA spans="3437~3551" text=" - Question 7: Do you have a history of constipation or gastrointestinal conditions like irritable bowel syndrome?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3640~3729" text=" - Question 8: Are you taking any medications that could be contributing to constipation?" id="Q7" relevance="Essential" comment="pt would not know which medication is contributing to constipation"/>
+<QA spans="3815~3906" text=" - Question 9: Have you recently traveled or been exposed to anyone with a similar illness?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="3998~4095" text=" - Question 10: Are you experiencing any fever or chills in addition to the abdominal discomfort?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

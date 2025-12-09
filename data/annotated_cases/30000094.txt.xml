@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, an elderly white female, presented to the emergency department via ambulance with a diagnosis of unspecified atrial fibrillation (ICD Code: I4891). She reported mild discomfort with a pain level of 2 and exhibited a heart rate of 60 bpm, respiratory rate of 18 breaths per minute, oxygen saturation of 94%, and blood pressure of 120/95 mmHg. Her temperature was 98.1°F, and she was hemodynamically stable upon evaluation. Laboratory results, including blood chemistry and hematology, were within normal limits, with no significant abnormalities noted. The acuity level was rated at 2.0, indicating a stable condition without immediate life-threatening concerns. After stabilization, the patient was discharged home with instructions for follow-up care to monitor and manage her atrial fibrillation.
+
+============== Medical History ==============
+The patient’s medical history is not documented in detail for this visit. The current diagnosis of unspecified atrial fibrillation suggests potential underlying cardiovascular conditions that warrant further evaluation and management. Given her age and the documented atrial fibrillation episode, the patient may benefit from regular cardiology follow-up and ongoing monitoring for potential complications such as stroke or thromboembolism. Additional documentation of past medical history would help guide her long-term care plan.
+
+==================================== ER Visit Info ====================================
+ICD Code: I4891
+Diagnosis: Unspecified atrial fibrillation
+Acuity: 2.0
+Arrival Transport: AMBULANCE
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice your heart feeling like it was racing or skipping beats?
+ - Answer 1: I first noticed it a few days ago, but it's been more pronounced over the past 24 hours.
+
+2.
+ - Question 2: How long have you been experiencing these heart palpitations?
+ - Answer 2: It's been on and off for a few days, but like I said, it's gotten worse over the last day.
+
+3.
+ - Question 3: Are the palpitations constant or do they come and go?
+ - Answer 3: They come and go; sometimes my heart feels normal, and then it starts racing or skipping beats again.
+
+4.
+ - Question 4: Have you experienced any chest pain, pressure, or discomfort along with the palpitations?
+ - Answer 4: No, I haven't felt any chest pain, but the palpitations are uncomfortable and make me anxious.
+
+5.
+ - Question 5: Do you have a history of heart conditions, such as arrhythmias or heart failure?
+ - Answer 5: I don't have a known history of heart conditions, but I've never really had my heart checked thoroughly before either.
+
+6.
+ - Question 6: Are you currently taking any medications that could affect your heart rate?
+ - Answer 6: No, I'm not taking any medications that I know would affect my heart rate.
+
+7.
+ - Question 7: Have you recently consumed caffeine, nicotine, or other stimulants?
+ - Answer 7: Yes, I had a couple of cups of coffee yesterday and a bit of chocolate, but I didn't think much of it at the time.
+
+8.
+ - Question 8: Can you describe the shortness of breath you're experiencing - is it mild, moderate, or severe?
+ - Answer 8: The shortness of breath is mild to moderate; it's not severe, but it's noticeable, especially when the palpitations are happening.
+
+9.
+ - Question 9: Do you have any history of anxiety disorders, and if so, have your symptoms been worsening?
+ - Answer 9: I've had some anxiety in the past, but it's been manageable. Lately, with these palpitations, my anxiety has been worse.
+
+10.
+ - Question 10: Have you experienced any triggers or factors that seem to make the palpitations and anxiety worse?
+ - Answer 10: Stress and maybe the caffeine seem to make it worse, but I'm not really sure; it's all been a bit overwhelming.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1749~1762" text="ESI Level: []" id="E0" ESI_LEVEL="2" comment=""/>
+<Lab_recommendation spans="1763~1785" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, cardiac enzyme"/>
+<ER_recommendation spans="1786~1807" text="ER Recommendation: []" id="ER0" comment="EKG, vital sign close monitor, IV meds if necessary"/>
+<Recommended_waiting_time spans="1808~1842" text="Recommended Waiting Time: []/hours" id="R0" comment="&lt;1"/>
+<QA spans="2162~2259" text=" - Question 1: When did you first notice your heart feeling like it was racing or skipping beats?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2366~2442" text=" - Question 2: How long have you been experiencing these heart palpitations?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2551~2619" text=" - Question 3: Are the palpitations constant or do they come and go?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2739~2843" text=" - Question 4: Have you experienced any chest pain, pressure, or discomfort along with the palpitations?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="2957~3051" text="- Question 5: Do you have a history of heart conditions, such as arrhythmias or heart failure?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3188~3278" text=" - Question 6: Are you currently taking any medications that could affect your heart rate?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3371~3453" text=" - Question 7: Have you recently consumed caffeine, nicotine, or other stimulants?" id="Q6" relevance="Wrong" comment="Not sure if this is important in the ER setting when we just need to focus on treating.. Rather than asking caffeine or nicotine, it may be better to ask about substance use"/>
+<QA spans="3586~3696" text=" - Question 8: Can you describe the shortness of breath you're experiencing - is it mild, moderate, or severe?" id="Q7" relevance="Optionl" comment="not necessary to determine the severity?"/>
+<QA spans="3845~3951" text=" - Question 9: Do you have any history of anxiety disorders, and if so, have your symptoms been worsening?" id="Q8" relevance="Optionl" comment="not necessary"/>
+<QA spans="4091~4205" text=" - Question 10: Have you experienced any triggers or factors that seem to make the palpitations and anxiety worse?" id="Q9" relevance="Wrong" comment="this question assumes that the palpitation is from anxiety..."/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

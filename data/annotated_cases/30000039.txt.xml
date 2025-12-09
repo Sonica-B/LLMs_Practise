@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, an elderly white male, presented to the emergency department following multiple falls, the most recent resulting in severe back pain. He reported worsening gait over the past few weeks and described his home as cluttered, posing significant fall risks. On admission, the patient was noted to have a T-11 vertebral compression fracture with 50% loss of height on imaging, as well as old posterior rib fractures. He also exhibited hypertension with a blood pressure of 189/96 mmHg, though other vital signs, including temperature, heart rate, and respiratory rate, were stable. Laboratory findings were unremarkable, and there were no indications of acute intracranial or other fractures based on CT imaging. He was evaluated by neurosurgery, who recommended conservative management with a TLSO brace and physical therapy. The patient was discharged home with support services after being fitted for the brace and provided with instructions to wear it whenever out of bed. Concerns about cognitive decline and alcohol use were noted, prompting recommendations for primary care and neuropsychological follow-up.
+
+============== Medical History ==============
+The patient has a documented history of hypertension and peripheral neuropathy, with a social history suggesting heavy alcohol use and possible cognitive decline. This visit highlighted a significant fall risk associated with his living environment, as well as his admitted memory issues. Imaging revealed no acute fractures beyond the T-11 compression fracture but did note evidence of prior rib fractures and mild degenerative changes consistent with age. His history and presentation raise concerns about underlying alcohol-related health issues, including potential cognitive impairment and poor home safety. The patient requires ongoing support, including blood pressure management, alcohol cessation counseling, and a safer living environment. His medical history underscores the importance of coordinated care to address both physical and social determinants of health.
+
+==================================== ER Visit Info ====================================
+ICD Code: 8054
+Diagnosis: FX LUMBAR VERTEBRA-CLOSE
+Acuity: 3.0
+Arrival Transport: WALK IN
+Disposition: ADMITTED
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: Can you describe the exact location of the back pain?
+ - Answer 1: The pain is in my lower back, it feels like it's around the middle of my back, but it hurts the most when I breathe in deeply or try to move around.
+
+2.
+ - Question 2: How long ago did the fall occur that you're associating with your back pain?
+ - Answer 2: I think it was a few days ago, I'm not entirely sure, I've been a bit confused about time lately.
+
+3.
+ - Question 3: What were the circumstances of the fall, such as the height from which you fell and how you landed?
+ - Answer 3: I fell on the ice and landed on my back, I don't know how far I fell, but it was enough to knock the wind out of me and cause a lot of pain.
+
+4.
+ - Question 4: Are there any movements or positions that make the pain better or worse?
+ - Answer 4: Yes, when I try to stand up straight or take deep breaths, the pain gets worse, and it feels a bit better when I'm sitting still or lying down, but even then, it's still quite painful.
+
+5.
+ - Question 5: Do you have any numbness, tingling, or weakness in your legs or arms?
+ - Answer 5: No, I don't feel any numbness, tingling, or weakness in my legs or arms, just the pain in my back.
+
+6.
+ - Question 6: Have you experienced any loss of bladder or bowel control since the fall?
+ - Answer 6: No, I haven't had any problems with bladder or bowel control since the fall.
+
+7.
+ - Question 7: Are you having any difficulty walking or standing due to the pain?
+ - Answer 7: Yes, walking and standing are very difficult for me right now because of the pain, it feels like it's hard to move without exacerbating the pain.
+
+8.
+ - Question 8: Do you have a history of back problems, such as herniated discs or spinal fractures?
+ - Answer 8: I don't have a history of back problems that I'm aware of, but I have had a few falls recently, and this one seems to be the worst.
+
+9.
+ - Question 9: Have you noticed any bruising, swelling, or deformity in the area of pain?
+ - Answer 9: Yes, I've noticed some bruising on my back and other parts of my body from the fall, but I'm not sure about any swelling or deformity.
+
+10.
+ - Question 10: Are you experiencing any fever, chills, or other systemic symptoms alongside the back pain?
+ - Answer 10: No, I don't have a fever or chills, just the back pain and some confusion at times, which my friends have noticed, especially in the evenings.
+
+]]></TEXT>
+<TAGS>
+<QA spans="2824~2891" text="- Question 1: Can you describe the exact location of the back pain?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="3058~3149" text=" - Question 2: How long ago did the fall occur that you're associating with your back pain?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3265~3379" text=" - Question 3: What were the circumstances of the fall, such as the height from which you fell and how you landed?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="3538~3625" text=" - Question 4: Are there any movements or positions that make the pain better or worse?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="3828~3912" text=" - Question 5: Do you have any numbness, tingling, or weakness in your legs or arms?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="4029~4117" text=" - Question 6: Have you experienced any loss of bladder or bowel control since the fall?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="4212~4293" text=" - Question 7: Are you having any difficulty walking or standing due to the pain?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="4457~4556" text=" - Question 8: Do you have a history of back problems, such as herniated discs or spinal fractures?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="4706~4795" text=" - Question 9: Have you noticed any bruising, swelling, or deformity in the area of pain?" id="Q8" relevance="Optionl" comment=""/>
+<QA spans="4949~5056" text=" - Question 10: Are you experiencing any fever, chills, or other systemic symptoms alongside the back pain?" id="Q9" relevance="Essential" comment=""/>
+<ESI spans="2398~2411" text="ESI Level: []" id="E0" ESI_LEVEL="3" comment=""/>
+<Lab_recommendation spans="2412~2434" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, Coag, UA"/>
+<ER_recommendation spans="2435~2456" text="ER Recommendation: []" id="ER0" comment="CT or MRI of the spine / brain"/>
+<Recommended_waiting_time spans="2457~2491" text="Recommended Waiting Time: []/hours" id="R0" comment="3"/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

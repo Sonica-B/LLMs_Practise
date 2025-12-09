@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged white female, presented to the emergency department via ambulance and was diagnosed with anorexia nervosa, unspecified (ICD Code: F5000). She denied any pain, reporting a pain level of 0, and her vital signs were stable, with a temperature of 98.1°F, heart rate of 78 bpm, respiratory rate of 16 breaths per minute, oxygen saturation of 100%, and blood pressure of 127/78 mmHg. Laboratory results, including blood chemistry and hematology, were within normal limits, showing no immediate physiological abnormalities. The acuity level was rated at 2.0. After assessment and stabilization, the patient was discharged home with recommendations to follow up with her primary care provider and mental health services to address her underlying condition and nutritional needs.
+
+============== Medical History ==============
+The patient’s medical history was not documented during this visit. However, the diagnosis of anorexia nervosa underscores the importance of addressing both the psychological and physical components of her condition. Follow-up care with a multidisciplinary team, including a mental health specialist, dietitian, and primary care provider, is essential to ensure adequate support for recovery. Preventive measures such as routine monitoring of weight, nutritional intake, and mental health status should be implemented to prevent further complications or exacerbations of her condition.
+
+==================================== ER Visit Info ====================================
+ICD Code: F5000
+Diagnosis: Anorexia nervosa, unspecified
+Acuity: 2.0
+Arrival Transport: AMBULANCE
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I've lost my appetite and feel empty inside, but not because I'm hungry, it's more like I have no desire to eat at all.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice a decrease in your appetite?
+ - Answer 1: I think it started a few weeks ago, but it's gotten worse over the past week.
+
+2.
+ - Question 2: Have you experienced any significant weight loss recently?
+ - Answer 2: Yes, I've lost a significant amount of weight, which is worrying me and my family.
+
+3.
+ - Question 3: Are you feeling nauseous or vomiting, which might be contributing to your lack of appetite?
+ - Answer 3: No, I don't feel nauseous, and I'm not vomiting; it's just that I have no desire to eat.
+
+4.
+ - Question 4: Do you have any abdominal pain or discomfort after eating?
+ - Answer 4: No, I don't have abdominal pain or discomfort after eating; it's just the lack of interest in food.
+
+5.
+ - Question 5: Have you noticed any changes in your sense of taste or smell?
+ - Answer 5: No, my sense of taste and smell seems normal; food just doesn't appeal to me.
+
+6.
+ - Question 6: Are you currently taking any medications that could be affecting your appetite?
+ - Answer 6: No, I'm not taking any medications that I think would affect my appetite.
+
+7.
+ - Question 7: Have you been feeling depressed, anxious, or overwhelmed lately?
+ - Answer 7: Yes, I have been feeling overwhelmed and anxious, which seems to be getting worse.
+
+8.
+ - Question 8: Do you have a history of eating disorders or gastrointestinal issues?
+ - Answer 8: Yes, I have a history of body image issues and restrictive eating patterns.
+
+9.
+ - Question 9: Have you recently traveled or been exposed to someone with a similar symptom?
+ - Answer 9: No, I haven't traveled recently or been exposed to someone with similar symptoms.
+
+10.
+ - Question 10: Are you experiencing any other symptoms such as fatigue, fever, or difficulty sleeping?
+ - Answer 10: Yes, I'm experiencing fatigue and difficulty sleeping, which I think might be related to my lack of appetite and overall mental state.
+
+]]></TEXT>
+<TAGS>
+<QA spans="2199~2268" text=" - Question 1: When did you first notice a decrease in your appetite?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2364~2437" text=" - Question 2: Have you experienced any significant weight loss recently?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2539~2644" text="- Question 3: Are you feeling nauseous or vomiting, which might be contributing to your lack of appetite?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2751~2824" text=" - Question 4: Do you have any abdominal pain or discomfort after eating?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="2942~3018" text=" - Question 5: Have you noticed any changes in your sense of taste or smell?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="3115~3208" text="- Question 6: Are you currently taking any medications that could be affecting your appetite?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3300~3379" text=" - Question 7: Have you been feeling depressed, anxious, or overwhelmed lately?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3481~3564" text="- Question 8: Do you have a history of eating disorders or gastrointestinal issues?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3658~3750" text=" - Question 9: Have you recently traveled or been exposed to someone with a similar symptom?" id="Q8" relevance="Essential" comment=""/>
+<QA spans="3851~3954" text=" - Question 10: Are you experiencing any other symptoms such as fatigue, fever, or difficulty sleeping?" id="Q9" relevance="Essential" comment=""/>
+<ESI spans="1787~1800" text="ESI Level: []" id="E0" ESI_LEVEL="4" comment=""/>
+<Lab_recommendation spans="1801~1823" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, UA"/>
+<ER_recommendation spans="1824~1845" text="ER Recommendation: []" id="ER0" comment="IV hydration"/>
+<Recommended_waiting_time spans="1846~1880" text="Recommended Waiting Time: []/hours" id="R0" comment="4"/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

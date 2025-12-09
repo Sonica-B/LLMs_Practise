@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged Black/African American male, presented to the emergency department with complaints suggestive of an allergic reaction, diagnosed as unspecified allergy (ICD Code: 9953). Upon evaluation, his vital signs included a temperature of 97.8°F, heart rate of 93 bpm, respiratory rate of 18 breaths per minute, oxygen saturation of 93%, and blood pressure of 140/70 mmHg. He reported mild discomfort with a pain level of 3. No lab tests were documented for this visit. The patient was treated symptomatically for the allergic reaction and discharged home in stable condition with instructions for follow-up care and to seek immediate medical attention if symptoms worsened.
+
+============== Medical History ==============
+The patient’s medical history was not documented for this visit. Given the current diagnosis of an unspecified allergic reaction, a detailed history of prior allergic episodes or potential triggers (e.g., food, medication, environmental factors) would be beneficial in guiding future care. Preventive measures, such as identifying and avoiding allergens, and the potential need for medications like antihistamines or an epinephrine auto-injector, should be discussed with the patient during follow-up care.
+
+==================================== ER Visit Info ====================================
+ICD Code: 9953
+Diagnosis: ALLERGY, UNSPECIFIED
+Acuity: 2.0
+Arrival Transport: WALK IN
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: When did you first notice the itching and hives starting?
+ - Answer 1: I first noticed the itching and hives about 2 hours ago.
+
+2.
+ - Question 2: Have you experienced anything like this before, or is this your first time with hives?
+ - Answer 2: This is not my first time with hives, I've had a similar reaction a few years ago.
+
+3.
+ - Question 3: Are there any new foods, medications, or products you've used in the past 24 to 48 hours?
+ - Answer 3: Yes, I tried a new shampoo yesterday and ate shellfish for dinner last night.
+
+4.
+ - Question 4: Do you have a history of allergies, such as to foods, drugs, or insect bites?
+ - Answer 4: I have a history of allergy to certain types of nuts.
+
+5.
+ - Question 5: Are the hives and itching worse in any particular area of your body or spread evenly?
+ - Answer 5: The hives seem to be spread evenly across my body, but they're worse on my arms and torso.
+
+6.
+ - Question 6: Have you recently been bitten by an insect or exposed to any potential allergens?
+ - Answer 6: I haven't been bitten by an insect recently, but I did spend some time outdoors yesterday.
+
+7.
+ - Question 7: Are you feeling any other symptoms, such as fever, nausea, or difficulty breathing?
+ - Answer 7: I'm feeling a bit anxious and my skin is really itchy, but I don't have a fever or nausea, and I'm breathing normally.
+
+8.
+ - Question 8: Have you taken any over-the-counter medications or used any creams that might be related to the hives?
+ - Answer 8: I took some diphenhydramine a few minutes before coming here, hoping it would help with the itching.
+
+9.
+ - Question 9: Do you have a family history of allergic reactions or conditions like eczema or asthma?
+ - Answer 9: Yes, my sister has eczema and my mother has asthma.
+
+10.
+ - Question 10: Are your lips, tongue, or throat swollen, or is the swelling limited to your skin?
+ - Answer 10: My skin is swollen, but I don't notice any swelling in my lips, tongue, or throat.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1590~1603" text="ESI Level: []" id="E0" ESI_LEVEL="2" comment=""/>
+<Lab_recommendation spans="1604~1626" text="Lab Recommendation: []" id="L0" comment="CBC, CMP"/>
+<ER_recommendation spans="1627~1648" text="ER Recommendation: []" id="ER0" comment="Oxygen level check, IV medication"/>
+<Recommended_waiting_time spans="1649~1683" text="Recommended Waiting Time: []/hours" id="R0" comment="1"/>
+<QA spans="2013~2085" text=" - Question 1: When did you first notice the itching and hives starting?" id="Q0" relevance="Essential" comment=""/>
+<QA spans="2160~2261" text=" - Question 2: Have you experienced anything like this before, or is this your first time with hives?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="2362~2466" text=" - Question 3: Are there any new foods, medications, or products you've used in the past 24 to 48 hours?" id="Q2" relevance="Essential" comment=""/>
+<QA spans="2562~2654" text=" - Question 4: Do you have a history of allergies, such as to foods, drugs, or insect bites?" id="Q3" relevance="Essential" comment=""/>
+<QA spans="2726~2826" text=" - Question 5: Are the hives and itching worse in any particular area of your body or spread evenly?" id="Q4" relevance="Essential" comment=""/>
+<QA spans="2935~3031" text=" - Question 6: Have you recently been bitten by an insect or exposed to any potential allergens?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="3140~3238" text=" - Question 7: Are you feeling any other symptoms, such as fever, nausea, or difficulty breathing?" id="Q6" relevance="Essential" comment=""/>
+<QA spans="3375~3492" text=" - Question 8: Have you taken any over-the-counter medications or used any creams that might be related to the hives?" id="Q7" relevance="Essential" comment=""/>
+<QA spans="3611~3713" text=" - Question 9: Do you have a family history of allergic reactions or conditions like eczema or asthma?" id="Q8" relevance="Optionl" comment=""/>
+<QA spans="3784~3882" text=" - Question 10: Are your lips, tongue, or throat swollen, or is the swelling limited to your skin?" id="Q9" relevance="Essential" comment=""/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

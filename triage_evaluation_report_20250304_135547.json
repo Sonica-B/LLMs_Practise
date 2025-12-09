@@ -1,0 +1,2226 @@
+{
+  "cases": [
+    {
+      "case_id": "30000012",
+      "chief_complaint": "I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.62,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient's symptoms of confusion and encephalopathy indicate potential deterioration. The urgency is underscored by the ambulance arrival, high-risk conditions, and an ESI level of 2."
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "The patient has a history of alcoholic cirrhosis, which increases the complexity of her current presentation. The suspected trigger for hepatic encephalopathy is a urinary tract infection, and further expert interpretation is required to manage this complication effectively."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The diagnosis of hepatic encephalopathy due to a urinary tract infection presents diagnostic uncertainty. The high risk associated with this uncertainty is evident in the patient's symptoms and the need for immediate intervention."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Hepatic Encephalopathy",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Urinary Tract Infection (UTI)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Alcohol withdrawal encephalopathy",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Wernicke-Korsakoff syndrome",
+            "likelihood": "Low"
+          },
+          {
+            "diagnosis": "Other causes of encephalopathy (e.g., metabolic disturbances, drug intoxication/withdrawal)",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "High-risk condition: confusion",
+          "High-risk condition: encephalopathy",
+          "Ambulance arrival",
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 0.125,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "name": "Basic metabolic panel",
+              "rationale": "Baseline assessment"
+            }
+          ],
+          "imaging": [],
+          "medications": [],
+          "monitoring": "Standard vital signs",
+          "consults": []
+        }
+      }
+    },
+    {
+      "case_id": "30000017",
+      "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": "Patient deterioration risk",
+          "reasons": [
+            {
+              "category": "1. Critical physiological instability",
+              "explanation": "The patient is experiencing symptoms such as extreme disorientation, unsteadiness, and difficulty walking, which may indicate a critical issue with their balance or neurological function."
+            },
+            {
+              "category": "5. Patient deterioration risk",
+              "explanation": "Given the patient's symptoms, there is a high risk of further deterioration if not promptly assessed and treated by a human medical provider."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Vertigo or Benign Paroxysmal Positional Vertigo (BPPV)",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Labyrinthitis",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Vestibular migraine",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Inner ear infection (Labyrinthitis or M\u00e9ni\u00e8re's disease)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Cerebellar ataxia",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ELOPED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Hearing and balance tests (audiometry and electronystagmography)",
+              "rationale": "To assess for inner ear function, particularly vestibular system."
+            },
+            {
+              "test": "Blood glucose level",
+              "rationale": "To rule out hypoglycemia as a possible cause of symptoms."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "CT or MRI scan of the head and brainstem",
+              "rationale": "If the patient's condition does not improve, to investigate for structural causes like a cerebellar lesion."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Meclizine or dimenhydrinate",
+              "indication": "To alleviate vertigo and nausea"
+            },
+            {
+              "name": "Prochlorperazine",
+              "indication": "For severe vertigo and vomiting"
+            }
+          ],
+          "monitoring": [
+            {
+              "frequency": "Every 4 hours",
+              "parameter": "Blood pressure and pulse rate"
+            },
+            {
+              "frequency": "As needed",
+              "parameter": "Blood glucose level"
+            }
+          ],
+          "consults": [
+            "Ear, Nose, and Throat (ENT) specialist for further evaluation of vestibular function.",
+            "Neurologist if the symptoms persist or worsen."
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000038",
+      "chief_complaint": "I've been experiencing a persistent cough and feeling congested, making it hard for me to take a deep breath.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.68,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient is experiencing persistent coughing and congestion, making it hard for them to take a deep breath. This could indicate respiratory distress, which requires immediate attention from a human medical provider."
+            },
+            {
+              "category": "ESI Level",
+              "explanation": "The Emergency Severity Index (ESI) level 3 indicates that the patient's condition is serious but not immediately life-threatening. However, it still requires prompt evaluation by a medical professional."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms suggest a respiratory issue, but the exact diagnosis is uncertain. Given the potential severity of such conditions, it's crucial to have a human medical provider for accurate assessment and appropriate treatment."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Acute Bronchitis",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Upper Respiratory Tract Infection (URTI)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Pneumonia",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Allergic Rhinitis",
+            "likelihood": "Low"
+          },
+          {
+            "diagnosis": "Asthma Exacerbation",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "Ambulance arrival"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To assess for infection or anemia."
+            },
+            {
+              "test": "C-reactive Protein (CRP)",
+              "rationale": "To assess inflammation levels in the body, which can indicate an infection."
+            },
+            {
+              "test": "Oxygen Saturation (SpO2)",
+              "rationale": "To monitor the patient's oxygenation level, especially if there are respiratory symptoms."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Chest X-ray",
+              "rationale": "To visualize the lungs and identify any infiltrates or consolidations that may suggest pneumonia."
+            },
+            {
+              "study": "Chest CT Scan (if the patient's condition worsens)",
+              "rationale": "To provide more detailed imaging of the lungs if a chest X-ray is inconclusive."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Expectorants",
+              "rationale": "To help loosen and expel mucus from the airways."
+            },
+            {
+              "name": "Cough suppressants (if the cough is severe and causing distress)",
+              "rationale": "To alleviate persistent coughing and reduce discomfort."
+            },
+            {
+              "name": "Antibiotics",
+              "rationale": "For potential treatment of bacterial infections, such as bronchitis or pneumonia. The decision to prescribe antibiotics should be based on the patient's clinical presentation and response to initial management."
+            },
+            {
+              "name": "Oral decongestants",
+              "rationale": "To relieve nasal congestion, which may contribute to breathing difficulties."
+            }
+          ],
+          "monitoring": {
+            "vital_signs_frequency": "Every 2-4 hours for initial assessment and stabilization, then every 4-6 hours as the patient improves.",
+            "parameters": [
+              "Temperature",
+              "Heart rate",
+              "Respiratory rate",
+              "Blood pressure",
+              "Oxygen saturation (SpO2)"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Pulmonologist or Infectious Disease specialist",
+              "indication": "If the patient's condition does not improve with initial management, or if there are complications."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000039",
+      "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient has a severe back pain that worsens with movement or breathing, which could indicate a serious injury. This level of pain and discomfort suggests possible deterioration, making it necessary to hand off the case to a human medical provider for immediate assessment."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's back pain is severe and persists after a fall, which is classified as a high-risk condition. The exact nature and extent of the injury are unclear, necessitating expert interpretation by a human medical provider to ensure proper diagnosis and treatment."
+            },
+            {
+              "category": "Protocol-mandated physician assessment",
+              "explanation": "The Emergency Severity Index (ESI) level for this patient is 2, which requires immediate physician assessment. This is due to the nature of the complaint and the potential severity of the injury."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Fracture of the thoracic or lumbar vertebra",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Strain or sprain of the back muscles",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Kyphosis or Scheuermann's kyphosis due to trauma",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Compression fracture of the vertebra",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Disc herniation or bulging disc in the thoracic or lumbar region",
+            "likelihood": "Medium"
+          }
+        ],
+        "risk_factors": [
+          "High-risk condition: fall"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 0.25,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Spine X-ray",
+              "rationale": "To visualize the spine, including vertebrae alignment and integrity, and detect any fractures or dislocations."
+            },
+            {
+              "test": "MRI of the Spine",
+              "rationale": "To provide detailed images of the soft tissues in the spine (discs, ligaments, muscles) to help diagnose conditions such as disc herniation or bulging discs."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "CT Scan of the Spine",
+              "rationale": "To further evaluate for any fractures, dislocations, or abnormalities in the bones of the spine not visible on X-ray."
+            }
+          ],
+          "medications": [
+            {
+              "medication": "Analgesics (e.g., acetaminophen, ibuprofen, opioids)",
+              "rationale": "To manage pain associated with the back injury."
+            },
+            {
+              "medication": "Muscle relaxants",
+              "rationale": "To help alleviate muscle spasms and promote relaxation of the back muscles."
+            },
+            {
+              "medication": "Anti-inflammatory drugs (e.g., corticosteroids)",
+              "rationale": "To reduce inflammation, swelling, and pain in the affected area."
+            }
+          ],
+          "monitoring": [
+            {
+              "vitalSigns": "Pain level (using a scale like the Visual Analog Scale or numeric rating scale)",
+              "frequency": "Daily"
+            },
+            {
+              "vitalSigns": "Blood pressure and heart rate",
+              "frequency": "Every 4 hours"
+            }
+          ],
+          "consults": [
+            {
+              "specialist": "Orthopedic Surgeon or Spine Specialist",
+              "rationale": "For further evaluation, management of the back injury, and guidance on possible surgical interventions if necessary."
+            },
+            {
+              "specialist": "Physical Therapist or Rehabilitation Medicine",
+              "rationale": "To help with pain management and provide exercises to aid in recovery and prevent future falls."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000055",
+      "chief_complaint": "I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's complaint of a persistent sharp pain in the left ear, accompanied by feelings of plugged-up sensation, suggests an otologic issue. However, without further diagnostic tests, it is unclear if this could be due to conditions such as otitis media, otitis externa, or even something more serious like a tumor. Given the uncertainty and potential for seriousness, a human medical provider's expertise is required for accurate diagnosis."
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "Although not provided in the patient information, ESI (Emergency Severity Index) level 4 indicates that the patient has at least two significant comorbidities. Therefore, a human medical provider is needed to interpret this complex medical history and ensure appropriate management of the current issue while also considering the potential interactions with pre-existing conditions."
+            },
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "Though not explicitly mentioned, any ear pain that persists can potentially lead to complications such as mastoiditis or facial nerve palsy. A human medical provider is essential to monitor the patient's condition for signs of worsening and to institute timely interventions if necessary."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Acute Otitis Media",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Serous Otitis Media",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Swimmer's Ear (Acute External Otitis)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Eustachian tube dysfunction",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Referred pain from TMJ disorder",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 2,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Audiogram",
+              "rationale": "To assess hearing function and rule out conductive or sensorineural hearing loss."
+            },
+            {
+              "test": "Otoscopic examination",
+              "rationale": "For direct visualization of the tympanic membrane, ear canal, and external auditory meatus to evaluate for signs of infection or inflammation."
+            }
+          ],
+          "imaging": [],
+          "medications": [
+            {
+              "name": "Pain relievers (acetaminophen or ibuprofen)",
+              "rationale": "For pain relief and fever reduction"
+            },
+            {
+              "name": "Antibiotics",
+              "rationale": "For suspected bacterial infections such as Acute Otitis Media."
+            },
+            {
+              "name": "Topical antibiotics (for Swimmer's Ear)",
+              "rationale": "For suspected acute external otitis."
+            }
+          ],
+          "monitoring": {
+            "vitalSignsMonitoringFrequency": "Daily",
+            "parameters": [
+              "Temperature",
+              "Pulse",
+              "Blood pressure",
+              "Respiratory rate"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Ear, Nose, and Throat (ENT) specialist",
+              "rationale": "For further evaluation and treatment of ear conditions."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000094",
+      "chief_complaint": "I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.62,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Critical physiological instability",
+              "explanation": "The patient is experiencing symptoms such as rapid heartbeat, anxiety, and shortness of breath which could indicate a cardiac emergency. This requires immediate attention from a human medical provider."
+            },
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient's high acuity level (2.0) indicates an urgent need for care, and the symptoms described suggest a potential risk of further deterioration. This necessitates a handoff to a human medical provider."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms (racing heart, skipped beats) are concerning for potential cardiac issues, but the exact diagnosis is not immediately clear. Given the high-risk nature of such symptoms, a human medical provider is needed to accurately diagnose and provide appropriate care."
+            }
+          ]
+        },
+        "possible_diagnoses": [],
+        "risk_factors": [
+          "Ambulance arrival",
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 0.125,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "ECG (Electrocardiogram)",
+              "rationale": "To evaluate the rhythm of the heart and look for signs of arrhythmia or ischemia."
+            },
+            {
+              "test": "Blood glucose",
+              "rationale": "To rule out hyperglycemia as a potential cause of tachycardia."
+            },
+            {
+              "test": "Troponin I or Troponin T",
+              "rationale": "To evaluate for myocardial injury or infarction."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Chest X-ray",
+              "rationale": "To assess the heart size, lung fields, and vascular pedicles."
+            },
+            {
+              "study": "Echocardiogram",
+              "rationale": "To evaluate left ventricular function, chamber size, valvular function, and rule out structural abnormalities."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Nitroglycerin",
+              "indication": "For possible angina or myocardial ischemia."
+            },
+            {
+              "name": "Beta-blockers",
+              "indication": "To slow the heart rate and decrease oxygen demand."
+            },
+            {
+              "name": "Calcium channel blockers",
+              "indication": "As an alternative to beta-blockers if contraindicated."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Continuous for vital signs, with periodic electrocardiogram monitoring.",
+            "parameters": [
+              "Heart rate",
+              "Blood pressure",
+              "Respiratory rate",
+              "Oxygen saturation",
+              "Pulse oximetry"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Cardiology",
+              "indication": "For further evaluation and management of potential cardiac conditions."
+            },
+            {
+              "specialist": "Emergency Medicine",
+              "indication": "For continued care and monitoring in the emergency department."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000112",
+      "chief_complaint": "I've been feeling weak and tired lately, and sometimes I get dizzy, like the room is spinning around me.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient is experiencing symptoms such as weakness, tiredness, and dizziness, which could indicate a potential deterioration of their health. These symptoms require urgent evaluation by a medical provider to assess the underlying cause and provide appropriate treatment."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms suggest a potential neurological issue, but without further diagnostic tests or expert interpretation, it is unclear what might be causing these symptoms. Given the potential seriousness of the symptoms, there is a high risk associated with this diagnostic uncertainty and requires the expertise of a human medical provider."
+            },
+            {
+              "category": "ESI Level",
+              "explanation": "The Emergency Severity Index (ESI) level for this patient is 4, indicating an emergency requiring immediate intervention. This level necessitates a handoff to a human medical provider to ensure prompt and appropriate care."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Anemia",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Hypotension",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Vitamin Deficiency (B12 or D)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Dehydration",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Migraine",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 2,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To check for Anemia, White Blood Cell (WBC) count and Platelet count."
+            },
+            {
+              "test": "Serum Electrolytes",
+              "rationale": "To evaluate dehydration status and electrolyte imbalance"
+            },
+            {
+              "test": "Ferritin Levels",
+              "rationale": "If Anemia is suspected, this test helps in determining Iron stores."
+            },
+            {
+              "test": "Vitamin B12 and Folate levels",
+              "rationale": "To evaluate for possible Vitamin Deficiency (B12 or D)"
+            },
+            {
+              "test": "Serum Calcium and Phosphorus",
+              "rationale": "To help diagnose possible Vitamin D deficiency"
+            }
+          ],
+          "imaging": [],
+          "medications": [
+            {
+              "medication": "Iron supplements",
+              "rationale": "If Anemia is confirmed"
+            },
+            {
+              "medication": "Antihypertensives (if Hypotension is confirmed)",
+              "rationale": "To maintain blood pressure within normal range"
+            }
+          ],
+          "monitoring": {
+            "frequency": "Daily",
+            "parameters": [
+              "Blood Pressure",
+              "Heart Rate",
+              "Respiratory Rate"
+            ]
+          },
+          "consults": [
+            "Consult with a Hematologist (if Anemia persists after initial treatment)"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000177",
+      "chief_complaint": "I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.72,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": "High risk patient (ESI level 3)",
+          "reasons": [
+            {
+              "category": "Critical physiological instability",
+              "explanation": "May apply based on risk factors"
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "May apply based on risk factors"
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "May apply based on risk factors"
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Acute Gastritis",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Gastroenteritis (Stomach Flu)",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Appendicitis",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Peptic Ulcer Disease",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Pancreatitis",
+            "likelihood": "Medium"
+          }
+        ],
+        "risk_factors": [
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "CBC",
+              "rationale": "To assess for anemia, infection or dehydration."
+            },
+            {
+              "test": "LFTs (Liver Function Tests)",
+              "rationale": "To evaluate liver function as symptoms might suggest liver involvement."
+            },
+            {
+              "test": "Amylase and Lipase",
+              "rationale": "To assess for pancreatitis."
+            },
+            {
+              "test": "Urea and Creatinine",
+              "rationale": "To evaluate kidney function as dehydration is a concern."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Abdominal X-ray",
+              "rationale": "To assess for obstruction or perforation."
+            },
+            {
+              "study": "Ultrasound Abdomen",
+              "rationale": "To evaluate gallbladder, liver and pancreas; may also reveal appendix abnormality."
+            },
+            {
+              "study": "CT Scan Abdomen",
+              "rationale": "In case other imaging studies are inconclusive or if there's suspicion of pancreatitis or appendicitis."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Antiemetics",
+              "rationale": "To help manage nausea and vomiting."
+            },
+            {
+              "name": "Pain relievers (as needed)",
+              "rationale": "For pain management."
+            },
+            {
+              "name": "Proton Pump Inhibitors",
+              "rationale": "To manage stomach acidity."
+            },
+            {
+              "name": "IV fluids",
+              "rationale": "For rehydration and electrolyte management."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Every 4 hours",
+            "parameters": [
+              "Vital signs (temperature, heart rate, respiratory rate, blood pressure)",
+              "Urine output",
+              "Electrolyte levels (sodium, potassium, chloride)"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Gastroenterologist",
+              "rationale": "For further evaluation and management of potential gastrointestinal disorders."
+            },
+            {
+              "specialist": "General Surgeon",
+              "rationale": "If there's suspicion of appendicitis or perforation."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000202",
+      "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient is experiencing symptoms such as itchiness, swelling, and hives, which may indicate a serious allergic reaction. If left untreated, this could potentially worsen or even become life-threatening."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms suggest an allergic reaction, but the exact cause is not clear. This level of diagnostic uncertainty warrants a human medical provider to accurately diagnose and prescribe appropriate treatment."
+            },
+            {
+              "category": "High acuity",
+              "explanation": "The patient's Risk Factors: High acuity score is 2.0, indicating high acuity. This means that the situation requires immediate attention from a medical professional."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Urticaria (Hives)",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Allergic Reaction",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Dermatitis",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Anaphylaxis (Severe Allergic Reaction)",
+            "likelihood": "Low",
+            "note": "Given the ESI Level 3, anaphylaxis should be considered but is less likely due to the initial presentation as it often involves more severe symptoms such as difficulty breathing or shock."
+          },
+          {
+            "diagnosis": "Scabies",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To assess white blood cell count, platelet count, and hemoglobin levels which can help in identifying an allergic reaction or dermatitis."
+            },
+            {
+              "test": "Erythrocyte Sedimentation Rate (ESR)",
+              "rationale": "To help determine if there is inflammation or infection present."
+            }
+          ],
+          "imaging": [],
+          "medications": [
+            {
+              "name": "Antihistamines",
+              "rationale": "To help alleviate the itching and discomfort caused by hives."
+            },
+            {
+              "name": "Corticosteroids",
+              "rationale": "To reduce inflammation and swelling associated with dermatitis or allergic reaction."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Every 4 hours",
+            "parameters": [
+              "Blood pressure",
+              "Heart rate",
+              "Respiratory rate",
+              "Oxygen saturation"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Allergist/Immunologist",
+              "rationale": "To help identify the cause of the allergic reaction, if applicable."
+            },
+            {
+              "specialist": "Dermatologist",
+              "rationale": "To provide a dermatological evaluation and management plan."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000204",
+      "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.68,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "5",
+              "explanation": "The patient's emotional state indicates a risk of patient deterioration due to psychological distress."
+            },
+            {
+              "category": "6",
+              "explanation": "While not explicitly mentioned, the 'ESI Level: 3' suggests that the patient may be part of a special population (in this case, likely acutely ill or injured adults) requiring a human medical provider for appropriate care."
+            },
+            {
+              "category": "7",
+              "explanation": "Given the nature of the chief complaint (emotional pain and hopelessness), it is protocol-mandated that a physician assesses the patient."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Major Depressive Disorder",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Post-Traumatic Stress Disorder (PTSD)",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Acute Stress Disorder",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Anxiety Disorders",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Traumatic Brain Injury (due to assault)",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "Ambulance arrival"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To assess for any anemia or other hematological abnormalities which could be associated with depression."
+            },
+            {
+              "test": "Thyroid Function Tests",
+              "rationale": "To rule out thyroid dysfunction as a potential contributing factor to the patient's symptoms."
+            },
+            {
+              "test": "Electrolytes and Blood Glucose",
+              "rationale": "To assess for any electrolyte imbalances or hypoglycemia which could exacerbate depressive symptoms."
+            }
+          ],
+          "imaging": [],
+          "medications": [
+            {
+              "name": "Selective Serotonin Reuptake Inhibitors (SSRIs) such as fluoxetine or sertraline",
+              "rationale": "To help manage symptoms of depression and anxiety."
+            },
+            {
+              "name": "Benzodiazepines for short-term relief of anxiety symptoms",
+              "rationale": "For temporary relief of anxiety symptoms while waiting for the full efficacy of SSRIs."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Daily",
+            "parameters": [
+              "Vital signs (temperature, pulse, respirations, blood pressure)",
+              "Mental status"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Psychiatrist",
+              "rationale": "For comprehensive assessment and management of the patient's mental health condition."
+            },
+            {
+              "specialist": "Trauma Counselor or Psychotherapist",
+              "rationale": "To help the patient cope with the emotional trauma resulting from the assault."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000252",
+      "chief_complaint": "I've lost my appetite and feel empty inside, but not because I'm hungry, it's more like I have no desire to eat at all.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.62,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient's complaint of loss of appetite and feeling empty inside could be indicative of various conditions, some of which may require immediate attention. This symptom, if coupled with other signs or associated conditions (such as weight loss, nausea, etc.), could signal a serious condition that requires the expertise of a human medical provider."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms are not specific enough to definitively diagnose a condition. Given the high acuity and ESI Level, there is a high risk associated with the diagnostic uncertainty."
+            },
+            {
+              "category": "Protocol-mandated physician assessment",
+              "explanation": "The patient arrived via ambulance (high acuity) and has an ESI level of 3, both of which are indicative of a high level of urgency. Protocols typically require that such patients be assessed by a physician."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Depression",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Anorexia Nervosa",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Major depressive disorder with anorexia as a symptom",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Adjustment disorder with anorexia as a symptom",
+            "likelihood": "Low to Medium"
+          },
+          {
+            "diagnosis": "Organic mental disorder (secondary to acute illness or substance abuse)",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "Ambulance arrival",
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 0.5,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To assess for anemia, infection, or other hematological abnormalities"
+            },
+            {
+              "test": "Thyroid Function Tests (TFTs)",
+              "rationale": "To evaluate thyroid function as it can impact appetite and metabolism"
+            },
+            {
+              "test": "Electrolytes and Chemistry Panel",
+              "rationales": [
+                "To assess for electrolyte imbalances, kidney function, liver function, or other abnormalities that could be contributing to the patient's symptoms"
+              ]
+            }
+          ],
+          "imaging": [],
+          "medications": [
+            {
+              "name": "Antidepressants",
+              "rationale": "To address potential depression and improve appetite"
+            },
+            {
+              "name": "Antipsychotics (atypical)",
+              "rationale": "For the treatment of severe depression or psychosis, if present"
+            }
+          ],
+          "monitoring": {
+            "frequency": "Every 4 hours",
+            "parameters": [
+              "Vital signs (temperature, pulse, respiration rate, blood pressure)",
+              "Weight and fluid intake/output"
+            ]
+          },
+          "consults": [
+            "Psychiatry Consultation",
+            "Nutrition Consultation"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000254",
+      "chief_complaint": "I have a sharp, aching pain in my lower back that feels like it's been throbbing all day and is really hurting when I move.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient is experiencing a sharp, aching pain in the lower back that persists and worsens with movement, suggesting potential serious pathology such as kidney stones or a herniated disc. This symptom warrants immediate attention and expert evaluation."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "Given the patient's presentation of lower back pain, there is diagnostic uncertainty regarding the potential cause. The high-risk factor here lies in the possibility that this could be a symptom of a more serious condition, such as a herniated disc or kidney stones, which could lead to complications if not promptly diagnosed and treated."
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "The ESI Level 4 indicates that this patient has multiple significant comorbidities (ESI stands for the Emergency Severity Index, which categorizes patients based on their acuity level). A human medical provider is needed to carefully interpret these complexities and tailor the treatment plan accordingly."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Lumbar Strain",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Disc Herniation",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Sciatica",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Lumbar Radiculopathy",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Spinal Stenosis",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 2,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "name": "Basic metabolic panel",
+              "rationale": "Baseline assessment"
+            }
+          ],
+          "imaging": [],
+          "medications": [],
+          "monitoring": "Standard vital signs",
+          "consults": []
+        }
+      }
+    },
+    {
+      "case_id": "30000262",
+      "chief_complaint": "I have been experiencing severe bowel movements with rectal bleeding and constipation, which is causing me a lot of discomfort and anxiety.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.68,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient is experiencing severe bowel movements with rectal bleeding and constipation, which could indicate a serious condition such as inflammatory bowel disease or colon cancer. The discomfort and anxiety also suggest that the patient's condition may be worsening."
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "The patient's arrival by ambulance suggests a non-routine or complex medical history. The presenting symptoms of severe bowel movements, rectal bleeding, and constipation require the expertise of a human medical provider to properly assess, diagnose, and treat."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The symptoms described are not specific to a single diagnosis, making it difficult to accurately diagnose without further testing. Given the potential seriousness of the patient's condition, there is a high risk associated with this diagnostic uncertainty."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Diverticulitis",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Colorectal Cancer",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Inflammatory Bowel Disease (IBD) such as Ulcerative Colitis or Crohn's disease",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Ischemic Colitis",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Hemorrhoids",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "Ambulance arrival"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "Vital signs frequency": "Every 4 hours",
+          "Parameters": [
+            "Blood pressure, pulse, temperature, respiratory rate"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000275",
+      "chief_complaint": "I have a sharp, stabbing pain in my upper abdomen that radiates to my back, accompanied by nausea and vomiting, which feels similar to the pancreatitis flares I've had before.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Critical physiological instability",
+              "explanation": "The patient is experiencing severe abdominal pain, nausea, vomiting, and these symptoms are similar to previous pancreatitis flares. This could indicate a critical condition that requires immediate attention from a medical professional."
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "The patient mentions having had previous pancreatitis flares, suggesting a complex medical history related to the pancreas. An expert interpretation of this history is necessary to accurately diagnose and treat the current condition."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms are consistent with past pancreatitis flares, but a definitive diagnosis cannot be made based on the provided information. Given the potential for serious consequences, a human medical provider is needed to ensure proper diagnostic procedures and treatments."
+            },
+            {
+              "category": "Resource limitations for critical care",
+              "explanation": "The Emergency Severity Index (ESI) level 4 indicates that the patient requires immediate attention but may not be critically ill or require intensive resources. However, given the potential severity of the condition (pancreatitis), a human medical provider is needed to assess and manage the situation appropriately."
+            },
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient's symptoms suggest that they may be experiencing another pancreatitis flare, which can lead to serious complications such as organ failure or sepsis if not treated promptly and effectively. A human medical provider is needed to monitor the patient's condition and intervene if necessary."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Acute Pancreatitis",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Cholecystitis",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Peptic Ulcer Disease with complications",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Gallstone disease",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Renal colic (Kidney Stone)",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 2,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Lipase",
+              "rationale": "To help confirm the diagnosis of pancreatitis, as lipase is often elevated in this condition."
+            },
+            {
+              "test": "Amylase",
+              "rationale": "Similar to lipase, amylase levels may also be elevated in pancreatitis and can help with diagnosis."
+            },
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To evaluate for signs of infection or inflammation which could support the diagnosis of pancreatitis, cholecystitis, or other abdominal conditions."
+            },
+            {
+              "test": "Liver function tests (LFTs)",
+              "rationale": "To assess liver health and evaluate for potential complications, such as hepatobiliary involvement."
+            },
+            {
+              "test": "Electrolytes",
+              "rationale": "To monitor electrolyte balance, especially potassium and sodium, which can be affected by nausea, vomiting, or certain medications."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Abdominal ultrasound",
+              "rationale": "To evaluate the gallbladder, pancreas, and biliary tract for potential abnormalities such as gallstones or inflammation."
+            },
+            {
+              "study": "Computed Tomography (CT) scan of the abdomen",
+              "rationale": "To provide more detailed images of the abdominal organs, potentially aiding in the diagnosis of pancreatitis, cholecystitis, or other abdominal conditions."
+            },
+            {
+              "study": "Magnetic Resonance Imaging (MRI) with magnetic resonance cholangiopancreatography (MRCP)",
+              "rationale": "To provide a more detailed evaluation of the pancreas and biliary system when CT scans are inconclusive or additional information is needed."
+            }
+          ],
+          "medications": [
+            {
+              "drug": "Pain management medications",
+              "rationale": "To help manage pain associated with abdominal conditions."
+            },
+            {
+              "drug": "Antiemetics (e.g., Ondansetron)",
+              "rationale": "To help manage nausea and vomiting."
+            },
+            {
+              "drug": "Intravenous fluids",
+              "rationale": "To maintain hydration and correct electrolyte imbalances."
+            }
+          ],
+          "monitoring": [
+            {
+              "vitalSign": "Blood pressure",
+              "frequency": "Every 15 minutes for the first hour, then every hour thereafter",
+              "parameters": "Systolic and diastolic pressures"
+            },
+            {
+              "vitalSign": "Pulse oximetry",
+              "frequency": "Continuously",
+              "parameters": "Oxygen saturation"
+            },
+            {
+              "vitalSign": "Respiratory rate",
+              "frequency": "Every 15 minutes for the first hour, then every hour thereafter",
+              "parameters": ""
+            },
+            {
+              "vitalSign": "Temperature",
+              "frequency": "Every 4 hours initially, then daily as stable",
+              "parameters": "Fever or hypothermia"
+            }
+          ],
+          "consults": [
+            {
+              "specialist": "General Surgeon",
+              "rationale": "For potential surgical intervention in the case of cholecystitis, gallstone disease, or other abdominal conditions."
+            },
+            {
+              "specialist": "Gastroenterologist",
+              "rationale": "For management and monitoring of pancreatitis or peptic ulcer disease."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000279",
+      "chief_complaint": "I feel overwhelmed by a deep sadness that's been weighing me down, making it hard to find interest or pleasure in things I normally enjoy.",
+      "predicted": {
+        "esi_level": 2,
+        "confidence": 0.62,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient's description of feeling overwhelmed by deep sadness that makes it hard to find interest or pleasure in things normally enjoyed may indicate a mental health crisis. This requires immediate attention from a human medical provider due to the potential for rapid deterioration."
+            },
+            {
+              "category": "Special population considerations (adult)",
+              "explanation": "While not a pediatric, geriatric, or pregnant patient, the patient's age is not specified in the provided information. However, the nature of the complaint suggests a mental health issue, which could be influenced by various factors including age. A human medical provider is necessary to assess and manage these potential influences."
+            },
+            {
+              "category": "Protocol-mandated physician assessment",
+              "explanation": "The Emergency Severity Index (ESI) level of the patient is 2, indicating that the patient requires an immediate evaluation by a medical provider. This is a protocol-mandated requirement."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Major Depressive Disorder",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Adjustment Disorder with Depressed Mood",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Dysthymia (Persistent Depressive Disorder)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Bipolar Disorder",
+            "likelihood": "Low"
+          },
+          {
+            "diagnosis": "Anxiety Disorders (e.g., Generalized Anxiety Disorder)",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "Ambulance arrival",
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "TRANSFER",
+        "arrival_method": "AMBULANCE"
+      },
+      "recommendations": {
+        "wait_time": 0.125,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "Assess for anemia or other conditions that may contribute to symptoms."
+            },
+            {
+              "test": "Thyroid function tests",
+              "rationale": "Hypothyroidism can cause symptoms similar to depression."
+            }
+          ],
+          "imaging": [],
+          "imaging.rationale": "Not typically indicated for the presented symptoms. Further imaging may be considered if there are concerns about physical health conditions that could contribute to the patient's emotional state.",
+          "medications": [
+            {
+              "name": "Selective serotonin reuptake inhibitors (SSRIs)",
+              "examples": [
+                "Fluoxetine",
+                "Sertraline",
+                "Citalopram"
+              ],
+              "rationale": "First-line treatment for Major Depressive Disorder and Adjustment Disorder with Depressed Mood."
+            },
+            {
+              "name": "Tricyclic antidepressants",
+              "examples": [
+                "Amitriptyline",
+                "Nortriptyline"
+              ],
+              "rationale": "Alternative option for treatment-resistant depression or when SSRIs are not tolerated."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Daily",
+            "parameters": [
+              "Blood pressure",
+              "Heart rate",
+              "Respiratory rate",
+              "Temperature"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Psychiatrist",
+              "rationale": "Referral for further evaluation, management of medications and psychotherapy."
+            },
+            {
+              "specialist": "Primary Care Physician",
+              "rationale": "Collaborative care in managing the patient's overall health and monitoring response to treatments."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000291",
+      "chief_complaint": "I'm experiencing a nosebleed that won't stop, and it's scary to see all the blood coming out, but thankfully, I don't feel any pain.",
+      "predicted": {
+        "esi_level": 1,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "Although the patient doesn't feel any pain, the continuous nosebleed that refuses to stop could potentially indicate a significant underlying issue. It is crucial to assess the patient promptly to prevent potential complications."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The diagnosis for this case is uncertain due to the continuous nosebleed without any reported pain. This situation warrants a human medical provider's expertise to ensure proper management and potential referral to a specialist if necessary."
+            },
+            {
+              "category": "Protocol-mandated physician assessment",
+              "explanation": "According to the ESI Level 1, this case requires an immediate assessment by a physician due to its non-life-threatening but urgent nature."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Epistaxis (Nosebleed)",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Hypertension (High Blood Pressure)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Coagulopathy (Disorder of blood coagulation)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Nasal Trauma",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Nasal Tumor",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 0,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To evaluate for anemia or other hematological abnormalities that may be contributing to the nosebleed."
+            },
+            {
+              "test": "Coagulation Profile",
+              "rationale": "To assess the patient's blood clotting ability, as a disorder of coagulation could potentially lead to increased risk of nosebleeds."
+            },
+            {
+              "test": "Blood Pressure Monitoring",
+              "rationale": "Given the medium likelihood of Hypertension, it is important to monitor blood pressure."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Nasal Endoscopy",
+              "rationale": "To visually inspect the nasal cavity and evaluate for potential causes such as trauma or a tumor."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Topical Nasal Vasoconstrictors",
+              "rationale": "These may help reduce blood flow and control nosebleeds."
+            },
+            {
+              "name": "Antihypertensives (if hypertension is confirmed)",
+              "rationale": "To manage high blood pressure, which could potentially contribute to the nosebleed."
+            }
+          ],
+          "monitoring": {
+            "frequency": "As needed",
+            "parameters": [
+              "Blood Pressure",
+              "Pulse rate"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Ear, Nose and Throat (ENT) Specialist",
+              "rationale": "For further evaluation and management of the nosebleed."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000317",
+      "chief_complaint": "My stomach feels bloated and painful, especially in the upper right area, and I have not been able to pass gas or have a bowel movement for a while, which is really uncomfortable and worrying.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.72,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "1. Critical physiological instability",
+              "explanation": "The patient is experiencing significant gastrointestinal discomfort, bloating, and lack of ability to pass gas or have a bowel movement, which could potentially indicate a serious condition such as appendicitis, gallstones, or other abdominal problems. This requires immediate attention from a human medical provider."
+            },
+            {
+              "category": "2. Complex medical history requiring expert interpretation",
+              "explanation": "The ESI Level 3 indicates that the patient's condition is serious but not immediately life-threatening. Given this, a detailed understanding of the patient's medical history and current symptoms will be crucial for accurate diagnosis and treatment."
+            },
+            {
+              "category": "3. Diagnostic uncertainty with high risk",
+              "explanation": "The patient's symptoms suggest abdominal pain and constipation, which could be indicative of several potential conditions. Without a thorough examination and interpretation by a human medical provider, there is a significant risk of misdiagnosis or delayed treatment."
+            },
+            {
+              "category": "5. Patient deterioration risk",
+              "explanation": "The patient's discomfort and inability to pass gas or have a bowel movement for an extended period may indicate potential worsening of the condition, necessitating the intervention of a human medical provider."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Gallstone Disease",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Acute Cholecystitis",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Intestinal Obstruction (e.g., Strangulated Hernia)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Diverticulitis",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Peptic Ulcer Disease",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To evaluate inflammatory response, anemia, and possible infection."
+            },
+            {
+              "test": "Liver Function Tests (LFTs)",
+              "rationale": "To assess liver function and rule out hepatobiliary disease."
+            },
+            {
+              "test": "Amylase and Lipase",
+              "rationale": "To evaluate pancreatic function in case of pancreatitis."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Abdominal Ultrasound",
+              "rationale": "To visualize the gallbladder, liver, pancreas, and biliary system for signs of stones or other abnormalities."
+            },
+            {
+              "study": "Computed Tomography (CT) scan of Abdomen/Pelvis",
+              "rationale": "To further evaluate the abdomen if the ultrasound is inconclusive, and to rule out intestinal obstruction or other abnormalities."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Analgesics (e.g., Acetaminophen or Nonsteroidal Anti-inflammatory Drugs)",
+              "rationale": "For pain management."
+            },
+            {
+              "name": "Antispasmodics (e.g., Dicyclomine)",
+              "rationale": "To relieve abdominal cramps and promote gas passage."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Every 4 hours",
+            "parameters": [
+              "Blood Pressure",
+              "Heart Rate",
+              "Respiratory Rate",
+              "Oxygen Saturation",
+              "Abdominal Examination"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "General Surgeon",
+              "indication": "For possible surgical intervention in case of gallstone disease, cholecystitis, or intestinal obstruction."
+            },
+            {
+              "specialist": "Gastroenterologist",
+              "indication": "For further evaluation and management if the suspected condition persists or worsens."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000368",
+      "chief_complaint": "I had a severe back pain that started after a physical strain, which has since resolved, but I'm now being treated for a dissection of my thoracic aorta, and I need to be careful to control my blood pressure to prevent further complications.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": "High risk patient (ESI level 3)",
+          "reasons": [
+            {
+              "category": "Critical physiological instability",
+              "explanation": "May apply based on risk factors"
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "May apply based on risk factors"
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "May apply based on risk factors"
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Thoracic Aortic Dissection",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Post-traumatic Back Pain Resolved (Previously Strain Injury)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Hypertension",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Chronic Back Pain",
+            "likelihood": "Low"
+          },
+          {
+            "diagnosis": "Recurrent Aortic Dissection (Given Resolved Previous Back Pain)",
+            "likelihood": "Medium"
+          }
+        ],
+        "risk_factors": [
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "name": "Basic metabolic panel",
+              "rationale": "Baseline assessment"
+            }
+          ],
+          "imaging": [],
+          "medications": [],
+          "monitoring": "Standard vital signs",
+          "consults": []
+        }
+      }
+    },
+    {
+      "case_id": "30000379",
+      "chief_complaint": "My stomach feels bloated and tender, and I have a constant, gnawing pain that makes it hard for me to eat, which is making my overall weakness and fatigue even worse.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": "High risk patient (ESI level 4)",
+          "reasons": [
+            {
+              "category": "Critical physiological instability",
+              "explanation": "May apply based on risk factors"
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "May apply based on risk factors"
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "May apply based on risk factors"
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Gastrointestinal disorders (e.g., Gastritis, Peptic ulcer disease)",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Irritable Bowel Syndrome",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Ovarian cancer (in women due to ESI level 4)",
+            "likelihood": "Low, but not entirely ruled out given ESI level and gender"
+          },
+          {
+            "diagnosis": "Celiac disease",
+            "likelihood": "Medium if there are additional symptoms suggesting gluten intolerance"
+          },
+          {
+            "diagnosis": "Inflammatory bowel disease (e.g., Crohn's disease, Ulcerative Colitis)",
+            "likelihood": "Medium if there are additional symptoms such as diarrhea or rectal bleeding"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "ADMITTED",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 2,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To assess for anemia, infection or inflammation."
+            },
+            {
+              "test": "Comprehensive Metabolic Panel",
+              "rationale": "To check electrolytes, liver and kidney function."
+            },
+            {
+              "test": "H. pylori serology/breath test",
+              "rationale": "To help diagnose peptic ulcer disease or gastritis."
+            },
+            {
+              "test": "Fecal occult blood test",
+              "rationale": "To check for gastrointestinal bleeding."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Upper GI series (with small bowel follow-through) or Endoscopy",
+              "rationale": "To visualize the upper gastrointestinal tract for ulcers, inflammation or other abnormalities."
+            },
+            {
+              "study": "Abdominal CT scan",
+              "rationale": "If there are concerns about the presence of an obstruction or tumor."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Antacids/H2-blockers/PPIs",
+              "rationale": "To relieve symptoms of acid reflux, ulcers or gastritis."
+            },
+            {
+              "name": "Loperamide (Imodium)",
+              "rationale": "For diarrhea control if present."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Daily",
+            "parameters": [
+              "Vital signs: Temperature, pulse, respiratory rate, blood pressure",
+              "Bowel habits: Frequency, consistency, and presence of blood"
+            ]
+          },
+          "consults": [
+            "Gastroenterologist",
+            "If symptoms persist or worsen, gynecological oncologist (in women due to ESI level 4)"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000389",
+      "chief_complaint": "I feel like I haven't had a bowel movement in a while and it's getting really hard to go, with a constant feeling of fullness and discomfort in my abdomen.",
+      "predicted": {
+        "esi_level": 4,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": null,
+          "reasons": [
+            {
+              "category": "Patient deterioration risk",
+              "explanation": "The patient is experiencing persistent abdominal discomfort, constipation, and a feeling of fullness, which could indicate an obstruction or other serious gastrointestinal issue. These symptoms could potentially lead to patient deterioration."
+            },
+            {
+              "category": "Diagnostic uncertainty with high risk",
+              "explanation": "The symptoms described suggest possible constipation or bowel obstruction, but the exact diagnosis is unclear. Given the potential for serious consequences, a human medical provider is needed to accurately diagnose and manage the condition."
+            },
+            {
+              "category": "Complex medical history requiring expert interpretation",
+              "explanation": "The ESI level 4 indicates that the patient may have multiple chronic conditions or complex health issues. A human medical provider with expertise in such cases is necessary to interpret the patient's history and symptoms accurately."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Constipation",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Irritable Bowel Syndrome (IBS)",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Diverticular Disease",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Obstruction in the Colon (e.g., colon cancer)",
+            "likelihood": "Low"
+          },
+          {
+            "diagnosis": "Gastrointestinal Infection",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": []
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 2,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Complete Blood Count (CBC)",
+              "rationale": "To rule out anemia or infection."
+            },
+            {
+              "test": "Electrolytes and BUN/Creatinine",
+              "rationale": "To assess hydration status and kidney function."
+            },
+            {
+              "test": "Stool Occult Blood Test",
+              "rationale": "To rule out blood in the stool which can suggest GI bleeding or cancer."
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Abdominal X-ray",
+              "rationale": "To evaluate for any signs of obstruction or free air."
+            },
+            {
+              "study": "Abdominal CT Scan",
+              "rationale": "If symptoms persist and other tests are inconclusive, to further evaluate for possible masses or obstructions."
+            }
+          ],
+          "medications": [
+            {
+              "name": "Polyethylene Glycol (Miralax)",
+              "rationale": "For symptomatic relief of constipation."
+            },
+            {
+              "name": "Lubiprostone",
+              "rationale": "For treatment-resistant constipation."
+            },
+            {
+              "name": "Linaclotide",
+              "rationale": "For the treatment of IBS with constipation."
+            }
+          ],
+          "monitoring": {
+            "frequency": "Daily",
+            "parameters": [
+              "Vital signs: blood pressure, pulse, temperature, respiratory rate.",
+              "Abdominal exam for signs of distention or tenderness."
+            ]
+          },
+          "consults": [
+            "Gastroenterologist (for further evaluation and management if symptoms persist)"
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "30000417",
+      "chief_complaint": "I have a sharp, stabbing pain in my right eye, and my vision is blurry and distorted, like something is clouding my sight.",
+      "predicted": {
+        "esi_level": 3,
+        "confidence": 0.76,
+        "needs_handoff": true,
+        "handoff_analysis": {
+          "required": true,
+          "primary_reason": "Diagnostic uncertainty with high risk",
+          "reasons": [
+            {
+              "category": "1. Critical physiological instability",
+              "explanation": "Although not explicitly mentioned, the sharp, stabbing pain in the right eye could indicate an ophthalmologic emergency such as acute glaucoma or retinal detachment, which can have serious systemic consequences if left untreated. However, the uncertainty lies in identifying the exact cause of the pain and vision changes."
+            },
+            {
+              "category": "2. Complex medical history requiring expert interpretation",
+              "explanation": "The ESI Level 3 indicates that this patient may have multiple chronic conditions or complex comorbidities which could affect the management of the current eye condition. A human medical provider is needed to interpret these factors and tailor a treatment plan accordingly."
+            },
+            {
+              "category": "4. Resource limitations for critical care",
+              "explanation": "Given the high acuity score (2.0), this patient requires close monitoring due to the potential severity of the eye condition. A human medical provider is necessary to prioritize resources, such as intensive care unit beds, if the situation worsens."
+            },
+            {
+              "category": "5. Patient deterioration risk",
+              "explanation": "The nature and severity of the symptoms (pain and blurry vision) suggest that this patient may be at risk for further complications, necessitating a human medical provider to closely monitor and intervene as needed."
+            }
+          ]
+        },
+        "possible_diagnoses": [
+          {
+            "diagnosis": "Acute Angle-Closure Glaucoma",
+            "likelihood": "High"
+          },
+          {
+            "diagnosis": "Retinal Detachment",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Corneal Abscess or Ulcer",
+            "likelihood": "Medium"
+          },
+          {
+            "diagnosis": "Iris Neovascularization",
+            "likelihood": "Low"
+          },
+          {
+            "diagnosis": "Optic Neuritis",
+            "likelihood": "Low"
+          }
+        ],
+        "risk_factors": [
+          "High acuity: 2.0"
+        ]
+      },
+      "actual": {
+        "esi_level": null,
+        "disposition": "HOME",
+        "arrival_method": "WALK IN"
+      },
+      "recommendations": {
+        "wait_time": 1,
+        "structured_recommendations": {
+          "labs": [
+            {
+              "test": "Gonioscopy",
+              "rationale": "To confirm the presence of angle closure in Acute Angle-Closure Glaucoma diagnosis"
+            },
+            {
+              "test": "Tonometry",
+              "rationale": "To measure intraocular pressure, which is elevated in Acute Angle-Closure Glaucoma and other eye conditions"
+            },
+            {
+              "test": "A-Scan Ultrasonography",
+              "rationale": "To assess the axial length of the eye and help rule out Retinal Detachment"
+            }
+          ],
+          "imaging": [
+            {
+              "study": "Optical Coherence Tomography (OCT)",
+              "rationale": "To evaluate the retina and rule out Retinal Detachment or other conditions like Macular Edema"
+            },
+            {
+              "study": "B-Scan Ultrasonography",
+              "rationale": "In case the patient is unable to undergo Optical Coherence Tomography due to media opacity"
+            }
+          ],
+          "medications": [
+            {
+              "name": "Carbonic Anhydrase Inhibitors (e.g., Acetazolamide)",
+              "rationale": "To reduce aqueous humor production and lower intraocular pressure"
+            },
+            {
+              "name": "Miotics (e.g., Pilocarpine)",
+              "rationale": "To increase the drainage angle and lower intraocular pressure"
+            },
+            {
+              "name": "Glaucoma Eye Drops",
+              "rationale": "To control intraocular pressure and prevent further damage"
+            }
+          ],
+          "monitoring": {
+            "vital_signs_frequency": "Four hourly initially, then as clinically indicated",
+            "parameters": [
+              "Blood Pressure",
+              "Pulse Rate",
+              "Respiratory Rate",
+              "Oxygen Saturation"
+            ]
+          },
+          "consults": [
+            {
+              "specialist": "Ophthalmologist",
+              "rationale": "For immediate evaluation and management of the eye condition"
+            },
+            {
+              "specialist": "Neurologist (if there is any neurological symptoms)",
+              "rationale": "To rule out Optic Neuritis or other central nervous system conditions"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "overall": {
+      "total_cases": 21,
+      "average_confidence": 0.72,
+      "handoff_rate": 1.0,
+      "esi_distribution": {
+        "1": 0.047619047619047616,
+        "2": 0.19047619047619047,
+        "3": 0.47619047619047616,
+        "4": 0.2857142857142857,
+        "5": 0.0
+      }
+    },
+    "handoff_analysis": {
+      "total_handoffs": 21,
+      "primary_reasons": {
+        "null": 0.7619047619047619,
+        "Patient deterioration risk": 0.047619047619047616,
+        "High risk patient (ESI level 3)": 0.09523809523809523,
+        "High risk patient (ESI level 4)": 0.047619047619047616,
+        "Diagnostic uncertainty with high risk": 0.047619047619047616
+      }
+    },
+    "by_arrival_method": {
+      "WALK IN": {
+        "count": 14,
+        "handoff_rate": 1.0,
+        "average_esi": 3.21
+      },
+      "AMBULANCE": {
+        "count": 7,
+        "handoff_rate": 1.0,
+        "average_esi": 2.57
+      }
+    },
+    "common_risk_factors": {
+      "High acuity: 2.0": 0.42857142857142855,
+      "Ambulance arrival": 0.3333333333333333,
+      "High-risk condition: confusion": 0.047619047619047616,
+      "High-risk condition: encephalopathy": 0.047619047619047616,
+      "High-risk condition: fall": 0.047619047619047616
+    }
+  }
+}

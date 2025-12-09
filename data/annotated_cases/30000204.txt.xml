@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<qa_schema_1_0>
+<TEXT><![CDATA[============== Summary of Current ED Visits ==============
+The patient, a middle-aged white male, presented to the emergency department via ambulance with a primary diagnosis of major depression, unspecified (ICD Code: 29620). He reported significant emotional distress, rating his pain level at 10. Vital signs on arrival included a temperature of 99.6°F, heart rate of 100 bpm, respiratory rate of 16 breaths per minute, oxygen saturation of 96%, and blood pressure of 146/96 mmHg. Laboratory results, including blood chemistry and hematology, were within normal limits, showing no immediate physiological abnormalities. The acuity level was rated at 3.0. The patient was stabilized in the emergency department and discharged home with instructions to follow up with mental health services for further evaluation and management of his depressive symptoms.
+
+============== Medical History ==============
+The patient’s medical history was not documented during this visit. However, the current presentation of major depression highlights the need for comprehensive mental health support, including counseling and potentially pharmacological therapy. Follow-up with a mental health professional to address underlying causes, explore coping strategies, and evaluate the need for further interventions is strongly recommended. Preventive measures, such as regular mental health assessments and early identification of exacerbating factors, could help manage his condition more effectively.
+
+==================================== ER Visit Info ====================================
+ICD Code: 29620
+Diagnosis: MAJOR DEPRESSION-UNSPEC
+Acuity: 3.0
+Arrival Transport: AMBULANCE
+Disposition: HOME
+==================================== Patient Judgement ====================================
+ESI Level: []
+Lab Recommendation: []
+ER Recommendation: []
+Recommended Waiting Time: []/hours
+
+==================================== Patient Chief Complaint ====================================
+I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.
+
+==================================== Question Answer Pair ====================================
+1.
+ - Question 1: Can you tell me more about the assault you mentioned and when it happened?
+ - Answer 1: The assault happened a few weeks ago, but the details are still very blurry and painful to recall. I'd rather not go into specifics right now.
+
+2.
+ - Question 2: How have you been taking care of yourself since the assault?
+ - Answer 2: To be honest, I haven't been taking care of myself well at all. I've been isolating myself from others and having trouble performing daily tasks.
+
+3.
+ - Question 3: Have you experienced any thoughts of harming yourself or others?
+ - Answer 3: Yes, I have had thoughts of harming myself. The emotional pain feels overwhelming, and sometimes I feel like I don't see a way out of it.
+
+4.
+ - Question 4: Are you currently in a safe environment, free from any immediate harm?
+ - Answer 4: I'm currently in a safe environment, but I don't always feel safe emotionally. The memories and feelings from the assault still haunt me.
+
+5.
+ - Question 5: Have you noticed any changes in your sleep patterns or appetite since the assault?
+ - Answer 5: My sleep has been severely affected; I either can't sleep at all or I sleep too much. My appetite has also decreased significantly since the assault.
+
+6.
+ - Question 6: Are you experiencing any flashbacks, nightmares, or vivid memories of the assault?
+ - Answer 6: Yes, I've been having flashbacks and nightmares about the assault. They're very vivid and disturbing.
+
+7.
+ - Question 7: Have you reached out to anyone for support, such as friends, family, or a therapist?
+ - Answer 7: I've tried reaching out to a few close friends, but it's hard for me to open up about what happened. I haven't seen a therapist yet, but I know I probably should.
+
+8.
+ - Question 8: Do you have a history of mental health conditions, such as depression or anxiety?
+ - Answer 8: I've struggled with depression before, but it's never been this bad. The assault seems to have triggered something deeper and more intense.
+
+9.
+ - Question 9: Are you using any coping mechanisms, such as substances, to deal with your emotional pain?
+ - Answer 9: Unfortunately, yes, I've been using alcohol as a way to try and cope with my emotional pain, but it doesn't provide any real relief and often makes things worse.
+
+10.
+ - Question 10: Have you considered or attempted to harm yourself in the past, or are you having thoughts of doing so now?
+ - Answer 10: I've had thoughts of harming myself recently, and it's something I've struggled with in the past during other difficult times. The thoughts are scary, and I know I need help to deal with them.
+
+]]></TEXT>
+<TAGS>
+<ESI spans="1778~1791" text="ESI Level: []" id="E0" ESI_LEVEL="4" comment=""/>
+<Lab_recommendation spans="1792~1814" text="Lab Recommendation: []" id="L0" comment="CBC, CMP, UA, drug screening"/>
+<ER_recommendation spans="1815~1836" text="ER Recommendation: []" id="ER0" comment="psychiatry evaluation"/>
+<Recommended_waiting_time spans="1837~1871" text="Recommended Waiting Time: []/hours" id="R0" comment="4"/>
+<QA spans="2258~2347" text=" - Question 1: Can you tell me more about the assault you mentioned and when it happened?" id="Q0" relevance="Optionl" comment=""/>
+<QA spans="2982~3067" text=" - Question 4: Are you currently in a safe environment, free from any immediate harm?" id="Q1" relevance="Essential" comment=""/>
+<QA spans="3223~3320" text=" - Question 5: Have you noticed any changes in your sleep patterns or appetite since the assault?" id="Q2" relevance="Optionl" comment=""/>
+<QA spans="3488~3585" text=" - Question 6: Are you experiencing any flashbacks, nightmares, or vivid memories of the assault?" id="Q3" relevance="Optionl" comment=""/>
+<QA spans="3705~3804" text=" - Question 7: Have you reached out to anyone for support, such as friends, family, or a therapist?" id="Q4" relevance="Optionl" comment=""/>
+<QA spans="3985~4081" text=" - Question 8: Do you have a history of mental health conditions, such as depression or anxiety?" id="Q5" relevance="Essential" comment=""/>
+<QA spans="4239~4344" text=" - Question 9: Are you using any coping mechanisms, such as substances, to deal with your emotional pain?" id="Q6" relevance="Optionl" comment=""/>
+<QA spans="4525~4647" text=" - Question 10: Have you considered or attempted to harm yourself in the past, or are you having thoughts of doing so now?" id="Q7" relevance="Essential" comment="This question should be the first question to ask in the ER setting"/>
+</TAGS>
+<META/>
+</qa_schema_1_0>

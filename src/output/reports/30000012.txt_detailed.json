@@ -1,0 +1,187 @@
+{
+  "case_id": "30000012.txt",
+  "chief_complaint": "I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.",
+  "predicted": {
+    "esi_level": 2,
+    "confidence": 0.95,
+    "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient presents with high-risk condition (confusion), which is a symptom associated with her hepatic encephalopathy, possibly triggered by a UTI. The symptoms are affecting her daily activities and can be life-threatening if not promptly treated.\n  4. Whether a handoff to human provider is needed: yes",
+    "risk_factors": [
+      "High-risk condition: confusion",
+      "Ambulance arrival"
+    ],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 2,
+  "correct": true,
+  "arrival_method": "AMBULANCE",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Wrong",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Wrong",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Wrong",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Optionl",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        }
+      ],
+      "ground_truth": 2
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 80.0,
+        "explanation": " ESI Level: 2\n   Confidence: 95%\n   Brief explanation: This patient presents with a significant, acute change in mental status due to hepatic encephalopathy and possible urinary tract infection. Although the patient's condition improved during hospitalization, she required multiple treatments and adjustments to medications, suggesting an ongoing need for monitoring and management. Furthermore, she requires follow-up with her hepatologist and transplant team, indicating a potentially complex medical history and future care needs.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 2\n   Confidence: 95%\n   Brief explanation: This patient presents with a significant, acute change in mental status due to hepatic encephalopathy and possible urinary tract infection. Although the patient's condition improved during hospitalization, she required multiple treatments and adjustments to medications, suggesting an ongoing need for monitoring and management. Furthermore, she requires follow-up with her hepatologist and transplant team, indicating a potentially complex medical history and future care needs.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: This patient presents with a serious medical condition (alcoholic cirrhosis with hepatic encephalopathy, urinary tract infection, and acute kidney injury), requiring immediate attention but is not imminently life-threatening. The patient is hospitalized and receiving appropriate treatment, which indicates that she requires observation and continued care before discharge.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient's symptoms (confusion, disorientation, and forgetfulness) are severe but not immediately life-threatening, as they can be managed with medication and hospitalization. However, the patient has a serious underlying condition (alcoholic cirrhosis), and the current episode may be a complication that requires close monitoring and further management (evaluation for liver transplant and treatment for hepatocellular carcinoma). The patient's kidney function was also affected but has normalized during hospitalization, indicating some level of instability. Therefore, this patient falls under ESI Level 3, which represents a patient who requires monitoring, diagnostic tests, or specific treatments that may require additional resources and/or consultation, but their condition is not critical or unstable enough to require immediate intervention.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient presents with serious but not immediately life-threatening symptoms related to hepatic encephalopathy and kidney injury. She is currently being treated for these conditions in the hospital, and her mental status improved during her stay. However, she requires ongoing management for her liver condition and potential cancer, which could escalate her severity if not adequately addressed.",
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient presents with a significant and potentially life-threatening condition (hepatic encephalopathy due to cirrhosis and UTI). While the mental status improved during hospitalization, the patient requires ongoing medical management, including liver transplant evaluation and treatment for hepatocellular carcinoma. The patient's kidney function was compromised and is now stabilizing. The case involves multiple acute and chronic conditions, and the patient requires close monitoring due to her complex medical history."
+        ],
+        "parsed_data": [
+          [
+            2,
+            95
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            95
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 60.0,
+        "explanation": " ESI Level: 3\n   Confidence: 90%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, while the patient has a serious condition in alcoholic cirrhosis, her symptoms and lab tests show no immediate life-threatening situation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's confusion, disorientation, and forgetfulness can be considered high risk as they could lead to further complications if not addressed promptly. Additionally, the presence of a urinary tract infection and mild acute kidney injury add to her distress.\n\n3. How many resources will this patient need? (For ESI 3-5) - This patient requires several resources during her hospitalization, including lab tests, imaging, medications for hepatic encephalopathy, UTI treatment, and follow-up with specialists. However, she does not require critical care resources such as ICU or immediate surgical intervention.\n\n4. Are vital signs concerning? (Can affect ESI level) - The patient's vital signs are mostly stable during hospitalization, with the exception of mild acute kidney injury and anemia, which were addressed through treatment and showed improvement.\n\nOverall, the patient requires moderate resources for her treatment and presents a high-risk situation due to her current confusion and forgetfulness. Therefore, I would classify this as an ESI level 3 case.",
+        "needs_handoff": true,
+        "responses": [
+          " ESI Level: 3\n   Confidence: 90%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, while the patient has a serious condition in alcoholic cirrhosis, her symptoms and lab tests show no immediate life-threatening situation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's confusion, disorientation, and forgetfulness can be considered high risk as they could lead to further complications if not addressed promptly. Additionally, the presence of a urinary tract infection and mild acute kidney injury add to her distress.\n\n3. How many resources will this patient need? (For ESI 3-5) - This patient requires several resources during her hospitalization, including lab tests, imaging, medications for hepatic encephalopathy, UTI treatment, and follow-up with specialists. However, she does not require critical care resources such as ICU or immediate surgical intervention.\n\n4. Are vital signs concerning? (Can affect ESI level) - The patient's vital signs are mostly stable during hospitalization, with the exception of mild acute kidney injury and anemia, which were addressed through treatment and showed improvement.\n\nOverall, the patient requires moderate resources for her treatment and presents a high-risk situation due to her current confusion and forgetfulness. Therefore, I would classify this as an ESI level 3 case.",
+          " ESI Level: 2\n   Confidence: 95%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient's current condition can be managed and improved with appropriate treatment as indicated by the lab tests, imaging, and hospitalization course. There is no immediate life threat.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's mental confusion and forgetfulness could be distressing for her, but it appears to be manageable with treatment as she showed improvement during hospitalization. The UTI is being treated, and her kidney function normalized.\n\n3. How many resources will this patient need? (For ESI 3-5) - The patient requires monitoring and ongoing care during her hospital stay for hepatic encephalopathy and the UTI. Post-discharge, she needs to continue taking medications and follow-ups with her specialists. However, it seems that she does not require extensive resources beyond standard care.\n\n4. Are vital signs concerning? (Can affect ESI level) - The patient's vital signs were not provided in the information given. Nevertheless, considering her stable mental status improvement during hospitalization and normalized kidney function, it is likely that her vital signs are within normal limits or can be managed with appropriate interventions.",
+          " ESI Level: 2\n   Confidence: 95%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1)\n   The patient's current condition does not indicate an immediate threat to life, and the improvements in mental status and kidney function during hospitalization support this conclusion.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2)\n   Although the patient is experiencing confusion and forgetfulness, which can be distressing, her symptoms have responded to treatment, indicating a reduced level of acuity and urgency compared to ESI 1.\n\n3. How many resources will this patient need? (For ESI 3-5)\n   The patient requires ongoing management of alcoholic cirrhosis, hepatocellular carcinoma evaluation, antibiotics for the UTI, lactulose for encephalopathy, and regular follow-ups with specialists. However, the resources needed are relatively standard for a hospital setting, and the patient's condition is expected to improve with treatment.\n\n4. Are vital signs concerning? (Can affect ESI level)\n   The patient's vital signs are not noted as being particularly concerning in this case summary. Her creatinine was temporarily elevated but normalized during her stay, and her thrombocytopenia was stable. These factors do not significantly impact the ESI level in this scenario.",
+          " ESI Level: 2\n   Confidence: 95%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient's condition is not critical enough to indicate immediate life threat. Although she has some serious medical issues such as anemia, elevated BUN, and mild acute kidney injury, these are being treated and her symptoms have improved during hospitalization.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing confusion and disorientation which can be distressing and potentially dangerous if not addressed promptly. However, her condition has shown improvement over the course of hospitalization.\n   3. How many resources will this patient need? (For ESI 3-5) - Moderate resources will be required for this patient. She requires ongoing treatment for her UTI, liver disease, and kidney injury, as well as follow-ups with specialists. However, she does not require immediate critical care resources such as ICU admission or emergency surgeries.\n   4. Are vital signs concerning? (Can affect ESI level) - The patient's vital signs are not critically abnormal, and her condition has shown improvement during hospitalization. This suggests that the ESI level is unlikely to be 3, 4, or 5.",
+          " ESI Level: 3\n   Confidence: 85%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - The patient's current condition does not indicate an imminent life-threatening situation, but her kidney function has been compromised. However, it is showing signs of improvement during hospitalization.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Although the patient's condition is concerning due to hepatic encephalopathy and mild acute kidney injury, her mental status improved during hospitalization, which suggests that she is not experiencing severe pain or distress at this moment.\n\n3. How many resources will this patient need? (For ESI 3-5) - Given the complexity of the patient's medical issues, such as alcoholic cirrhosis, hepatic encephalopathy, urinary tract infection, anemia, and kidney injury, she may require a significant number of resources, including specialized care from hepatologists and transplant teams. Furthermore, she will need ongoing treatment for her hepatocellular carcinoma, as well as lactulose, antibiotics, and other medications for her current condition upon discharge.\n\n4. Are vital signs concerning? (Can affect ESI level) - The patient's vital signs were not explicitly mentioned in the case, but her lab results showed anemia, elevated BUN, and mild acute kidney injury with creatinine of 1.4 (baseline 1.1), which suggest that her condition may be critical enough to warrant attention from multiple healthcare providers."
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 2,
+    "case_id": "30000012.txt"
+  }
+}

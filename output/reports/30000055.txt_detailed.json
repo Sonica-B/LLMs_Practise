@@ -1,0 +1,184 @@
+{
+  "case_id": "30000055.txt",
+  "chief_complaint": "I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.",
+  "predicted": {
+    "esi_level": 3,
+    "confidence": 0.95,
+    "explanation": "1. ESI level: 3\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient is experiencing constant, worsening ear pain that seems to be related to swallowing and chewing. They have a history of impacted cerumen and the pain started without a clear onset. While they don't seem to be in severe distress, it's reasonable to suspect an issue that requires multiple resources for management.\n  4. Whether a handoff to human provider is needed (yes) - Due to the nature of the symptoms and potential need for multiple resources, a handoff to a human provider for further evaluation and treatment would be advisable.",
+    "risk_factors": [],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 5,
+  "correct": false,
+  "arrival_method": "WALK IN",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": false
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 4,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": false
+        }
+      ],
+      "ground_truth": 5
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 80.0,
+        "explanation": " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient complains of persistent and annoying ear pain, which could indicate an otitis media (middle ear infection) or other ear conditions requiring medical attention. However, the absence of symptoms suggesting severe or life-threatening conditions, such as fever, hearing loss, dizziness, or speech difficulty, places this case in ESI level 3 (se semi-urgent). This assessment does not replace a thorough clinical evaluation and decision by an attending healthcare professional.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 3\n   Confidence: 95%\n   Brief explanation: The patient complains of persistent and annoying ear pain, which could indicate an otitis media (middle ear infection) or other ear conditions requiring medical attention. However, the absence of symptoms suggesting severe or life-threatening conditions, such as fever, hearing loss, dizziness, or speech difficulty, places this case in ESI level 3 (se semi-urgent). This assessment does not replace a thorough clinical evaluation and decision by an attending healthcare professional.",
+          " ESI Level: 2\n   Confidence: 85%\n   Brief explanation: The patient is experiencing ear pain, which is not an immediate life threat but could indicate a serious condition such as an infection or ruptured eardrum. However, since it's not specified whether the patient has any underlying health issues, impaired level of consciousness, or vital signs abnormalities, the ESI level is assessed as 2 (emergent or semi-urgent). The pain being described as \"sharp\" and \"annoying\" suggests some urgency, but not an immediate emergency.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient presents with a persistent, severe ear pain that feels plugged up, which could indicate an infection or blockage in the ear. While not life-threatening, this issue requires prompt attention due to the potential for complications. Therefore, it falls under ESI Level 3, indicating a semi-urgent condition that should be seen within 15 minutes to 30 minutes of arrival.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing ear pain, which can be indicative of a non-urgent otolaryngologic issue. However, the presence of a feeling of the ear being plugged up could suggest an underlying infection or blockage that may require attention within hours but not immediately. This level 3 is appropriate as it indicates patients who require medical attention within several hours and whose illness requires active monitoring due to the potential for worsening symptoms or complications.",
+          " ESI Level: 3\n   Confidence: 85%\n\nExplanation: The patient is experiencing a persistent, sharp ear pain which could suggest an infection or blockage in the ear. However, this symptom alone might not be immediately life-threatening or require urgent intervention. Since there's no mention of any associated symptoms such as loss of hearing, vertigo, tinnitus, or facial weakness - all of which would indicate a more serious condition like an acute inner ear problem or stroke - it seems less likely to be an ESI Level 1 or 2 case. On the other hand, given that the patient described the pain as persistent and annoying, it might not be considered a minor issue (ESI Level 4 or 5) either. Therefore, I would assess this as an ESI Level 3, indicating a Moderate Acuity."
+        ],
+        "parsed_data": [
+          [
+            3,
+            95
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 2\n   Confidence: 90%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not reporting life-threatening symptoms such as chest pain, difficulty breathing, or loss of consciousness, so they are not imminently dying or in a critical condition.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient describes severe ear pain and discomfort that has persisted, which may cause significant distress. Although not immediately life-threatening, it could be causing acute discomfort and require prompt attention.\n   3. How many resources will this patient need? (For ESI 3-5) - The resources required for this patient would likely be minimal, including an exam by a healthcare professional with potential imaging or medication for pain relief.\n   4. Are vital signs concerning? (Can affect ESI level) - No, the patient's vital signs are not provided in the information given, but there is no mention of symptoms that would indicate serious concern such as elevated heart rate, low blood pressure, or respiratory distress.",
+        "needs_handoff": true,
+        "responses": [
+          " ESI Level: 2\n   Confidence: 90%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not reporting life-threatening symptoms such as chest pain, difficulty breathing, or loss of consciousness, so they are not imminently dying or in a critical condition.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient describes severe ear pain and discomfort that has persisted, which may cause significant distress. Although not immediately life-threatening, it could be causing acute discomfort and require prompt attention.\n   3. How many resources will this patient need? (For ESI 3-5) - The resources required for this patient would likely be minimal, including an exam by a healthcare professional with potential imaging or medication for pain relief.\n   4. Are vital signs concerning? (Can affect ESI level) - No, the patient's vital signs are not provided in the information given, but there is no mention of symptoms that would indicate serious concern such as elevated heart rate, low blood pressure, or respiratory distress.",
+          " ESI Level: 2\n   Confidence: 85%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient's symptoms do not indicate an immediate life-threatening situation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient describes a persistent sharp ear pain that feels plugged up, which may suggest an acute otitis media or other ear condition causing significant discomfort. However, it is not classified as severe distress yet.\n\n3. How many resources will this patient need? (For ESI 3-5) - This will depend on the specific diagnosis and treatment required. A simple ear cleaning or medication may be enough; however, further examination or imaging might be necessary if the condition worsens or complications arise.\n\n4. Are vital signs concerning? (Can affect ESI level) - There is no information provided regarding the patient's vital signs, so it cannot be determined at this point whether they are concerning or not. If the patient has fever, elevated blood pressure, or other abnormal vitals, it could potentially impact the ESI level.\n\nIn summary, the patient presents with moderate pain and discomfort that requires further medical evaluation and possible treatment. The current information provided suggests an ESI level of 2. However, if the patient's vital signs become concerning during the assessment or additional symptoms develop, the ESI level may need to be re-evaluated accordingly.",
+          " ESI Level: 2\n   Confidence: 90%\n\n   Step-by-step reasoning:\n   1. The patient is not dying or about to die (ESI 1).\n   2. Although the pain in the left ear can be severe, it doesn't seem to cause high-risk situations or severe distress (ESI 2).\n   3. This patient will likely require a moderate level of resources such as an ENT specialist and imaging tests if necessary (For ESI 3-5).\n   4. There is no information about the vital signs, but if they are within normal limits, it will not significantly affect the ESI level (ESI 2 remains appropriate).",
+          " ESI Level: 2\n   Confidence: 80%\n\nStep-by-step reasoning:\n1. The patient is not currently dying or about to die.\n2. The patient's complaint of a sharp, annoying pain in the left ear that feels plugged up and won't go away suggests a high level of discomfort (severe pain/distress).\n3. The resources required for this patient would include an ear, nose, and throat specialist or a general practitioner with experience in ear issues.\n4. Vital signs are not mentioned in the provided information. If vital signs were concerning (e.g., high fever, elevated blood pressure), it could potentially impact the ESI level, but given the lack of such information, the ESI level remains at 2 for this analysis.",
+          " ESI Level: 2\n   Confidence: 95%\n   Step-by-step reasoning:\n   1. The patient is not dying or about to die.\n   2. The patient describes a high level of discomfort and distress due to the persistent, sharp pain in their left ear that also feels plugged up. This could be considered severe pain/distress.\n   3. The resources needed for this patient are moderate as they will require an examination by an ENT specialist and possibly imaging studies. However, the immediate need for critical resources such as ICU or advanced life support is not indicated at this time.\n   4. Vital signs were not provided in this case, but assuming no other concerning symptoms, the lack of information regarding vital signs would not affect the ESI level determination."
+        ],
+        "parsed_data": [
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            95
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 5,
+    "case_id": "30000055.txt"
+  }
+}

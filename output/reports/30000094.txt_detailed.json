@@ -1,0 +1,186 @@
+{
+  "case_id": "30000094.txt",
+  "chief_complaint": "I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.",
+  "predicted": {
+    "esi_level": 2,
+    "confidence": 0.85,
+    "explanation": "1. ESI level: 2\n  2. Confidence level: 0.85\n  3. Brief explanation: The patient presents with symptoms of possible arrhythmia, which can be serious if left untreated, and the onset has been worsening over the last 24 hours. Additionally, the patient mentions mild to moderate shortness of breath and increased anxiety, both potential signs of respiratory distress. However, there is no mention of chest pain, which would increase concern for a more severe condition like a myocardial infarction (heart attack).\n  4. Whether a handoff to human provider is needed: Yes",
+    "risk_factors": [
+      "Ambulance arrival"
+    ],
+    "needs_handoff": true,
+    "qa_count": 10
+  },
+  "ground_truth": 2,
+  "correct": true,
+  "arrival_method": "AMBULANCE",
+  "confidence_analysis": {
+    "incremental": {
+      "progression": [
+        {
+          "questions_asked": 0,
+          "question_type": "None",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 1,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 2,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 3,
+          "question_type": "Essential",
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 4,
+          "question_type": "Essential",
+          "confidence": 0.95,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 5,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 6,
+          "question_type": "Essential",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 7,
+          "question_type": "Wrong",
+          "confidence": 0.85,
+          "esi_level": 3,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 8,
+          "question_type": "Wrong",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 9,
+          "question_type": "Optionl",
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
+        },
+        {
+          "questions_asked": 10,
+          "question_type": "Optionl",
+          "confidence": 0.85,
+          "esi_level": 2,
+          "needs_handoff": true
+        }
+      ],
+      "ground_truth": 2
+    },
+    "elicitation": {
+      "vanilla_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing symptoms of a possible cardiac issue (heart racing and skipping beats), which could indicate an Emergency Department (ED) arrival category of Urgent. However, the fact that they are also experiencing anxiety and shortness of breath may suggest a psychogenic component to their condition, thereby increasing the level slightly towards the \"Severe\" end of the spectrum. The patient should be triaged promptly for an ECG and further evaluation by a cardiologist or other appropriate specialist.",
+        "needs_handoff": false,
+        "responses": [
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing symptoms of a possible cardiac issue (heart racing and skipping beats), which could indicate an Emergency Department (ED) arrival category of Urgent. However, the fact that they are also experiencing anxiety and shortness of breath may suggest a psychogenic component to their condition, thereby increasing the level slightly towards the \"Severe\" end of the spectrum. The patient should be triaged promptly for an ECG and further evaluation by a cardiologist or other appropriate specialist.",
+          " ESI Level: 3\n   Confidence: 80%\n   Brief explanation: The patient is experiencing symptoms consistent with a cardiac issue (heart racing and skipping beats), which could indicate a life-threatening emergency if not addressed promptly. However, the shortness of breath and anxiety could also be related to an anxiety disorder or panic attack. The patient's history is not provided, so it's difficult to determine if there are any underlying heart conditions that could make this more urgent. Regardless, a thorough evaluation is needed to ensure the patient's safety and well-being.",
+          " ESI Level: 3\n   Confidence: 90%\n   Brief explanation: The patient is experiencing symptoms of a possible cardiac issue (heart racing and skipping beats) which requires prompt attention. However, the symptoms are not immediate life-threatening or requiring resuscitation (ESI level 1), but they indicate a semi-urgent condition that may require observation, monitoring, or further diagnostic tests (ESI level 3). The confidence is high because these symptoms are consistent with cardiac concerns.",
+          " ESI Level: 3\n   Confidence: 90%\n   Brief explanation: The patient presents with symptoms that could indicate a cardiac emergency (chest pain, shortness of breath) or a non-emergency situation (palpitations). However, due to the reported racing and skipping heartbeats accompanied by anxiety and shortness of breath, it is more likely that this patient requires urgent attention. Therefore, an ESI level 3 is appropriate for this case.",
+          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient's complaint of a racing and skipping heartbeat, associated anxiety, and shortness of breath suggests a possible cardiac issue or anxiety attack. While the details provided do not definitively point to one over the other, the symptoms are suggestive of a potentially serious condition that requires urgent evaluation but is not an immediate life threat (ESI Level 3). The patient should be triaged quickly but not necessarily seen immediately by a physician."
+        ],
+        "parsed_data": [
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " ESI Level: 2\n   Confidence: 80%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not currently in a life-threatening situation, but it's important to assess quickly due to symptoms of possible cardiac issues.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's complaint of heart racing and skipping beats, along with feelings of anxiety and shortness of breath, suggests a significant risk to their health status.\n   3. How many resources will this patient need? (For ESI 3-5) - This patient will require immediate attention from a cardiologist or emergency care provider. They may also need additional tests such as an EKG and potential admission for observation and treatment.\n   4. Are vital signs concerning? (Can affect ESI level) - Not specified in the provided information, but if the patient's heart rate, blood pressure, or oxygen saturation levels are significantly abnormal, it could indicate a more urgent situation (ESI 1 or 2).\n\n   Final assessment: This patient requires immediate attention due to possible cardiac-related symptoms and should be evaluated as ESI level 2.",
+        "needs_handoff": true,
+        "responses": [
+          " ESI Level: 2\n   Confidence: 80%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not currently in a life-threatening situation, but it's important to assess quickly due to symptoms of possible cardiac issues.\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's complaint of heart racing and skipping beats, along with feelings of anxiety and shortness of breath, suggests a significant risk to their health status.\n   3. How many resources will this patient need? (For ESI 3-5) - This patient will require immediate attention from a cardiologist or emergency care provider. They may also need additional tests such as an EKG and potential admission for observation and treatment.\n   4. Are vital signs concerning? (Can affect ESI level) - Not specified in the provided information, but if the patient's heart rate, blood pressure, or oxygen saturation levels are significantly abnormal, it could indicate a more urgent situation (ESI 1 or 2).\n\n   Final assessment: This patient requires immediate attention due to possible cardiac-related symptoms and should be evaluated as ESI level 2.",
+          " ESI Level: 2\n   Confidence: 80%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - The patient's symptoms suggest a possible cardiac issue, but they are not immediately life-threatening. Therefore, the patient is not dying or about to die.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The symptoms of racing heart, skipping beats, anxiety, and shortness of breath could indicate a cardiac emergency. Although the patient is not currently experiencing severe distress, these symptoms are indicative of potential danger.\n\n3. How many resources will this patient need? (For ESI 3-5) - Given the possible cardiac emergency, the patient may require multiple resources such as an electrocardiogram (ECG), cardiology consultation, and potentially urgent intervention. However, the urgency is not so high that it would warrant an ESI level of 3 or higher.\n\n4. Are vital signs concerning? (Can affect ESI level) - The patient's symptoms suggest that their heart rate may be abnormal, but we do not have specific vital sign information in this case. If the heart rate is significantly elevated or if other vital signs are abnormal, it could increase the urgency of the situation and potentially move the ESI level up.\n\nIn summary, based on the patient's reported symptoms and considering the potential severity of a possible cardiac issue, an ESI level of 2 is appropriate for this case. The ESI level could be reevaluated if further information regarding vital signs becomes available.",
+          " ESI Level: 2\n   Confidence: 85%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient's symptoms do not suggest an immediate life-threatening situation, but they are concerning enough that prompt medical attention is required.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's symptoms of heart racing and skipping beats, along with feelings of anxiety and shortness of breath, suggest a potential cardiac emergency. The distress level is moderate but still significant.\n\n3. How many resources will this patient need? (For ESI 3-5) - This patient may require immediate assessment by a cardiologist or other specialist, as well as possible diagnostic tests such as an electrocardiogram (ECG). They may also require oxygen therapy and/or medication to manage symptoms. The number of resources needed is moderate, justifying an ESI level 2.\n\n4. Are vital signs concerning? - Yes, the patient's symptoms could indicate abnormal heart activity, which might be reflected in their vital signs. However, without specific vital sign information provided in the case, it is impossible to make a definitive judgment about this factor. Nonetheless, the symptoms themselves suggest potential vital sign abnormalities that warrant further evaluation.",
+          " ESI Level: 2\n   Confidence: 90%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the symptoms described are not immediate signs of life-threatening conditions such as cardiac arrest, shock, or uncontrolled bleeding.\n\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing symptoms of possible cardiac arrhythmia, which can be serious and require prompt attention. Additionally, anxiety and shortness of breath could indicate acute distress.\n\n   3. How many resources will this patient need? (For ESI 3-5) - This patient may need an EKG to assess the heart rhythm, possibly medication to manage arrhythmia or anxiety, and potentially cardiology consultation. However, these resources can be provided relatively quickly without significant delay to other patients.\n\n   4. Are vital signs concerning? (Can affect ESI level) - Vital signs such as blood pressure, pulse rate, respiratory rate, and oxygen saturation are not specifically mentioned in the information provided. If these are stable and within normal limits, it would support an ESI 2 classification. However, tachycardia or other abnormalities could potentially raise the ESI level.\n\nOverall, this patient's symptoms suggest a potential cardiac arrhythmia that requires prompt attention but does not appear to be immediately life-threatening. Therefore, an ESI level of 2 seems appropriate based on the given information.",
+          " ESI Level: 2\n   Confidence: 85%\n   Step-by-step reasoning:\n   1. This patient is not dying or about to die at the moment, but symptoms such as racing heart and skipping beats could indicate a serious cardiac condition if left untreated.\n   2. The patient is experiencing high-risk symptoms (cardiac symptoms) with significant distress (anxiety and shortness of breath). This is a high-risk situation that requires immediate attention due to the potential for severe consequences.\n   3. Resources needed would be moderate. The patient will require an EKG, possibly cardiology consultation, and potentially hospital admission if the results are concerning.\n   4. Vital signs such as heart rate could be concerning in this case. Rapid or irregular heartbeats are indicative of a potential emergency situation."
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      }
+    },
+    "ground_truth": 2,
+    "case_id": "30000094.txt"
+  }
+}

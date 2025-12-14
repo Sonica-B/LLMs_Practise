@@ -13,6 +13,18 @@ class ConfidenceAnalyzer:
         self.triage_system = triage_system
         self.results = []
         self.output_dir = output_dir
+
+    def _extract_progression(self, result):
+        """Return (progression, ground_truth) regardless of top-level or nested shape."""
+        progression = result.get('progression')
+        ground_truth = result.get('ground_truth')
+
+        if progression is None and 'incremental' in result:
+            inc = result.get('incremental', {})
+            progression = inc.get('progression')
+            ground_truth = ground_truth or inc.get('ground_truth')
+
+        return progression, ground_truth
     
     def analyze_case(self, case_data, annotations):
         """Analyze confidence progression with incremental questions"""
@@ -129,12 +141,22 @@ class ConfidenceAnalyzer:
         """Generate summary report of confidence analysis"""
         if not self.results:
             return "No results to analyze"
+
+        # Collect available progressions
+        progression_entries = []
+        for r in self.results:
+            progression, ground_truth = self._extract_progression(r)
+            if progression:
+                progression_entries.append((progression, ground_truth))
+
+        if not progression_entries:
+            return "No progression data to analyze"
         
         # Calculate summary statistics
         summary = {
-            'cases_analyzed': len(self.results),
-            'average_initial_confidence': np.mean([r['progression'][0]['confidence'] for r in self.results]),
-            'average_final_confidence': np.mean([r['progression'][-1]['confidence'] for r in self.results]),
+            'cases_analyzed': len(progression_entries),
+            'average_initial_confidence': np.mean([p[0]['confidence'] for p, _ in progression_entries]),
+            'average_final_confidence': np.mean([p[-1]['confidence'] for p, _ in progression_entries]),
             'confidence_change': {},
             'question_impact': {}
         }
@@ -143,10 +165,10 @@ class ConfidenceAnalyzer:
         question_types = ['Essential', 'Optional', 'Wrong']
         for q_type in question_types:
             changes = []
-            for result in self.results:
-                for i in range(1, len(result['progression'])):
-                    if result['progression'][i]['question_type'] == q_type:
-                        change = result['progression'][i]['confidence'] - result['progression'][i-1]['confidence']
+            for progression, _ in progression_entries:
+                for i in range(1, len(progression)):
+                    if progression[i].get('question_type') == q_type:
+                        change = progression[i]['confidence'] - progression[i-1]['confidence']
                         changes.append(change)
             
             if changes:
@@ -173,9 +195,11 @@ class ConfidenceAnalyzer:
             if result is None:
                 print(f"No data found for case {case_id}")
                 return None
-                
-        progression = result['progression']
-        ground_truth = result.get('ground_truth')
+
+        progression, ground_truth = self._extract_progression(result)
+        if not progression:
+            print(f"No progression data found for case {case_id}")
+            return None
         
         # Create a figure with two subplots sharing x-axis
         fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 10), sharex=True, 
@@ -273,11 +297,13 @@ class ConfidenceAnalyzer:
         # Gather prediction data
         data = []
         for result in self.results:
-            ground_truth = result.get('ground_truth')
+            progression, ground_truth = self._extract_progression(result)
             if not ground_truth:
                 continue
-                
-            for p in result['progression']:
+            if not progression:
+                continue
+
+            for p in progression:
                 data.append({
                     'case_id': result.get('case_id', ''),
                     'confidence': p['confidence'],
@@ -352,8 +378,9 @@ class ConfidenceAnalyzer:
         # Gather data on question impacts
         impacts = []
         for result in self.results:
-            progression = result['progression']
-            ground_truth = result.get('ground_truth')
+            progression, ground_truth = self._extract_progression(result)
+            if not progression:
+                continue
             
             for i in range(1, len(progression)):
                 # Calculate changes after each question
@@ -450,7 +477,8 @@ class ConfidenceAnalyzer:
         for result in self.results:
             case_id = result.get('case_id', 'unknown')
             file_path = self.plot_esi_confidence_progression(case_id, result)
-            output_files.append(file_path)
+            if file_path:
+                output_files.append(file_path)
         
         # Correlation and impact analyses
         correlation_path = self.plot_confidence_accuracy_correlation()

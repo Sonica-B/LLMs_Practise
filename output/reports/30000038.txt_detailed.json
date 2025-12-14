@@ -3,8 +3,8 @@
   "chief_complaint": "I've been experiencing a persistent cough and feeling congested, making it hard for me to take a deep breath.",
   "predicted": {
     "esi_level": 3,
-    "confidence": 0.95,
-    "explanation": "1. ESI level: 3\n  2. Confidence level: 0.95\n  3. Explanation: The patient presents with symptoms of a respiratory infection, such as a persistent cough and congestion, along with a recent fever. While there is no immediate life-threatening situation (ESI 1), the patient requires multiple resources due to their need for treatment and potential complications given their living situation (ESI 3).\n  4. Handoff to human provider: Yes, this patient should be evaluated by a healthcare professional. The symptoms of a respiratory infection, especially in an elderly individual with possible exposure to other sick contacts, may indicate the need for antibiotics or further diagnostic tests.",
+    "confidence": 0.85,
+    "explanation": " 1. ESI level: 3\n2. Confidence level: 0.85\n3. Brief explanation: The patient has been experiencing persistent cough and congestion for about a week and a half, with a recent onset of productive cough and a fever. While there's no evidence of chest pain or respiratory distress, the patient finds it hard to catch their breath when speaking, lives in an elderly independent living facility where there might be multiple sick contacts, and has a mention of COPD suggested in their chest X-ray.\n4. Whether a handoff to human provider is needed (yes) - This case requires clinical judgment due to the presence of persistent symptoms, fever, a history of chronic conditions, potential exposure to sick individuals, and the chest X-ray findings suggestive of COPD. It would be advisable for a human healthcare professional to evaluate the patient further to determine appropriate treatment.",
     "risk_factors": [
       "Ambulance arrival"
     ],
@@ -20,21 +20,21 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.85,
+          "confidence": 0.6,
           "esi_level": 3,
           "needs_handoff": true
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.95,
+          "confidence": 0.85,
           "esi_level": 4,
           "needs_handoff": true
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.95,
+          "confidence": 0.8,
           "esi_level": 4,
           "needs_handoff": true
         },
@@ -48,50 +48,50 @@
         {
           "questions_asked": 4,
           "question_type": "Essential",
-          "confidence": 0.95,
-          "esi_level": 4,
+          "confidence": 0.9,
+          "esi_level": 3,
           "needs_handoff": true
         },
         {
           "questions_asked": 5,
           "question_type": "Essential",
-          "confidence": 0.95,
-          "esi_level": 4,
-          "needs_handoff": true
+          "confidence": 0.8,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 6,
           "question_type": "Essential",
-          "confidence": 0.95,
-          "esi_level": 3,
+          "confidence": 0.85,
+          "esi_level": 2,
           "needs_handoff": true
         },
         {
           "questions_asked": 7,
           "question_type": "Essential",
-          "confidence": 0.95,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": true
         },
         {
           "questions_asked": 8,
           "question_type": "Wrong",
-          "confidence": 0.95,
-          "esi_level": 3,
-          "needs_handoff": true
+          "confidence": 0.8,
+          "esi_level": 4,
+          "needs_handoff": false
         },
         {
           "questions_asked": 9,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 4,
+          "confidence": 0.85,
+          "esi_level": 3,
           "needs_handoff": true
         },
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 3,
+          "confidence": 0.85,
+          "esi_level": 2,
           "needs_handoff": true
         }
       ],
@@ -101,14 +101,14 @@
       "vanilla_self_random_consistency": {
         "esi_level": 3,
         "confidence": 100.0,
-        "explanation": " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient presents with symptoms of an acute respiratory infection (persistent cough, difficulty breathing) but does not exhibit signs of severe distress or life-threatening conditions such as chest pain, shortness of breath, or altered mental status. However, the severity could escalate if the condition worsens and the patient starts experiencing severe respiratory symptoms. A follow-up assessment may be necessary to monitor the progression of the symptoms.",
+        "explanation": " {\"esi_level\": 3, \"confidence\": 85, \"reason\": \"The patient is experiencing respiratory symptoms (persistent cough and congestion), but there's no mention of severe distress or vital signs abnormalities. These symptoms suggest a moderate urgency level.\"}",
         "needs_handoff": false,
         "responses": [
-          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient presents with symptoms of an acute respiratory infection (persistent cough, difficulty breathing) but does not exhibit signs of severe distress or life-threatening conditions such as chest pain, shortness of breath, or altered mental status. However, the severity could escalate if the condition worsens and the patient starts experiencing severe respiratory symptoms. A follow-up assessment may be necessary to monitor the progression of the symptoms.",
-          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient presents with respiratory symptoms, which can be a non-urgent condition but could potentially escalate if the cough worsens or there's accompanying chest pain, fever, or shortness of breath. A thorough evaluation is required to rule out possible complications such as pneumonia or asthma. However, given that the patient has not mentioned these additional symptoms, it seems unlikely to be an immediate threat to life or limb, placing this case in ESI level 3 (Semi-urgent).",
-          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient presents with symptoms of an acute respiratory infection (persistent cough, difficulty breathing) that requires attention within 24 hours but is not immediately life-threatening. Given the severity and urgency of the patient's respiratory symptoms, ESI level 3 seems most appropriate as these patients generally require a semi-urgent response (within 12-24 hours). However, it should be noted that while this is a common presentation for a non-emergency situation, if the patient has other significant comorbidities or exacerbations of chronic conditions, the ESI level could potentially change.",
-          " ESI Level: 3\n   Confidence: 85%\n   Brief explanation: The patient is experiencing respiratory symptoms, but there are no clear signs of immediate danger such as trouble breathing, chest pain, or severe shortness of breath (ESI level 1 and 2). However, persistent coughing and congestion can be indicative of a lower respiratory tract infection that may require antibiotics. Given the current symptoms, this patient would likely be triaged for a semi-urgent evaluation (ESI level 3).",
-          " ESI Level: 3\n   Confidence: 85%\n   Brief Explanation: The patient presents with respiratory symptoms such as coughing and congestion, making it difficult to breathe deeply. While not a life-threatening condition, these symptoms may require immediate attention due to the potential for complications like pneumonia or asthma exacerbations. The patient's history is not provided, which could impact the severity level, but given the nature of the symptoms, it is likely that this patient falls within a 3 (Semi-Urgent) on the Emergency Severity Index."
+          " {\"esi_level\": 3, \"confidence\": 85, \"reason\": \"The patient is experiencing respiratory symptoms (persistent cough and congestion), but there's no mention of severe distress or vital signs abnormalities. These symptoms suggest a moderate urgency level.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient is experiencing symptoms such as a persistent cough and congestion, suggesting a possible respiratory condition. However, without additional information about the severity of these symptoms (e.g., shortness of breath, fever, or chest pain), the exact ESI level cannot be definitively determined.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"70%\", \"reason\": \"The patient is experiencing symptoms of a respiratory infection (persistent cough and congestion), which might be indicative of moderate severity. However, without additional information about the duration of symptoms, fever, chest pain, shortness of breath, or other potential complications, the exact ESI level can't be definitively determined.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"Persistent cough and congestion suggest a possible upper respiratory infection or allergic reaction. However, difficulty breathing indicates a potentially more serious condition such as pneumonia or asthma flare-up. Therefore, the ESI level is assigned as 3.\"}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"80\",\n\"reason\": \"The patient is experiencing respiratory symptoms (cough and congestion) but there's no immediate danger, as indicated by the ability to take shallow breaths. However, persistent coughing can sometimes lead to more serious issues if left untreated for a prolonged period.\"\n}"
         ],
         "parsed_data": [
           [
@@ -117,15 +117,53 @@
           ],
           [
             3,
-            85
+            80
           ],
           [
             3,
-            85
+            70
           ],
           [
             3,
-            85
+            80
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "vanilla_self_random_avg_conf": {
+        "esi_level": 3,
+        "confidence": 79.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing respiratory symptoms such as persistent cough and congestion, making it hard to breathe deeply. This suggests a moderate acuity level as it could indicate a respiratory infection, but the absence of other severe symptoms or vital sign abnormalities lowers the urgency.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing respiratory symptoms such as persistent cough and congestion, making it hard to breathe deeply. This suggests a moderate acuity level as it could indicate a respiratory infection, but the absence of other severe symptoms or vital sign abnormalities lowers the urgency.\"}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"80\",\n\"reason\": \"The patient is experiencing symptoms of an acute respiratory illness such as a persistent cough, congestion, and difficulty breathing. This suggests a moderate acuity level (Level 3) requiring urgent assessment but not immediately life-threatening.\"\n}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"80\",\n  \"reason\": \"The patient's complaint of persistent cough and congestion, making it hard to take a deep breath, suggests a moderate acuity level (ESI Level 3). This is due to the possibility that the symptoms could indicate a respiratory infection. However, without further information about the patient's vital signs, age, or presence of other symptoms, the confidence in this assessment is reduced.\"\n}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"70\",\n\"reason\": \"The patient is experiencing symptoms of a respiratory infection (persistent cough, congestion, difficulty breathing), but there are no indications of life-threatening emergencies such as chest pain, shortness of breath, or altered mental status.\"\n}",
+          " {\"esi_level\": 3, \"confidence\": 85, \"reason\": \"Persistent cough and congestion could indicate a respiratory infection. Although no vital signs are provided, the patient's symptoms suggest a moderately urgent condition (ESI level 3).\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            70
           ],
           [
             3,
@@ -134,19 +172,19 @@
         ],
         "prompt_strategy": "vanilla",
         "sampling_strategy": "self_random",
-        "aggregation_strategy": "consistency"
+        "aggregation_strategy": "avg_conf"
       },
-      "cot_self_random_consistency": {
+      "vanilla_misleading_avg_conf": {
         "esi_level": 3,
-        "confidence": 80.0,
-        "explanation": " ESI Level: 3\n   Confidence: 80%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not exhibiting any signs of imminent death.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient is experiencing respiratory symptoms, but the severity seems to be moderate as there is no indication of difficulty breathing or shortness of breath at rest, which are indicative of a more urgent situation.\n3. How many resources will this patient need? (For ESI 3-5) - A moderate amount of resources may be needed, such as a private room, oxygen therapy, and possibly laboratory tests to assess the cause of the cough and congestion.\n4. Are vital signs concerning? (Can affect ESI level) - There is no information provided regarding the patient's vital signs, but given the nature of the symptoms, it would be reasonable to assume that their heart rate and respiratory rate may be slightly elevated. However, this does not necessitate an ESI 1 or 2 classification.\n\nOverall, based on the available information, the Emergency Severity Index level for this patient is 3, indicating a semi-urgent case that requires moderate resources but can wait for a few minutes to be attended to without causing harm. It is important to note that the absence of certain crucial pieces of information such as vital signs could impact the accuracy of the ESI level determination.",
+        "confidence": 77.0,
+        "explanation": " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient is experiencing symptoms suggestive of a respiratory infection (cough, congestion), but the severity seems moderate as the patient can still take shallow breaths. This aligns with ESI level 3.\"}",
         "needs_handoff": false,
         "responses": [
-          " ESI Level: 3\n   Confidence: 80%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not exhibiting any signs of imminent death.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient is experiencing respiratory symptoms, but the severity seems to be moderate as there is no indication of difficulty breathing or shortness of breath at rest, which are indicative of a more urgent situation.\n3. How many resources will this patient need? (For ESI 3-5) - A moderate amount of resources may be needed, such as a private room, oxygen therapy, and possibly laboratory tests to assess the cause of the cough and congestion.\n4. Are vital signs concerning? (Can affect ESI level) - There is no information provided regarding the patient's vital signs, but given the nature of the symptoms, it would be reasonable to assume that their heart rate and respiratory rate may be slightly elevated. However, this does not necessitate an ESI 1 or 2 classification.\n\nOverall, based on the available information, the Emergency Severity Index level for this patient is 3, indicating a semi-urgent case that requires moderate resources but can wait for a few minutes to be attended to without causing harm. It is important to note that the absence of certain crucial pieces of information such as vital signs could impact the accuracy of the ESI level determination.",
-          " ESI Level: 3\n   Confidence: 80%\n\nStep-by-step reasoning:\n\n1. Is this patient dying or about to die? (ESI 1) - No, the symptoms described do not indicate an immediate life-threatening situation.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The persistent cough and congestion, making it hard for the patient to breathe, could potentially be indicative of a respiratory condition like pneumonia or asthma, which might cause distress but is not an emergency requiring urgent intervention.\n\n3. How many resources will this patient need? (For ESI 3-5) - The patient may require a moderate level of resources for further investigation and treatment, such as diagnostic tests, oxygen therapy, or antibiotics. However, they do not appear to require critical care services like a ventilator or intensive monitoring at the moment.\n\n4. Are vital signs concerning? (Can affect ESI level) - The information provided does not detail the patient's vital signs, so it is impossible to determine if they are within normal limits. If the patient's vital signs were found to be abnormal and indicative of respiratory distress (such as an elevated respiratory rate or low oxygen saturation), this could potentially elevate the ESI level.\n\nOverall, given the information provided, it seems most appropriate to classify this patient as ESI level 3 - Deferred, meaning that they can be seen at a later time, and their condition does not require immediate intervention. If more detailed information about the patient's vital signs becomes available, the ESI level may need to be re-evaluated.",
-          " ESI Level: 2\n   Confidence: 90%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not experiencing symptoms that suggest an immediate life threat.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the persistent cough and congestion may indicate a respiratory infection, which can be distressing for the patient. However, without additional information about the severity of symptoms such as shortness of breath, fever, chest pain, etc., it's hard to determine if this is a high-risk situation.\n\n3. How many resources will this patient need? (For ESI 3-5) - This patient may require an evaluation by a healthcare professional and possible diagnostic tests such as a chest X-ray or lab work. They might need medication for symptom relief, but the level of resource utilization is not significant enough to warrant an ESI level of 3 or higher.\n\n4. Are vital signs concerning? (Can affect ESI level) - Without specific vitals provided in the information given, it's impossible to determine if the patient's vitals are concerning. If the patient has a high fever, rapid breathing rate, low oxygen saturation, or other abnormalities in their vital signs, this could indicate a more severe condition and require an ESI level adjustment. However, based on the information provided, these factors do not seem to be concerning enough to warrant an ESI level higher than 2.",
-          "1. Is this patient dying or about to die? (ESI 1): No, the patient's symptoms of persistent cough and congestion do not suggest an immediate life-threatening condition.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2): The patient mentions discomfort but does not seem to be in acute distress or experiencing unmanageable pain.\n3. How many resources will this patient need? (For ESI 3-5): Given the symptoms, the patient may require basic diagnostic tests such as chest X-ray or lab work, but it is unlikely that they will require extensive resources or multiple specialists.\n4. Are vital signs concerning? (Can affect ESI level): There are no provided vital signs in this scenario. However, if we assume normal vital signs for the sake of this analysis, we can proceed with our assessment.\n\nESI Level: 3\nConfidence: 90% [Note: This level could change based on additional information or changes in the patient's condition.]\nStep-by-step reasoning: The patient is experiencing a non-life-threatening but concerning respiratory issue, which will require some resources for diagnosis and treatment. The patient's reported symptoms do not suggest an immediate high-risk situation or severe pain/distress, making this an ESI level 3 case.",
-          " ESI Level: 3\n   Confidence: 80%\n\n   Step-by-step reasoning:\n   1. Is this patient dying or about to die? (ESI 1) - No, the patient is not experiencing life-threatening symptoms such as chest pain, shortness of breath, or signs of shock that would suggest an imminent risk of death.\n\n   2. Is this a high-risk situation or severe pain/distress? (ESI 2) - The patient's symptoms, while uncomfortable, do not indicate a high-risk situation or significant pain/distress. The inability to take deep breaths and persistent cough can suggest a respiratory issue, but it is not immediately life-threatening.\n\n   3. How many resources will this patient need? (For ESI 3-5) - This patient may require an examination by a healthcare provider, potential diagnostic tests such as a chest X-ray, and possibly medications to alleviate symptoms. However, the use of intensive resources like the ER bed or ICU is not anticipated based on the given information.\n\n   4. Are vital signs concerning? (Can affect ESI level) - The patient's vital signs are not provided in the case description, but if they are stable and within normal ranges, it suggests a lower acuity level.\n\n   Based on this analysis, the Emergency Severity Index (ESI) level is 3, which represents patients with non-urgent, semi-urgent, or urgent needs who can be scheduled for care."
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient is experiencing symptoms suggestive of a respiratory infection (cough, congestion), but the severity seems moderate as the patient can still take shallow breaths. This aligns with ESI level 3.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"70\", \"reason\": \"The patient is experiencing respiratory symptoms but also has a slightly elevated heart rate, indicating possible cardiopulmonary involvement. However, the lack of severe symptoms such as shortness of breath or chest pain suggests an ESI level 3.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing respiratory symptoms (persistent cough, congestion) but has been waiting for 30 minutes, suggesting that the condition may not be urgent.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's chief complaint suggests a respiratory issue, but the presence of anxiety in their history may indicate that symptoms could be exacerbated by psychological factors. As such, this case falls under ESI Level 3: Acutely Ill patients who require medical attention within 12-24 hours.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"70%\", \"reason\": \"Persistent cough and congestion with difficulty breathing, while not an immediate life-threatening condition, can indicate a respiratory infection that may require further evaluation. However, the onset of symptoms being 2 days indicates a moderate severity level.\"}"
         ],
         "parsed_data": [
           [
@@ -155,15 +193,129 @@
           ],
           [
             3,
+            70
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            70
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
+      },
+      "vanilla_prompt_paraphrasing_consistency": {
+        "esi_level": 3,
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"75%\", \"reason\": \"The patient is experiencing symptoms of an upper respiratory infection, such as a persistent cough and congestion. However, the severity seems to be moderate and not requiring immediate hospitalization. This suggests ESI level 3.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"75%\", \"reason\": \"The patient is experiencing symptoms of an upper respiratory infection, such as a persistent cough and congestion. However, the severity seems to be moderate and not requiring immediate hospitalization. This suggests ESI level 3.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient presents with symptoms of upper respiratory infection (URI), including a persistent cough and congestion. The inability to take a deep breath might indicate possible bronchitis or pneumonia, which justifies an ESI level of 3.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"75%\", \"reason\": \"The patient is experiencing symptoms of a possible upper respiratory infection, which requires medical attention but is not immediately life-threatening. The persistent cough and congestion suggest an illness that may warrant antibiotics or other treatments to alleviate the symptoms.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient's chief complaint suggests respiratory symptoms such as cough and congestion which may indicate a respiratory infection or allergy. However, the absence of other specific symptoms typically associated with more serious conditions (e.g., fever, chest pain, shortness of breath) indicates a lower level of acuity.\"}",
+          " {\"esi_level\": \"2\", \"confidence\": \"60\", \"reason\": \"The patient is experiencing symptoms of a lower respiratory infection, such as persistent cough and congestion, making it hard to breathe deeply. However, the history does not mention fever, chest pain or shortness of breath at rest, which are more indicative of a higher level of urgency.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            3,
             80
           ],
           [
             2,
-            90
+            60
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_consistency": {
+        "esi_level": 2,
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not dying or about to die as they are experiencing a persistent cough and congestion but no signs of critical distress.\",\n\"2. The symptoms suggest respiratory issues which can be considered high-risk due to potential complications such as pneumonia or asthma exacerbation, although the severity is not specified in the given information.\",\n\"3. This patient may require medical attention, but not immediate critical care, so they will likely need moderate resources.\",\n\"4. No vital signs were provided to determine if they are concerning or not.\"]}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not dying or about to die as they are experiencing a persistent cough and congestion but no signs of critical distress.\",\n\"2. The symptoms suggest respiratory issues which can be considered high-risk due to potential complications such as pneumonia or asthma exacerbation, although the severity is not specified in the given information.\",\n\"3. This patient may require medical attention, but not immediate critical care, so they will likely need moderate resources.\",\n\"4. No vital signs were provided to determine if they are concerning or not.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not currently exhibiting signs of imminent death.\",\n\"2. The patient's complaint suggests a respiratory infection, which can cause significant distress and discomfort (ESI level 2).\",\n\"3. While the number of resources required may vary depending on the severity of the infection, it is not expected to be excessive for routine care.\",\n\"4. No vital signs are mentioned in the patient information provided.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient is not experiencing a life-threatening emergency, as they are not dying or about to die (ESI 1).\\n2. However, the patient's symptoms of persistent cough and congestion, making it hard to breathe, suggest a moderate level of respiratory distress (ESI 2). This could potentially worsen if left untreated.\\n3. The patient is likely to require some medical resources, such as antibiotics or inhalers for their respiratory symptoms, but not extensive resources typically required for ESI 3-5 level patients.\\n4. No vital signs are mentioned in the provided information, so it's not possible to determine if they are concerning at this time.\"] }",
+          " {\"esi_level\": 3, \"confidence\": 80, \"steps\": [\"1. The patient is not in immediate danger of dying or about to die.\",\n                                              \"2. While the persistent cough and difficulty breathing may indicate a respiratory infection, it does not fall under the high-risk situation or severe pain/distress category (ESI 2)\",\n                                              \"3. The patient's condition requires medical attention but will likely not require extensive resources (such as ICU care).\",\n                                              \"4. Vital signs were not provided for this analysis, but based on the given symptoms, they are unlikely to be significantly concerning.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die as they are experiencing a persistent cough and congestion but do not mention any life-threatening symptoms. (ESI 1 excluded)\",\n\"2. Although the patient is in some distress due to difficulty breathing deeply, this could be considered a high-risk situation because respiratory conditions can potentially escalate if left untreated. (ESI 2 possible)\",\n\"3. This patient may require moderate resources such as a hospital bed, lab tests, and possibly a chest x-ray or other imaging studies. (ESI 3-5 possibilities)\",\n\"4. There are no vital signs mentioned in the given information that would indicate an urgent need for intervention. However, if the patient's condition worsens or if they exhibit concerning vital signs during assessment, their ESI level might increase.\"\n]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            70
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            75
           ],
           [
             3,
-            90
+            80
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "cot_self_random_avg_conf": {
+        "esi_level": 2,
+        "confidence": 76.66666666666667,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not showing signs of immediate life-threatening symptoms (dying or about to die).\",\n\"2. The patient presents with a high-risk situation due to the persistent cough and congestion that makes it hard to breathe, which can be indicative of a potentially serious respiratory condition.\",\n\"3. Although this case might require some resources for evaluation and treatment, it is not likely to require extensive resources compared to more critical situations.\",\n\"4. No vital signs are given in the patient history, but symptoms such as difficulty breathing and persistent cough can be concerning\"]}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not showing signs of immediate life-threatening symptoms (dying or about to die).\",\n\"2. The patient presents with a high-risk situation due to the persistent cough and congestion that makes it hard to breathe, which can be indicative of a potentially serious respiratory condition.\",\n\"3. Although this case might require some resources for evaluation and treatment, it is not likely to require extensive resources compared to more critical situations.\",\n\"4. No vital signs are given in the patient history, but symptoms such as difficulty breathing and persistent cough can be concerning\"]}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                                \"2. Although the persistent cough and congestion may cause distress, it does not qualify as a high-risk situation or severe pain/distress (ESI level 2).\",\n                                                \"3. This patient will likely require moderate resources such as diagnostic tests for respiratory infections.\",\n                                                \"4. The patient's vital signs are unknown, but based on the symptoms described, they may be within normal ranges. If vital signs were concerning, this could potentially elevate the ESI level.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                               \"2. The patient's symptoms of a persistent cough and congestion suggest a respiratory issue which can cause discomfort, but it's not immediate life-threatening (ESI 2).\",\n                                               \"3. Resources needed for this patient would typically include a primary care provider or urgent care facility to assess the condition and potentially prescribe medication.\",\n                                               \"4. No vital signs were provided in the case, but if the patient's oxygen saturation or breathing rate was concerning, it could potentially elevate the ESI level.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die, as their symptoms suggest a respiratory infection rather than an immediate life-threatening condition.\",\n\"2. Although the patient's symptoms are causing distress (persistent cough and difficulty breathing), they do not appear to be in severe pain or a high-risk situation at this point.\",\n\"3. The number of resources required for this patient may vary depending on the severity of their respiratory infection, but initial assessment suggests they will need standard care, which is within the capacity of most emergency departments.\",\n\"4. Vital signs were not provided in the given information, but assuming a normal blood pressure, pulse rate, and oxygen saturation level, it does not indicate an immediate critical condition.\"] }",
+          " {\"esi_level\": 3,\n \"confidence\": 80,\n \"steps\": [\"1. The patient is not currently experiencing a life-threatening situation or about to die.\",\n           \"2. While the persistent cough and difficulty breathing may indicate respiratory distress, it does not meet the criteria for a high-risk situation or severe pain/distress (ESI 2).\",\n           \"3. The patient's symptoms suggest that they will require moderate resources such as laboratory tests, medications, and possibly imaging studies.\",\n           \"4. Vital signs were not provided in the information, but assuming normal vital signs for now.\"]\n}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            70
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
           ],
           [
             3,
@@ -172,9 +324,166 @@
         ],
         "prompt_strategy": "cot",
         "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
+      },
+      "cot_prompt_paraphrasing_consistency": {
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die. However, the persistent cough and congestion make it difficult for the patient to breathe deeply, suggesting some level of distress (ESI 2).\",\n\"2. Although the specific resources needed are not explicitly stated, the symptoms suggest a possible respiratory infection that may require medication, monitoring, and potentially imaging tests (which can affect ESI level from 3-5).\",\n\"3. Vital signs such as oxygen saturation, heart rate, blood pressure, temperature, and respiration rate are not provided, but if these were normal or only mildly abnormal, it would support the ESI level 2 assessment.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die. However, the persistent cough and congestion make it difficult for the patient to breathe deeply, suggesting some level of distress (ESI 2).\",\n\"2. Although the specific resources needed are not explicitly stated, the symptoms suggest a possible respiratory infection that may require medication, monitoring, and potentially imaging tests (which can affect ESI level from 3-5).\",\n\"3. Vital signs such as oxygen saturation, heart rate, blood pressure, temperature, and respiration rate are not provided, but if these were normal or only mildly abnormal, it would support the ESI level 2 assessment.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's chief complaint suggests a respiratory infection, but there is no immediate danger or signs of suffocation. (Not ESI 1)\",\n\"2. The patient describes experiencing persistent cough, congestion and difficulty breathing deeply which could indicate a high-risk situation or severe discomfort, thus potentially qualifying as ESI 2.\",\n\"3. Given the current symptoms and potential severity, this patient may require additional resources such as chest x-ray, oxygen therapy, or antibiotics. (Potentially ESI 2 or 3)\",\n\"4. Vital signs were not provided for evaluation in this case.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die. They are experiencing symptoms such as a persistent cough and congestion, but these are not immediate life-threatening issues. (ESI 1 is excluded)\",\n\"2. The patient's description of severe difficulty breathing suggests they may be in some distress or discomfort. This falls under the category of a high-risk situation or severe pain/distress. (ESI 2)\",\n\"3. The number of resources needed for this patient will likely be moderate, as they require medical attention due to their respiratory symptoms but do not appear to need immediate critical care\",\n\"4. Vital signs were not provided in the information given, but if the patient's oxygen saturation or heart rate were found to be concerning, it could potentially move the ESI level up\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die as the symptoms described (persistent cough and congestion) do not indicate immediate life-threatening conditions.\",\n\"2. While the symptoms may cause discomfort and distress, they are not severe enough to qualify this as a high-risk situation.\",\n\"3. The patient's resource needs will likely be moderate, requiring a medical professional for evaluation and possibly prescription medication or further tests depending on the results of the initial examination.\",\n\"4. Vital signs such as blood pressure, heart rate, temperature, and oxygen saturation were not provided in the case summary, but if they are within normal ranges, it further supports an ESI level 2.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not dying or about to die, but the persistent cough and congestion may indicate a respiratory infection which can cause distress if left untreated. However, no immediate life-threatening conditions are evident from the provided information. (ESI 1 not applicable)\",\n\"2. The symptoms of persistent cough and difficulty breathing suggest that this might be a high-risk situation or severe discomfort for the patient. (ESI 2 applies)\",\n\"3. This patient will likely need medical attention, possibly including diagnostic tests such as chest X-ray and lab work, as well as potential antibiotics if a bacterial infection is suspected. (Resource usage may be moderate to high, suggesting ESI 2 or 3)\",\n\"4. No vital signs were provided in the information given. If the patient's oxygen saturation, heart rate, or blood pressure were abnormal, it could further indicate the need for more immediate attention (ESI level might increase)\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            70
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
         "aggregation_strategy": "consistency"
       },
+      "self_probing_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 70, \"reasoning\": \"The patient's symptoms of persistent cough and congestion suggest an upper respiratory tract infection such as a common cold or flu. However, the inability to take a deep breath could indicate a more serious condition like pneumonia or bronchitis. The ESI Level 3 is based on non-life-threatening symptoms but does not account for the difficulty in breathing. Therefore, while a relatively high confidence (70%) is placed in this assessment given the presented symptoms, there's still a need for further examination and possible diagnostic tests to confirm the diagnosis and rule out more serious conditions.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 70, \"reasoning\": \"The patient's symptoms of persistent cough and congestion suggest an upper respiratory tract infection such as a common cold or flu. However, the inability to take a deep breath could indicate a more serious condition like pneumonia or bronchitis. The ESI Level 3 is based on non-life-threatening symptoms but does not account for the difficulty in breathing. Therefore, while a relatively high confidence (70%) is placed in this assessment given the presented symptoms, there's still a need for further examination and possible diagnostic tests to confirm the diagnosis and rule out more serious conditions.\"}",
+          " {\"confidence\": 60, \"reason\": \"The patient is experiencing symptoms of respiratory infection such as a persistent cough and congestion, which are common in ESI level 3. However, without more detailed information like the patient's age, underlying health conditions, or results from physical examination or laboratory tests, the accuracy of the assessment may not be high.\"}",
+          " {\"confidence\": 65, \"reasoning\": \"The ESI level 3 assessment appears to be somewhat likely based on the symptoms described (persistent cough and congestion), but additional information is needed. For instance, fever, chest pain, or shortness of breath would increase the likelihood of a higher ESI level (indicating a more serious condition). However, without further details about the patient's medical history, comorbidities, vital signs, or physical examination findings, it is difficult to be certain.\"}",
+          " {\"confidence\": 65,\n\"reasoning\": \"The patient is experiencing symptoms such as persistent cough and congestion, which can be indicative of upper respiratory tract infections or allergies. However, the severity seems to suggest a lower respiratory infection might also be possible. The ESI level 3 assessment considers patients with moderate illness, who may require more than scheduled office hours but do not need emergency department care. This assessment is plausible as it captures the moderate nature of the symptoms, but it does not fully account for the possibility of a lower respiratory infection.\"}",
+          " {\"confidence\": 65, \"reasoning\": \"The ESI level 3 assessment is moderately likely based on the presented symptoms of persistent cough and congestion, which are common with upper respiratory infections. However, a deeper assessment would be required to confirm or rule out other possible conditions such as asthma, pneumonia, or allergies.\"}"
+        ],
+        "parsed_data": [
+          70,
+          60,
+          65,
+          65,
+          65
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
+      },
+      "self_probing_self_random_avg_conf": {
+        "esi_level": 3,
+        "confidence": 69.0,
+        "explanation": " {\"confidence\": 75,\n \"reasoning\": \"The patient's symptoms of a persistent cough and congestion suggest upper respiratory tract infection or allergy. However, the inability to take deep breaths indicates potential lower respiratory involvement. Given that no chest pain, fever, or shortness of breath (common signs of pneumonia or asthma) are mentioned, an ESI level 3 is plausible as it pertains to a simple upper respiratory infection. However, the inability to take deep breaths warrants further examination, increasing the likelihood that a more thorough assessment may be necessary.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 75,\n \"reasoning\": \"The patient's symptoms of a persistent cough and congestion suggest upper respiratory tract infection or allergy. However, the inability to take deep breaths indicates potential lower respiratory involvement. Given that no chest pain, fever, or shortness of breath (common signs of pneumonia or asthma) are mentioned, an ESI level 3 is plausible as it pertains to a simple upper respiratory infection. However, the inability to take deep breaths warrants further examination, increasing the likelihood that a more thorough assessment may be necessary.\"}",
+          " {\"confidence\": 65,\n \"reasoning\": \"The ESI level 3 assessment seems reasonable given the symptoms of persistent cough and congestion. However, the patient's history is not provided which could impact the accuracy of this assessment. A more specific diagnosis such as bronchitis, pneumonia or a common cold could be made with additional information.\"}",
+          " {\"confidence\": 65, \"reason\": \"The patient is presenting symptoms that are consistent with a respiratory infection such as persistent cough and congestion. However, the ESI level assessment of 3 might be underestimating the severity because it does not account for the difficulty in taking deep breaths, which could indicate more severe respiratory distress. The patient's symptoms could potentially warrant a higher ESI level assessment.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient's symptoms of a persistent cough and congestion suggest upper respiratory infection or allergies. However, the inability to take a deep breath might indicate lower respiratory involvement as well, which is not typical for an ESI level 3 assessment. The ESI (Emergency Severity Index) level 3 generally applies to patients with non-acute problems and minor injury. Given the possible involvement of both upper and lower respiratory symptoms, a more thorough examination may be necessary to determine the appropriate level.\"}",
+          " {\"confidence\": 65,\n\"reasoning\": \"The ESI Level 3 assessment seems plausible given the reported symptoms of persistent cough and congestion. However, a more detailed history, physical examination, and potential diagnostic tests (such as chest X-ray or blood test) are needed to confirm this diagnosis. The persistent nature of the symptoms suggests a possible lower respiratory tract infection, but could also be due to other conditions such as allergies or heart failure.\"}"
+        ],
+        "parsed_data": [
+          75,
+          65,
+          65,
+          75,
+          65
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
+      },
+      "multi_step_self_random_avg_conf": {
+        "esi_level": 2,
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80,\n\"step_confidences\": [95, 70, 65, 90],\n\"reason\": \"The patient presents with symptoms of a persistent cough and congestion that make it hard to take deep breaths. This could suggest a respiratory infection which, while not life-threatening, is considered high-risk due to the difficulty breathing (ESI 2). The need for resources may be moderate as they might require medication and possibly some diagnostic tests. Vital signs are not provided in the given information, but assuming normal vital signs based on general symptoms (ESI level could be adjusted if vital signs deviate significantly from normal).\"}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80,\n\"step_confidences\": [95, 70, 65, 90],\n\"reason\": \"The patient presents with symptoms of a persistent cough and congestion that make it hard to take deep breaths. This could suggest a respiratory infection which, while not life-threatening, is considered high-risk due to the difficulty breathing (ESI 2). The need for resources may be moderate as they might require medication and possibly some diagnostic tests. Vital signs are not provided in the given information, but assuming normal vital signs based on general symptoms (ESI level could be adjusted if vital signs deviate significantly from normal).\"}",
+          " {\"esi_level\": 2, \"confidence\": 80,\n\"step_confidences\": [95, 70, 60, 90],\n\"reason\": \"The patient's chief complaint of a persistent cough and congestion suggest a respiratory infection. While not immediately life-threatening (Step 1: 95% confidence), it is causing significant discomfort (Step 2: 70% confidence). The resources required may include medications, follow-up appointments, or tests to diagnose and manage the infection (Step 3: 60% confidence). The patient's vital signs are within normal limits, but this information alone does not significantly affect ESI level determination (Step 4: 90% confidence). Therefore, the ESI level is determined to be a 2 based on the significant discomfort and possible need for resources.\",\n\"overall_confidence\": \"80%\"}",
+          " {\"esi_level\": 2,\n\"confidence\": 80,\n\"step_confidences\": [95, 75, 60, 90],\n\"reason\": \"The patient's symptoms of a persistent cough and congestion with difficulty breathing suggest an upper respiratory infection, which is not life-threatening but indicates high risk and severe distress (Step 1: 95%, Step 2: 75%). The patient will likely require moderate resources for diagnosis and treatment (Step 3: 60%). The vital signs are within normal limits based on the given information, which affects ESI level determination (Step 4: 90%).\"\n}",
+          " {\"esi_level\": 3,\n\"confidence\": 70,\n\"step_confidences\": [85, 65, 75, 90],\n\"reason\": \"The patient is experiencing symptoms such as persistent cough and congestion which are common in non-life-threatening respiratory conditions. However, the severity of these symptoms suggests a higher ESI level. The patient does not appear to be in severe pain or distress, but they are experiencing discomfort (ESI 2 confidence: 65%). The number of resources required for this condition can vary, but given the current information, it seems that moderate resources will be needed (ESI 3-5 confidence: 75%). The patient's vital signs are not provided in the case history, but normal vital signs would typically point towards a lower ESI level. However, given the symptoms described, it is reasonable to assume that the vital signs may not be completely within normal limits (ESI 4 confidence: 90%).\"\n}",
+          " {\"esi_level\": 2,\n \"confidence\": 80,\n \"step_confidences\": [60, 95, 75, 90],\n \"reason\": \"The patient is experiencing persistent cough and congestion that makes it hard to take a deep breath, which can be symptoms of respiratory conditions like bronchitis or pneumonia. Although not life-threatening in the immediate sense (Step 1: 60%), the symptoms are causing significant discomfort and distress (Step 2: 95%). The patient may require hospitalization for observation, medication, and potential further diagnostic tests (Step 3: 75%). Vital signs seem to be within normal limits based on information provided (Step 4: 90%).\"\n}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80,
+            [
+              95,
+              70,
+              65,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              95,
+              70,
+              60,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              95,
+              75,
+              60,
+              90
+            ]
+          ],
+          [
+            3,
+            70,
+            [
+              85,
+              65,
+              75,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              60,
+              95,
+              75,
+              90
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
+      },
       "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "top_k_self_random_consistency": {
         "esi_level": 3,
         "confidence": 0,
         "needs_handoff": true

@@ -2,13 +2,13 @@
   "case_id": "30000204.txt",
   "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
   "predicted": {
-    "esi_level": 2,
-    "confidence": 0.95,
-    "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Explanation: The patient presents with significant emotional distress, feelings of hopelessness, self-harm thoughts, changes in sleep and appetite patterns, and flashbacks related to a recent traumatic event (assault). These factors suggest a high risk situation or severe pain/distress (ESI level 2).\n  4. Handoff to human provider: Yes, the patient requires immediate assessment and intervention by a mental health professional due to their high risk status.",
+    "esi_level": 3,
+    "confidence": 0.7,
+    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
     "risk_factors": [
       "Ambulance arrival"
     ],
-    "needs_handoff": true,
+    "needs_handoff": false,
     "qa_count": 10
   },
   "ground_truth": 4,
@@ -20,161 +20,140 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 3,
           "question_type": "Essential",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 4,
           "question_type": "Unknown",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 5,
           "question_type": "Unknown",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 6,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 7,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 8,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 9,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         },
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.95,
-          "esi_level": 2,
-          "needs_handoff": true
+          "confidence": 0.7,
+          "esi_level": 3,
+          "needs_handoff": false
         }
       ],
       "ground_truth": 4
     },
     "elicitation": {
       "vanilla_self_random_consistency": {
-        "esi_level": 4,
-        "confidence": 100.0,
-        "explanation": " ESI Level: 4\n   Confidence: 95%\n   Brief explanation: This patient is expressing severe emotional distress, which can be life-threatening if left untreated. The patient mentions a history of an assault, which may indicate a need for immediate psychiatric intervention due to potential trauma. Additionally, the intensity of the emotions expressed suggests that the patient requires urgent attention to prevent potential self-harm or harm to others.",
-        "needs_handoff": false,
-        "responses": [
-          " ESI Level: 4\n   Confidence: 95%\n   Brief explanation: This patient is expressing severe emotional distress, which can be life-threatening if left untreated. The patient mentions a history of an assault, which may indicate a need for immediate psychiatric intervention due to potential trauma. Additionally, the intensity of the emotions expressed suggests that the patient requires urgent attention to prevent potential self-harm or harm to others.",
-          " ESI Level: 4\n   Confidence: 80%\n   Brief explanation: The patient is experiencing significant emotional distress and seems to be at imminent risk due to feelings of hopelessness following an assault. This level of emotional pain may indicate a suicidal or homicidal ideation which would qualify as ESI Level 4. However, without more specific information about the immediate physical condition, mental status, or behavioral changes of the patient, there is some uncertainty in the assessment.",
-          " ESI Level: 4\n   Confidence: 85%\n   Brief explanation: The patient is presenting with acute mental health issues following a traumatic event, which is a clear indication of an urgent need for psychiatric attention. While not immediately life-threatening, the emotional distress could potentially escalate rapidly if left untreated. Therefore, it's crucial to prioritize this case appropriately.",
-          " ESI Level: 4\n   Confidence: 90%\n   Brief explanation: The patient is experiencing severe emotional distress, which could indicate a mental health crisis. The patient mentions feelings of overwhelming emotional pain and hopelessness, as well as symptoms suggestive of depression (darkness following them since the assault). The patient may require immediate evaluation by a mental health professional for potential suicidality or self-harm risk.",
-          " ESI Level: 4\n   Confidence: 90%\n   Brief Explanation: The patient presents with significant psychological distress and suicidal feelings (weight, hopelessness). While not an immediate physical danger to themselves or others, the emotional state requires urgent attention from a mental health professional. This is especially important given the history of trauma (assault) which may exacerbate the current situation. It's essential to prioritize this patient as a level 4 in order to provide timely and appropriate care for their acute psychiatric condition."
-        ],
-        "parsed_data": [
-          [
-            4,
-            95
-          ],
-          [
-            4,
-            80
-          ],
-          [
-            4,
-            85
-          ],
-          [
-            4,
-            90
-          ],
-          [
-            4,
-            90
-          ]
-        ],
-        "prompt_strategy": "vanilla",
-        "sampling_strategy": "self_random",
-        "aggregation_strategy": "consistency"
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "vanilla_self_random_avg_conf": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "vanilla_misleading_avg_conf": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "vanilla_prompt_paraphrasing_consistency": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
       },
       "cot_self_random_consistency": {
-        "esi_level": 2,
-        "confidence": 100.0,
-        "explanation": " ESI Level: 2\n   Confidence: 85%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not currently in a life-threatening situation.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing severe emotional distress and suicidal ideation, which can be high risk if left untreated.\n3. How many resources will this patient need? (For ESI 3-5) - This patient may require mental health resources such as a psychiatrist, therapist, or crisis counselor. They might also need support services like social work for follow-up care and assistance with their situation.\n4. Are vital signs concerning? (Can affect ESI level) - There is no information provided about the patient's vital signs in this case. However, the emotional distress and suicidal ideation indicate a high risk that warrants an ESI 2 rating regardless of physical vital signs.",
-        "needs_handoff": true,
-        "responses": [
-          " ESI Level: 2\n   Confidence: 85%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not currently in a life-threatening situation.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is experiencing severe emotional distress and suicidal ideation, which can be high risk if left untreated.\n3. How many resources will this patient need? (For ESI 3-5) - This patient may require mental health resources such as a psychiatrist, therapist, or crisis counselor. They might also need support services like social work for follow-up care and assistance with their situation.\n4. Are vital signs concerning? (Can affect ESI level) - There is no information provided about the patient's vital signs in this case. However, the emotional distress and suicidal ideation indicate a high risk that warrants an ESI 2 rating regardless of physical vital signs.",
-          " ESI Level: 2\n   Confidence: 95%\n   Step-by-step reasoning:\n   1. The patient is not currently dying or about to die (ESI 1).\n   2. This patient presents with severe emotional distress and pain (ESI 2), as indicated by the chief complaint of overwhelming emotional pain, hopelessness, and a heavy weight crushing them since an assault. These symptoms suggest a high-risk situation.\n   3. The resources required for this patient will be moderate. They may need counseling services, possibly medication management, and follow-up care with mental health professionals (ESI 2).\n   4. Vital signs are not mentioned in the provided information, but they do not appear to be concerning based on the symptoms described (ESI 2 or 3 can still apply even if vital signs are stable). If the patient were experiencing any physical symptoms such as chest pain, shortness of breath, or other indications of distress that could impact vital signs, their ESI level might need to be reassessed.",
-          " ESI Level: 2\n   Confidence: 95%\n\nStep-by-step reasoning:\n1. Is this patient dying or about to die? (ESI 1) - No, the patient is not displaying symptoms that indicate they are dying or about to die.\n2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient is expressing feelings of overwhelming emotional pain and hopelessness, which suggests a high level of distress and mental health crisis. This could potentially escalate into a higher risk situation if not addressed promptly.\n3. How many resources will this patient need? (For ESI 3-5) - The patient may require psychiatric evaluation, counseling services, and possibly inpatient care depending on the severity of their condition. However, since they are not displaying any life-threatening physical symptoms at this time, the immediate need for resources is lower than levels 3-5 would suggest.\n4. Are vital signs concerning? - There is no information provided about the patient's vital signs in this case, so it cannot be determined if they are concerning or not. However, since the focus of this case is on emotional distress rather than physical symptoms, the lack of information regarding vital signs does not significantly impact the ESI level determination.",
-          " ESI Level: 2\n   Confidence: 90%\n\nStep-by-step reasoning:\n1. The patient is not dying or about to die, as indicated by the description of emotional pain and hopelessness, which does not suggest an immediate life-threatening situation.\n\n2. This patient is experiencing a high level of distress due to psychological trauma, which would qualify this case as a high-risk situation or severe pain/distress (ESI 2).\n\n3. The resources needed for this patient will likely include mental health counseling and possibly medication management. While not immediately life-threatening, the emotional turmoil experienced by the patient requires specialized care and support.\n\n4. Vital signs were not provided in the information given, but it is important to note that physical symptoms may develop as a result of this psychological trauma. It is crucial to monitor the patient's vital signs closely and address any concerning findings promptly.",
-          "1. Is this patient dying or about to die? (ESI 1): No, the patient is not currently experiencing life-threatening symptoms that would indicate an immediate risk of death.\n\n2. Is this a high-risk situation or severe pain/distress? (ESI 2): Yes, the patient is expressing significant emotional distress and hopelessness, which could potentially lead to self-harm or suicidal ideation if not addressed appropriately. This qualifies as a high-risk situation requiring immediate attention.\n\n3. How many resources will this patient need? (For ESI 3-5): Given the nature of the emotional distress, it is likely that the patient will require psychiatric intervention and possibly counseling or therapy sessions. This requires mental health resources, which can be readily available in an emergency department setting.\n\n4. Are vital signs concerning? (Can affect ESI level): There are no indications in the provided information that the patient's vital signs are abnormal or concerning.\n\nESI Level: 2\nConfidence: 95%\nStep-by-step reasoning: The patient is expressing high levels of emotional distress and hopelessness, which could potentially lead to a high-risk situation. The patient is not currently experiencing life-threatening symptoms that would require immediate intervention to save their life (ESI 1). However, the patient does need mental health resources for psychiatric intervention and counseling/therapy sessions (ESI 2). The vital signs do not seem concerning based on the information provided."
-        ],
-        "parsed_data": [
-          [
-            2,
-            85
-          ],
-          [
-            2,
-            95
-          ],
-          [
-            2,
-            95
-          ],
-          [
-            2,
-            90
-          ],
-          [
-            2,
-            95
-          ]
-        ],
-        "prompt_strategy": "cot",
-        "sampling_strategy": "self_random",
-        "aggregation_strategy": "consistency"
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "cot_self_random_avg_conf": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "cot_prompt_paraphrasing_consistency": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "self_probing_self_random_consistency": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "self_probing_self_random_avg_conf": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "multi_step_self_random_avg_conf": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
       },
       "top_k_self_random_pair_rank": {
+        "esi_level": 3,
+        "confidence": 0,
+        "needs_handoff": true
+      },
+      "top_k_self_random_consistency": {
         "esi_level": 3,
         "confidence": 0,
         "needs_handoff": true

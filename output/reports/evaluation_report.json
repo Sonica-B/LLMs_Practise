@@ -1,49 +1,49 @@
 {
   "metrics": {
     "total_cases": 10,
-    "accuracy": 0.4,
-    "accuracy_within_one": 0.8,
+    "accuracy": 0.5,
+    "accuracy_within_one": 0.9,
     "esi_distribution": {
       "1": 0.0,
-      "2": 0.6,
-      "3": 0.4,
+      "2": 0.0,
+      "3": 1.0,
       "4": 0.0,
       "5": 0.0
     },
-    "handoff_rate": 1.0
+    "handoff_rate": 0.0
   },
   "case_results": [
     {
       "case_id": "30000012.txt",
       "chief_complaint": "I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.",
       "predicted": {
-        "esi_level": 2,
-        "confidence": 0.95,
-        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Brief explanation: This patient presents with symptoms consistent with hepatic encephalopathy, which is a high-risk condition and requires immediate attention due to its potential to progress rapidly if not treated promptly. The presence of a urinary tract infection as well as lab tests showing anemia and acute kidney injury further support this level of severity.\n  4. Whether a handoff to human provider is needed: Yes, given the high-risk condition and potential for rapid progression, it would be appropriate to have a human provider evaluate and manage the patient's care to ensure timely and appropriate interventions are provided.",
+        "esi_level": 3,
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [
           "High-risk condition: confusion",
           "Ambulance arrival"
         ],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 2,
-      "correct": true,
+      "correct": false,
       "arrival_method": "AMBULANCE"
     },
     {
       "case_id": "30000017.txt",
       "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
       "predicted": {
-        "esi_level": 2,
-        "confidence": 0.9,
-        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.9\n  3. Explanation: The patient presents with symptoms of acute vertigo (dizziness, unsteadiness), nausea, double vision, and blurred vision, which may suggest a vestibular disorder or inner ear problem. Additionally, the patient's inability to walk due to leg weakness raises concerns about neurological involvement. The fact that these symptoms started after drinking could indicate alcohol-induced vertigo; however, the severity of symptoms suggests a more significant underlying issue. A high risk situation or severe pain/distress is likely.\n  4. Handoff to human provider: Yes, given the complexity of the patient's symptoms and potential need for further diagnostic tests, a handoff to a human provider is recommended.",
+        "esi_level": 3,
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 3,
-      "correct": false,
+      "correct": true,
       "arrival_method": "WALK IN"
     },
     {
@@ -51,12 +51,12 @@
       "chief_complaint": "I've been experiencing a persistent cough and feeling congested, making it hard for me to take a deep breath.",
       "predicted": {
         "esi_level": 3,
-        "confidence": 0.95,
-        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.95\n  3. Explanation: The patient presents with symptoms of a respiratory infection, such as a persistent cough and congestion, along with a recent fever. While there is no immediate life-threatening situation (ESI 1), the patient requires multiple resources due to their need for treatment and potential complications given their living situation (ESI 3).\n  4. Handoff to human provider: Yes, this patient should be evaluated by a healthcare professional. The symptoms of a respiratory infection, especially in an elderly individual with possible exposure to other sick contacts, may indicate the need for antibiotics or further diagnostic tests.",
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [
           "Ambulance arrival"
         ],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 3,
@@ -67,15 +67,15 @@
       "case_id": "30000039.txt",
       "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
       "predicted": {
-        "esi_level": 2,
-        "confidence": 0.95,
-        "explanation": "1. ESI level: 2\n   2. Confidence level: 0.95\n   3. Brief explanation: The patient has severe back pain, difficulty walking or standing due to the pain, and noticed some bruising on the back after a fall. However, there are no signs of numbness, tingling, weakness, loss of bladder or bowel control, fever, chills, or other systemic symptoms. This suggests a high risk situation or severe pain/distress that requires multiple resources.\n   4. Whether a handoff to human provider is needed: Yes",
+        "esi_level": 3,
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 3,
-      "correct": false,
+      "correct": true,
       "arrival_method": "WALK IN"
     },
     {
@@ -83,10 +83,10 @@
       "chief_complaint": "I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.",
       "predicted": {
         "esi_level": 3,
-        "confidence": 0.95,
-        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.95\n  3. Brief explanation: The patient is experiencing constant, worsening ear pain that seems to be related to swallowing and chewing. They have a history of impacted cerumen and the pain started without a clear onset. While they don't seem to be in severe distress, it's reasonable to suspect an issue that requires multiple resources for management.\n  4. Whether a handoff to human provider is needed (yes) - Due to the nature of the symptoms and potential need for multiple resources, a handoff to a human provider for further evaluation and treatment would be advisable.",
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 5,
@@ -97,17 +97,17 @@
       "case_id": "30000094.txt",
       "chief_complaint": "I've been feeling like my heart is racing and skipping beats, and it's making me feel anxious and a bit short of breath.",
       "predicted": {
-        "esi_level": 2,
-        "confidence": 0.85,
-        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.85\n  3. Brief explanation: The patient presents with symptoms of possible arrhythmia, which can be serious if left untreated, and the onset has been worsening over the last 24 hours. Additionally, the patient mentions mild to moderate shortness of breath and increased anxiety, both potential signs of respiratory distress. However, there is no mention of chest pain, which would increase concern for a more severe condition like a myocardial infarction (heart attack).\n  4. Whether a handoff to human provider is needed: Yes",
+        "esi_level": 3,
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [
           "Ambulance arrival"
         ],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 2,
-      "correct": true,
+      "correct": false,
       "arrival_method": "AMBULANCE"
     },
     {
@@ -115,10 +115,10 @@
       "chief_complaint": "I've been feeling weak and tired lately, and sometimes I get dizzy, like the room is spinning around me.",
       "predicted": {
         "esi_level": 3,
-        "confidence": 0.85,
-        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.85\n  3. Brief explanation: The patient presents with symptoms of weakness, dizziness, and a history of anemia. Although there are no signs of severe pain or distress, the patient's ability to walk with difficulty and increased risk of falling suggests a need for multiple resources.\n  4. Whether a handoff to human provider is needed: yes",
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 3,
@@ -129,15 +129,15 @@
       "case_id": "30000177.txt",
       "chief_complaint": "I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.",
       "predicted": {
-        "esi_level": 2,
-        "confidence": 0.95,
-        "explanation": "1. ESI level: 2\n   2. Confidence level: 0.95\n   3. Explanation: The patient is experiencing severe nausea, vomiting, and abdominal pain that started 3 days ago, which may indicate a potentially serious condition such as acute cholecystitis or pancreatitis. Although the patient's vital signs are not mentioned in this context, their description of worsening symptoms and inability to keep down food or liquids raises concern for dehydration and electrolyte imbalance.\n   4. Handoff to human provider: yes",
+        "esi_level": 3,
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 3
       },
       "ground_truth": 3,
-      "correct": false,
+      "correct": true,
       "arrival_method": "WALK IN"
     },
     {
@@ -145,10 +145,10 @@
       "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
       "predicted": {
         "esi_level": 3,
-        "confidence": 0.85,
-        "explanation": "1. ESI level: 3\n  2. Confidence level: 0.85\n  3. Brief explanation: The patient has a known history of hives, which has been exacerbated by exposure to a new shampoo and shellfish. Although the patient reports experiencing some anxiety and itching, they do not exhibit signs of fever, nausea, or difficulty breathing, suggesting that their condition is manageable with multiple resources needed (ESI level 3).\n  4. Whether a handoff to human provider is needed: yes",
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 2,
@@ -159,13 +159,13 @@
       "case_id": "30000204.txt",
       "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
       "predicted": {
-        "esi_level": 2,
-        "confidence": 0.95,
-        "explanation": "1. ESI level: 2\n  2. Confidence level: 0.95\n  3. Explanation: The patient presents with significant emotional distress, feelings of hopelessness, self-harm thoughts, changes in sleep and appetite patterns, and flashbacks related to a recent traumatic event (assault). These factors suggest a high risk situation or severe pain/distress (ESI level 2).\n  4. Handoff to human provider: Yes, the patient requires immediate assessment and intervention by a mental health professional due to their high risk status.",
+        "esi_level": 3,
+        "confidence": 0.7,
+        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
         "risk_factors": [
           "Ambulance arrival"
         ],
-        "needs_handoff": true,
+        "needs_handoff": false,
         "qa_count": 10
       },
       "ground_truth": 4,

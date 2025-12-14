@@ -27,6 +27,14 @@ def main():
     # analyzer = ConfidenceAnalyzer(triage_system)
     analyzer = ExtendedConfidenceAnalyzer(triage_system, output_dir="output/visualizations")
     evaluator = TriageEvaluator(triage_system)
+
+    # Health check for LLM availability early to avoid silent defaults
+    try:
+        triage_system.run("Health check: reply 'ok'")
+    except Exception as e:
+        print(f"LLM health check failed: {e}")
+        print("Please ensure Ollama is running and the 'mistral' model is pulled (ollama pull mistral).")
+        return
     
 
     data_dir = Path(args.data_dir)
@@ -46,44 +54,50 @@ def main():
         
         # Parse XML case
         parsed_case = parse_xml_case(xml_file)
+
+        # Validate ground truth ESI
+        esi_annotations = parsed_case['annotations'].get('ESI', [])
+        gt = None
+        if esi_annotations and 'esi_level' in esi_annotations[0]:
+            gt = esi_annotations[0].get('esi_level')
+        if gt is None:
+            print(f"Skipping case {case_id}: missing or invalid ESI_LEVEL in XML (required for plots).")
+            continue
         
         # Parse medical case
-        case_data = triage_system.parse_medical_case(parsed_case['case_text'])
-        
-        # Evaluate against ground truth
-        eval_result = evaluator.evaluate_case(case_id, parsed_case, case_data)
-        
-        # Analyze confidence progression
-        # conf_result = analyzer.analyze_case(case_data, parsed_case['annotations'])
-        conf_result = analyzer.analyze_case_with_elicitation(case_data, parsed_case['annotations'])
-        conf_result['case_id'] = case_id
-        analyzer.results.append(conf_result)
-        
-        # print("Generating comprehensive visualizations...")
-        # analyzer.generate_comprehensive_analysis()
-        # print(f"Advanced visualizations saved to output/visualizations/")
-        
-        print("Generating confidence elicitation visualizations...")
-        analyzer.generate_all_visualizations(
-            {case_result.get('case_id', f'case_{i}'): case_result 
-            for i, case_result in enumerate(analyzer.results)},
-            "TrigageSystem",  # Model name
-            "MedicalCases"    # Dataset name
-        )
+        try:
+            case_data = triage_system.parse_medical_case(parsed_case['case_text'])
+            
+            # Evaluate against ground truth
+            eval_result = evaluator.evaluate_case(case_id, parsed_case, case_data)
+            
+            # Analyze confidence progression
+            conf_result = analyzer.analyze_case_with_elicitation(case_data, parsed_case['annotations'])
+            conf_result['case_id'] = case_id
+            analyzer.results.append(conf_result)
+            
+            print("Generating confidence elicitation visualizations...")
+            analyzer.generate_all_visualizations(
+                {case_result.get('case_id', f'case_{idx}'): case_result 
+                for idx, case_result in enumerate(analyzer.results)},
+                "TrigageSystem",  # Model name
+                "MedicalCases"    # Dataset name
+            )
 
-      # Generate plot for the incremental analysis part of the results
-        if "incremental" in conf_result and "progression" in conf_result["incremental"]:
-            plot_path = analyzer.plot_confidence_progression(case_id, conf_result["incremental"])
-            print(f"Confidence progression plot saved to {plot_path}")
-        else:
-            print(f"Warning: Could not generate confidence progression plot for case {case_id}")
-        
-        # Generate plot
-        # plot_path = analyzer.plot_confidence_progression(case_id, conf_result)
-        
-        # Save results
-        with open(f"output/reports/{case_id}_detailed.json", 'w') as f:
-            json.dump({**eval_result, 'confidence_analysis': conf_result}, f, indent=2)
+            # Generate plot for the incremental analysis part of the results
+            if "incremental" in conf_result and "progression" in conf_result["incremental"]:
+                plot_path = analyzer.plot_confidence_progression(case_id, conf_result["incremental"])
+                print(f"Confidence progression plot saved to {plot_path}")
+            else:
+                print(f"Warning: Could not generate confidence progression plot for case {case_id}")
+            
+            # Save results
+            with open(f"output/reports/{case_id}_detailed.json", 'w') as f:
+                json.dump({**eval_result, 'confidence_analysis': conf_result}, f, indent=2)
+
+        except Exception as e:
+            print(f"Skipping case {case_id} due to error: {e}")
+            continue
     
     # Generate evaluation report
     eval_path = evaluator.generate_report()

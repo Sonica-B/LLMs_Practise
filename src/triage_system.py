@@ -24,20 +24,24 @@ class TriageSystem:
         
         response = requests.post(url, json=payload)
         
-        if response.status_code == 200:
-            # Parse streaming response
-            full_text = ""
-            for line in response.text.splitlines():
-                if not line:
-                    continue
-                try:
-                    data = json.loads(line)
-                    full_text += data.get("response", "")
-                except:
-                    pass
-            return full_text
-        else:
-            return f"Error: {response.status_code} - {response.text}"
+        if response.status_code != 200:
+            raise RuntimeError(f"Ollama request failed ({response.status_code}): {response.text}")
+
+        # Parse streaming response
+        full_text = ""
+        for line in response.text.splitlines():
+            if not line:
+                continue
+            try:
+                data = json.loads(line)
+                full_text += data.get("response", "")
+            except Exception:
+                continue
+
+        if not full_text.strip():
+            raise RuntimeError("Ollama returned an empty response.")
+
+        return full_text
     
     def parse_medical_case(self, case_text):
         """Parse medical case from raw text"""
@@ -112,14 +116,21 @@ class TriageSystem:
         
         # Get LLM prediction
         response = self.run(prompt)
+
+        if not response or "error" in response.lower():
+            raise RuntimeError(f"LLM returned an error or empty response: {response[:200]}")
         
         # Extract ESI level first - fix for the error
         esi_match = re.search(r'ESI level.*?(\d)', response, re.IGNORECASE)
-        esi_level = int(esi_match.group(1)) if esi_match else 3
+        if not esi_match:
+            raise ValueError(f"Could not parse ESI level from response: {response[:200]}")
+        esi_level = int(esi_match.group(1))
         
         # Extract confidence
         conf_match = re.search(r'Confidence level.*?(0\.\d+)', response, re.IGNORECASE)
-        confidence = float(conf_match.group(1)) if conf_match else 0.7
+        if not conf_match:
+            raise ValueError(f"Could not parse confidence from response: {response[:200]}")
+        confidence = float(conf_match.group(1))
         
         # Extract handoff decision
         handoff_match = re.search(r'handoff.*?(yes|no)', response, re.IGNORECASE)

@@ -30,8 +30,7 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
                      "consistency", "avg_conf", "pair_rank"]
         
         # Visualization types
-        vis_types = ["distribution_plots", "performance_tables", 
-                    "confidence_graphs", "error_analysis"]
+        vis_types = ["distribution_plots", "performance_tables", "error_analysis"]
         
         # Create main directory
         os.makedirs(self.confidence_elicitation_dir, exist_ok=True)
@@ -209,9 +208,23 @@ class ExtendedConfidenceAnalyzer(ConfidenceAnalyzer):
         # Define default strategies if none provided
         if not strategies:
             strategies = [
+                # Vanilla
                 ("vanilla", "self_random", "consistency"),
+                ("vanilla", "self_random", "avg_conf"),
+                ("vanilla", "misleading", "avg_conf"),
+                ("vanilla", "prompt_paraphrasing", "consistency"),
+                # CoT
                 ("cot", "self_random", "consistency"),
-                ("top_k", "self_random", "pair_rank")
+                ("cot", "self_random", "avg_conf"),
+                ("cot", "prompt_paraphrasing", "consistency"),
+                # Self-probing (confidence only)
+                ("self_probing", "self_random", "consistency"),
+                ("self_probing", "self_random", "avg_conf"),
+                # Multi-step
+                ("multi_step", "self_random", "avg_conf"),
+                # Top-k rankings
+                ("top_k", "self_random", "pair_rank"),
+                ("top_k", "self_random", "consistency")
             ]
         
         # Run confidence elicitation for each strategy

@@ -1,11 +1,11 @@
 {
   "cases_analyzed": 10,
-  "average_initial_confidence": 0.9299999999999999,
-  "average_final_confidence": 0.885,
+  "average_initial_confidence": 0.7,
+  "average_final_confidence": 0.7,
   "confidence_change": {},
   "question_impact": {
     "Essential": {
-      "average_change": -0.004225352112676054,
+      "average_change": 0.0,
       "count": 71
     },
     "Wrong": {

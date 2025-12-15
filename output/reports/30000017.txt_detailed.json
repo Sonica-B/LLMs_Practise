@@ -3,8 +3,8 @@
   "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
   "predicted": {
     "esi_level": 2,
-    "confidence": 0.7,
-    "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"70\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient is experiencing symptoms of acute vertigo, nausea, double vision, and unsteady legs. Although there's no history of head injuries or recent medication changes, the onset of symptoms after drinking suggests alcohol-induced vestibulotoxicity (drunken sailor syndrome). This condition can lead to severe disorientation and falls if left untreated. Therefore, a high risk situation exists and immediate attention is necessary.\"\n}",
+    "confidence": 0.9,
+    "explanation": " {\n  \"esi_level\": \"ESI 2\",\n  \"confidence\": \"90\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient's symptoms of severe dizziness, blurred vision, and difficulty standing or walking suggest a high risk situation or severe distress. The presence of nausea, unsteady legs, and double vision further supports this ESI level.\"\n}",
     "risk_factors": [],
     "needs_handoff": true,
     "qa_count": 10
@@ -18,14 +18,14 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.8,
+          "confidence": 0.9,
           "esi_level": 2,
-          "needs_handoff": false
+          "needs_handoff": true
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.9,
+          "confidence": 0.8,
           "esi_level": 2,
           "needs_handoff": true
         },
@@ -69,14 +69,14 @@
           "question_type": "Essential",
           "confidence": 0.8,
           "esi_level": 2,
-          "needs_handoff": true
+          "needs_handoff": false
         },
         {
           "questions_asked": 8,
           "question_type": "Essential",
           "confidence": 0.8,
           "esi_level": 2,
-          "needs_handoff": true
+          "needs_handoff": false
         },
         {
           "questions_asked": 9,
@@ -90,7 +90,7 @@
           "question_type": "Optionl",
           "confidence": 0.8,
           "esi_level": 2,
-          "needs_handoff": false
+          "needs_handoff": true
         }
       ],
       "ground_truth": 3
@@ -99,14 +99,14 @@
       "vanilla_self_random_consistency": {
         "esi_level": 3,
         "confidence": 100.0,
-        "explanation": " {\"esi_level\": 3, \"confidence\": 90, \"reason\": \"Symptoms such as disorientation, unsteadiness, and inability to walk could suggest a neurological or vestibular issue. These symptoms can be life-threatening if related to a brain injury or stroke, hence the ESI level 3 for potential seriousness.\"}",
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"90\", \"reason\": \"The patient is experiencing symptoms such as disorientation, dizziness, and unsteadiness, which could indicate a neurological or vestibular issue. Additionally, the inability to walk increases the urgency level.\"}",
         "needs_handoff": false,
         "responses": [
-          " {\"esi_level\": 3, \"confidence\": 90, \"reason\": \"Symptoms such as disorientation, unsteadiness, and inability to walk could suggest a neurological or vestibular issue. These symptoms can be life-threatening if related to a brain injury or stroke, hence the ESI level 3 for potential seriousness.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms such as severe dizziness, disorientation, and unsteadiness that make it impossible for them to walk. This suggests a moderate acuity level (ESI level 3) due to the potential for serious neurological or vestibular issues.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing symptoms suggestive of a neurological issue such as vertigo or dizziness, which could potentially indicate a stroke. The inability to walk and unsteady balance add to the severity.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe symptoms such as disorientation, unsteadiness, and inability to walk, which could indicate a neurological or vestibular issue. These symptoms can potentially deteriorate rapidly if not attended to immediately.\"}",
-          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"90\",\n  \"reason\": \"The patient is experiencing symptoms such as disorientation, spinning room sensations, and inability to walk, which are indicative of a potential neurological emergency. The patient's condition requires urgent evaluation.\"\n}"
+          " {\"esi_level\": \"3\", \"confidence\": \"90\", \"reason\": \"The patient is experiencing symptoms such as disorientation, dizziness, and unsteadiness, which could indicate a neurological or vestibular issue. Additionally, the inability to walk increases the urgency level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90\", \"reason\": \"The patient is experiencing symptoms of acute dizziness, disorientation, and loss of balance which could indicate a neurological or vestibular issue. This condition requires immediate attention but does not constitute an emergency requiring immediate resuscitation.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe symptoms such as disorientation, loss of balance, and inability to walk. These symptoms could indicate a neurological or vestibular issue that requires urgent attention.\"}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"85\",\n  \"reason\": \"The patient is experiencing symptoms of possible acute neurological, neuropsychiatric or intoxication disorders that could lead to falls and injuries. These symptoms require further evaluation in the Emergency Department.\"\n}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"90\",\n\"reason\": \"The patient is experiencing symptoms of acute dizziness, imbalance, and difficulty walking, which are indicative of a moderate emergence severity level (ESI Level 3). These symptoms could be due to various conditions like inner ear problems, low blood sugar, or even stroke if accompanied by other symptoms such as speech difficulties or weakness on one side of the body. However, it is crucial for a healthcare professional to conduct a thorough assessment and examination to confirm this diagnosis.\"\n}"
         ],
         "parsed_data": [
           [
@@ -115,11 +115,11 @@
           ],
           [
             3,
-            80
+            90
           ],
           [
             3,
-            90
+            85
           ],
           [
             3,
@@ -136,20 +136,20 @@
       },
       "vanilla_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 85.0,
-        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient's complaint of severe disorientation, unsteadiness, and inability to walk suggests a high acuity level. This could indicate conditions such as vertigo or neurological problems which require urgent attention.\"}",
+        "confidence": 87.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms of acute disturbance in balance and coordination, which could indicate a neurological issue or vestibular disorder. These symptoms can be potentially serious and require urgent evaluation.\"}",
         "needs_handoff": false,
         "responses": [
-          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient's complaint of severe disorientation, unsteadiness, and inability to walk suggests a high acuity level. This could indicate conditions such as vertigo or neurological problems which require urgent attention.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing symptoms of acute neurological disturbance (dizziness, disorientation, and difficulty walking), which is indicative of a potentially serious condition. Immediate evaluation by a healthcare professional is required due to the risk of falls or further deterioration.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe symptoms of possible vertigo or inner ear disorder, which could lead to falls and injuries. The inability to walk and the feeling of disorientation suggest a high level of acuity.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms suggest possible neurological or vestibular issues, which could indicate a moderate emergence. The inability to walk and severe disorientation are concerning and require further evaluation.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing symptoms such as extreme disorientation, room spinning (vertigo), and difficulty walking, which are indicative of a neurological or vestibular issue. This level of impairment could potentially lead to falls and injury, making ESI Level 3 appropriate.\"}"
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms of acute disturbance in balance and coordination, which could indicate a neurological issue or vestibular disorder. These symptoms can be potentially serious and require urgent evaluation.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85%\", \"reason\": \"The patient is experiencing symptoms of acute dizziness and instability, which could indicate a neurological emergency. The inability to walk also suggests significant impairment.\"}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"90\",\n  \"reason\": \"The patient's symptoms of severe disorientation, unsteadiness, and inability to walk suggest a high acuity level. This aligns with ESI Level 3 for patients requiring immediate evaluation due to serious potential life-threatening conditions.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient's symptoms suggest a neurological issue or inner ear problem, which could indicate moderate severity. The inability to walk and the disorientation are concerning signs that require prompt attention.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90\", \"reason\": \"The patient is experiencing severe symptoms such as disorientation, dizziness, and unsteadiness that are affecting their ability to walk. These symptoms could indicate a neurological or vestibular issue which may require immediate medical attention.\"}"
         ],
         "parsed_data": [
           [
             3,
-            85
+            80
           ],
           [
             3,
@@ -161,11 +161,11 @@
           ],
           [
             3,
-            80
+            90
           ],
           [
             3,
-            85
+            90
           ]
         ],
         "prompt_strategy": "vanilla",
@@ -174,15 +174,15 @@
       },
       "vanilla_misleading_avg_conf": {
         "esi_level": 3,
-        "confidence": 90.0,
-        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"95\", \"reason\": \"The patient is experiencing symptoms of acute dizziness, disorientation, and difficulty walking, which are consistent with conditions such as vertigo, migraine, or inner ear problems. These symptoms can be potentially serious and require urgent attention.\"}",
+        "confidence": 87.0,
+        "explanation": " {\n\"esi_level\": \"3\",\n\"confidence\": \"95\",\n\"reason\": \"The patient is experiencing severe symptoms such as disorientation, dizziness, and inability to walk. These symptoms could indicate a neurological or vestibular issue, which typically requires urgent attention.\"\n}",
         "needs_handoff": false,
         "responses": [
-          " {\"esi_level\": \"3\", \"confidence\": \"95\", \"reason\": \"The patient is experiencing symptoms of acute dizziness, disorientation, and difficulty walking, which are consistent with conditions such as vertigo, migraine, or inner ear problems. These symptoms can be potentially serious and require urgent attention.\"}",
-          " {\"esi_level\": \"4\", \"confidence\": \"95\", \"reason\": \"The patient's symptoms of severe disorientation, dizziness, and difficulty walking suggest an urgent need for medical attention. The duration of these symptoms (2 days) also points towards a higher level of severity.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"95\", \"reason\": \"The patient is experiencing severe neurological symptoms such as disorientation, dizziness, and unsteadiness which could indicate a serious condition like stroke or inner ear issues. The mild pain reported does not significantly affect the ESI level in this case.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's complaint of severe disorientation, unsteadiness, and inability to walk suggests a possible neurological issue or vertigo. However, given the history of anxiety, it is also possible that this could be an anxiety attack mimicking these symptoms. The ESI level 3 is appropriate as the condition appears non-critical but warrants prompt attention due to potential seriousness.\"}",
-          " {\"esi_level\": \"5\", \"confidence\": \"95\", \"reason\": \"The patient is experiencing significant symptoms related to potential neurological or vestibular problems, which require immediate attention. These symptoms include severe disorientation, unsteadiness, spinning sensations, and inability to walk.\"}"
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"95\",\n\"reason\": \"The patient is experiencing severe symptoms such as disorientation, dizziness, and inability to walk. These symptoms could indicate a neurological or vestibular issue, which typically requires urgent attention.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient's symptoms of extreme disorientation, spinning room, unsteadiness, and difficulty walking suggest a moderate acuity level due to potential issues with the central nervous system or vestibular disorders. The mild pain reported does not necessarily contradict this assessment.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85%\", \"reason\": \"The patient is experiencing severe disorientation, balance issues, and difficulty walking. These symptoms suggest a high acuity level that might be due to neurological or vestibular problems. The mild pain reported adds to the overall severity.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms of vertigo, disorientation, and unsteadiness which could potentially be due to a neurological condition. The inability to walk is also concerning, and the slightly elevated heart rate adds an urgency to the situation.\"}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"90\",\n  \"reason\": \"The patient's symptoms of severe disorientation, dizziness, and difficulty walking suggest a potential neurological emergency. While the patient is afebrile, these symptoms can be indicative of conditions such as vertigo, migraines, or even stroke.\"\n}"
         ],
         "parsed_data": [
           [
@@ -190,20 +190,20 @@
             95
           ],
           [
-            4,
-            95
+            3,
+            85
           ],
           [
             3,
-            95
+            85
           ],
           [
             3,
             80
           ],
           [
-            5,
-            95
+            3,
+            90
           ]
         ],
         "prompt_strategy": "vanilla",
@@ -211,32 +211,32 @@
         "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 80.0,
-        "explanation": " {\"esi_level\": \"4\", \"confidence\": \"85%\", \"reason\": \"The patient's symptoms of extreme disorientation, room spinning (vertigo), and difficulty walking suggest a moderate to severe neurological or vestibular issue. A ESI level 4 is appropriate given the seriousness of these symptoms, which may indicate conditions such as a brain injury, inner ear disorder, or migraine with aura.\"}",
+        "esi_level": 5,
+        "confidence": 40.0,
+        "explanation": " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient's symptoms of severe disorientation, extreme dizziness, and inability to walk suggest a high level (ESI Level 5) emergency requiring immediate attention. This could be indicative of conditions such as stroke or inner ear disorders, which can lead to serious neurological consequences if not promptly addressed.\"}",
         "needs_handoff": false,
         "responses": [
-          " {\"esi_level\": \"4\", \"confidence\": \"85%\", \"reason\": \"The patient's symptoms of extreme disorientation, room spinning (vertigo), and difficulty walking suggest a moderate to severe neurological or vestibular issue. A ESI level 4 is appropriate given the seriousness of these symptoms, which may indicate conditions such as a brain injury, inner ear disorder, or migraine with aura.\"}",
-          " {\"esi_level\": 3, \"confidence\": 85, \"reason\": \"The patient's symptoms suggest a possible vestibular disorder or neurological issue that requires immediate attention due to the potential for falls and injury. The inability to walk and severe disorientation indicate a need for urgent evaluation.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"95%\", \"reason\": \"The patient's symptoms suggest a neurological emergency, such as a stroke or inner ear problem. The inability to walk and extreme disorientation indicate a significant impairment of balance and cognitive function, which warrants an ESI level 3 triage.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing symptoms such as disorientation, unsteadiness, and inability to walk which could suggest a neurological or vestibular issue. A triage nurse might assign an ESI level 3 due to the potential for balance and mobility issues that could lead to falls, but further evaluation by a healthcare professional is necessary.\"}",
-          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient's symptoms, such as severe dizziness, disorientation, and difficulties in walking, could be indicative of a neurological issue or inner ear problem. These symptoms warrant urgent attention and further diagnostic tests to rule out potential serious conditions like vestibular disorders, migraines, or even stroke.\"}"
+          " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient's symptoms of severe disorientation, extreme dizziness, and inability to walk suggest a high level (ESI Level 5) emergency requiring immediate attention. This could be indicative of conditions such as stroke or inner ear disorders, which can lead to serious neurological consequences if not promptly addressed.\"}",
+          " {\n\"esi_level\": \"4\",\n\"confidence\": \"85\",\n\"reason\": \"The patient's symptoms suggest a possible vestibular disorder or acute neurological issue, given the symptoms of severe disorientation, dizziness, and unsteady gait. This requires immediate medical attention due to potential seriousness.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient's complaint of severe disorientation, room spinning (vertigo), and inability to walk suggest a moderate emergency (ESI Level 3) related to possible vestibular or neurological issues. This warrants immediate medical attention.\"}",
+          " {\"esi_level\": 5, \"confidence\": 85, \"reason\": \"The patient's symptoms suggest possible vestibular dysfunction or vertigo which may be indicative of a neurological emergency. A more detailed evaluation is required to confirm the diagnosis and ensure appropriate treatment.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing symptoms of acute dizziness, disorientation, and unsteadiness, which could potentially indicate a neurological or vestibular issue. The inability to walk further complicates the situation, suggesting possible balance problems. Given these symptoms, ESI level 3 (emergency department within 15 minutes) is appropriate as they require immediate evaluation and treatment to rule out serious conditions such as stroke.\"}"
         ],
         "parsed_data": [
+          [
+            5,
+            90
+          ],
           [
             4,
             85
           ],
           [
             3,
-            85
+            90
           ],
           [
-            3,
-            95
-          ],
-          [
-            3,
+            5,
             85
           ],
           [
@@ -251,19 +251,23 @@
       "cot_self_random_consistency": {
         "esi_level": 2,
         "confidence": 100.0,
-        "explanation": " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient's complaint of extreme disorientation, unsteadiness, and inability to walk could indicate a neurological or vestibular issue, which if severe or progressive, might lead to falls and potential injury (however, not immediately life-threatening). Hence, ESI level 1 is ruled out.\n2. The patient's complaint suggests a high level of distress and impairment, making ESI level 5 unlikely as this category is for minor issues that can wait without undue discomfort.\n3. Given the patient's complaint, it is reasonable to expect multiple resources such as a neurologist or an emergency department bed. However, the immediate need for critical care resources like ICU beds is less likely compared to ESI level 3.\n4. While not explicitly provided, if vital signs such as blood pressure, pulse, and respiratory rate are abnormal, it could affect the ESI level (ESI level 1 or 2 might be more appropriate).\nIn this case, considering the provided information, ESI level 2 seems most appropriate.\"] }",
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"95%\", \"steps\": [\"1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and difficulty walking, which can indicate a neurological emergency or a serious underlying condition.\",\n\"2. Given the nature of the symptoms, this is likely a high-risk situation that requires immediate attention due to the potential for further deterioration or complications.\",\n\"3. The patient will likely need multiple resources, including an immediate evaluation by a healthcare professional, possible imaging tests, and potentially hospital admission.\",\n\"4. While vital sign information is not provided, the symptoms suggest that blood pressure, heart rate, and respiratory rate could be abnormal, further elevating the urgency.\"] }",
         "needs_handoff": true,
         "responses": [
-          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient's complaint of extreme disorientation, unsteadiness, and inability to walk could indicate a neurological or vestibular issue, which if severe or progressive, might lead to falls and potential injury (however, not immediately life-threatening). Hence, ESI level 1 is ruled out.\n2. The patient's complaint suggests a high level of distress and impairment, making ESI level 5 unlikely as this category is for minor issues that can wait without undue discomfort.\n3. Given the patient's complaint, it is reasonable to expect multiple resources such as a neurologist or an emergency department bed. However, the immediate need for critical care resources like ICU beds is less likely compared to ESI level 3.\n4. While not explicitly provided, if vital signs such as blood pressure, pulse, and respiratory rate are abnormal, it could affect the ESI level (ESI level 1 or 2 might be more appropriate).\nIn this case, considering the provided information, ESI level 2 seems most appropriate.\"] }",
-          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient's symptoms suggest acute neurological or vestibular issues, which can be serious and potentially life-threatening if left untreated (although not immediately life-threatening). This aligns with ESI level 2.\n2. The patient is experiencing severe distress due to the disorientation, unsteadiness, and inability to walk, indicative of a high-risk situation or severe pain/distress (ESI level 2).\n3. Although the patient may require medical attention immediately, they do not appear to need excessive resources (beyond emergency department care) at this time, which would suggest ESI levels 3-5.\n4. Vital signs were not explicitly provided in the patient information, but based on symptoms it's reasonable to assume that the patient might have abnormal findings if a thorough examination is conducted, but this doesn't necessarily change the initial ESI level assessment.\"] }",
-          " {\"esi_level\": 2, \"confidence\": 95, \"steps\": [\"1. The patient's symptoms indicate possible neurological or vestibular issues which could be life-threatening if left untreated, but there is no immediate danger of death (ESI 1).\",\n\"2. The patient describes high levels of distress and disability, making it difficult to walk (ESI 2).\",\n\"3. This patient may require immediate medical attention from a specialized team, potentially including neurology, emergency medicine, or rehabilitation (ESI 3-5, leaning towards ESI 2 due to the immediate need for medical intervention and potential life-altering consequences if not treated promptly).\",\n\"4. Although vital signs are not provided, given the patient's symptoms it is reasonable to assume that an evaluation of blood pressure, pulse, and oxygen saturation would be necessary upon arrival (this could affect ESI level if any vital sign readings were significantly abnormal).\"]}",
-          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient's complaint of extreme disorientation, unsteadiness, and inability to walk suggest a potential neurological or vestibular issue which could be serious but not life-threatening immediately (ESI 1 excluded).\",\n\"2. The nature of the symptoms falls under 'Severe Acute Altered Mental Status' category, which is classified as ESI 2.\",\n\"3. Although resources may still be needed for diagnostic tests and potential treatment, they are not expected to be high compared to ESI 1 or ESI 3-5 cases.\",\n\"4. Vital signs were not provided in the patient information, but given the nature of symptoms, they could potentially be concerning if abnormal.\"]}",
-          " {\"esi_level\": \"2\",\n\"confidence\": \"85%\",\n\"steps\": [\n    \"The patient is experiencing significant symptoms that could potentially indicate a neurological emergency (vertigo, disorientation, unsteadiness), which falls under ESI level 2 as it meets the criteria for 'High Acuity', but not necessarily life-threatening.\",\n    \"The patient's history is not provided, however, the severity of the symptoms suggests a need for urgent medical attention and resources. Without more information about the patient's past conditions or medications, we cannot determine if this is a high-risk situation or severe pain/distress (ESI level 2), but it is likely.\",\n    \"Assuming that further tests and potential imaging will be required to diagnose the cause of these symptoms, this patient will require multiple resources.\",\n    \"The patient's vital signs are not specified, however, the symptoms described could potentially have implications on their blood pressure, pulse, or respiratory rate. Without this information, we cannot definitively say if vital signs are concerning.\"\n]}"
+          " {\"esi_level\": \"2\", \"confidence\": \"95%\", \"steps\": [\"1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and difficulty walking, which can indicate a neurological emergency or a serious underlying condition.\",\n\"2. Given the nature of the symptoms, this is likely a high-risk situation that requires immediate attention due to the potential for further deterioration or complications.\",\n\"3. The patient will likely need multiple resources, including an immediate evaluation by a healthcare professional, possible imaging tests, and potentially hospital admission.\",\n\"4. While vital sign information is not provided, the symptoms suggest that blood pressure, heart rate, and respiratory rate could be abnormal, further elevating the urgency.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient's symptoms suggest a serious neurological issue such as a stroke or vertigo which, if left untreated, could potentially lead to long-term complications or death. However, it is not immediately clear whether the patient is dying or about to die.\",\n\"2. The patient's symptoms of extreme disorientation, unsteadiness, and inability to walk indicate a high level of distress and potential for rapid deterioration.\",\n\"3. Given the severity of the patient's symptoms, they will likely require immediate medical attention and multiple resources such as neurology, imaging, and possibly ICU care.\",\n\"4. Vital signs were not provided in the information, but the patient's symptoms strongly suggest that they may be abnormal.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 95, \"steps\": [\"1. The patient's symptoms suggest a potential neurological emergency such as a stroke or vertigo which could be life-threatening if not promptly treated (ESI 1). However, the specific cause is unknown in this scenario and needs further evaluation. Therefore, it falls under ESI 2 for high-risk situations or severe pain/distress.\",\n\"2. The patient's description of disorientation, spinning room, unsteadiness, and difficulty walking indicates a possible neurological emergency that could cause significant distress.\",\n\"3. Given the nature of the symptoms, this patient will likely require immediate medical attention and multiple resources such as CT scan, neurology consultation, and potential admission to the intensive care unit for observation and treatment.\",\n\"4. Although vital signs were not provided, the patient's severe symptoms suggest that if their vital signs are concerning (e.g., elevated blood pressure, rapid heart rate, or abnormal neurological findings), it would further support an ESI 2 classification.\"]",
+          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient's symptoms suggest a possible neurological emergency or severe vertigo, which could be life-threatening if not addressed promptly. (ESI 1 considered).\",\n\"2. The patient is experiencing significant disorientation, unsteadiness, and impaired mobility, indicative of high levels of distress and potential for increased risk. (ESI 2 considered).\",\n\"3. Given the acuity and potential need for immediate neurological assessment and treatment, this patient will likely require multiple resources including emergency department (ED) staff, imaging, and possibly admission to the hospital. (ESI 3-5 considered).\",\n\"4. Although vital signs are not explicitly provided, the nature of the symptoms suggests that abnormal vital signs may be present, further supporting an ESI level 2.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and difficulty walking, which could indicate a neurological issue or inner ear problem. These symptoms are not life-threatening immediately but are causing significant distress (ESI 2).\",\n\"2. Vital signs were not provided in the patient history, but given the severity of the symptoms, it's possible that they may be abnormal. If vital signs were available, they could further help determine the ESI level.\",\n\"3. Given the high-risk situation and potential need for immediate attention, the patient will likely require multiple resources such as a neurologist, imaging services, and possibly admission to the hospital.\"] }"
         ],
         "parsed_data": [
           [
             2,
             95
+          ],
+          [
+            2,
+            85
           ],
           [
             2,
@@ -280,32 +284,32 @@
       },
       "cot_self_random_avg_conf": {
         "esi_level": 2,
-        "confidence": 91.25,
-        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and difficulty walking, which may indicate a neurological or vestibular issue. These symptoms can potentially lead to falls and injuries if not addressed promptly.\",\n\"2. In terms of resources needed, the patient will likely require an immediate evaluation by a healthcare professional with expertise in neurology or emergency medicine, as well as potential diagnostic tests such as CT scans or blood work.\",\n\"3. Vital signs were not provided in the patient history, but given the severity of symptoms, it is reasonable to assume that they may be concerning if measured.\",\n\"4. Based on the information provided, it appears that this patient's condition could be life-threatening or result in serious harm if not treated promptly. Therefore, an ESI level 2 (High Acuity) is appropriate.\"] }",
+        "confidence": 83.75,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's complaint suggests symptoms of acute dizziness, unsteadiness, and impaired mobility, which could indicate a serious condition such as vertigo, inner ear problems, or even stroke if accompanied by other symptoms like slurred speech or facial drooping (ESI 1). However, the absence of these symptoms lowers the risk of imminent death or permanent damage. (80% confidence)\",\n\"2. The patient's description of extreme disorientation and inability to walk suggests a high level of distress and potential need for immediate attention. (95% confidence)\",\n\"3. Given the nature of the complaint, this patient will likely require urgent medical assessment and possible further testing or imaging. This necessitates multiple resources. (80% confidence)\",\n\"4. No vital signs are mentioned in the provided information, but if assessed during an examination, abnormalities could affect the ESI level. For example, low blood pressure, rapid heart rate, or abnormal neurological findings would warrant a higher ESI level.\"\n]\n}",
         "needs_handoff": true,
         "responses": [
-          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and difficulty walking, which may indicate a neurological or vestibular issue. These symptoms can potentially lead to falls and injuries if not addressed promptly.\",\n\"2. In terms of resources needed, the patient will likely require an immediate evaluation by a healthcare professional with expertise in neurology or emergency medicine, as well as potential diagnostic tests such as CT scans or blood work.\",\n\"3. Vital signs were not provided in the patient history, but given the severity of symptoms, it is reasonable to assume that they may be concerning if measured.\",\n\"4. Based on the information provided, it appears that this patient's condition could be life-threatening or result in serious harm if not treated promptly. Therefore, an ESI level 2 (High Acuity) is appropriate.\"] }",
-          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is experiencing severe symptoms such as disorientation, unsteadiness, and inability to walk, which could indicate a neurological or cardiovascular issue. These symptoms are not directly life-threatening but require immediate attention due to the potential for rapid deterioration.\",\n\"2. Given the severity of the patient's symptoms and the possibility of underlying serious conditions, this is considered a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. This patient will likely require multiple resources such as a neurological assessment, potential imaging studies, and possibly admission to the hospital.\",\n\"4. Although vital signs are not provided in the given information, the symptoms described suggest that they might be concerning, but more specific details would be needed for a definitive conclusion.\"] }",
-          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not exhibiting signs of imminent death, but their symptoms suggest a serious neurological issue such as vertigo or stroke which requires immediate attention. (ESI 1: No, ESI 2: Yes)\",\n\"2. The patient's description of extreme disorientation, spinning room sensation, and unsteadiness indicates high-risk situation or severe pain/distress. (ESI 3-5: Not applicable as this patient fits into ESI level 2)\",\n\"3. Although vital signs are not explicitly mentioned in the provided information, the nature of the symptoms points towards a situation that will require multiple resources including immediate medical attention and potential imaging tests such as an MRI or CT scan. (ESI 3-5: Resources needed suggest ESI level 2 or higher, but given the acuity and severity of symptoms, it is most likely ESI level 2)\"]}",
-          " {\"esi_level\": \"2\", \"confidence\": \"95%\", \"steps\": [\"1. The patient's symptoms suggest a neurological issue or inner ear problem that could potentially be life-threatening if left untreated, but the immediate risk of death is not high. (ESI 1 is for patients who are dying or about to die).\",\n\"2. The patient is experiencing severe distress and impairment due to disorientation, unsteadiness, and inability to walk, which indicates a high-risk situation or severe pain/distress. (ESI 2).\",\n\"3. This patient will likely need immediate medical attention, including possible imaging studies (CT scan, MRI) and neurological evaluation. However, the resources needed are more than what can be provided in a low-acuity area like a fast-track room or an urgent care center, but less than what is required for critical care patients. This places it between ESI 3 and ESI 4.\",\n\"4. The symptoms themselves suggest that vital signs could potentially be concerning (e.g., abnormal blood pressure, heart rate, or oxygen saturation levels), but no specific information about the patient's vital signs is provided in this case.\"] }",
-          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient's symptoms suggest a possible neurological emergency such as a stroke or inner ear problem which could be life-threatening if not promptly addressed (ESI 1). However, no direct reference is made about the risk of imminent death. Thus, we can't definitively categorize this as ESI 1.\n2. The patient's symptoms of extreme disorientation, unsteadiness, and inability to walk indicate a high level of distress (ESI 2).\n3. Resources required may include an immediate medical assessment, possibly imaging studies or other diagnostic tests, and potentially hospital admission depending on the results. This aligns with ESI 3-5, but without further information about resource utilization, we can't definitively categorize this as ESI 3-5.\n4. The patient's vital signs are not mentioned in the provided information, so they cannot be factored into the analysis.\"]"
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's complaint suggests symptoms of acute dizziness, unsteadiness, and impaired mobility, which could indicate a serious condition such as vertigo, inner ear problems, or even stroke if accompanied by other symptoms like slurred speech or facial drooping (ESI 1). However, the absence of these symptoms lowers the risk of imminent death or permanent damage. (80% confidence)\",\n\"2. The patient's description of extreme disorientation and inability to walk suggests a high level of distress and potential need for immediate attention. (95% confidence)\",\n\"3. Given the nature of the complaint, this patient will likely require urgent medical assessment and possible further testing or imaging. This necessitates multiple resources. (80% confidence)\",\n\"4. No vital signs are mentioned in the provided information, but if assessed during an examination, abnormalities could affect the ESI level. For example, low blood pressure, rapid heart rate, or abnormal neurological findings would warrant a higher ESI level.\"\n]\n}",
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient is not dying or about to die, but the symptoms such as extreme disorientation and unsteadiness suggest a potential neurological issue which could be serious if left untreated.\",\n\"2. Given the high-risk situation due to the severe symptoms and the possibility of a neurological problem, this patient is classified under ESI 2.\",\n\"3. Although resources might be required for diagnostic tests and treatment, they are not expected to be excessive.\",\n\"4. Vital signs are not provided in the given information, but considering the patient's symptoms, they may be concerning and could impact the final decision\"]}",
+          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient is not dying or about to die immediately, but the symptoms described suggest a possible neurological issue or inner ear disorder which could lead to falls and potential harm if left untreated (ESI 2).\n2. The patient's symptoms are severe, including extreme disorientation, unsteadiness, and inability to walk, indicating high levels of distress and requiring immediate attention (ESI 2).\n3. While not specified, it can be assumed that the patient will likely need medical evaluation and possible imaging tests or further examination (ESI 2-4, leaning towards 2 due to severity of symptoms).\n4. Vital signs are not provided in this case, but the described symptoms often correlate with concerning findings in a physical examination.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's complaint suggests a neurological issue or inner ear problem which could potentially be severe but is not immediately life-threatening (ESI 1).\",\n\"2. The patient describes symptoms such as extreme disorientation, room spinning, and difficulty walking, indicating a high level of distress and potential for rapid deterioration (ESI 2).\",\n\"3. Although the exact resources needed are not specified, the nature of the symptoms suggests that this patient may require urgent medical attention, potentially involving imaging or neurological assessments (ESI 3-5).\",\n\"4. No vital signs were provided to evaluate in this case, but given the severity of the patient's symptoms, concerning vital signs could further justify an ESI level of 2.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's symptoms suggest a neurological issue, which could potentially be life-threatening if left untreated (although not imminently). However, the patient is currently conscious and able to communicate. This does not meet the criteria for ESI level 1.\",\n\"2. The patient's complaint of extreme disorientation, unsteadiness, spinning sensation, and difficulty walking suggests a high-risk situation or severe distress (ESI level 2).\",\n\"3. Although this patient may require significant resources such as neurological testing and potential hospitalization, the immediate need is not so great that it requires an ESI level 3 or higher.\",\n\"4. The lack of information about the patient's vital signs does not allow for a definitive conclusion about their concern level, but given the nature of the symptoms, they are likely to be abnormal.\"] }"
         ],
         "parsed_data": [
           [
             2,
-            90
+            85
           ],
           [
             2,
-            90
+            80
           ],
           [
             2,
-            90
+            85
           ],
           [
             2,
-            95
+            85
           ]
         ],
         "prompt_strategy": "cot",
@@ -315,14 +319,14 @@
       "cot_prompt_paraphrasing_consistency": {
         "esi_level": 2,
         "confidence": 100.0,
-        "explanation": " {\"esi_level\": \"2\",\n \"confidence\": \"95%\",\n \"steps\": [\"1. The patient's symptoms of extreme disorientation, unsteadiness, and inability to walk suggest a high level of distress (ESI 2).\n2. Although the vital signs are not explicitly provided, the severity of the symptoms indicates that they may be concerning if they were known. For example, dizziness, disorientation, and difficulty walking can be indicative of low blood pressure or other serious neurological issues.\n3. Given the high-risk situation and potential need for immediate medical attention, this patient will likely require a moderate number of resources (ESI 2).\n4. As stated, the vital signs are not provided, but based on the symptoms described, it is reasonable to assume that they may be abnormal if measured.\"]",
+        "explanation": " {\"esi_level\": \"2\",\n\"confidence\": \"85%\",\n\"steps\": [\"1. The patient's symptoms suggest a neurological or vestibular issue, such as vertigo or a TIA (transient ischemic attack), which can cause disorientation and unsteadiness. However, the inability to walk implies a significant balance and coordination issue.\",\n\"2. Given the severity of the symptoms and the risk of falls causing additional injury, this situation could be considered high-risk.\",\n\"3. The patient will likely need immediate medical attention and monitoring, but may not require extensive resources beyond emergency department care.\",\n\"4. While not specified in the case, concerning vital signs such as an elevated heart rate or blood pressure could indicate a more serious condition, potentially raising the ESI level.\"]}",
         "needs_handoff": true,
         "responses": [
-          " {\"esi_level\": \"2\",\n \"confidence\": \"95%\",\n \"steps\": [\"1. The patient's symptoms of extreme disorientation, unsteadiness, and inability to walk suggest a high level of distress (ESI 2).\n2. Although the vital signs are not explicitly provided, the severity of the symptoms indicates that they may be concerning if they were known. For example, dizziness, disorientation, and difficulty walking can be indicative of low blood pressure or other serious neurological issues.\n3. Given the high-risk situation and potential need for immediate medical attention, this patient will likely require a moderate number of resources (ESI 2).\n4. As stated, the vital signs are not provided, but based on the symptoms described, it is reasonable to assume that they may be abnormal if measured.\"]",
-          " {\n  \"esi_level\": 2,\n  \"confidence\": 85,\n  \"steps\": [\n    \"Initial Assessment:\",\n    \"- Chief Complaint: The patient's symptoms suggest possible acute vestibular syndrome (dizziness), cerebrovascular event, or central nervous system disorder. These conditions can potentially lead to falls and injuries.\",\n\n    \"Patient History Analysis:\",\n    \"- No specified history of chronic conditions like diabetes, hypertension, or cardiovascular disease is mentioned. However, the presence of such conditions may affect the severity of symptoms.\",\n\n    \"ESI Level Determination:\",\n    \"- The patient's immediate condition appears severe due to disorientation and difficulty walking. This meets the criteria for ESI level 2.\",\n\n    \"Vital Signs Analysis:\",\n    \"- Vital signs are not provided, but abnormal vital signs such as increased heart rate, blood pressure, or respiratory rate can indicate a more critical situation and potentially elevate the ESI level.\",\n\n    \"Resource Requirements:\",\n    \"- This patient will likely require immediate attention from medical staff, including a neurological assessment and potentially diagnostic tests.\"\n  ]\n}",
-          " {\"esi_level\": \"2\",\n \"confidence\": \"85%\",\n \"steps\": [\"1. The patient's chief complaint of extreme disorientation, room spinning, and unsteadiness along with inability to walk suggests a possible neurological issue or inner ear disorder, which is a high-risk situation due to the potential for falls and injury. (ESI 2)\",\n           \"2. The patient's reported symptoms suggest that they might require immediate medical attention and resources such as imaging studies (CT/MRI), medication, and possibly hospitalization depending on the diagnosis. This indicates a need for multiple resources. (Consideration for ESI 3-5, but given the immediacy of the situation and potential for deterioration, I lean towards ESI 2)\",\n           \"3. The patient's vital signs are not mentioned in this case, but if they were concerning (e.g., abnormal blood pressure, heart rate, or respiratory rate) it could warrant a higher ESI level. However, given the information provided, vital signs do not seem to be alarmingly concerning.\"]\n}",
-          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient's complaint of extreme disorientation and unsteadiness, along with symptoms such as room spinning and difficulty walking, suggest a potentially severe condition such as vertigo, migraine, or inner ear disorder. These conditions can cause significant distress but are not typically life-threatening in the short term.\",\n\"2. Given the patient's description of their symptoms, this is a high-risk situation due to the potential for falls and accidents that could exacerbate their condition. Additionally, severe vertigo or migraines can cause extreme discomfort and distress.\",\n\"3. This patient will likely require immediate medical attention and possibly imaging tests (CT or MRI) depending on the results of initial examinations and tests. They may also need medication to manage symptoms such as nausea and dizziness. However, hospital admission is not immediately necessary unless the condition worsens or other concerning factors arise.\",\n\"4. Vital signs were not provided in the case summary, but if they are checked and found to be stable, it further supports an ESI level of 2.\"] }",
-          " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"85\",\n  \"steps\": [\n    \"1. Is this patient dying or about to die? (ESI 1) - No, the patient is not showing immediate life-threatening symptoms such as loss of consciousness, respiratory arrest, or severe bleeding.\",\n    \"2. Is this a high-risk situation or severe pain/distress? (ESI 2) - Yes, the patient's complaint of extreme disorientation, unsteadiness, and inability to walk suggests a significant neurological issue or imbalance that could lead to falls and further injury. The patient is also experiencing distress.\",\n    \"3. How many resources will this patient need? (For ESI 3-5) - This patient may require immediate medical attention for further evaluation, imaging tests (like CT scan or MRI), and possibly hospital admission, but does not seem to require urgent interventions such as intubation or surgery, which are indicative of higher ESI levels.\",\n    \"4. Are vital signs concerning? - The information provided does not include the patient's vitals; however, symptoms described could indicate abnormalities in blood pressure, heart rate, or oxygen saturation.\"\n  ]\n}"
+          " {\"esi_level\": \"2\",\n\"confidence\": \"85%\",\n\"steps\": [\"1. The patient's symptoms suggest a neurological or vestibular issue, such as vertigo or a TIA (transient ischemic attack), which can cause disorientation and unsteadiness. However, the inability to walk implies a significant balance and coordination issue.\",\n\"2. Given the severity of the symptoms and the risk of falls causing additional injury, this situation could be considered high-risk.\",\n\"3. The patient will likely need immediate medical attention and monitoring, but may not require extensive resources beyond emergency department care.\",\n\"4. While not specified in the case, concerning vital signs such as an elevated heart rate or blood pressure could indicate a more serious condition, potentially raising the ESI level.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's symptoms suggest a neurological or vestibular issue which could be severe and potentially life-threatening if left untreated (ESI 2).\",\n                                               \"2. The patient is experiencing severe disorientation, unsteadiness, and difficulty walking, indicating high risk and potential for further harm or distress (ESI 2).\",\n                                               \"3. This patient will require immediate medical attention from a neurologist, ER physician, and possibly imaging studies such as an MRI or CT scan to evaluate the cause of symptoms. The patient may also need medication for symptom relief and observation in the hospital (ESI 2).\",\n                                               \"4. Vital signs were not explicitly mentioned, but based on the severity of symptoms, it would be reasonable to expect abnormalities in blood pressure, heart rate, or respiratory rate, all of which can affect the ESI level.\"] }",
+          " {\"esi_level\": \"2\",\n \"confidence\": \"90%\",\n \"steps\": [\"1. The patient's complaint of extreme disorientation, unsteadiness, and inability to walk suggests a serious neurological or vestibular issue that may require urgent attention. (ESI 2)\",\n            \"2. The patient may need resources such as immediate medical evaluation, potential imaging studies (CT or MRI), and possible hospitalization for further care. (Affects ESI level)\",\n            \"3. The patient's vital signs, if available, were not provided in the given information, but their symptomology indicates a concern that could potentially worsen without timely intervention.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's symptoms suggest a potentially serious condition such as vertigo, inner ear issues, or neurological problems which could be severe but are not necessarily life-threatening. (ESI 2)\",\n\"2. The patient is experiencing high levels of distress due to disorientation and unsteadiness, indicating a need for immediate attention. (ESI 2)\",\n\"3. Although the resources needed will depend on the diagnosis, it's likely that the patient will require medical evaluation and possibly imaging tests or further specialists if neurological issues are suspected. (ESI 2-4)\",\n\"4. There is no information about vital signs in this case, but symptoms of extreme disorientation and unsteadiness can be indicative of concerning vital sign changes, such as low blood pressure or abnormal heart rate.\"]",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's symptoms suggest a high risk situation or severe distress as they are experiencing disorientation, extreme unsteadiness, and are unable to walk. These could be signs of a neurological issue, inner ear problem, or low blood sugar level.\",\n\"2. The patient's vital signs were not provided in the given information. However, symptoms such as disorientation and difficulty walking can indicate potential problems with the central nervous system, which might require urgent attention.\",\n\"3. Based on the severity of the symptoms, this patient would likely need immediate medical attention and resources to determine the cause of their condition.\",\n\"4. The patient's vital signs are not provided but abnormal blood pressure, heart rate, or oxygen saturation could further support a higher ESI level.\"] }"
         ],
         "parsed_data": [
           [
@@ -349,21 +353,21 @@
       "self_probing_self_random_consistency": {
         "esi_level": 3,
         "confidence": 100.0,
-        "explanation": " {\"confidence\": 60,\n\"reasoning\": \"The patient's symptoms of disorientation, room spinning (vertigo), and difficulty walking suggest a potential vestibular or neurological issue. However, the lack of specific details about the onset, duration, associated symptoms, or any known medical history makes it difficult to definitively confirm an ESI level 3 (acute undifferentiated) assessment with high confidence. Further evaluation and diagnostic tests are necessary to establish a more accurate diagnosis.\"}",
+        "explanation": " {\"confidence\": 65, \"reasoning\": \"The patient's symptoms of extreme disorientation, room spinning (possibly vertigo), and inability to walk could suggest a vestibular issue, migraine with vertigo, or even a neurological condition. However, the ESI Level 3 assessment assumes a minor injury with minimal functional loss. The symptoms described are more severe and could indicate a moderate to high level of impairment, which would typically require an ESI Level 4 or higher.\"}",
         "needs_handoff": false,
         "responses": [
-          " {\"confidence\": 60,\n\"reasoning\": \"The patient's symptoms of disorientation, room spinning (vertigo), and difficulty walking suggest a potential vestibular or neurological issue. However, the lack of specific details about the onset, duration, associated symptoms, or any known medical history makes it difficult to definitively confirm an ESI level 3 (acute undifferentiated) assessment with high confidence. Further evaluation and diagnostic tests are necessary to establish a more accurate diagnosis.\"}",
-          " {\"confidence\": 65,\n\"reasoning\": \"The patient is experiencing symptoms suggestive of vestibular disorders (dizziness, unsteadiness, and disorientation) or neurological conditions (unsteady gait). However, the absence of other specific symptoms such as headache, visual disturbances, nausea, vomiting, loss of consciousness, or focal neurological deficits could indicate a lower ESI level. The patient's history and presentation may require further diagnostic tests to confirm the diagnosis and determine the ESI level accurately.\"}",
-          " {\"confidence\": 60,\n\"reasoning\": \"The ESI level assessment of 3 is based on the triage system used in emergency medicine, where Level 1 represents the most critical patients and Level 5 the least. The patient's symptoms suggest possible vestibular disorders (e.g., vertigo, disorientation) or neurological issues (e.g., cerebellar lesions, brainstem strokes). These conditions can impair balance and coordination, which aligns with the patient's complaints. However, without further diagnostic tests such as an MRI or CT scan, it is not definitive. Therefore, the confidence in this assessment is around 60%.\"}",
-          " {\"confidence\": 60,\n\"reasoning\": \"The patient's symptoms suggest acute vestibular disorder (vertigo) or a neurological condition affecting balance and coordination. However, without more specific diagnostic tests or information about the onset of symptoms, underlying medical conditions, or any recent traumatic incidents, it is challenging to confirm a definitive diagnosis. The ESI level 3 assessment seems plausible as it corresponds to patients with moderate severity requiring hospitalization, but further investigation is necessary for an accurate evaluation.\"}",
-          " {\"confidence\": 65, \"reason\": \"The patient's symptoms of disorientation, dizziness, and unsteadiness, along with difficulties in walking, can suggest vestibular or neurological disorders. However, the ESI level 3 only considers physical injuries and does not account for these symptoms. Therefore, while a physical injury is still possible, it seems less likely to be the primary cause of the symptoms based on the provided information.\"}"
+          " {\"confidence\": 65, \"reasoning\": \"The patient's symptoms of extreme disorientation, room spinning (possibly vertigo), and inability to walk could suggest a vestibular issue, migraine with vertigo, or even a neurological condition. However, the ESI Level 3 assessment assumes a minor injury with minimal functional loss. The symptoms described are more severe and could indicate a moderate to high level of impairment, which would typically require an ESI Level 4 or higher.\"}",
+          " {\"confidence\": 65, \"reason\": \"The symptoms described by the patient, such as disorientation, room spinning (vertigo), and difficulty walking, are suggestive of a vestibular disorder or inner ear issue. However, the absence of specific triggers, such as head injury, medication use, or prolonged immobilization, makes it less certain. Additionally, the ESI level 3 assumes a minor emergency, which might not be fully justified given the severity and sudden onset of the described symptoms.\"}",
+          " {\"confidence\": 60, \"reason\": \"The patient's symptoms of extreme disorientation, room spinning (possibly vertigo), and unsteadiness, along with difficulty walking, suggest a neurological or vestibular issue. However, the ESI level assessment might not be entirely accurate because it does not take into account these specific symptoms. The ESI level system primarily focuses on assessing trauma severity based on anatomical structures involved in injuries and is not designed to evaluate non-trauma related symptoms like those presented.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient's symptoms of disorientation, spinning sensations (vertigo), and inability to walk suggest a vestibular issue or inner ear problem such as Benign Paroxysmal Positional Vertigo (BPPV) or Labyrinthitis. However, the absence of other common symptoms like nausea, vomiting, hearing loss, or headache in this case reduces the certainty of the assessment. An ESI level 3 is appropriate for a minor neurological complaint.\"}",
+          " {\"confidence\": 70,\n \"reasoning\": \"The ESI level 3 assessment is based on the description of symptoms such as disorientation, room spinning (vertigo), and inability to walk which can be associated with a neurological condition like vestibular disorder or migraine. However, more specific information about patient's medical history, vital signs, or results from any diagnostic tests would be needed for a definitive assessment.\"}"
         ],
         "parsed_data": [
-          60,
+          65,
           65,
           60,
-          60,
-          65
+          75,
+          70
         ],
         "prompt_strategy": "self_probing",
         "sampling_strategy": "self_random",
@@ -371,22 +375,22 @@
       },
       "self_probing_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 67.0,
-        "explanation": " {\"confidence\": 65,\n\"reasoning\": \"The presented symptoms of disorientation, spinning sensations (vertigo), and difficulty walking suggest a possible vestibular disorder or inner ear issue, such as Benign Paroxysmal Positional Vertigo (BPPV) or Labyrinthitis. However, the absence of additional symptoms like nausea, vomiting, headache, hearing loss, or tinnitus lowers the confidence in this ESI level assessment. A more detailed history and physical examination are required for accurate diagnosis.\"}",
+        "confidence": 70.0,
+        "explanation": " {\"confidence\": 75,\n\"reasoning\": \"The ESI level 3 assessment suggests a moderate acuity level for emergency departments, suitable for patients requiring neither immediate resuscitation nor prolonged advanced life support. The patient's complaint of severe disorientation and unsteadiness with room spinning, along with difficulty walking, can be indicative of vestibular disorders or neurological conditions, such as vertigo, migraine, or transient ischemic attack (TIA). While these symptoms could potentially require extended observation, they do not immediately necessitate life-threatening interventions. However, the assessment may still need to be reevaluated depending on additional factors like patient's past medical history, vital signs, and neurological examination results.\"}",
         "needs_handoff": false,
         "responses": [
-          " {\"confidence\": 65,\n\"reasoning\": \"The presented symptoms of disorientation, spinning sensations (vertigo), and difficulty walking suggest a possible vestibular disorder or inner ear issue, such as Benign Paroxysmal Positional Vertigo (BPPV) or Labyrinthitis. However, the absence of additional symptoms like nausea, vomiting, headache, hearing loss, or tinnitus lowers the confidence in this ESI level assessment. A more detailed history and physical examination are required for accurate diagnosis.\"}",
-          " {\"confidence\": 75, \"reasoning\": \"The patient's symptoms of severe disorientation, room spinning (vertigo), and inability to walk suggest a vestibular disorder or a problem with the balance center in the inner ear. However, without more specific diagnostic tests, it's difficult to definitively confirm the cause. The ESI level 3 assessment is reasonable given these symptoms but could also apply to other neurological conditions like migraine or transient ischemic attack. The patient should be referred for further evaluation by a neurologist.\"}",
-          " {\"confidence\": 70, \"reasoning\": \"The patient's symptoms of disorientation, room spinning (possibly vertigo), and difficulty walking suggest a vestibular or neurological issue. However, the absence of other common signs such as nausea, vomiting, headache, or hearing loss lowers the certainty. Additionally, the ESI Level 3 is based on the presence or absence of certain symptoms, which may not be present in this case.\"}",
-          " {\"confidence\": 60,\n \"reasoning\": \"The patient's symptoms of disorientation, spinning sensations (vertigo), and unsteadiness suggest a vestibular issue or inner ear problem such as Benign Paroxysmal Positional Vertigo (BPPV) or Labyrinthitis. The ESI level assessment is based on musculoskeletal injuries, which may not apply here. However, the assessment could still be relevant if the patient's symptoms are due to a cervical spine issue causing referred vestibular symptoms.\"}",
-          " {\"confidence\": 65, \"reasoning\": \"The patient's complaint of disorientation, room spinning (vertigo), and unsteadiness suggests vestibular or central nervous system issues. However, the inability to walk could indicate a more severe neurological issue or stroke. The ESI Level 3 is appropriate for a non-emergency situation with mild symptoms but the patient's description of severe instability raises some concerns that warrant further evaluation.\"}"
+          " {\"confidence\": 75,\n\"reasoning\": \"The ESI level 3 assessment suggests a moderate acuity level for emergency departments, suitable for patients requiring neither immediate resuscitation nor prolonged advanced life support. The patient's complaint of severe disorientation and unsteadiness with room spinning, along with difficulty walking, can be indicative of vestibular disorders or neurological conditions, such as vertigo, migraine, or transient ischemic attack (TIA). While these symptoms could potentially require extended observation, they do not immediately necessitate life-threatening interventions. However, the assessment may still need to be reevaluated depending on additional factors like patient's past medical history, vital signs, and neurological examination results.\"}",
+          " {\"confidence\": 65,\n\"reasoning\": \"The symptoms described - severe disorientation, room spinning (possibly vertigo), and difficulty walking - suggest a neurological or vestibular issue. However, without further medical history, physical examination, or diagnostic tests, it's challenging to confirm a definitive diagnosis or ESI level. The assessment of ESI Level 3 (Neurology/Psychiatry) might be reasonable given the symptoms, but it's not entirely certain.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient's symptoms suggest acute vestibular dysfunction or vertigo, which could be due to conditions like Benign Paroxysmal Positional Vertigo (BPPV), M\u00e9ni\u00e8re's disease, or labyrinthitis. The ESI level 3 assessment might be appropriate if the patient also presents with severe headache, nausea, vomiting, or hearing loss, which are common in these conditions. However, without further information about the onset of symptoms, duration, associated symptoms, and any known medical history, the diagnosis remains preliminary.\"}",
+          " {\"confidence\": 65, \"reasoning\": \"The ESI level 3 is a triage system for acute conditions, and this patient's symptoms suggest an acute vestibular disorder or a neurological issue such as vertigo or transient ischemic attack (TIA). However, the absence of other severe symptoms like altered level of consciousness, speech difficulties, limb weakness, or paralysis suggests that it might be less urgent compared to ESI level 1 or 2. The patient's age and overall health status are not provided, which could influence the assessment.\"}",
+          " {\"confidence\": 70, \"reasoning\": \"The patient is experiencing symptoms of vertigo and ataxia, which are common in vestibular disorders such as Benign Paroxysmal Positional Vertigo (BPPV) or Meniere's disease. However, the patient's complaint of leg weakness may indicate a neurological issue as well. The ESI level 3 assessment considers non-emergency cases that can be treated in an outpatient setting. Given the potential for both vestibular and neurological issues, a more comprehensive assessment may be necessary to accurately determine the severity.\"}"
         ],
         "parsed_data": [
+          75,
           65,
           75,
-          70,
-          60,
-          65
+          65,
+          70
         ],
         "prompt_strategy": "self_probing",
         "sampling_strategy": "self_random",
@@ -395,34 +399,24 @@
       "multi_step_self_random_avg_conf": {
         "esi_level": 1,
         "confidence": 95.0,
-        "explanation": " {\"esi_level\": \"1\", \"confidence\": \"95\", \"step_confidences\": [98, 90, 70, 99], \"reason\": \"The patient's symptoms of extreme disorientation, room spinning, unsteadiness, and inability to walk suggest a possible vestibular disorder or stroke, which can be life-threatening. The high level of distress and severe symptoms indicate a high-risk situation (ESI 2). Given the urgent nature of the case, resources will likely be required (ESI 3-5). Vital signs may not necessarily be outside of normal limits in this type of scenario, but the urgency and potential for complications warrant immediate attention.\"}",
+        "explanation": " {\"esi_level\": \"Not Applicable\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"The provided symptoms suggest an urgent situation (ESI 2), but a definitive ESI level cannot be determined without assessing the patient's vital signs and resources needed, which are not specified in the patient information.\"}\n\nReasoning: The given symptoms of disorientation, room spinning, unsteadiness, and difficulty walking could indicate a high-risk situation or severe distress (ESI 2). However, to determine the exact ESI level, it is necessary to assess if this is a life-threatening condition requiring immediate intervention (ESI 1), evaluate vital signs, and determine how many resources this patient will need. These assessments rely on information not provided in the given patient data. Therefore, the ESI level cannot be definitively determined at this time.",
         "needs_handoff": true,
         "responses": [
-          " {\"esi_level\": \"1\", \"confidence\": \"95\", \"step_confidences\": [98, 90, 70, 99], \"reason\": \"The patient's symptoms of extreme disorientation, room spinning, unsteadiness, and inability to walk suggest a possible vestibular disorder or stroke, which can be life-threatening. The high level of distress and severe symptoms indicate a high-risk situation (ESI 2). Given the urgent nature of the case, resources will likely be required (ESI 3-5). Vital signs may not necessarily be outside of normal limits in this type of scenario, but the urgency and potential for complications warrant immediate attention.\"}",
-          " {\"esi_level\": \"1\", \"confidence\": \"95\", \"step_confidences\": [98, 90, 80, 95], \"reason\": \"The patient's symptoms of severe disorientation, room spinning, unsteadiness, and inability to walk indicate a life-threatening condition such as stroke or inner ear disorder. The high level of distress and severity of the symptoms warrant an ESI level 1.\"}",
-          " {\"esi_level\": \"Not Applicable\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"The provided symptoms indicate a serious condition that requires immediate attention (dizziness, disorientation, unsteady gait, and inability to walk), but without additional information such as vital signs or the results of any relevant tests, it is not possible to accurately determine an ESI level or provide a confidence percentage.\"}\n\nReasoning: The symptoms presented by the patient suggest a high-risk situation (ESI 2) and possibly a life-threatening condition requiring immediate intervention (ESI 1), but without further diagnostic information, it's not possible to accurately determine an ESI level or evaluate the confidence in each step.",
-          " {\"esi_level\": 1, \"confidence\": 95, \"step_confidences\": [99, 98, 70, 85], \"reason\": \"The patient's symptoms of extreme disorientation, unsteadiness, and inability to walk, along with the complaint of room spinning (which could indicate vertigo or a balance disorder), suggest a life-threatening condition such as a stroke or inner ear problem. The high level of distress and potential for falls increases the urgency. Vital signs might provide more information but are not the primary factor in this case.\"}",
-          " {\"esi_level\": 2, \"confidence\": 90, \"step_confidences\": [95, 80, 70, 95], \"reason\": \"The patient's symptoms of disorientation, room spinning, and unsteadiness suggest a high risk situation (ESI 2). The inability to walk due to leg issues further reinforces the ESI 2 assessment. The patient may require moderate resources but not immediate life-saving interventions (ESI 3-5), although the exact number of resources needed is unclear at this point. Vital signs are not provided for evaluation. Overall confidence in the assessment is 90%.\"}"
+          " {\"esi_level\": \"Not Applicable\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"The provided symptoms suggest an urgent situation (ESI 2), but a definitive ESI level cannot be determined without assessing the patient's vital signs and resources needed, which are not specified in the patient information.\"}\n\nReasoning: The given symptoms of disorientation, room spinning, unsteadiness, and difficulty walking could indicate a high-risk situation or severe distress (ESI 2). However, to determine the exact ESI level, it is necessary to assess if this is a life-threatening condition requiring immediate intervention (ESI 1), evaluate vital signs, and determine how many resources this patient will need. These assessments rely on information not provided in the given patient data. Therefore, the ESI level cannot be definitively determined at this time.",
+          " {\"esi_level\": 1, \"confidence\": 95, \"step_confidences\": [99, 85, 75, 90], \"reason\": \"The patient's symptoms of extreme disorientation, room spinning, unsteadiness, and inability to walk suggest a high risk of falling or injury. These symptoms also indicate potential neurological problems, which could be life-threatening if not addressed immediately. The vital signs are not provided, but based on the severity of the patient's symptoms, it is reasonable to assume that they may be outside of normal limits.\"}",
+          " {\"esi_level\": \"1\", \"confidence\": \"95\", \"step_confidences\": [99, 90, 80, 98], \"reason\": \"The patient's symptoms suggest acute vestibular dysfunction or vertigo, which can be life-threatening if associated with loss of consciousness, nystagmus, or hearing impairment. The high level of disorientation and unsteadiness, along with the inability to walk, indicate a need for immediate intervention (ESI 1). Although not explicitly stated in the patient history, the severity of symptoms suggests severe pain/distress (ESI 2). Assessing vital signs is crucial to determine if there are any underlying conditions that might affect the ESI level. Given the urgency of the situation, the vital signs are expected to be outside of normal limits.\"}",
+          " {\"esi_level\": \"Not Applicable\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"The provided symptoms do not allow for a reliable ESI level determination as the Chief Complaint does not provide enough information to accurately assess the urgency and resources required. The ESI system is meant for use in an Emergency Department setting where vital signs, diagnosis, and treatment progress can be monitored.\"}",
+          " {\"esi_level\": \"1\", \"confidence\": \"95\", \"step_confidences\": [90, 90, 80, 95], \"reason\": \"The patient's symptoms of severe disorientation, spinning sensation, unsteadiness, and inability to walk suggest an acute balance disorder or neurological emergency, potentially indicating a life-threatening condition such as stroke or vertigo. The high level of distress and severity also indicate ESI 2. The patient may require urgent intervention and multiple resources (ESI 3-5), given the potential need for imaging studies, medication, or even surgery. However, the vital signs being within normal limits slightly reduces the urgency but does not change the ESI level due to the critical nature of the symptoms.\"}"
         ],
         "parsed_data": [
           [
             1,
             95,
             [
-              98,
-              90,
-              70,
-              99
-            ]
-          ],
-          [
-            1,
-            95,
-            [
-              98,
-              90,
-              80,
-              95
+              99,
+              85,
+              75,
+              90
             ]
           ],
           [
@@ -430,18 +424,18 @@
             95,
             [
               99,
-              98,
-              70,
-              85
+              90,
+              80,
+              98
             ]
           ],
           [
-            2,
-            90,
+            1,
+            95,
             [
-              95,
+              90,
+              90,
               80,
-              70,
               95
             ]
           ]

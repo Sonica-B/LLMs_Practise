@@ -55,15 +55,6 @@ def main():
         # Parse XML case
         parsed_case = parse_xml_case(xml_file)
 
-        # Validate ground truth ESI
-        esi_annotations = parsed_case['annotations'].get('ESI', [])
-        gt = None
-        if esi_annotations and 'esi_level' in esi_annotations[0]:
-            gt = esi_annotations[0].get('esi_level')
-        if gt is None:
-            print(f"Skipping case {case_id}: missing or invalid ESI_LEVEL in XML (required for plots).")
-            continue
-        
         # Parse medical case
         try:
             case_data = triage_system.parse_medical_case(parsed_case['case_text'])

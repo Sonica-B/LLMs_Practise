@@ -26,9 +26,11 @@ def parse_xml_case(xml_path):
             
             # Special handling for specific tags
             if tag_type == 'ESI':
+                raw_level = (tag.get('ESI_LEVEL', '') or '').strip()
                 try:
-                    annotation['esi_level'] = int(tag.get('ESI_LEVEL', '').strip())
+                    annotation['esi_level'] = int(raw_level)
                 except:
+                    # Non-numeric or missing ESI levels are treated as unknown
                     annotation['esi_level'] = None
             elif tag_type == 'QA':
                 annotation['relevance'] = tag.get('relevance', '')

@@ -38,16 +38,18 @@ class TriageEvaluator:
         """Calculate evaluation metrics"""
         if not self.results:
             return {}
-        
-        # Overall accuracy
-        correct_cases = [r for r in self.results if r['correct'] is True]
-        accuracy = len(correct_cases) / len(self.results) if self.results else 0
-        
-        # Accuracy within one level
-        within_one = [r for r in self.results if r['ground_truth'] and 
-                     abs(r['predicted']['esi_level'] - r['ground_truth']) <= 1]
-        accuracy_within_one = len(within_one) / len(self.results) if self.results else 0
-        
+
+        # Only compute accuracy on cases with ground truth
+        gt_cases = [r for r in self.results if r.get('ground_truth') is not None]
+        if gt_cases:
+            correct_cases = [r for r in gt_cases if r['correct'] is True]
+            accuracy = len(correct_cases) / len(gt_cases)
+            within_one = [r for r in gt_cases if abs(r['predicted']['esi_level'] - r['ground_truth']) <= 1]
+            accuracy_within_one = len(within_one) / len(gt_cases)
+        else:
+            accuracy = None
+            accuracy_within_one = None
+
         # ESI distribution
         esi_distribution = {}
         for level in range(1, 6):
@@ -59,6 +61,7 @@ class TriageEvaluator:
         
         self.metrics = {
             'total_cases': len(self.results),
+            'cases_with_ground_truth': len(gt_cases),
             'accuracy': accuracy,
             'accuracy_within_one': accuracy_within_one,
             'esi_distribution': esi_distribution,

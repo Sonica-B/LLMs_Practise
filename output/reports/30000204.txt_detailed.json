@@ -2,13 +2,13 @@
   "case_id": "30000204.txt",
   "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
   "predicted": {
-    "esi_level": 3,
-    "confidence": 0.7,
-    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+    "esi_level": 2,
+    "confidence": 0.9,
+    "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"90\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient is experiencing severe emotional distress, including symptoms of depression, anxiety, and suicidal ideation. They have also mentioned a history of mental health conditions. This situation requires immediate attention from a psychiatric professional.\"\n}",
     "risk_factors": [
       "Ambulance arrival"
     ],
-    "needs_handoff": false,
+    "needs_handoff": true,
     "qa_count": 10
   },
   "ground_truth": 4,
@@ -20,133 +20,453 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 2,
           "needs_handoff": false
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 3,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 4,
           "question_type": "Unknown",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 5,
           "question_type": "Unknown",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 6,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 7,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 8,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 9,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         }
       ],
       "ground_truth": 4
     },
     "elicitation": {
       "vanilla_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 60.0,
+        "explanation": " {\n  \"esi_level\": \"5\",\n  \"confidence\": \"100\",\n  \"reason\": \"The patient describes severe emotional distress and suicidal ideation (heavy weight, darkness, hopelessness), which is a clear indication of ESI level 5. The description of the assault in the past also contributes to this assessment.\"\n}",
+        "needs_handoff": false,
+        "responses": [
+          " {\n  \"esi_level\": \"5\",\n  \"confidence\": \"100\",\n  \"reason\": \"The patient describes severe emotional distress and suicidal ideation (heavy weight, darkness, hopelessness), which is a clear indication of ESI level 5. The description of the assault in the past also contributes to this assessment.\"\n}",
+          " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe emotional distress, indicating a high level of acuity. The description of ongoing emotional pain, hopelessness, and suicidal ideology (implied by the mention of feeling crushed by a weight and following the assault) suggests an ESI Level 5.\"}",
+          " {\n\"esi_level\": \"4\",\n\"confidence\": \"90\",\n\"reason\": \"The patient is experiencing severe emotional distress and suicidal ideations (feeling hopeless, a heavy weight crushing them, and being followed by darkness since the assault). This indicates a high risk of immediate harm to themselves, which aligns with ESI level 4.\"\n}",
+          " {\"esi_level\": \"4\", \"confidence\": \"80%\", \"reason\": \"The patient is experiencing intense emotional distress, indicative of a mental health emergency. The symptoms described suggest suicidal ideation or severe depression, which aligns with ESI level 4.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is expressing severe psychological distress and suicidal ideation due to emotional pain from a recent assault, which requires immediate psychiatric attention (Emergency Severity Index Level 5).\"}"
+        ],
+        "parsed_data": [
+          [
+            5,
+            100
+          ],
+          [
+            5,
+            90
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            4,
+            80
+          ],
+          [
+            5,
+            100
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "vanilla_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient's description of severe emotional distress, hopelessness, and ongoing issues related to an assault indicate a high level of urgency (ESI Level 5).\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient's description of severe emotional distress, hopelessness, and ongoing issues related to an assault indicate a high level of urgency (ESI Level 5).\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient's description of emotional pain, hopelessness, and feelings of being overwhelmed suggest a high level of distress. The mention of an assault may indicate a need for immediate medical or psychiatric attention due to potential trauma.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is describing symptoms of severe psychological distress, including feelings of hopelessness and emotional pain following an assault. This suggests a high priority for immediate psychiatric intervention.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing significant emotional distress, potential suicidal ideations, and has a history of trauma (assault). This indicates an immediate risk and requires the highest ESI level.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe emotional distress and suicidal ideations, which falls under ESI level 5. This requires immediate psychiatric attention.\"}"
+        ],
+        "parsed_data": [
+          [
+            5,
+            100
+          ],
+          [
+            5,
+            100
+          ],
+          [
+            5,
+            100
+          ],
+          [
+            5,
+            100
+          ],
+          [
+            5,
+            100
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_misleading_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 85.0,
+        "explanation": " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe emotional distress and suicidal ideation, which is an ESI level 5 emergency.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe emotional distress and suicidal ideation, which is an ESI level 5 emergency.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing severe emotional distress, possibly suicidal ideation (indicated by feelings of hopelessness and a heavy weight crushing them), which is a high acuity situation. This is further supported by the history of anxiety.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe emotional distress due to a recent traumatic event (assault). This falls under ESI Level 5, which indicates the need for immediate psychiatric attention and potential danger to self or others.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe emotional distress due to a history of trauma. This level of emotional suffering and the mention of hopelessness suggest a high urgency for mental health services, which is typically an ESI level 4.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"85%\", \"reason\": \"The patient is experiencing severe emotional distress and suicidal ideation (mentioned as feeling 'hopeless' and a 'heavy weight crushing them'), which is indicative of an ESI level 4, with high acuity and requiring immediate intervention.\"}"
+        ],
+        "parsed_data": [
+          [
+            5,
+            100
+          ],
+          [
+            4,
+            80
+          ],
+          [
+            5,
+            100
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            4,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 60.0,
+        "explanation": " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing significant emotional distress, including feelings of hopelessness and an inability to find relief from a prolonged period of darkness and emotional pain. This suggests a high ESI level (Level 5) as these symptoms are indicative of severe psychological disturbance.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing significant emotional distress, including feelings of hopelessness and an inability to find relief from a prolonged period of darkness and emotional pain. This suggests a high ESI level (Level 5) as these symptoms are indicative of severe psychological disturbance.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"85\", \"reason\": \"The patient's description of intense emotional pain, hopelessness, and feelings of being crushed by a weight for an extended period since the assault suggest severe psychological distress. This aligns with ESI Level 4 which is for patients requiring immediate evaluation by a psychiatrist.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient's description of feeling emotionally overwhelmed, hopelessness, and a heavy weight following an assault suggests severe psychological distress. This aligns with ESI level 5, indicating the need for immediate psychiatric attention.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"90\", \"reason\": \"The patient's emotional distress, feelings of hopelessness, and reference to an assault suggest a high level of emotional suffering (ESI Level 5). The patient's description aligns with symptoms indicative of severe psychological trauma.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe emotional distress due to a recent traumatic event, which is likely the assault. This level of emotional pain, hopelessness, and feelings of being crushed by a heavy weight suggest a high level of urgency in terms of mental health care.\"}"
+        ],
+        "parsed_data": [
+          [
+            5,
+            90
+          ],
+          [
+            4,
+            85
+          ],
+          [
+            5,
+            90
+          ],
+          [
+            5,
+            90
+          ],
+          [
+            4,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not currently dying or about to die, but they are experiencing emotional distress and pain that seems severe.\",\n\"2. The patient's chief complaint indicates high-risk situation related to psychological wellbeing due to the assault they experienced.\",\n\"3. Although the specific resources needed for this case might vary depending on the availability of mental health services, it is likely that this patient will require more resources than an average patient.\",\n\"4. Vital signs were not provided in the given information, but based on the emotional distress described, there are no immediate concerns about vital signs.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not currently dying or about to die, but they are experiencing emotional distress and pain that seems severe.\",\n\"2. The patient's chief complaint indicates high-risk situation related to psychological wellbeing due to the assault they experienced.\",\n\"3. Although the specific resources needed for this case might vary depending on the availability of mental health services, it is likely that this patient will require more resources than an average patient.\",\n\"4. Vital signs were not provided in the given information, but based on the emotional distress described, there are no immediate concerns about vital signs.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not dying or about to die.\",\n                                                \"2. The patient's complaint indicates severe emotional distress and high risk of self-harm or harm from others due to the assault, which falls under ESI level 2.\",\n                                                \"3. This patient may require immediate psychological support and potentially medical attention if there are signs of physical trauma related to the assault.\",\n                                                \"4. The emotional state does not directly provide information about vital signs.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                               \"2. The patient's complaint suggests a high level of emotional distress and potential suicidal ideation (assault as a trigger). This falls under ESI level 2: High Acuity\",\n                                               \"3. While resource needs may vary based on the specific treatment plan, the immediate need for mental health support indicates that multiple resources will likely be required.\",\n                                               \"4. Vital signs are not provided in this case, but emotional distress and suicidal ideation can often lead to concerning physiological changes if left untreated.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not in immediate danger of death, but the emotional distress could escalate and lead to potential self-harm or suicidal thoughts. This aligns with ESI level 2 which involves high-risk situations requiring urgent attention.\",\n\"2. The patient's emotional pain and hopelessness, along with a history of trauma (assault), suggest a significant level of distress. The presence of ongoing mental health issues and the impact on their wellbeing meets the criteria for ESI level 2.\",\n\"3. This patient will require resources from psychiatry or psychology services to address the underlying emotional pain and provide necessary support.\",\n\"4. No vital signs are mentioned in the case, but the emotional distress can indirectly affect vital signs such as increased heart rate or blood pressure, which could further escalate the situation.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient is not dying or about to die, as there's no immediate threat to their physical health. However, they are experiencing significant emotional distress (ESI 2).\",\n\"2. The patient's description of feeling overwhelmed with emotional pain and hopelessness suggests a high-risk situation or severe psychological distress.\",\n\"3. The patient will likely need multiple resources including mental health support, potentially medication, and follow-up care.\",\n\"4. There are no vital signs mentioned in the provided information that would affect the ESI level.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 83.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient is not dying or about to die, but they are expressing severe emotional distress and pain (suicidal ideation).\",\n\"2. This situation is high-risk due to the potential for self-harm or harm by others (assault), and the severity of the emotional pain.\",\n\"3. The patient may require psychiatric intervention, counseling, and possibly medical attention if there are any physical symptoms related to the assault.\",\n\"4. No vital signs were provided in the patient information.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient is not dying or about to die, but they are expressing severe emotional distress and pain (suicidal ideation).\",\n\"2. This situation is high-risk due to the potential for self-harm or harm by others (assault), and the severity of the emotional pain.\",\n\"3. The patient may require psychiatric intervention, counseling, and possibly medical attention if there are any physical symptoms related to the assault.\",\n\"4. No vital signs were provided in the patient information.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient is not dying or about to die, but the emotional distress described seems severe and potentially life-threatening due to suicide risk.\",\n\"2. Despite no direct mention of high-risk physical situations, the emotional pain and hopelessness suggest a potential high-risk situation that requires immediate attention.\",\n\"3. The patient will likely need mental health resources, including possible inpatient psychiatric care, which could require multiple healthcare professionals and hospital beds.\",\n\"4. No vital signs are provided in this case, but the emotional state described suggests that if left untreated, there may be potential physical consequences such as self-harm.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient is not dying or about to die, as they are experiencing emotional distress rather than physical danger.\",\n                                                \"2. The patient's complaint suggests a high level of emotional pain and distress which can be considered severe according to ESI guidelines.\",\n                                                \"3. This patient will likely need mental health resources for treatment, which may require some time and effort but should not demand immediate critical care resources.\",\n                                                \"4. While vital signs are not explicitly mentioned, emotional distress does not typically affect vital signs in the same way as physical trauma.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die, but they are expressing severe emotional distress and hopelessness after an assault (Chief Complaint).\",\n\"2. This emotional state can be considered a high-risk situation as the patient's mental health is severely affected (1st step).\",\n\"3. Resources needed would include psychological support, possibly medication, and potentially referrals to specialized services such as counseling or therapy (not specified in the provided information, but given the nature of the issue it can be assumed that multiple resources will be required).\",\n\"4. While not explicitly mentioned, the emotional distress and hopelessness expressed could potentially impact vital signs if prolonged, although no immediate life-threatening concerns are evident.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient is not currently dying or about to die, but the emotional distress could potentially lead to self-harm or suicidal ideation if left untreated.\",\n\"2. The patient's chief complaint involves high levels of emotional pain and distress, which can be considered a high-risk situation given the potential for self-harm.\",\n\"3. This patient will likely require mental health resources such as counseling, therapy, or possibly hospitalization for observation and management of suicidal ideation.\",\n\"4. No vital signs were provided in this scenario, but the emotional distress could potentially affect heart rate, blood pressure, or other vital signs\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "cot_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not dying or about to die, as the chief complaint is emotional pain and hopelessness rather than physical danger.\",\n\"2. The patient's description of feeling overwhelmed with emotional pain and distress suggests a high-risk situation, which aligns with ESI level 2.\",\n\"3. Although the patient may require resources for mental health support, it does not seem to require an extensive amount of resources typically associated with higher ESI levels (3-5)\",\n\"4. There are no vital signs provided in this case, but the absence of any mention of physical symptoms also supports the assumption that the patient is not currently at risk of immediate physical harm.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not dying or about to die, as the chief complaint is emotional pain and hopelessness rather than physical danger.\",\n\"2. The patient's description of feeling overwhelmed with emotional pain and distress suggests a high-risk situation, which aligns with ESI level 2.\",\n\"3. Although the patient may require resources for mental health support, it does not seem to require an extensive amount of resources typically associated with higher ESI levels (3-5)\",\n\"4. There are no vital signs provided in this case, but the absence of any mention of physical symptoms also supports the assumption that the patient is not currently at risk of immediate physical harm.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not in immediate danger of death (dying or about to die).\",\n                                             \"2. This situation seems high-risk due to the patient's emotional distress and feelings of hopelessness, which might indicate a suicidal ideation.\",\n                                             \"3. The patient will likely require mental health resources for assessment and treatment.\",\n                                             \"4. No vital signs are provided in the given information, but emotional distress can affect physical well-being. However, it's not always directly observable or measurable through standard vital sign checks.\"\n                                            ]}",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"85%\",\n\"steps\": [\n    \"1. The patient is not currently dying or about to die.\",\n    \"2. The patient presents with high levels of emotional distress and pain, which falls under the category of severe psychological disturbance. This is indicated by statements like 'overwhelmed with emotional pain', 'hopelessness', and 'heavy weight crushing them'.\",\n    \"3. While the exact resources required are not specified, it's reasonable to assume that this patient will need mental health resources (therapy, medication) to manage their psychological state.\",\n    \"4. Vital signs are not mentioned in the provided data, but if they become concerning due to self-harm or other related risks, the ESI level may increase.\"\n]\n}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. This is a high-risk situation due to the emotional distress and hopelessness mentioned.\",\n\"3. The patient may need mental health resources such as therapy or medication.\",\n\"4. No vital signs are directly mentioned, but the emotional state suggests potential physical manifestations of stress that could be concerning if not addressed.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. The patient's complaint suggests high emotional distress and hopelessness, which can be considered severe psychological pain.\",\n\"3. The patient will likely need psychiatric evaluation and treatment.\",\n\"4. No vital signs were provided in the given information.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 85, \"reasoning\": \"The patient's description of emotional distress and hopelessness along with the mention of an assault suggests a high level of psychological trauma. The ESI Level 5 assessment seems reasonable given these symptoms, although further evaluation would be needed to confirm the diagnosis.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 85, \"reasoning\": \"The patient's description of emotional distress and hopelessness along with the mention of an assault suggests a high level of psychological trauma. The ESI Level 5 assessment seems reasonable given these symptoms, although further evaluation would be needed to confirm the diagnosis.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient's description of intense emotional pain and hopelessness coupled with a history of trauma (assault) aligns with the symptoms of Major Depressive Disorder. The ESI Level 5 assessment is likely correct, as it corresponds to severe depressive episodes, which can be triggered by traumatic events.\"}",
+          " {\"confidence\": 70,\n\"reasoning\": \"The patient's description of persistent emotional pain, hopelessness, and a feeling of being overwhelmed suggest symptoms consistent with Major Depressive Disorder or Complex PTSD. The ESI level 5 (Extreme Suicide Risk) is assigned based on the severity of symptoms and reference to an assault in the past. However, without additional information about the patient's current suicidal ideation, intentions, or plans, it is not possible to definitively confirm the ESI level 5 assessment with 100% certainty.\"}",
+          " {\"confidence\": 75,\n \"reasoning\": \"The patient's description of overwhelming emotional pain and hopelessness, along with the reference to a heavy weight and darkness, suggests symptoms consistent with Major Depressive Disorder or similar mental health conditions. The ESI Level 5 assessment seems plausible as it corresponds to moderate severity of suicidal ideation. However, further evaluation is necessary to confirm the diagnosis and assess the patient's risk level.\"}",
+          " {\"confidence\": 75,\n\"reasoning\": \"The patient's description of overwhelming emotional pain and hopelessness, as well as the long-term impact since the assault, suggest that they may be experiencing significant psychological distress. The ESI Level 5 assessment is plausible given these symptoms, but it's important to consider that a definitive diagnosis would require a comprehensive mental health evaluation by a qualified healthcare professional.\"}"
+        ],
+        "parsed_data": [
+          85,
+          75,
+          70,
+          75,
+          75
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 77.0,
+        "explanation": " {\"confidence\": 75, \"reasoning\": \"The patient's description of emotional pain, hopelessness, and feeling overwhelmed suggests symptoms consistent with Major Depressive Disorder or complex trauma. The ESI level 5 corresponds to cases requiring intensive outpatient treatment with psychological interventions and medication management. However, the severity of the described emotional distress seems to indicate a higher level of need, suggesting a confidence of 75% in the initial assessment.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 75, \"reasoning\": \"The patient's description of emotional pain, hopelessness, and feeling overwhelmed suggests symptoms consistent with Major Depressive Disorder or complex trauma. The ESI level 5 corresponds to cases requiring intensive outpatient treatment with psychological interventions and medication management. However, the severity of the described emotional distress seems to indicate a higher level of need, suggesting a confidence of 75% in the initial assessment.\"}",
+          " {\"confidence\": 75,\n\"reasoning\": \"The patient's symptoms of emotional pain, hopelessness, and feelings of being overwhelmed suggest a high level of psychological distress. The mention of an assault in the past might indicate a traumatic event, which often leads to long-term mental health issues. However, without additional information about the patient's current functioning, social support systems, or any history of prior mental health concerns, there is still some uncertainty regarding the exact level of severity.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient's description of chronic emotional pain, hopelessness, and feelings of being crushed by a heavy weight suggest symptoms consistent with Major Depressive Disorder or Complex Post-Traumatic Stress Disorder (CPTSD). The ESI Level 5 assessment seems plausible given the severity of these symptoms, although a thorough evaluation, including a mental health assessment, would be required to confirm this diagnosis. However, it is noteworthy that the patient has experienced trauma and the onset of symptoms coincides with the assault event.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient's chief complaint indicates symptoms consistent with Major Depressive Disorder and Post-Traumatic Stress Disorder (PTSD) following an assault. The ESI level 5 assessment seems plausible as it corresponds to severe mental illness requiring hospitalization in a psychiatric unit, which may be appropriate for this patient given their extreme emotional pain and hopelessness, suicidal ideation, and prolonged symptoms following a traumatic event.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The ESI Level 5 assessment suggests that the patient is experiencing severe emotional distress and suicidal ideations. The patient's description of overwhelming emotional pain, hopelessness, and a sense of darkness following an assault strongly aligns with this level. However, while the symptoms are consistent, it's important to note that self-reports can sometimes underestimate the severity of mental health issues. A professional evaluation would be necessary to confirm this assessment.\"}"
+        ],
+        "parsed_data": [
+          75,
+          75,
+          75,
+          75,
+          85
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "multi_step_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"80\",\n\"step_confidences\": [\n    \"100\", \"75\", \"60\", \"90\"\n],\n\"reason\": \"The patient's chief complaint suggests a significant level of emotional distress and hopelessness, which although not immediately life-threatening (ESI 1), qualifies as a high-risk situation or involves severe pain/distress (ESI 2). The patient may require multiple resources for treatment (ESI 3-5). Vital signs are within normal limits, but this is less relevant in determining the ESI level for mental health concerns.\",\n\"explanation\": \"The patient's description of overwhelming emotional pain and hopelessness, as well as the mention of an assault, suggests a high-risk situation or severe distress. Although not life-threatening in the immediate sense, it is crucial to address this issue promptly due to its potential long-term consequences. The patient may need multiple resources for treatment, such as therapy, medication, and support groups. Vital signs are within normal limits, but they are less relevant in determining the ESI level for mental health concerns.\"}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"80\",\n\"step_confidences\": [\n    \"100\", \"75\", \"60\", \"90\"\n],\n\"reason\": \"The patient's chief complaint suggests a significant level of emotional distress and hopelessness, which although not immediately life-threatening (ESI 1), qualifies as a high-risk situation or involves severe pain/distress (ESI 2). The patient may require multiple resources for treatment (ESI 3-5). Vital signs are within normal limits, but this is less relevant in determining the ESI level for mental health concerns.\",\n\"explanation\": \"The patient's description of overwhelming emotional pain and hopelessness, as well as the mention of an assault, suggests a high-risk situation or severe distress. Although not life-threatening in the immediate sense, it is crucial to address this issue promptly due to its potential long-term consequences. The patient may need multiple resources for treatment, such as therapy, medication, and support groups. Vital signs are within normal limits, but they are less relevant in determining the ESI level for mental health concerns.\"}",
+          " {\"esi_level\": \"2\", \"confidence\": \"90%\",\n\"step_confidences\": [\n    \"85%\",  // Step 1: Assess if this is a life-threatening condition requiring immediate intervention (ESI 1). The patient's complaint does not indicate an immediate life-threatening situation.\n    \"95%\",  // Step 2: Assess if this is a high-risk situation or involves severe pain/distress (ESI 2). The patient describes intense emotional pain and hopelessness, which fits the criteria for ESI level 2.\n    \"80%\",  // Step 3: Determine how many resources this patient will need (for ESI 3-5). While the specific resources required will depend on the treatment plan, the patient's emotional state suggests that they may need more resources than a typical outpatient visit (ESI level 2).\n    \"90%\"  // Step 4: Evaluate if vital signs are within normal limits (can affect ESI level). The information provided does not include the patient's vital signs, but assuming no life-threatening conditions were previously mentioned, it is likely that their vital signs are within normal limits.\n],\n\"reasoning\": \"The patient describes intense emotional pain and hopelessness, which is indicative of a high-risk situation or severe distress (ESI level 2). The specific resources required will depend on the treatment plan, but given the patient's emotional state, they are likely to need more resources than a typical outpatient visit.\"\n}",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"80\",\n\"step_confidences\": [\n    \"60%\",\n    \"95%\",\n    \"70%\",\n    \"95%\"\n],\n\"reasoning\": \"The patient's chief complaint indicates a high level of emotional distress, which falls under ESI 2. The patient's condition is not immediately life-threatening (Step 1), but it does involve severe pain and distress (Step 2). Regarding resources needed, the severity of emotional pain might require more than basic resources (Step 3). Vital signs are not mentioned in the given data, but it's assumed that they are within normal limits given no mention otherwise (Step 4)\"}",
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\",\n\"step_confidences\": [\n    \"60%\",\n    \"95%\",\n    \"70%\",\n    \"95%\"\n],\n\"reasoning\": \"The patient's chief complaint of emotional pain, hopelessness, and feeling overwhelmed suggests a high-risk situation (Step 2). The patient's description of the prolonged period of distress since the assault indicates that this is not an immediate life-threatening condition (Step 1). While no vital signs are mentioned, if provided, their normal limits would likely not significantly affect the ESI level. The number of resources needed for this patient can vary depending on the treatment plan and support services required, but given the nature of the complaint, it is reasonable to expect that more than minimal resources will be necessary (Step 3).\"\n}",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"80\",\n\"step_confidences\": [70, 95, 60, 100],\n\"reason\": \"The patient is experiencing significant emotional distress and hopelessness, which falls under ESI level 2. The high-risk situation is due to the emotional trauma from the assault. No immediate intervention is required (ESI 1). Vital signs are not provided but are usually not relevant in psychological assessments. The resource utilization (ESI 3-5) will likely depend on the treatment plan, which may involve therapy sessions and potential medication management.\",\n\"explanation\": \"The patient's description of overwhelming emotional pain and hopelessness, along with the reference to a traumatic event, indicates a high-risk situation or severe distress (Step 2). The need for resources will depend on the treatment plan (Step 3). Vital signs are not typically relevant in psychological assessments but are within normal limits as no abnormalities have been mentioned (Step 4). Therefore, the ESI level is determined to be 2.\"}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80,
+            [
+              100,
+              75,
+              60,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              60,
+              95,
+              70,
+              95
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              60,
+              95,
+              70,
+              95
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              70,
+              95,
+              60,
+              100
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "top_k_self_random_pair_rank": {
         "esi_level": 3,
@@ -154,9 +474,34 @@
         "needs_handoff": true
       },
       "top_k_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 100.0,
+        "explanation": " {\n  \"guesses\": [\n    {\"esi_level\": \"G3\", \"confidence\": \"90%\"},\n    {\"esi_level\": \"G4\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"G5\", \"confidence\": \"20%\"}\n  ],\n  \"reason\": \"The patient is experiencing severe emotional distress and symptoms suggestive of major depressive disorder, possibly complicated by post-traumatic stress disorder due to a history of assault. The high level of hopelessness, persistent darkness, and ongoing emotional pain point towards ESI levels G3, G4, or G5.\"\n}",
+        "needs_handoff": false,
+        "responses": [
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"G3\", \"confidence\": \"90%\"},\n    {\"esi_level\": \"G4\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"G5\", \"confidence\": \"20%\"}\n  ],\n  \"reason\": \"The patient is experiencing severe emotional distress and symptoms suggestive of major depressive disorder, possibly complicated by post-traumatic stress disorder due to a history of assault. The high level of hopelessness, persistent darkness, and ongoing emotional pain point towards ESI levels G3, G4, or G5.\"\n}",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"G4\", \"confidence\": \"95%\"},\n    {\"esi_level\": \"G3\", \"confidence\": \"5%\"},\n    {\"esi_level\": \"G2\", \"confidence\": \"0%\"}\n  ],\n  \"reason\": \"The patient's description of overwhelming emotional pain, hopelessness, and a prolonged feeling of darkness suggests a severe psychological impact from the trauma. The symptoms are consistent with ESI level G4. The lack of physical complaints and the emphasis on emotional distress support this assessment.\"\n}",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"4\", \"confidence\": \"85%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"10%\"},\n    {\"esi_level\": \"3\", \"confidence\": \"5%\"}\n  ],\n  \"reason\": \"The patient's description of emotional pain, hopelessness, and feelings of being overwhelmed suggest a higher level of psychiatric acuity. However, the specific mention of an assault indicates a need for physical safety assessment as well (ESI level 4 or 5). The lower ESI level 3 is considered due to the patient's subjective description rather than objective signs of distress.\"\n}",
+          " {\"guesses\": [\n    {\"esi_level\": \"G3\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"G4\", \"confidence\": \"15%\"},\n    {\"esi_level\": \"G5\", \"confidence\": \"5%\"}\n], \"reason\": \"The patient's description of emotional pain, hopelessness, and a heavy weight that feels crushing, along with the mention of an assault, suggests significant psychological distress. The ESI level G3 (Major Depression or Bipolar Disorder) is the most likely diagnosis given these symptoms, but the severity and persistence of the patient's feelings may suggest a more severe disorder such as G4 (Severe Psychotic Disorder) or G5 (Suicidal Ideation). However, the latter two diagnoses are less probable based on the provided information.\"}",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"G3\", \"confidence\": \"85%\"},\n    {\"esi_level\": \"G4\", \"confidence\": \"10%\"},\n    {\"esi_level\": \"G5\", \"confidence\": \"5%\"}\n  ],\n  \"reason\": \"The patient's description of intense emotional pain, hopelessness, and ongoing depression since the assault suggests a high level of psychiatric distress. This aligns with ESI levels G3, G4, or G5. However, given the specific mention of an assault, which can have severe psychological consequences, the most likely assessment is ESI level G3 (Psychiatrically Impaired) due to the intensity and duration of symptoms.\"\n}"
+        ],
+        "parsed_data": [
+          [
+            [
+              4,
+              5,
+              3
+            ],
+            [
+              85,
+              10,
+              5
+            ]
+          ]
+        ],
+        "prompt_strategy": "top_k",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       }
     },
     "ground_truth": 4,

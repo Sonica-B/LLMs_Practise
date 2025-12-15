@@ -2,15 +2,15 @@
   "case_id": "30000177.txt",
   "chief_complaint": "I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.",
   "predicted": {
-    "esi_level": 3,
-    "confidence": 0.7,
-    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+    "esi_level": 2,
+    "confidence": 0.9,
+    "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"90\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient's symptoms of severe nausea, vomiting, and abdominal pain (particularly the sharp nature of the pain and its localization to the upper part of the abdomen) suggest a high risk situation or severe pain/distress. Given the duration of the symptoms (3 days), it is appropriate to consider this patient as ESI level 2.\"\n}",
     "risk_factors": [],
-    "needs_handoff": false,
+    "needs_handoff": true,
     "qa_count": 3
   },
   "ground_truth": 3,
-  "correct": true,
+  "correct": false,
   "arrival_method": "WALK IN",
   "confidence_analysis": {
     "incremental": {
@@ -18,29 +18,29 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.9,
+          "esi_level": 2,
           "needs_handoff": false
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 3,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 2,
           "needs_handoff": false
         }
       ],
@@ -49,53 +49,331 @@
     "elicitation": {
       "vanilla_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 40.0,
+        "explanation": " {\n\"esi_level\": \"3\",\n\"confidence\": \"90\",\n\"reason\": \"The patient is experiencing severe symptoms such as persistent nausea, vomiting, abdominal pain, and inability to keep down food or liquids. These symptoms suggest a high acuity level, which aligns with ESI Level 3 (Acute: Intermediate).\"\n}",
+        "needs_handoff": false,
+        "responses": [
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"90\",\n\"reason\": \"The patient is experiencing severe symptoms such as persistent nausea, vomiting, abdominal pain, and inability to keep down food or liquids. These symptoms suggest a high acuity level, which aligns with ESI Level 3 (Acute: Intermediate).\"\n}",
+          " {\"esi_level\": \"5\", \"confidence\": \"90\", \"reason\": \"The patient's symptoms of severe nausea, vomiting, abdominal pain that is worsening, and inability to keep down food or liquids are indicative of a potentially life-threatening condition. These symptoms could suggest conditions such as gastrointestinal bleeding, appendicitis, or pancreatitis.\"}",
+          " {\"esi_level\": 4, \"confidence\": 95, \"reason\": \"The patient is experiencing severe symptoms of nausea, vomiting, and abdominal pain that worsens over time along with an inability to keep down any food or liquids. This aligns with ESI Level 4, which denotes acutely ill patients who require immediate intervention.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"95%\", \"reason\": \"The patient is experiencing severe symptoms such as nausea, vomiting, abdominal pain, and inability to keep down food or liquids. These symptoms suggest a high acuity level, but the absence of vital sign abnormalities, altered mental status, or signs of pregnancy lowers the urgency to an ESI level 3.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe symptoms such as unrelenting nausea, vomiting, abdominal pain that worsens, and inability to keep down food or liquids. These are all signs of an acute medical condition like appendicitis, gallstones, or gastrointestinal bleed, which require immediate attention.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            5,
+            90
+          ],
+          [
+            4,
+            95
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            5,
+            90
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "vanilla_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 90.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe nausea, vomiting, abdominal pain and inability to keep down food or liquids, which could indicate a gastrointestinal obstruction or other serious conditions. This level of symptoms and the associated impact on the patient's ability to maintain fluid and nutrient intake warrant an ESI level 3.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe nausea, vomiting, abdominal pain and inability to keep down food or liquids, which could indicate a gastrointestinal obstruction or other serious conditions. This level of symptoms and the associated impact on the patient's ability to maintain fluid and nutrient intake warrant an ESI level 3.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90\", \"reason\": \"The patient is experiencing severe symptoms such as intractable nausea, vomiting, and abdominal pain that worsens over time, with an inability to eat or drink. This suggests a high acuity level (Level 3) based on the criteria for 'Severe Acute Abdomen'.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe symptoms such as intense nausea, vomiting, abdominal pain that worsens, and an inability to keep down food or liquids. These symptoms suggest a high likelihood of a serious medical condition, which is typically associated with ESI Level 5.\"}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"90\",\n\"reason\": \"The patient is experiencing severe symptoms such as uncontrollable vomiting, worsening abdominal pain, and inability to eat or drink, which are indicative of acute abdominal conditions such as appendicitis or gastroenteritis. These symptoms warrant a triage level 3.\"\n}",
+          " {\n\"esi_level\": \"4\",\n\"confidence\": \"95\",\n\"reason\": \"The patient is experiencing severe symptoms including nausea, vomiting, abdominal pain that worsens over time, and inability to keep down food or liquids. These symptoms are indicative of a potential gastrointestinal obstruction or other serious conditions requiring immediate attention.\"\n}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            5,
+            100
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            4,
+            95
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_misleading_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 97.5,
+        "explanation": " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe symptoms such as inability to keep down food or liquids, severe nausea and vomiting accompanied by abdominal pain. This indicates a high acuity level (ESI 5), suggesting immediate attention is required.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"5\", \"confidence\": \"100\", \"reason\": \"The patient is experiencing severe symptoms such as inability to keep down food or liquids, severe nausea and vomiting accompanied by abdominal pain. This indicates a high acuity level (ESI 5), suggesting immediate attention is required.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"95\", \"reason\": \"The patient is experiencing severe symptoms such as persistent nausea, vomiting, and worsening abdominal pain. The inability to keep down food or liquids indicates dehydration, which can be a serious condition if not addressed promptly.\"}",
+          " {\"esi_level\": \"5\", \"confidence\": \"95%\", \"reason\": \"The patient is experiencing severe symptoms of nausea, vomiting, and abdominal pain, which is worsening. They are unable to keep down any food or liquids, indicating possible gastrointestinal obstruction or other serious conditions. These symptoms warrant an ESI level 5, signifying the highest acuity level.\"}",
+          " {\"esi_level\": 4, \"confidence\": 90, \"reason\": \"The patient is experiencing severe symptoms such as intense nausea, vomiting, and abdominal pain that worsens over time. Additionally, the inability to keep down food or liquids could indicate a serious condition like gastrointestinal obstruction. The elevated heart rate also suggests acute illness.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"Severe nausea, vomiting, abdominal pain and inability to keep down food or liquids could indicate a gastrointestinal emergency. This patient's symptoms are consistent with ESI Level 3, as they have the potential to seriously dehydrate the patient.\"}"
+        ],
+        "parsed_data": [
+          [
+            5,
+            100
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            5,
+            95
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 60.0,
+        "explanation": " {\"esi_level\": \"4\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe symptoms including intractable nausea, vomiting, and worsening abdominal pain accompanied by an inability to keep down food or liquids. This suggests a high acuity level requiring urgent medical attention, potentially indicative of acute gastrointestinal conditions such as pancreatitis or appendicitis.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"4\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing severe symptoms including intractable nausea, vomiting, and worsening abdominal pain accompanied by an inability to keep down food or liquids. This suggests a high acuity level requiring urgent medical attention, potentially indicative of acute gastrointestinal conditions such as pancreatitis or appendicitis.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe symptoms such as intractable nausea, vomiting, and abdominal pain that worsens. This could indicate a possible gastrointestinal obstruction or acute appendicitis. Given these symptoms, an Emergency Severity Index (ESI) level 4 is assigned.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85%\", \"reason\": \"The patient is experiencing severe symptoms such as intractable nausea, vomiting, abdominal pain, and inability to keep down food or liquids. These symptoms could indicate a serious condition like appendicitis or gallstones, which would require urgent attention. This aligns with ESI Level 3 (acute, potentially life-threatening conditions requiring treatment within 6-12 hours).\"}",
+          " {\"esi_level\": 5, \"confidence\": 90, \"reason\": \"The patient's symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids suggest a high acuity level (ESI Level 5). This is indicative of a possible serious gastrointestinal issue such as pancreatitis or appendicitis that requires immediate attention.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe nausea, vomiting, abdominal pain, and an inability to keep down food or liquids, which could indicate a serious gastrointestinal issue such as acute pancreatitis or appendicitis. This level of symptoms requires urgent medical attention.\"}"
+        ],
+        "parsed_data": [
+          [
+            4,
+            90
+          ],
+          [
+            4,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            5,
+            90
+          ],
+          [
+            4,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 95, \"steps\": [\"1. The patient is experiencing severe symptoms such as nausea, vomiting, abdominal pain, and inability to keep down food or liquids, which can indicate a serious condition like appendicitis, gastrointestinal bleeding, or food poisoning. These symptoms could potentially lead to dehydration if left untreated. However, the patient is not currently exhibiting signs of imminent death (ESI 1).\",\n\"2. The patient's symptoms are severe and high-risk due to the potential for complications such as dehydration, organ damage, or sepsis. They are also experiencing significant pain and distress (ESI 2).\",\n\"3. Given the patient's severe symptoms, they will likely require multiple resources, including diagnostic tests (e.g., blood tests, imaging), IV fluids, potential surgery, and hospitalization (ESI 3-5). However, without more specific information about the patient's medical history or vital signs, it is difficult to determine an exact ESI level beyond ESI 2.\",\n\"4. The patient's symptoms suggest that their condition could be concerning based on the severity of their symptoms. Vital signs should ideally be checked to further assess the patient's status and help determine the appropriate ESI level (ESI 3-5).\"]}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 95, \"steps\": [\"1. The patient is experiencing severe symptoms such as nausea, vomiting, abdominal pain, and inability to keep down food or liquids, which can indicate a serious condition like appendicitis, gastrointestinal bleeding, or food poisoning. These symptoms could potentially lead to dehydration if left untreated. However, the patient is not currently exhibiting signs of imminent death (ESI 1).\",\n\"2. The patient's symptoms are severe and high-risk due to the potential for complications such as dehydration, organ damage, or sepsis. They are also experiencing significant pain and distress (ESI 2).\",\n\"3. Given the patient's severe symptoms, they will likely require multiple resources, including diagnostic tests (e.g., blood tests, imaging), IV fluids, potential surgery, and hospitalization (ESI 3-5). However, without more specific information about the patient's medical history or vital signs, it is difficult to determine an exact ESI level beyond ESI 2.\",\n\"4. The patient's symptoms suggest that their condition could be concerning based on the severity of their symptoms. Vital signs should ideally be checked to further assess the patient's status and help determine the appropriate ESI level (ESI 3-5).\"]}",
+          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient's symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids suggest a potentially serious condition such as appendicitis, gastrointestinal bleed, or food poisoning. However, without information about the patient's vital signs, it is not definitively clear if the patient is dying or about to die (ESI 1), so we categorize this as ESI 2.\",\n\"2. The symptoms and potential seriousness of the condition indicate a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. Given the severity of the patient's symptoms, multiple resources may be needed for diagnostic tests and treatment. However, without more information about the specific resources required, we cannot accurately determine the level of resource utilization (ESI 3-5).\",\n\"4. Without vital signs data, it is not possible to definitively assess their concerning nature.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 95, \"steps\": [\"1. The patient is not dying or about to die, but the symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids could indicate a serious condition such as appendicitis or gastrointestinal bleeding. (ESI 2).\",\n\"2. The patient's description of worsening symptoms suggests high risk and severe distress. (ESI 2).\",\n\"3. This patient is likely to need multiple resources, including immediate medical attention, intravenous fluids for hydration, possibly imaging studies such as ultrasound or CT scan, and potentially surgery if the condition is appendicitis. (Can affect ESI level 2-4 depending on resources available).\",\n\"4. No vital signs are provided in this case, but the symptoms described would typically be associated with concerning vital signs, such as tachycardia, hypotension, or altered mental status.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not dying or about to die, but the symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids suggest a serious condition. (ESI 1 not applicable)\",\n\"2. The patient's description of high-intensity symptoms such as severe pain, distress, and worsening condition indicates a high-risk situation or severe pain/distress. (ESI 2)\",\n\"3. Although the patient requires medical attention, they are unlikely to require extensive resources compared to an emergency requiring immediate surgery or critical care. (ESI 3-5 less likely)\",\n\"4. While vital signs were not explicitly provided, the severity of the symptoms suggests that concerning vital signs may be present upon evaluation. However, without specific data it is difficult to make a definitive statement.\"]}",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient's condition suggests a high level of discomfort due to severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids. This could indicate a serious condition such as appendicitis or gastrointestinal obstruction. However, it does not directly suggest that the patient is dying or about to die (ESI 1).\",\n\"2. The patient's description of severe and worsening symptoms, accompanied by high levels of discomfort, suggests a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. Given the serious nature of the symptoms, this patient will likely require significant resources such as intravenous fluids, pain management, diagnostic tests like ultrasounds or CT scans, and potentially surgery if necessary (ESI 3-5). However, the immediate need for these resources indicates a higher level of urgency, leaning towards ESI 2.\",\n\"4. Although not explicitly mentioned in the provided information, vital signs such as blood pressure, heart rate, temperature, and oxygen levels are crucial in determining the ESI level. In the absence of these details, it's challenging to make a definitive statement about their concern.\"]"
+        ],
+        "parsed_data": [
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 90.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"95%\", \"steps\": [\"1. The patient is not in immediate danger of dying, but the symptoms (severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids) indicate a serious condition that requires prompt medical attention.\",\n\"2. The patient's symptoms suggest a high-risk situation due to the potential for dehydration and malnutrition caused by persistent vomiting, and the severe pain they are experiencing.\",\n\"3. This patient will likely require hospital resources for observation, fluid replacement, and potential diagnostic tests to identify the cause of their symptoms.\",\n\"4. Vital signs such as blood pressure, pulse rate, respiratory rate, and temperature were not provided in the information, but based on the severity of the symptoms, they may be elevated.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"95%\", \"steps\": [\"1. The patient is not in immediate danger of dying, but the symptoms (severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids) indicate a serious condition that requires prompt medical attention.\",\n\"2. The patient's symptoms suggest a high-risk situation due to the potential for dehydration and malnutrition caused by persistent vomiting, and the severe pain they are experiencing.\",\n\"3. This patient will likely require hospital resources for observation, fluid replacement, and potential diagnostic tests to identify the cause of their symptoms.\",\n\"4. Vital signs such as blood pressure, pulse rate, respiratory rate, and temperature were not provided in the information, but based on the severity of the symptoms, they may be elevated.\"] }",
+          " {\"esi_level\": \"2\",\n \"confidence\": \"90%\",\n \"steps\": [\"1. The patient is not currently in a life-threatening situation (ESI 1), but the symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids suggest a serious condition that requires prompt medical attention (ESI 2).\n2. The patient's vital signs are not explicitly provided, but given the symptoms, they may be concerning due to potential dehydration or complications related to the gastrointestinal issues.\n3. Given the patient's need for immediate medical attention and potentially requiring further diagnostic tests or treatments, this patient will likely require more resources than a typical outpatient visit (ESI 3-5). However, without specific information about the resources required, it is difficult to definitively assign an ESI level in this range.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is experiencing severe symptoms such as nausea, vomiting, abdominal pain, and inability to keep down food or liquids, which could indicate a serious condition like appendicitis or gastrointestinal obstruction.\",\n\"2. The severity of the patient's symptoms suggests that this may be a high-risk situation or severe pain/distress, as they are unable to keep down food or liquids and the abdominal pain is worsening.\",\n\"3. Given the nature of the symptoms, this patient will likely require significant resources such as imaging tests, fluids, and possibly surgery.\",\n\"4. Although vital signs were not explicitly provided in the case history, the severity of the symptoms suggests that they may be concerning, potentially indicating dehydration or other complications.\"]",
+          " {\"esi_level\": \"2\", \"confidence\": \"90%\", \"steps\": [\"1. The patient's symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids suggest a high-risk situation or severe pain/distress (ESI 2).\",\n\"2. While the patient's vital signs were not explicitly provided, the nature and severity of the symptoms make it likely that they may be concerning, which would further support an ESI level of 2.\",\n\"3. Given the need for immediate medical attention due to severe symptoms, this patient will require significant resources.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die as their condition, while severe, can be managed with medical intervention. (ESI 1 ruled out)\",\n\"2. The patient is experiencing severe nausea, vomiting, abdominal pain, and an inability to keep down food or liquids, which could indicate a serious condition such as appendicitis, gallstones, or gastrointestinal bleed. This qualifies as high-risk situation or severe pain/distress. (ESI 2)\",\n\"3. The patient will likely need significant resources, including intravenous fluids, pain management, and potentially diagnostic tests such as ultrasound or CT scan. (ESI 3-5 possible)\",\n\"4. While not specified in the provided information, vital signs such as heart rate, blood pressure, temperature, and respiratory rate could be indicative of the severity of the patient's condition and thus impact the ESI level\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            95
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "cot_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is experiencing severe nausea, vomiting, abdominal pain, and an inability to keep down food or liquids, which could indicate a serious condition such as gastrointestinal bleeding, appendicitis, or pancreatitis.\",\n\"2. Although the vital signs are not explicitly provided, the patient's description of symptoms suggests that they may be experiencing severe pain and distress.\",\n\"3. The patient will likely require immediate medical attention and potentially hospitalization, which increases the resource requirements.\",\n\"4. While vital signs are not provided, if the patient's blood pressure, heart rate, or oxygen saturation levels were significantly abnormal, it could escalate the ESI level.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is experiencing severe nausea, vomiting, abdominal pain, and an inability to keep down food or liquids, which could indicate a serious condition such as gastrointestinal bleeding, appendicitis, or pancreatitis.\",\n\"2. Although the vital signs are not explicitly provided, the patient's description of symptoms suggests that they may be experiencing severe pain and distress.\",\n\"3. The patient will likely require immediate medical attention and potentially hospitalization, which increases the resource requirements.\",\n\"4. While vital signs are not provided, if the patient's blood pressure, heart rate, or oxygen saturation levels were significantly abnormal, it could escalate the ESI level.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's chief complaint of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids indicates a potential serious gastrointestinal issue. This could be an obstruction, gastroparesis, or pancreatitis.\",\n\"2. The severity of the patient's symptoms suggests that this is a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. Depending on the findings from further investigations and treatment response, this patient may require imaging studies such as CT scan, endoscopy, and potential surgical intervention if an obstruction is found. This would place this patient in ESI 3-5 category.\",\n\"4. Vital signs might be concerning due to dehydration caused by vomiting and inability to keep down fluids. Monitoring and replacement of lost electrolytes may be necessary.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's complaint of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids suggests a potentially serious condition. This could indicate conditions such as appendicitis, gallstones, or gastrointestinal bleeding.\",\n\"2. Given the severity of the symptoms and the potential for progressive worsening if not treated promptly, this qualifies as a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. This patient will likely need immediate medical attention, possibly including diagnostic tests such as blood tests, ultrasound, or CT scan to determine the cause of their symptoms. They may also require intravenous fluids and potentially medication for pain management.\",\n\"4. Vital signs are not specifically mentioned in the given information, but the patient's description of worsening symptoms suggests that they could be concerning. It would be important to assess and monitor vital signs to ensure adequate oxygenation and circulation.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. This patient is experiencing severe symptoms that could potentially be life-threatening (severe nausea, vomiting, abdominal pain, inability to keep down food or liquids). However, the specific cause is not immediately clear.\",\n\"2. The patient's symptoms suggest a high-risk situation due to the severity and potential for complications related to dehydration, electrolyte imbalance, and malnutrition.\",\n\"3. This patient may require multiple resources such as IV fluids, medications for nausea and pain management, possible diagnostic tests (lab work, imaging), and potentially hospital admission for close monitoring.\",\n\"4. Although not explicitly provided, the symptoms themselves imply that vital signs could be concerning if the patient's condition continues to worsen.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is experiencing severe symptoms such as nausea, vomiting, abdominal pain, and inability to keep down food or liquids, which may indicate a serious condition.\",\n\"2. The severity of the pain and distress described by the patient suggests that this could be a high-risk situation.\",\n\"3. The resources required for this patient may include immediate medical attention, intravenous fluids, and potential imaging studies to diagnose the cause of the symptoms.\",\n\"4. While vital signs are not explicitly mentioned in the provided data, the severity of the symptoms suggests that they could be concerning.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 85,\n \"reasoning\": \"The patient is experiencing severe symptoms such as persistent nausea, vomiting, and worsening abdominal pain accompanied by inability to eat or drink. This suggests a high acuity level (ESI Level 5), which often indicates serious conditions like appendicitis, cholecystitis, or gastrointestinal obstruction. However, other factors such as the patient's vital signs, presence of fever, and results from any diagnostic tests would further support this assessment.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 85,\n \"reasoning\": \"The patient is experiencing severe symptoms such as persistent nausea, vomiting, and worsening abdominal pain accompanied by inability to eat or drink. This suggests a high acuity level (ESI Level 5), which often indicates serious conditions like appendicitis, cholecystitis, or gastrointestinal obstruction. However, other factors such as the patient's vital signs, presence of fever, and results from any diagnostic tests would further support this assessment.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The symptoms of severe nausea, vomiting, abdominal pain worsening over time, and inability to keep down food or liquids suggest a possible gastrointestinal issue such as gastritis, gastroesophageal reflux disease (GERD), or even a more serious condition like appendicitis. The ESI level 5 could be an accurate assessment given the patient's high acuity and need for immediate attention due to severe symptoms. However, it is crucial to consider other possible diagnoses, such as food poisoning or other digestive disorders, that might require specific diagnostic tests.\"}",
+          " {\"confidence\": 65, \"reasoning\": \"The patient presents with symptoms of severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids, which are indicative of a serious gastrointestinal issue such as acute pancreatitis, gastroenteritis, or gastroesophageal reflux disease (GERD). However, without further diagnostic tests, it's difficult to confirm the exact cause and severity. The ESI level 5 is likely given these symptoms but a definitive conclusion requires additional information such as lab results, imaging findings, or response to initial treatment.\"}",
+          " {\"confidence\": 85,\n\"reasoning\": \"The ESI (Emergency Severity Index) level 5 assessment is relatively accurate given the patient's symptoms of severe nausea, vomiting, abdominal pain, inability to keep down food or liquids. These symptoms can suggest acute gastrointestinal conditions such as appendicitis, cholecystitis, or gastroenteritis, which are often high-acuity emergencies requiring immediate medical attention.\"}",
+          " {\"confidence\": 85,\n \"reasoning\": \"The patient is experiencing severe symptoms such as intense nausea, vomiting, abdominal pain, and inability to consume food or liquids. These symptoms suggest a high likelihood of an acute abdomen, which can indicate various serious conditions like appendicitis, cholecystitis, or gastrointestinal bleeding. Therefore, the ESI Level 5 assessment seems plausible.\"}"
+        ],
+        "parsed_data": [
+          85,
+          85,
+          65,
+          85,
+          85
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 79.0,
+        "explanation": " {\"confidence\": 65, \"reasoning\": \"The patient presents with severe symptoms such as persistent nausea, vomiting, and abdominal pain accompanied by an inability to eat or drink. These symptoms could indicate a serious condition like gastroenteritis, appendicitis, or even gastric ulcer. However, the absence of other symptoms (e.g., fever, chills, shortness of breath) that might suggest systemic involvement lowers the confidence in this ESI level 4 assessment, which typically applies to patients requiring immediate resuscitation and invasive procedures.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 65, \"reasoning\": \"The patient presents with severe symptoms such as persistent nausea, vomiting, and abdominal pain accompanied by an inability to eat or drink. These symptoms could indicate a serious condition like gastroenteritis, appendicitis, or even gastric ulcer. However, the absence of other symptoms (e.g., fever, chills, shortness of breath) that might suggest systemic involvement lowers the confidence in this ESI level 4 assessment, which typically applies to patients requiring immediate resuscitation and invasive procedures.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The symptoms described - severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids - are indicative of conditions such as gastroenteritis, gastritis, or appendicitis. Given the acute nature and severity of these symptoms, it is likely that the ESI level assessment (Emergency Severity Index) of 4 is appropriate. This scale ranges from 1 (requiring immediate attention) to 5 (non-urgent), with 4 indicating 'serious illness'. However, a definitive diagnosis would require further diagnostic tests.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The symptoms of severe nausea, vomiting, abdominal pain worsening over time, and inability to keep down food or liquids suggest possible gastrointestinal issues such as gastritis, gastroenteritis, or appendicitis. The ESI level 4 (Emergency Severity Index) is typically assigned to patients with acute abdomen, severe abdominal pain, or vomiting that may require immediate surgical intervention. However, further diagnostic tests are needed to confirm the exact condition, hence the confidence level is not 100%.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient is experiencing severe symptoms such as nausea, vomiting, abdominal pain, and inability to eat or drink. These symptoms could indicate a serious condition like gastrointestinal obstruction, appendicitis, or food poisoning. Given the severity of the symptoms, an ESI level 4 is plausible but requires further diagnostic tests to confirm.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The patient presents symptoms of acute abdomen (severe abdominal pain, nausea, vomiting, inability to eat or drink), which typically correspond with an ESI level 4 emergency. However, a definitive diagnosis requires further diagnostic tests such as ultrasound, CT scan, or laboratory tests to confirm the cause of the symptoms. The given assessment has a high likelihood but not absolute certainty due to the need for additional investigations.\"}"
+        ],
+        "parsed_data": [
+          65,
+          85,
+          85,
+          75,
+          85
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "multi_step_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 80.0,
+        "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"75\",\n  \"step_confidences\": [\n    \"70%\",\n    \"85%\",\n    \"60%\",\n    \"90%\"\n  ],\n  \"reason\": \"The patient is experiencing severe nausea, vomiting, abdominal pain, and an inability to keep down food or liquids. This symptomatology suggests a gastrointestinal issue that requires attention but does not appear life-threatening (ESI 1). The high level of distress and severe pain (ESI 2) is confirmed due to the patient's description of worsening symptoms. The resources required for this patient are moderate, as they may need multiple medical evaluations and potential hospitalization (ESI 3-5). Vital signs appear within normal limits based on the provided information (affecting ESI level).\",\n}",
+        "needs_handoff": true,
+        "responses": [
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"75\",\n  \"step_confidences\": [\n    \"70%\",\n    \"85%\",\n    \"60%\",\n    \"90%\"\n  ],\n  \"reason\": \"The patient is experiencing severe nausea, vomiting, abdominal pain, and an inability to keep down food or liquids. This symptomatology suggests a gastrointestinal issue that requires attention but does not appear life-threatening (ESI 1). The high level of distress and severe pain (ESI 2) is confirmed due to the patient's description of worsening symptoms. The resources required for this patient are moderate, as they may need multiple medical evaluations and potential hospitalization (ESI 3-5). Vital signs appear within normal limits based on the provided information (affecting ESI level).\",\n}",
+          " {\"esi_level\": \"Not specified\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"Insufficient patient information is provided to accurately determine the Emergency Severity Index (ESI) level or assign confidence levels to each step.\"}\n\nReasoning: The provided patient information does not contain sufficient details about the patient's condition, medical history, vital signs, or the resources required for treatment. As a result, it is impossible to accurately determine the ESI level or evaluate the confidence in each step of the assessment process.",
+          " {\"esi_level\": \"Not Applicable\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"The given symptoms do not provide enough information for an ESI level determination. However, I would suggest seeking immediate medical attention due to the described severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids.\"}\n\nReasoning: The patient's symptoms of severe nausea, vomiting, abdominal pain, and inability to eat or drink suggest a potential urgent condition. However, the provided information does not contain vital signs, which are necessary for an accurate ESI level determination (Emergency Severity Index). Therefore, I cannot confidently assign an ESI level at this time. Given the described symptoms, it is crucial that the patient seeks immediate medical attention due to the potential severity of their condition.",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"80\",\n\"step_confidences\": [95, 80, 70, 90],\n\"reason\": \"The patient is experiencing severe nausea, vomiting, abdominal pain, and inability to keep down food or liquids. This indicates a high-risk situation (ESI 2) with moderate certainty (80%). The symptoms suggest an underlying medical condition that may require hospitalization. The vital signs might not be within normal limits due to the patient's discomfort, which affects ESI level determination.\",\n\"explanation\": \"Step 1: Given the severe nature of the nausea, vomiting, and abdominal pain, there is a possibility that this could be a life-threatening condition (ESI 1) but with less than 10% confidence as it doesn't seem immediately life-threatening. Step 2: The high level of discomfort and severe symptoms indicate a high-risk situation or involves severe pain/distress (ESI 2) with an 80% confidence level. Step 3: The amount of resources needed will depend on the diagnosis, but it is likely that the patient may require hospitalization for observation and treatment (70%). Step 4: Vital signs are not provided in the information given, making it difficult to assess whether they are within normal limits. However, considering the symptoms described, it's reasonable to assume that vital signs might be abnormal.\"}",
+          " {\"esi_level\": \"Not Applicable\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"The given patient information does not provide sufficient details for an accurate ESI (Emergency Severity Index) level determination. The ESI system requires specific data such as vital signs, age, presence of certain symptoms or conditions, and the need for immediate intervention or surgery to classify a case into one of the five levels (1-5). Without these details, it's not possible to provide an accurate assessment.\"}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80,
+            [
+              95,
+              80,
+              70,
+              90
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "top_k_self_random_pair_rank": {
         "esi_level": 3,

@@ -2,15 +2,15 @@
   "case_id": "30000039.txt",
   "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
   "predicted": {
-    "esi_level": 3,
-    "confidence": 0.7,
-    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+    "esi_level": 2,
+    "confidence": 0.8,
+    "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"80\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient reports severe lower back pain, difficulty walking or standing due to the pain, and has a history of recent falls. These symptoms suggest a high risk situation or severe pain/distress (ESI level 2). The patient should be assessed urgently by medical professionals.\"\n}",
     "risk_factors": [],
-    "needs_handoff": false,
+    "needs_handoff": true,
     "qa_count": 10
   },
   "ground_truth": 3,
-  "correct": true,
+  "correct": false,
   "arrival_method": "WALK IN",
   "confidence_analysis": {
     "incremental": {
@@ -18,79 +18,79 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 3,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 4,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 5,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.9,
+          "esi_level": 2,
           "needs_handoff": false
         },
         {
           "questions_asked": 6,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.9,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 7,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 8,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 2,
           "needs_handoff": false
         },
         {
           "questions_asked": 9,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 2,
           "needs_handoff": false
         },
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         }
       ],
       "ground_truth": 3
@@ -98,53 +98,383 @@
     "elicitation": {
       "vanilla_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 60.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"75%\", \"reason\": \"The patient is experiencing severe back pain, which can be indicative of a potentially serious injury. The pain worsens with movement and breathing, suggesting possible fractures or herniated discs. However, without further information about the mechanism of injury, comorbidities, or vital signs, the ESI level remains as 3.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"75%\", \"reason\": \"The patient is experiencing severe back pain, which can be indicative of a potentially serious injury. The pain worsens with movement and breathing, suggesting possible fractures or herniated discs. However, without further information about the mechanism of injury, comorbidities, or vital signs, the ESI level remains as 3.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing severe back pain after a fall, which could indicate an acute spine injury. This aligns with ESI level 3, which represents patients requiring urgent care for acute abdominal or musculoskeletal conditions.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient describes severe back pain, exacerbated by movement and breathing, which suggests a potentially serious injury. Given the history of a recent fall, this aligns with the criteria for ESI Level 3 (Severe illness or major trauma requiring imaging or surgery) as per the modified Manitoba system.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"95%\", \"reason\": \"The patient reports severe back pain, exacerbated by movement or breathing, which could indicate a fracture or serious spinal injury. This level of discomfort is suggestive of a high acuity case.\"}",
+          " {\"esi_level\": 4, \"confidence\": 95, \"reason\": \"The patient reports severe back pain that worsens with movement and breathing, which are signs of potential spinal or musculoskeletal injury. This suggests a high acuity level.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            4,
+            95
+          ],
+          [
+            4,
+            95
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "vanilla_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 83.33333333333333,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe back pain following a fall, which could potentially indicate a fracture or serious strain. The pain worsens with movement and breathing, suggesting acute injury.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing severe back pain following a fall, which could potentially indicate a fracture or serious strain. The pain worsens with movement and breathing, suggesting acute injury.\"}",
+          " {\"esi_level\": 4, \"confidence\": 95, \"reason\": \"The patient is experiencing severe back pain that worsens with movement or breathing, which is indicative of a potential spinal injury. The patient also mentions having this pain since their fall, suggesting an urgent need for further evaluation and possible imaging studies.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's report of severe back pain, exacerbated by movement and breathing, suggests a high acuity level. This symptomatology aligns with the characteristics of ESI Level 3 patients who require moderate-acuity care.\"}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"85\",\n\"reason\": \"The patient is experiencing severe back pain that worsens with movement or breathing, which suggests a high acuity level. This aligns with ESI Level 3.\"\n}",
+          " {\n\"esi_level\": \"4\",\n\"confidence\": \"90\",\n\"reason\": \"The patient's description of severe back pain, exacerbated by movement and breathing, suggests a high level of acute discomfort. This aligns with ESI Level 4 which is defined as having urgent symptoms that require immediate attention, but do not pose an immediate threat to life or major limb.\"\n}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            85
+          ],
+          [
+            4,
+            95
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            4,
+            90
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_misleading_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 78.75,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing severe back pain, which could be a sign of a potential spinal injury due to the fall. This level of pain warrants urgent attention.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing severe back pain, which could be a sign of a potential spinal injury due to the fall. This level of pain warrants urgent attention.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing severe back pain, but the summary indicates mild pain (3/10). The discrepancy suggests that the patient may be underestimating or overestimating their pain level. However, the report of the pain worsening since a fall indicates a potential injury which warrants further evaluation.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"90\", \"reason\": \"The patient's chief complaint of severe back pain following a fall and the associated symptoms (pain when breathing in or moving) suggest a high acuity level. The presence of these symptoms typically indicates structural damage, making it a potentially serious condition.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"65\", \"reason\": \"The patient reports severe back pain which is a level 3 on the ESI scale. However, the summary of the patient history suggests only mild (3/10) pain, leading to a lower confidence in the assessment.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient's complaint of severe back pain, exacerbated by movement and breathing, suggests a moderate acuity level (ESI 3) as it is considered a musculoskeletal issue that may require further imaging or specialist referral. However, the absence of fever and other symptoms such as neurological deficits or trauma signs can slightly reduce the urgency.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            3,
+            65
+          ],
+          [
+            3,
+            90
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient describes severe back pain, exacerbated by movement and breathing, which suggests a high intensity injury. This, combined with the history of a fall, indicates a likely ESI level 5 injury.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"5\", \"confidence\": \"90%\", \"reason\": \"The patient describes severe back pain, exacerbated by movement and breathing, which suggests a high intensity injury. This, combined with the history of a fall, indicates a likely ESI level 5 injury.\"}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"75\",\n  \"reason\": \"The patient reported severe back pain following a fall, and the pain increases with breathing and movement. This suggests an injury such as a sprain or strain, which falls under ESI Level 3.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient's chief complaint of severe back pain, especially during movement or breathing, along with the history of a recent fall, suggests a moderate emergency (ESI Level 3) as it could indicate a spinal fracture or significant soft tissue injury. However, a proper clinical examination and diagnostic tests are necessary for a definitive diagnosis.\"}",
+          " {\"esi_level\": 3, \"confidence\": 70, \"reason\": \"The patient's complaint of severe back pain exacerbated by breathing and movement, coupled with a recent history of falling, suggests a possible injury. However, without more specific details about the nature of the fall or any accompanying symptoms, it is difficult to definitively assign an ESI level. Therefore, an ESI level 3 is assigned based on the general description of the complaint.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient reports severe back pain and discomfort since a fall, which suggests a possible injury to the spinal column or soft tissues. ESI triage level 3 is appropriate for patients with back injuries causing significant disability, but not neurological deficits.\"}"
+        ],
+        "parsed_data": [
+          [
+            5,
+            90
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            70
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die as they are experiencing severe back pain but no signs of life-threatening conditions are mentioned.\",\n\"2. This is a high-risk situation due to the patient's description of severe and aggravating back pain, which could indicate a serious condition such as fracture or herniated disc.\",\n\"3. The patient will likely need medical attention and possibly imaging studies, but not an immediate intervention like surgery.\",\n\"4. No vital signs are mentioned in the given information.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die as they are experiencing severe back pain but no signs of life-threatening conditions are mentioned.\",\n\"2. This is a high-risk situation due to the patient's description of severe and aggravating back pain, which could indicate a serious condition such as fracture or herniated disc.\",\n\"3. The patient will likely need medical attention and possibly imaging studies, but not an immediate intervention like surgery.\",\n\"4. No vital signs are mentioned in the given information.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not currently in a life-threatening situation (ESI 1). However, the severe back pain and discomfort after a fall could indicate a serious injury, such as a fracture or spinal cord injury, which might require urgent attention (ESI 2).\",\n\"2. The patient's description of the pain worsening with breathing and movement suggests that this may be a high-risk situation due to the potential for complications like respiratory distress or paralysis. Thus, it is classified as ESI 2.\",\n\"3. Although the exact resources needed are unclear from the given information, the patient's condition necessitates medical attention, which would likely involve imaging tests and possible surgical intervention (ESI 3-5).\",\n\"4. No vital signs were provided in the patient information.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                              \"2. The patient is experiencing severe pain and distress in the back area, which falls under a high-risk situation or severe pain/distress category (ESI 2).\",\n                                              \"3. The patient's condition may require medical attention from multiple healthcare professionals for diagnostics and treatment of the back injury.\",\n                                              \"4. Vital signs are not specified in the given information, but the description of severe pain and discomfort suggests that they might be concerning.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die as indicated by the symptoms of severe back pain. However, the patient's description of the pain being exacerbated by breathing and moving suggests a high level of discomfort (ESI 2).\",\n\"2. Although specific vital signs are not provided in this case, the patient's report of severe pain may indicate elevated blood pressure or heart rate, which could be concerning (ESI 2).\",\n\"3. The patient will likely need medical attention and possibly imaging to diagnose the cause of the back pain. However, they do not appear to require immediate intensive care or significant resources (ESI 2).\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not currently in a life-threatening situation (dying or about to die), but the severe back pain suggests a high level of discomfort and potential need for urgent care.\",\n\"2. The patient's complaint of intense back pain, exacerbated by movement and breathing, indicates a high level of distress, which aligns with ESI level 2.\",\n\"3. Although this case requires medical attention, it is unlikely to require extensive resources as it appears to be focused on addressing the back pain.\",\n\"4. The lack of information regarding vital signs makes it difficult to definitively determine their status, but given the patient's description of intense pain and distress, they may show concerning vital signs.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 86.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not currently showing signs of imminent death (ESI 1).\",\n                                              \"2. The patient's chief complaint indicates severe pain and discomfort, which aligns with ESI level 2 for high-risk situations or severe pain/distress.\",\n                                              \"3. While the specific resource requirements are not given, a back injury after a fall would likely require medical imaging and potentially physical therapy or surgery. This falls under resources needed (ESI 3-5).\",\n                                              \"4. The patient's vital signs might be concerning due to the pain level described, but no specific vital sign measurements are provided.\"]}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not currently showing signs of imminent death (ESI 1).\",\n                                              \"2. The patient's chief complaint indicates severe pain and discomfort, which aligns with ESI level 2 for high-risk situations or severe pain/distress.\",\n                                              \"3. While the specific resource requirements are not given, a back injury after a fall would likely require medical imaging and potentially physical therapy or surgery. This falls under resources needed (ESI 3-5).\",\n                                              \"4. The patient's vital signs might be concerning due to the pain level described, but no specific vital sign measurements are provided.\"]}",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not dying or about to die, but the severity of their back pain suggests a high level of distress. (ESI 2)\",\n                                               \"2. The patient's chief complaint of severe back pain and discomfort since a fall, especially when breathing or moving, indicates a high-risk situation or severe pain/distress. (ESI 2)\",\n                                               \"3. The resources needed for this patient may include pain management, possible imaging studies, and potential consultation with an orthopedic specialist. However, the initial focus is on managing their acute pain and assessing any potential injuries from the fall, which would not require extensive resources typically associated with ESI 3-5.\",\n                                               \"4. Although not specified in the patient information, if vital signs were to be concerning (e.g., elevated heart rate, blood pressure, or respiratory rate), it could potentially impact the ESI level, but the information provided does not suggest that this is the case.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not dying or about to die as indicated by the complaint of severe back pain but no signs of respiratory distress or shock.\",\n\"2. The patient is experiencing severe pain/distress due to the back injury from a fall and the description of discomfort when breathing in or moving, which suggests a high-risk situation.\",\n\"3. This patient may require moderate resources such as diagnostic imaging (e.g., X-ray, MRI) and potentially prescription medication for pain management.\",\n\"4. No vital signs were provided in the given information, but based on the described symptoms, it is possible that some of the vital signs could be concerning.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's complaint suggests severe pain which may indicate a potential spinal injury due to the fall. However, there is no immediate indication that the patient is dying or about to die.\",\n\"2. The level of pain and distress experienced by the patient is high, as described in the chief complaint.\",\n\"3. This patient will likely need medical resources such as imaging tests (e.g., X-ray, MRI), pain management, and possibly physical therapy if a spinal injury is confirmed. Therefore, this case falls under ESI level 2.\",\n\"4. While not specified in the provided information, concerning vital signs could increase the urgency of the situation and potentially elevate the ESI level. For example, an abnormal blood pressure or heart rate might indicate a more serious condition.\" ]}",
+          " {\"esi_level\": \"2\", \"confidence\": \"85%\", \"steps\": [\"1. The patient is not dying or about to die, but they are describing severe pain in the back which could indicate a potential spinal injury from the fall.\",\n\"2. The pain and discomfort described is likely causing significant distress for the patient, thus qualifying as a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. Based on the information provided, it's unclear how many resources this patient will need.\",\n\"4. No vital signs were provided in the given information, but the patient's description of pain and discomfort could indicate concerning vital signs if accompanied by symptoms such as numbness, paralysis, or difficulty breathing.\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            90
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "cot_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient's complaint of severe back pain, especially when breathing or moving, suggests a high level of discomfort. However, no immediate danger to life is indicated.\",\n\"2. Given the recent fall and the severity of the pain, this could be considered a high-risk situation due to potential spinal injury. Though it's not explicitly stated that the patient is in respiratory distress or experiencing neurological symptoms, these are red flags for a higher ESI.\",\n\"3. The resources needed for this patient would likely include pain management, possible imaging tests like an MRI or CT scan, and potential consultation with a spine specialist if symptoms persist or worsen.\",\n\"4. No vital signs are mentioned in the case to suggest immediate concern.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"80%\", \"steps\": [\"1. The patient's complaint of severe back pain, especially when breathing or moving, suggests a high level of discomfort. However, no immediate danger to life is indicated.\",\n\"2. Given the recent fall and the severity of the pain, this could be considered a high-risk situation due to potential spinal injury. Though it's not explicitly stated that the patient is in respiratory distress or experiencing neurological symptoms, these are red flags for a higher ESI.\",\n\"3. The resources needed for this patient would likely include pain management, possible imaging tests like an MRI or CT scan, and potential consultation with a spine specialist if symptoms persist or worsen.\",\n\"4. No vital signs are mentioned in the case to suggest immediate concern.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die as they are experiencing severe back pain after a fall but there are no indications of life-threatening conditions like difficulty breathing, loss of consciousness, or uncontrollable bleeding.\",\n\"2. This is a high-risk situation due to the patient's description of severe back pain and the fact that it worsens with movement or breathing, which could be indicative of a spinal injury.\",\n\"3. The patient will likely need multiple resources such as imaging studies (X-ray, MRI), potential surgery, and pain management medication.\",\n\"4. Vital signs may not be immediately concerning in this case, but they should be closely monitored to ensure the patient's condition does not deteriorate.\"] }",
+          " {\"esi_level\": \"2\", \"confidence\": \"75%\", \"steps\": [\"1. The patient's complaint indicates a high level of pain and discomfort, which is severe enough to interfere with normal activities (ESI 2).\\n2. The patient's history suggests a possible cause for the symptoms, in this case, a fall (although no specific details about the fall are provided, it could potentially be a high-risk situation depending on the nature of the fall).\\n3. The patient may require medical resources such as pain management and possibly imaging studies to assess the extent of any injuries.\\n4. No vital signs were provided in this case, but the patient's description of severe pain suggests that their vitals might be affected, which could further justify an ESI level 2.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not currently dying or about to die. However, the severity of the back pain and its impact on daily activities suggest a high level of discomfort.\",\n\"2. Given the patient's description of severe pain, especially during movement and breathing, this qualifies as a high-risk situation or severe pain/distress.\",\n\"3. While we don't have specific resource requirements mentioned in the case, the need for medical attention to manage the back pain suggests that some resources will be needed.\",\n\"4. No vital signs were provided in the case, but the severe nature of the symptoms suggests that they may be concerning and should be assessed by a healthcare professional.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die, but they are experiencing severe pain and distress due to a recent fall that caused back pain (not dying).\",\n\"2. The level of pain and discomfort suggests a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. Although not specified, it is likely the patient will need medical attention for their back injury which could require imaging tests, physical therapy, or possibly surgery. This qualifies as more than minimal resources required (ESI 3-5, but ESI 2 due to immediate pain and distress).\",\n\"4. No vital signs are mentioned in this case, but if concerning signs such as numbness, loss of bladder or bowel control, or difficulty walking were present, it could elevate the ESI level.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            75
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 75, \"reasoning\": \"The patient reports severe back pain, especially during movement and breathing, which are typical symptoms of a higher ESI level. However, without further diagnostic tests or medical history, it's not definitive. The preliminary ESI level 4 suggests significant nerve damage in the lower extremities, but if these symptoms are not present, there might be an overestimation.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 75, \"reasoning\": \"The patient reports severe back pain, especially during movement and breathing, which are typical symptoms of a higher ESI level. However, without further diagnostic tests or medical history, it's not definitive. The preliminary ESI level 4 suggests significant nerve damage in the lower extremities, but if these symptoms are not present, there might be an overestimation.\"}",
+          " {\"confidence\": 75,\n\"reasoning\": \"The ESI (Emergency Severity Index) Level 4 assessment suggests that the patient is experiencing a severe acute condition that requires immediate intervention. The symptoms described, such as severe back pain exacerbated by movement or breathing, are consistent with potential spinal injury. However, without more detailed information about the nature of the fall, any other accompanying symptoms, or results from any diagnostic tests, the confidence in this assessment is relatively high but not absolute.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The patient is experiencing severe back pain and discomfort since a fall, which suggests a potential spinal injury. The ESI Level 4 assessment indicates pain in the lower lumbar region (L4-L5 or L5-S1), abdomen, groin, inner thighs, and the buttocks. Given the patient's symptoms and the location of the pain, it is likely that the ESI Level 4 assessment is correct, but a thorough medical examination is necessary for confirmation.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The patient's description of severe back pain exacerbated by movement or breathing suggests a higher level injury. The ESI Level 4 indicates a T12-L1 nerve root injury with possible motor deficit, which could be consistent with the symptoms described. However, without further diagnostic tests or additional information about the nature and extent of the fall, the confidence in this assessment is not absolute.\"}",
+          " {\"confidence\": 70, \"reasoning\": \"The patient is experiencing severe back pain and discomfort that worsens during movement or deep breathing, which are common symptoms of a higher ESI level injury. However, the provided information does not include specific details about the nature of the fall or any imaging results, making it difficult to achieve a definitive assessment. The reported ESI Level 4 corresponds to a T10-L1 vertebrae injury, and given the symptoms, it is plausible but may require further diagnostic tests to confirm.\"}"
+        ],
+        "parsed_data": [
+          75,
+          75,
+          85,
+          85,
+          70
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 5,
+        "confidence": 76.0,
+        "explanation": " {\"confidence\": 85, \"reasoning\": \"The patient's description of severe back pain worsened by breathing and movement, which are symptoms commonly associated with injuries to the thoracic or lumbar spine, aligns with an ESI Level 5 assessment. However, without further diagnostic tests such as physical examination, imaging studies (like X-rays, MRI, or CT scan), or laboratory tests, this assessment should be considered preliminary and could potentially be revised based on additional information.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 85, \"reasoning\": \"The patient's description of severe back pain worsened by breathing and movement, which are symptoms commonly associated with injuries to the thoracic or lumbar spine, aligns with an ESI Level 5 assessment. However, without further diagnostic tests such as physical examination, imaging studies (like X-rays, MRI, or CT scan), or laboratory tests, this assessment should be considered preliminary and could potentially be revised based on additional information.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient's complaint of severe back pain, particularly during breathing and movement, as well as the onset following a fall, are common symptoms suggestive of a high level injury (ESI Levels V-VI). However, the assessment is based solely on symptomatic presentation without further diagnostic tests. Therefore, while a high ESI Level is probable, a definitive diagnosis requires confirmation through imaging studies like MRI or CT scans.\"}",
+          " {\"confidence\": 70, \"reasoning\": \"The ESI (Emergency Severity Index) Level 5 assessment suggests the patient has a severe acute abdomen or pelvis condition. However, the primary complaint of back pain and reported symptoms after a fall suggest a possible spinal injury. While the ESI Level 5 can be applicable for some cases involving back pain, it might not fully capture this specific scenario due to the potential spinal injury involvement. Therefore, the assessment may need further refinement or additional examination to confirm the correct ESI level.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient reports severe back pain, especially when breathing or moving, which can be indicative of a high level injury. The ESI Level 5 assessment seems plausible as it describes injuries to the T12 and L1 vertebrae, and the symptoms match these areas. However, without additional information such as imaging results or specific details about the fall, there is still some uncertainty.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient is experiencing severe back pain after a fall, and the ESI Level 5 corresponds to severe pain, localized to a specific area, and aggravated by movement or coughing. However, the exact location of the injury is not specified in the case, and without additional information about symptoms such as numbness, tingling, or radiating pain, the assessment could be less accurate.\"}"
+        ],
+        "parsed_data": [
+          85,
+          75,
+          70,
+          75,
+          75
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "multi_step_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 84.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 95, \"step_confidences\": [85, 98, 75, 90],\n\"reason\": \"The patient's chief complaint of severe back pain after a fall indicates a high-risk situation (ESI 2). The patient's history does not suggest a life-threatening condition or immediate intervention (ESI 1), and the severity of the pain and distress indicates a need for additional resources. The patient's vital signs may not be provided, but if they are within normal limits, this would further support an ESI level of 2.\"}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 95, \"step_confidences\": [85, 98, 75, 90],\n\"reason\": \"The patient's chief complaint of severe back pain after a fall indicates a high-risk situation (ESI 2). The patient's history does not suggest a life-threatening condition or immediate intervention (ESI 1), and the severity of the pain and distress indicates a need for additional resources. The patient's vital signs may not be provided, but if they are within normal limits, this would further support an ESI level of 2.\"}",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"80\",\n\"step_confidences\": [\n  \"60%\",\n  \"90%\",\n  \"70%\",\n  \"85%\"\n],\n\"reason\": \"The patient's complaint of severe back pain following a fall suggests a high-risk situation or severe pain/distress (ESI 2). The patient's chief complaint itself does not seem to be life-threatening (ESI 1), but the level of pain and discomfort indicates a significant issue that requires attention. Regarding resources, it is likely that this patient will require more than minimal resources for proper assessment and treatment due to the nature of the injury. The vital signs might not be provided in the given information, but assuming they are within normal limits based on context (as the focus is on the back pain), this would not significantly affect the ESI level determination.\",\n\"explanation\": \"In the given scenario, the patient's chief complaint of severe back pain following a fall indicates a high-risk situation or severe pain/distress (ESI 2). The patient's condition does not seem to be life-threatening (ESI 1), but the level of pain and discomfort requires immediate attention. Regarding resources, it is likely that this patient will require more than minimal resources for proper assessment and treatment due to the nature of the injury. The vital signs might not be provided in the given information, but assuming they are within normal limits based on context (as the focus is on the back pain), this would not significantly affect the ESI level determination.\"}",
+          " {\"esi_level\": 2, \"confidence\": 85,\n\"step_confidences\": [95, 80, 70, 90],\n\"reason\": \"The patient is experiencing severe pain and distress (Step 2) which suggests ESI level 2. The patient's complaint of back pain after a fall, coupled with the exacerbation when breathing or moving, indicates a high-risk situation. However, since this is not a life-threatening condition requiring immediate intervention (Step 1), and the vital signs are not mentioned in the provided information to assess (Step 4), the ESI level determination relies mainly on the patient's symptoms. Resource needs will be moderate (Step 3) as the patient requires medical attention for their back pain.\"}",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"80\",\n\"step_confidences\": [\n  95, 85, 70, 90\n],\n\"reason\": \"The patient's chief complaint of severe back pain following a fall indicates a high-risk situation (ESI level 2). Although the exact resources needed are not specified, the nature of the injury suggests that additional medical attention may be required. The vital signs are not provided to assess if they are within normal limits.\",\n\"final_esilevel_explanation\": \"The patient's severe back pain and discomfort following a fall suggest a high-risk situation or ESI level 2, which requires prompt medical attention.\"}",
+          " {\"esi_level\": \"2\", \"confidence\": \"80\", \"step_confidences\": [85, 75, 60, 90], \"reason\": \"The patient presents with severe back pain following a fall and describes discomfort when breathing or moving, indicating a high-risk situation (Step 2). The symptoms do not seem life-threatening at first glance (Step 1), but the level of pain and distress might require additional resources beyond basic care (Step 3). Vital signs are not explicitly provided, but if they are within normal limits, it can support an ESI level of 2 (Step 4).\" }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            95,
+            [
+              85,
+              98,
+              75,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              60,
+              90,
+              70,
+              85
+            ]
+          ],
+          [
+            2,
+            85,
+            [
+              95,
+              80,
+              70,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              95,
+              85,
+              70,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              85,
+              75,
+              60,
+              90
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "top_k_self_random_pair_rank": {
         "esi_level": 3,

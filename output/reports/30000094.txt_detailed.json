@@ -4,7 +4,7 @@
   "predicted": {
     "esi_level": 3,
     "confidence": 0.7,
-    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+    "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"70\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient is experiencing palpitations and mild-moderate shortness of breath, which could indicate an arrhythmia. However, the symptoms have been present for a few days and there's no history of heart conditions or current medication usage that would significantly impact the heart rate. The recent consumption of caffeine and stress could potentially be contributing factors. Given the severity of symptoms and the need for further evaluation, an ESI level 3 is appropriate.\"\n}",
     "risk_factors": [
       "Ambulance arrival"
     ],
@@ -20,42 +20,42 @@
         {
           "questions_asked": 0,
           "question_type": "None",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": false
         },
         {
           "questions_asked": 3,
           "question_type": "Essential",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
-          "needs_handoff": false
+          "needs_handoff": true
         },
         {
           "questions_asked": 4,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 2,
+          "needs_handoff": true
         },
         {
           "questions_asked": 5,
           "question_type": "Essential",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": false
         },
@@ -64,7 +64,7 @@
           "question_type": "Essential",
           "confidence": 0.7,
           "esi_level": 3,
-          "needs_handoff": false
+          "needs_handoff": true
         },
         {
           "questions_asked": 7,
@@ -76,7 +76,7 @@
         {
           "questions_asked": 8,
           "question_type": "Wrong",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": false
         },
@@ -90,7 +90,7 @@
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": false
         }
@@ -100,63 +100,463 @@
     "elicitation": {
       "vanilla_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient reports symptoms of possible cardiac distress (racing and skipping heartbeats, shortness of breath) which are indicative of a moderate acuity level. However, the absence of additional high-risk signs such as chest pain or loss of consciousness lowers the urgency.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient reports symptoms of possible cardiac distress (racing and skipping heartbeats, shortness of breath) which are indicative of a moderate acuity level. However, the absence of additional high-risk signs such as chest pain or loss of consciousness lowers the urgency.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"Symptoms suggest potential cardiac issue, but patient history is not provided for further assessment. The symptoms described - heart racing and skipping beats, shortness of breath, and anxiety - are consistent with acute coronary syndrome or other cardiovascular disorders, which typically require urgent evaluation (ESI Level 3). However, without additional information about the patient's medical history, medications, or vital signs, the assessment may not be entirely accurate.\"}",
+          " {\"esi_level\": 3, \"confidence\": 85, \"reason\": \"Patient is reporting symptoms of possible cardiac arrhythmia, which can indicate a moderate emergency. The shortness of breath and anxiety also point towards potential respiratory distress related to the heart issue.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"75\", \"reason\": \"The patient is experiencing symptoms suggestive of cardiac issues such as heart palpitations and shortness of breath, which could indicate a moderate emergent condition. However, the absence of chest pain or other severe symptoms lowers the urgency level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms such as a racing and irregular heartbeat, anxiety, and shortness of breath. These symptoms could indicate cardiac distress, but the absence of other severe symptoms like chest pain or loss of consciousness suggests a lower emergency severity level.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "vanilla_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 91.66666666666667,
+        "explanation": " {\"esi_level\": \"4\", \"confidence\": \"90\", \"reason\": \"Symptoms suggest potential cardiac issue (heart racing, skipping beats) with accompanying respiratory symptoms (shortness of breath), which places this patient in an Emergency Severity Index level 4.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"4\", \"confidence\": \"90\", \"reason\": \"Symptoms suggest potential cardiac issue (heart racing, skipping beats) with accompanying respiratory symptoms (shortness of breath), which places this patient in an Emergency Severity Index level 4.\"}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"reason\": \"The patient reports symptoms of possible cardiac distress (racing heart and skipped beats), which is a high-acuity problem per ESI guidelines. However, the absence of additional life-threatening symptoms such as chest pain or pressure, extreme shortness of breath, or fainting, along with the presence of anxiety, suggests this may not be an immediate critical condition.\"}",
+          " {\"esi_level\": \"4\", \"confidence\": \"95\", \"reason\": \"The patient's symptoms of a racing and irregular heartbeat, anxiety, and shortness of breath suggest possible cardiac distress. These symptoms require immediate medical attention.\"}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"80\",\n\"reason\": \"The patient is experiencing symptoms such as a racing heart, skipped beats, anxiety, and shortness of breath. These symptoms could indicate a cardiac condition, which requires urgent attention but is not typically an immediate life-threatening emergency.\"\n}",
+          " {\"esi_level\": \"4\", \"confidence\": \"90%\", \"reason\": \"The patient is experiencing symptoms suggestive of cardiac distress, such as a racing and irregular heartbeat, shortness of breath, and anxiety. These are potentially life-threatening symptoms that require immediate evaluation.\"}"
+        ],
+        "parsed_data": [
+          [
+            4,
+            90
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            4,
+            95
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            4,
+            90
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_misleading_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 83.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient reports symptoms of potential cardiac distress (racing heart, skipping beats), which aligns with ESI Level 3. However, the absence of significant additional symptoms such as chest pain or fainting slightly reduces the confidence level.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient reports symptoms of potential cardiac distress (racing heart, skipping beats), which aligns with ESI Level 3. However, the absence of significant additional symptoms such as chest pain or fainting slightly reduces the confidence level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"Although the symptoms describe potential cardiac issues, the patient's history of anxiety suggests that this might be an exacerbation or manifestation of their anxiety disorder. However, further evaluation is required to confirm.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms of possible cardiac distress (elevated heart rate, racing and skipping beats), but also anxiety which could contribute to the symptoms. However, the patient's history is not provided to confirm any underlying conditions that might elevate the ESI level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85%\", \"reason\": \"The patient's chief complaint of racing and skipping heartbeats, anxiety, and shortness of breath suggests a potential cardiac issue. However, since the patient arrived by private vehicle instead of an ambulance, and there are no immediate vital signs reported, this case falls under ESI level 3.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing palpitations, anxiety, and shortness of breath, which are symptoms of possible cardiac issues. However, the onset of symptoms being 2 days ago suggests it's not an immediate life-threatening emergency (ESI Level 1 or 2). Yet, given the potential severity of the symptoms, further evaluation is required (ESI Level 4 or 5 is also possible). Since the patient is experiencing these symptoms for more than a few minutes but less than 6 hours, ESI Level 3 seems most appropriate.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of heart palpitations, anxiety, and shortness of breath suggest a potential cardiac issue, which would warrant an ESI level 3 (Acute) due to the possibility of life-threatening conditions such as myocardial infarction or arrhythmia.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of heart palpitations, anxiety, and shortness of breath suggest a potential cardiac issue, which would warrant an ESI level 3 (Acute) due to the possibility of life-threatening conditions such as myocardial infarction or arrhythmia.\"}",
+          " {\n  \"esi_level\": 3,\n  \"confidence\": 80,\n  \"reason\": \"The patient is experiencing symptoms that could potentially indicate a cardiac issue (heart racing and skipping beats). Additionally, their anxiety and shortness of breath might be related to these symptoms. Given the severity of the symptoms, an ESI level of 3 seems appropriate.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms such as heart palpitations, anxiety, and shortness of breath. These are potentially indicative of a cardiovascular issue or panic attack, both of which warrant an urgent evaluation (ESI Level 3). However, further assessment would require additional information such as the patient's medical history, risk factors, and vital signs.\"}",
+          " {\"esi_level\": 3, \"confidence\": 95, \"reason\": \"The patient's symptoms suggest a potential cardiac issue. While the specific causes for heart palpitations can vary and not all are life-threatening, this level of severity requires medical evaluation to rule out serious conditions such as arrhythmias or heart disease.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient reports symptoms of palpitations, anxiety, and shortness of breath, which may suggest a cardiac issue. However, the absence of other alarming symptoms such as chest pain, loss of consciousness, or severe shortness of breath reduces the urgency.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            95
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's symptoms could indicate a cardiac issue, which if left untreated could potentially lead to severe consequences such as death or permanent damage (ESI 1). However, the specific symptoms mentioned are not immediate red flags for imminent danger (e.g., chest pain radiating to the jaw, arm, or back, loss of consciousness, etc.). Thus, it's classified as ESI 2.\",\"2. The patient is experiencing palpitations, anxiety, and shortness of breath, which suggest a high level of discomfort and distress (ESI 2).\",\"3. Although the exact resource requirements are unknown, given the nature of the symptoms, this patient will likely need immediate medical attention, including ECG monitoring and possibly cardiology consultation (ESI 2-3).\",\"4. Vital signs such as blood pressure, pulse rate, and oxygen saturation were not provided in the information. However, given the reported symptoms, it's reasonable to assume that they may be abnormal.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's symptoms could indicate a cardiac issue, which if left untreated could potentially lead to severe consequences such as death or permanent damage (ESI 1). However, the specific symptoms mentioned are not immediate red flags for imminent danger (e.g., chest pain radiating to the jaw, arm, or back, loss of consciousness, etc.). Thus, it's classified as ESI 2.\",\"2. The patient is experiencing palpitations, anxiety, and shortness of breath, which suggest a high level of discomfort and distress (ESI 2).\",\"3. Although the exact resource requirements are unknown, given the nature of the symptoms, this patient will likely need immediate medical attention, including ECG monitoring and possibly cardiology consultation (ESI 2-3).\",\"4. Vital signs such as blood pressure, pulse rate, and oxygen saturation were not provided in the information. However, given the reported symptoms, it's reasonable to assume that they may be abnormal.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not currently in a life-threatening situation (ESI 1) as their symptoms could be indicative of heart palpitations or anxiety rather than an imminent cardiac arrest. However, the severity of these symptoms requires immediate medical attention.\",\n\"2. The symptoms such as racing/skipping heartbeats, shortness of breath, and anxiety indicate a high level of discomfort and distress (ESI 2).\",\n\"3. While this patient may require multiple resources including an EKG, medications for heart rate control, and potentially admission if the symptoms persist or worsen.\",\n\"4. The patient's vital signs are not provided in this case, but abnormal vital signs (e.g., elevated blood pressure, rapid heart rate) could further increase the ESI level.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's symptoms suggest possible cardiac issues which could be life-threatening if left untreated (ESI 1). However, the current complaint does not indicate imminent danger or death. Therefore, ESI level is not 1.\",\"2. The symptoms of racing heart, skipping beats, anxiety, and shortness of breath suggest a high-risk situation or severe pain/distress (ESI 2).\",\"3. The patient will likely need urgent medical attention from a cardiologist or emergency department physician to evaluate the cardiac issue. This requires multiple resources. However, since this does not affect the ESI level directly, it is not considered in this case.\",\"4. Without specific vital sign data, it's difficult to determine if they are concerning. The symptoms listed indicate a need for immediate medical attention, but further information would be needed to confirm.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not currently in a life-threatening situation (dying or about to die), but they are experiencing symptoms that could indicate a cardiac issue, which qualifies as high risk (ESI 2).\",\n\"2. The patient's complaint of heart racing and skipping beats, along with feelings of anxiety and shortness of breath, suggest a potential cardiovascular emergency. This is considered severe pain/distress.\",\n\"3. Given the nature of the patient's symptoms, they are likely to require immediate medical attention and multiple resources to ensure appropriate monitoring and diagnosis, which leans towards ESI 2.\",\n\"4. While vital signs were not provided in the information given, if the patient's heart rate is significantly elevated or irregular, it could further support an ESI level of 2.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not clearly dying or about to die as the symptoms described (heart racing, skipping beats, anxiety, shortness of breath) while severe, are not immediate life-threatening conditions. (ESI 1 excluded)\",\n\"2. The patient's condition indicates a high level of discomfort and potential for significant distress due to heart-related symptoms. This falls under ESI 2: High-risk situations or severe pain/distress.\",\n\"3. While the exact resource requirement is not specified, given the nature of the symptoms, the patient will likely need immediate medical attention which constitutes more resources than a typical outpatient visit (ESI 3-5), but less than an emergent situation requiring extensive resources (ESI 1-2).\",\n\"4. The absence of concerning vital signs information does not allow for a definitive assessment, but given the nature of the symptoms, it is reasonable to infer that vital signs may be abnormal, thus warranting immediate attention.\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 83.33333333333333,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's symptoms suggest a possible cardiac issue, which if severe, could potentially be life-threatening (ESI 1). However, the current description does not indicate imminent danger (dying or about to die), thus ruling out ESI 1.\n2. The patient is experiencing racing and skipping heartbeats, anxiety, shortness of breath, which can be indicative of high-risk situations or severe pain/distress (ESI 2). This aligns with the provided symptoms.\n3. While not explicitly stated, the nature of the symptoms suggests that this patient may require multiple resources such as an ECG, medication, and possibly cardiology consultation. However, the need for resources does not solely determine the ESI level in this case (ESI 3-5).\n4. The lack of information about vital signs makes it difficult to definitively conclude if they are concerning or not. In the absence of vital sign data, we cannot adjust the ESI level based on this factor.\"]",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's symptoms suggest a possible cardiac issue, which if severe, could potentially be life-threatening (ESI 1). However, the current description does not indicate imminent danger (dying or about to die), thus ruling out ESI 1.\n2. The patient is experiencing racing and skipping heartbeats, anxiety, shortness of breath, which can be indicative of high-risk situations or severe pain/distress (ESI 2). This aligns with the provided symptoms.\n3. While not explicitly stated, the nature of the symptoms suggests that this patient may require multiple resources such as an ECG, medication, and possibly cardiology consultation. However, the need for resources does not solely determine the ESI level in this case (ESI 3-5).\n4. The lack of information about vital signs makes it difficult to definitively conclude if they are concerning or not. In the absence of vital sign data, we cannot adjust the ESI level based on this factor.\"]",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is experiencing symptoms such as a racing and skipping heartbeat, anxiety, and shortness of breath which could indicate cardiovascular issues. However, dying or being about to die isn't explicitly stated. (ESI Level not 1).\",\n\"2. The symptoms described can be considered high-risk or severe distress due to the potential implications of cardiac problems. (ESI Level 2).\",\n\"3. Although resources may be required for proper evaluation and treatment, the urgency of the situation seems to warrant more immediate attention compared to non-urgent cases. (ESI Levels 3-5 less likely).\",\n\"4. The patient's symptoms do not directly indicate concerning vital signs in this initial presentation. However, if their heart rate or blood pressure is elevated upon examination, it could impact the ESI level.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient is not currently in a life-threatening situation (ESI 1), but the symptoms of racing heart, skipping beats, anxiety, and shortness of breath suggest a potential cardiovascular issue which falls under ESI 2.\n\n2. The patient's symptoms indicate a high-risk situation or severe distress as they could be indicative of a serious condition such as a heart attack. This qualifies as ESI 2.\n\n3. Although the severity of the situation suggests multiple resources may be required, immediate attention and hospitalization are necessary. Therefore, this does not significantly affect the ESI level.\n\n4. The patient's symptoms suggest that vital signs could potentially be concerning, but without specific measurements it is not possible to determine their exact state.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not currently dying or about to die, but their symptoms (racing heart, skipped beats, anxiety, shortness of breath) could indicate a serious condition such as a heart attack or arrhythmia.\",\n\"2. These symptoms fall under the 'high-risk situation' category as they may require urgent medical attention due to potential life-threatening conditions.\",\n\"3. The patient will likely need multiple resources, including immediate cardiac monitoring and potentially medications or procedures.\",\n\"4. While vital signs are not explicitly provided in the information, the symptoms described suggest that they could be concerning if measured.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not currently in a life-threatening situation but presents symptoms of possible cardiac issues which can be severe if left untreated (ESI 1 not applicable).\",\n\"2. The symptoms described such as racing heart, skipping beats, shortness of breath, and anxiety suggest a high-risk situation or severe distress related to possible cardiovascular problems (ESI 2).\",\n\"3. Given the urgent need for immediate medical evaluation and treatment, this patient will likely require multiple resources including triage, EKG, consultation with a cardiologist, and potentially admission to the hospital (ESI 3-5).\",\n\"4. While not explicitly stated, symptoms such as racing heart, shortness of breath, and anxiety can be indicative of concerning vital signs (ESI level may increase if vital signs are confirmed to be abnormal upon examination).\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "cot_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is experiencing symptoms such as a racing heart, skipping beats, anxiety, and shortness of breath which could suggest cardiovascular distress or an arrhythmia, although the specific cause is not clear yet. These symptoms are concerning but do not necessarily indicate an immediate life-threatening emergency (ESI 1).\",\n\"2. Given the patient's symptoms, this situation can be considered high-risk due to the potential for severe consequences if left untreated or improperly managed (ESI 2).\",\n\"3. The patient may require resources such as ECG monitoring, cardiology consultation, and potentially medication adjustments, depending on the final diagnosis.\",\n\"4. While vital signs were not provided in this case, symptoms like racing heart and shortness of breath can suggest concerning vital sign abnormalities, which would further support an ESI level 2.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is experiencing symptoms such as a racing heart, skipping beats, anxiety, and shortness of breath which could suggest cardiovascular distress or an arrhythmia, although the specific cause is not clear yet. These symptoms are concerning but do not necessarily indicate an immediate life-threatening emergency (ESI 1).\",\n\"2. Given the patient's symptoms, this situation can be considered high-risk due to the potential for severe consequences if left untreated or improperly managed (ESI 2).\",\n\"3. The patient may require resources such as ECG monitoring, cardiology consultation, and potentially medication adjustments, depending on the final diagnosis.\",\n\"4. While vital signs were not provided in this case, symptoms like racing heart and shortness of breath can suggest concerning vital sign abnormalities, which would further support an ESI level 2.\"] }",
+          " {\n  \"esi_level\": 2,\n  \"confidence\": 85,\n  \"steps\": [\n    \"Chief Complaint: The patient's symptoms suggest possible cardiac arrhythmia, which can be a serious condition if left untreated. The symptoms of racing heart, skipping beats, anxiety, and shortness of breath are all associated with this condition.\",\n    \"Patient History: There is no mention of any significant past medical history that would alter the ESI level at this point. However, it's important to note that a history of heart disease or other chronic conditions could potentially increase the severity.\",\n    \"1. Is this patient dying or about to die? (ESI 1): While the symptoms are serious, they do not immediately indicate imminent danger. The patient is conscious and able to communicate their symptoms, which suggests that they are not in immediate life-threatening distress.\",\n    \"2. Is this a high-risk situation or severe pain/distress? (ESI 2): Given the nature of the symptoms and the fact that they could potentially indicate cardiac arrhythmia, this patient falls into the ESI 2 category as they require prompt evaluation and treatment to manage their symptoms.\",\n    \"3. How many resources will this patient need? (For ESI 3-5): This patient will likely require immediate access to an emergency department bed for assessment and potential further testing such as an EKG or cardiac monitoring. They may also need a cardiologist consultation if the initial assessment suggests cardiac arrhythmia.\",\n    \"4. Are vital signs concerning? (Can affect ESI level): There is no mention of the patient's vital signs in the provided information. If the patient's heart rate, blood pressure, or oxygen saturation levels are significantly abnormal, it could potentially elevate the ESI level.\"\n  ]\n}",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient's complaint of a racing heart and skipping beats may indicate an acute cardiac issue. However, they also mention anxiety which could be contributing to these symptoms.\",\n\"2. The patient reports feeling short of breath, another potential symptom of cardiac distress or other severe conditions like asthma.\",\n\"3. Given the possible severity of the cardiac symptoms, the patient may require immediate medical attention and multiple resources including an ECG, possible admission, and cardiology consultation.\",\n\"4. While no vital sign data is provided, symptoms such as racing heart, skipping beats, and shortness of breath can indicate concerning vital signs.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 90, \"steps\": [\"1. The patient is not currently in a life-threatening situation, but the symptoms could indicate heart problems which require immediate attention.\",\n\"2. The symptoms of racing heart, skipping beats, anxiety, and shortness of breath suggest high distress or severe discomfort for the patient.\",\n\"3. Although this case may require medical resources such as an EKG or consultation with a cardiologist, it is not likely to require extensive resources typically associated with ESI 3-5.\",\n\"4. Vital signs are not explicitly provided in the given case, but the symptoms suggest potential concerns that warrant further investigation.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient's symptoms suggest a potential cardiac issue, which if severe, could be life-threatening (ESI 1). However, the specific description of 'racing and skipping beats' might indicate atrial fibrillation rather than a heart attack, which is generally more sudden in onset.\n2. The patient describes symptoms such as anxiety, shortness of breath, and palpitations, which are associated with severe pain/distress (ESI 2).\n3. Given the potential cardiac issue, this patient will likely require immediate medical evaluation and possibly diagnostic tests, thus requiring moderate resources (ESI 3-5).\n4. The vital signs were not provided in the given information, but if the patient's heart rate is significantly elevated or blood pressure is low, it could indicate a more urgent situation (ESI 1 or ESI 2)\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            90
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 65, \"reason\": \"The symptoms of a racing or irregular heartbeat (palpitations), anxiety, and shortness of breath can be indicative of cardiac conditions such as atrial fibrillation, tachycardia, or panic attacks. However, without further diagnostic tests, the ESI Level 3 assessment may not fully capture the urgency of these symptoms, especially if they are new, recurring frequently, or accompanied by other concerning symptoms like chest pain, dizziness, or fainting. Therefore, a lower or higher level of care might be more appropriate depending on the specifics of the case.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 65, \"reason\": \"The symptoms of a racing or irregular heartbeat (palpitations), anxiety, and shortness of breath can be indicative of cardiac conditions such as atrial fibrillation, tachycardia, or panic attacks. However, without further diagnostic tests, the ESI Level 3 assessment may not fully capture the urgency of these symptoms, especially if they are new, recurring frequently, or accompanied by other concerning symptoms like chest pain, dizziness, or fainting. Therefore, a lower or higher level of care might be more appropriate depending on the specifics of the case.\"}",
+          " {\"confidence\": 65, \"reason\": \"The symptoms of heart racing, skipping beats, anxiety, and shortness of breath can be indicative of cardiac issues. However, the ESI level 3 assessment seems a bit low considering these potentially serious symptoms. The patient's age, sex, presence of risk factors for heart disease (such as diabetes, hypertension, smoking, or family history), and other medical conditions should be taken into account before making an accurate assessment.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient's complaint of heart racing and skipping beats, along with feelings of anxiety and shortness of breath, are common symptoms associated with cardiac conditions. However, the ESI Level 3 assessment might not accurately reflect the severity of the patient's condition without further evaluation. It's essential to consider potential underlying causes such as panic attacks, hyperthyroidism, or other conditions that can mimic heart-related symptoms. Therefore, a more comprehensive evaluation is necessary to determine the exact cause and appropriate level of emergency care.\"}",
+          " {\"confidence\": 70, \"reason\": \"The patient is reporting symptoms such as a racing and irregular heartbeat, anxiety, and shortness of breath which are indicative of cardiovascular issues. However, the absence of other common symptoms like chest pain or pressure, arm or neck discomfort, or nausea may suggest that the case could be less emergent. The ESI level 3 is often assigned to cases involving severe chest pain or acute coronary syndrome. Given these considerations, a confidence of 70% is attributed to this assessment.\"}",
+          " {\"confidence\": 65, \"reason\": \"The patient is experiencing symptoms such as a racing heart, skipped beats, anxiety, and shortness of breath which are common indicators of cardiac issues. However, the ESI Level 3 assessment might not accurately reflect the severity of these symptoms without further evaluation. The confidence in this assessment is moderate since it's based on initial symptom reporting and additional diagnostic tests or patient history would be needed for a more accurate assessment.\"}"
+        ],
+        "parsed_data": [
+          65,
+          65,
+          75,
+          70,
+          65
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 4,
+        "confidence": 73.0,
+        "explanation": " {\"confidence\": 65, \"reason\": \"The patient is experiencing symptoms such as a racing heart, heartbeat irregularities, anxiety, and shortness of breath, which are indicative of possible cardiac issues. However, the absence of other common symptoms like chest pain or pressure, neck, jaw, arm, or back discomfort, and no reported history of diabetes, high blood pressure, or smoking could potentially lower the initial ESI level assessment. Therefore, a more thorough evaluation is recommended to confirm or rule out heart-related conditions.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 65, \"reason\": \"The patient is experiencing symptoms such as a racing heart, heartbeat irregularities, anxiety, and shortness of breath, which are indicative of possible cardiac issues. However, the absence of other common symptoms like chest pain or pressure, neck, jaw, arm, or back discomfort, and no reported history of diabetes, high blood pressure, or smoking could potentially lower the initial ESI level assessment. Therefore, a more thorough evaluation is recommended to confirm or rule out heart-related conditions.\"}",
+          " {\"confidence\": 75,\n\"reasoning\": \"The patient reports symptoms of a fast or irregular heartbeat (palpitations), anxiety, and shortness of breath, which are common signs of cardiovascular conditions such as arrhythmias. However, the assessment could be influenced by factors like stress, caffeine consumption, or other underlying health issues. The ESI level 4 assessment seems plausible given these symptoms but additional information and diagnostic tests would be needed to confirm this.\"}",
+          " {\"confidence\": 75,\n\"reasoning\": \"The patient's chief complaint of a racing heart, skipped beats, anxiety, and shortness of breath are consistent with symptoms of cardiac arrhythmia or panic attack. However, the ESI Level Assessment of 4 may not accurately reflect the severity due to its focus on trauma-related emergencies rather than cardiovascular issues. A more appropriate assessment might be the Triage Acuity Scale (TAS) which could provide a better evaluation based on the presented symptoms.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient is experiencing symptoms such as a racing heart, skipping beats, anxiety, and shortness of breath, which are common symptoms of cardiac conditions. However, the absence of other factors like chest pain, history of cardiovascular disease, or risk factors (e.g., smoking, high blood pressure) could potentially lower the certainty of this being a high-acuity emergency. Nonetheless, given the serious nature of these symptoms, further evaluation is needed.\"}",
+          " {\"confidence\": 75,\n \"reasoning\": \"The ESI level 4 assessment suggests that the patient is experiencing acute coronary syndrome (ACS), which includes unstable angina or non-ST segment elevation myocardial infarction (NSTEMI). The symptoms of heart palpitations, anxiety, and shortness of breath are consistent with these conditions. However, a definitive diagnosis requires further evaluation such as electrocardiogram (ECG), cardiac enzymes, and potentially stress testing or coronary angiography. A confidence level of 75% is given considering the patient's symptoms but acknowledging the need for additional diagnostic tests.\"}"
+        ],
+        "parsed_data": [
+          65,
+          75,
+          75,
+          75,
+          75
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "multi_step_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 70,\n\"step_confidences\": [85, 60, 50, 80],\n\"reason\": \"The patient's symptoms of heart racing, skipping beats, anxiety, and shortness of breath suggest a potentially serious cardiovascular condition that could require further evaluation and treatment. However, the exact ESI level cannot be definitively determined without more detailed information about the patient's vital signs, medical history, and current medications.\n\nStep 1: The symptoms described are concerning but not immediately life-threatening (85% confidence).\n\nStep 2: The patient is experiencing significant distress and discomfort, indicating a high-risk situation or severe pain/distress (60% confidence).\n\nStep 3: Based on the information provided, it is unclear how many resources will be needed for this patient (50% confidence).\n\nStep 4: The vital signs were not specified in the provided information, which affects the ESI level determination (80% confidence).\"}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 70,\n\"step_confidences\": [85, 60, 50, 80],\n\"reason\": \"The patient's symptoms of heart racing, skipping beats, anxiety, and shortness of breath suggest a potentially serious cardiovascular condition that could require further evaluation and treatment. However, the exact ESI level cannot be definitively determined without more detailed information about the patient's vital signs, medical history, and current medications.\n\nStep 1: The symptoms described are concerning but not immediately life-threatening (85% confidence).\n\nStep 2: The patient is experiencing significant distress and discomfort, indicating a high-risk situation or severe pain/distress (60% confidence).\n\nStep 3: Based on the information provided, it is unclear how many resources will be needed for this patient (50% confidence).\n\nStep 4: The vital signs were not specified in the provided information, which affects the ESI level determination (80% confidence).\"}",
+          " {\"esi_level\": 2, \"confidence\": 70,\n\"step_confidences\": [85, 60, 50, 90],\n\"reason\": \"The patient reports symptoms of an irregular heartbeat and anxiety which are indicative of a possible cardiac issue. Although not life-threatening immediately, it falls under high risk due to the nature of the complaint (Step 1: 85%). The patient's description of severe distress and feelings of shortness of breath suggest a high-risk situation or significant pain/distress (Step 2: 60%).\n\nThe resources required for this patient may include further diagnostic tests and potentially cardiology consultation, but it is not immediately clear if they will need intensive care (Step 3: 50%). The patient's vital signs are within normal limits upon initial assessment, which can affect the ESI level determination (Step 4: 90%).\n\nThe final ESI level is determined to be a 2 due to the urgent nature of the symptoms and potential for further complications. The overall confidence in this assessment is 70%, as there are uncertainties regarding the exact resource requirements.\"}",
+          " {\"esi_level\": \"Not Determined\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"Insufficient patient information provided to accurately assess ESI level.\"}\n\nReasoning: The provided information does not include enough details about the patient's vital signs (like blood pressure, heart rate, oxygen saturation) or other pertinent medical history that are necessary for a reliable assessment of the Emergency Severity Index (ESI) level. A more complete picture is required to make an informed decision regarding the urgency and resource allocation for this patient.",
+          " {\"esi_level\": 2, \"confidence\": 80, \"step_confidences\": [70, 95, 60, 85], \"reason\": \"The patient is experiencing symptoms of a potentially serious cardiovascular issue (heart racing and skipping beats), which could indicate a high-risk situation or involve severe distress. However, the vital signs are not provided to confirm if they are within normal limits. Given the nature of the symptoms, an ESI level 2 seems appropriate with a confidence level of 80%.\"}",
+          " {\n  \"esi_level\": \"Not specified\",\n  \"confidence\": \"50\",\n  \"step_confidences\": [\n    \"Step 1: Assess if this is a life-threatening condition requiring immediate intervention (ESI 1): 30%\",\n    \"Step 2: Assess if this is a high-risk situation or involves severe pain/distress (ESI 2): 40%\",\n    \"Step 3: Determine how many resources this patient will need (for ESI 3-5): 10%\",\n    \"Step 4: Evaluate if vital signs are within normal limits (can affect ESI level): Not applicable (vital signs not provided)\"\n  ],\n  \"reason\": \"Given the symptoms of a racing heart, skipped beats, anxiety, and shortness of breath, it is possible that this patient might require immediate medical attention (Step 1: 30%). However, without additional information about the severity of the symptoms and the overall health condition of the patient, it's difficult to assign a definite ESI level. Similarly, determining resource requirements and evaluating vital signs require more specific data (Steps 2-4).\"\n}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80,
+            [
+              70,
+              95,
+              60,
+              85
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "top_k_self_random_pair_rank": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 60.0,
+        "explanation": " {\n  \"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"60%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"20%\"}\n  ],\n  \"reason\": \"The patient is experiencing symptoms that could suggest cardiovascular or respiratory issues, such as a rapid heart rate, skipped beats, anxiety, and shortness of breath. A triage assessment (ESI level) for these symptoms would likely fall within levels 3 to 5 due to the potential severity.\"\n}\n\nThe top assessment is ESI level 3 with an 80% confidence as it falls in the middle of the range, and the symptoms described could potentially indicate a serious cardiac or respiratory issue. However, further evaluation such as an electrocardiogram (ECG) would be necessary for definitive diagnosis and to determine the appropriate ESI level.",
+        "needs_handoff": false,
+        "responses": [
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"60%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"20%\"}\n  ],\n  \"reason\": \"The patient is experiencing symptoms that could suggest cardiovascular or respiratory issues, such as a rapid heart rate, skipped beats, anxiety, and shortness of breath. A triage assessment (ESI level) for these symptoms would likely fall within levels 3 to 5 due to the potential severity.\"\n}\n\nThe top assessment is ESI level 3 with an 80% confidence as it falls in the middle of the range, and the symptoms described could potentially indicate a serious cardiac or respiratory issue. However, further evaluation such as an electrocardiogram (ECG) would be necessary for definitive diagnosis and to determine the appropriate ESI level.",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"75%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"20%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"5%\"}\n  ],\n  \"reason\": \"The patient's symptoms of a racing and irregular heartbeat, accompanied by anxiety and shortness of breath, are suggestive of cardiac or respiratory distress. ESI level 3 is the most likely given these symptoms, as it indicates acute or potentially life-threatening conditions such as chest pain, difficulty breathing, uncontrolled bleeding, etc.\"\n}\n\nThis patient's symptoms are indicative of possible heart-related issues, such as atrial fibrillation, which can cause an irregular and rapid heartbeat. These symptoms may also be caused by anxiety or other respiratory conditions, but given the specificity of the heart-related symptoms, it is most likely that this patient requires urgent attention (ESI level 3). However, there is still a chance that other factors might be contributing to their symptoms, such as ESI levels 4 (semi-urgent) or 5 (non-emergency), and further evaluation by a healthcare professional would be required to make an accurate diagnosis.",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"G3\", \"confidence\": \"90%\"},\n    {\"esi_level\": \"G2\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"G1\", \"confidence\": \"50%\"}\n  ],\n  \"reason\": \"Symptoms of heart palpitations, anxiety, and shortness of breath could indicate a cardiac issue (G3). However, the patient's history is not provided, so other possibilities such as respiratory issues (G2) or anxiety disorders (G1) cannot be ruled out completely based on the given information.\"\n}\n\nBrief reasoning for the top assessment: The symptoms mentioned are commonly associated with cardiac conditions. However, the absence of other accompanying symptoms or specific risk factors could decrease the likelihood of a serious cardiac issue. The patient's history would provide more context to determine the exact probability and ESI level.",
+          " {\"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"15%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"5%\"}\n],\n\"reason\": \"Given the symptoms of a racing and irregular heartbeat, shortness of breath, and anxiety, these are indicative of a possible cardiac condition. The patient's ECG may help confirm the diagnosis. However, it is essential to consider other possible causes such as anxiety disorders or respiratory issues, hence the lower confidence in ESI level 1.\"}\n\nBrief reasoning for top assessment: The symptoms of heart palpitations, shortness of breath, and anxiety can suggest a cardiac condition like atrial fibrillation or another arrhythmia. However, it is essential to rule out other possibilities such as anxiety disorders or respiratory issues, which is why the ESI level is not definitively 1.",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"80%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"15%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"5%\"}\n  ],\n  \"reason\": \"Symptoms such as a racing heart, skipped beats, anxiety, and shortness of breath are common with ESI levels 3-5 and could indicate a cardiac issue. However, the exact probability depends on additional factors like age, risk factors, and physical examination results.\"\n}\n\nThe top assessment is ESI level 3 with an 80% confidence. This is because the symptoms mentioned are common in patients with chest pain or discomfort (ESI level 3). However, it's important to note that additional factors such as age, risk factors, and physical examination results would be needed for a definitive diagnosis. The other two assessments are less likely due to the specific symptoms presented but still possible given the limited information provided."
+        ],
+        "parsed_data": [
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              80,
+              60,
+              20
+            ]
+          ],
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              75,
+              20,
+              5
+            ]
+          ],
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              80,
+              15,
+              5
+            ]
+          ],
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              80,
+              15,
+              5
+            ]
+          ]
+        ],
+        "prompt_strategy": "top_k",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "pair_rank"
       },
       "top_k_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\n  \"guesses\": [\n    {\n      \"esi_level\": \"G3\",\n      \"confidence\": \"75%\"\n    },\n    {\n      \"esi_level\": \"G2\",\n      \"confidence\": \"20%\"\n    },\n    {\n      \"esi_level\": \"G1\",\n      \"confidence\": \"5%\"\n    }\n  ],\n  \"reason\": \"The patient's symptoms of a racing and skipping heartbeat, anxiety, and shortness of breath could indicate a cardiovascular issue (G3). These symptoms are commonly associated with arrhythmias or heart disease. However, the symptoms could also be caused by other factors such as stress or anxiety (G2), but they seem less likely given the specific nature of the patient's complaints.\"\n}",
+        "needs_handoff": false,
+        "responses": [
+          " {\n  \"guesses\": [\n    {\n      \"esi_level\": \"G3\",\n      \"confidence\": \"75%\"\n    },\n    {\n      \"esi_level\": \"G2\",\n      \"confidence\": \"20%\"\n    },\n    {\n      \"esi_level\": \"G1\",\n      \"confidence\": \"5%\"\n    }\n  ],\n  \"reason\": \"The patient's symptoms of a racing and skipping heartbeat, anxiety, and shortness of breath could indicate a cardiovascular issue (G3). These symptoms are commonly associated with arrhythmias or heart disease. However, the symptoms could also be caused by other factors such as stress or anxiety (G2), but they seem less likely given the specific nature of the patient's complaints.\"\n}",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"75%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"20%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"5%\"}\n  ],\n  \"reason\": \"The symptoms of racing heart, skipped beats, anxiety, and shortness of breath may suggest a cardiac issue or anxiety disorder. A racing heart and skipped beats could indicate heart disease or arrhythmia (ESI level 3). However, these symptoms can also be associated with anxiety disorders, which are more likely to present with additional symptoms like chest pain but still warrant attention (ESI level 4). The least probable scenario is acute life-threatening conditions such as a myocardial infarction (ESI level 5) since the patient did not report severe or persistent chest pain.\"\n}",
+          " {\n  \"guesses\": [\n    {\"esi_level\": \"3\", \"confidence\": \"70%\"},\n    {\"esi_level\": \"4\", \"confidence\": \"25%\"},\n    {\"esi_level\": \"5\", \"confidence\": \"5%\"}\n  ],\n  \"reason\": \"The symptoms of a racing and irregular heartbeat, anxiety, and shortness of breath can suggest cardiac or respiratory emergencies. However, given the absence of other severe symptoms such as chest pain, fainting, or loss of consciousness, an ESI level 3 is the most likely, with possible presentations including a cardiovascular issue like atrial fibrillation or tachycardia. ESI level 4 might also be considered due to the respiratory symptoms such as shortness of breath, but it's less likely without other signs of respiratory distress. An ESI level 5 is least probable given the mild presentation.\"\n}",
+          " {\n  \"guesses\": [\n    {\n      \"esi_level\": \"3\",\n      \"confidence\": \"80\"\n    },\n    {\n      \"esi_level\": \"4\",\n      \"confidence\": \"60\"\n    },\n    {\n      \"esi_level\": \"5\",\n      \"confidence\": \"40\"\n    }\n  ],\n  \"reason\": \"Symptoms of palpitations, anxiety, and shortness of breath can be indicative of a cardiac issue (G1: ESI level 3), such as arrhythmia or heart disease. However, these symptoms are also common in patients with high levels of stress or anxiety (G2: ESI level 4) and may be related to a psychological condition. Additionally, the symptoms could potentially be attributed to less urgent conditions like hyperthyroidism or anemia (G3: ESI level 5), which would require further tests to confirm.\"\n}",
+          " {\n  \"guesses\": [\n    {\n      \"esi_level\": \"3\",\n      \"confidence\": \"80\"\n    },\n    {\n      \"esi_level\": \"4\",\n      \"confidence\": \"15\"\n    },\n    {\n      \"esi_level\": \"5\",\n      \"confidence\": \"5\"\n    }\n  ],\n  \"reason\": \"Symptoms of heart palpitations, anxiety, and shortness of breath could suggest a cardiovascular emergency (ESI level 1), but given the absence of severe chest pain, this seems less likely. The patient's symptoms are more consistent with an ESI level 3 or 4 condition such as an arrhythmia or congestive heart failure, respectively. However, it is important to consider that these conditions can also present at lower severity levels (ESI 5), especially in the absence of a complete medical history.\"\n}"
+        ],
+        "parsed_data": [
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              75,
+              20,
+              5
+            ]
+          ],
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              70,
+              25,
+              5
+            ]
+          ],
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              80,
+              60,
+              40
+            ]
+          ],
+          [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              80,
+              15,
+              5
+            ]
+          ]
+        ],
+        "prompt_strategy": "top_k",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       }
     },
     "ground_truth": 2,

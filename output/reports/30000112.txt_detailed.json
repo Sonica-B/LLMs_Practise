@@ -3,8 +3,8 @@
   "chief_complaint": "I've been feeling weak and tired lately, and sometimes I get dizzy, like the room is spinning around me.",
   "predicted": {
     "esi_level": 3,
-    "confidence": 0.7,
-    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+    "confidence": 0.8,
+    "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"80\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient is experiencing weakness, dizziness, and imbalance. While there are no immediate life-threatening symptoms or high levels of pain/distress, the patient's condition requires multiple resources due to the need for diagnostic tests and potential management of underlying conditions such as anemia. The symptoms of stumbling and holding onto objects for support suggest a possible balance issue.\"\n}",
     "risk_factors": [],
     "needs_handoff": false,
     "qa_count": 10
@@ -19,14 +19,14 @@
           "questions_asked": 0,
           "question_type": "None",
           "confidence": 0.7,
-          "esi_level": 3,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
@@ -39,58 +39,58 @@
         {
           "questions_asked": 3,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 4,
           "question_type": "Essential",
           "confidence": 0.7,
-          "esi_level": 3,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 5,
           "question_type": "Essential",
           "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "esi_level": 4,
+          "needs_handoff": true
         },
         {
           "questions_asked": 6,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 7,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 8,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 9,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 4,
+          "needs_handoff": true
         }
       ],
       "ground_truth": 3
@@ -98,53 +98,359 @@
     "elicitation": {
       "vanilla_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": \"2\", \"confidence\": \"80\", \"reason\": \"The patient reports symptoms such as weakness, fatigue, and dizziness which could indicate a non-urgent medical condition like anemia, dehydration, or low blood sugar. The presence of only nonspecific symptoms without signs of airway compromise, acute abdomen, or mental status changes suggests a lower ESI level.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"2\", \"confidence\": \"80\", \"reason\": \"The patient reports symptoms such as weakness, fatigue, and dizziness which could indicate a non-urgent medical condition like anemia, dehydration, or low blood sugar. The presence of only nonspecific symptoms without signs of airway compromise, acute abdomen, or mental status changes suggests a lower ESI level.\"}",
+          " {\"esi_level\": 3, \"confidence\": 75, \"reason\": \"The patient reports symptoms of dizziness and weakness, which could suggest a neurological or cardiovascular issue. While not an immediate life-threatening emergency, these symptoms warrant further investigation.\"}",
+          " {\"esi_level\": 3, \"confidence\": 70, \"reason\": \"The patient's symptoms of weakness, tiredness, and dizziness could indicate various conditions such as anemia, dehydration, or low blood sugar, which may require further evaluation. However, the absence of more severe symptoms like chest pain, shortness of breath, or unconsciousness suggest a lower acuity level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms such as weakness, tiredness, and dizziness which could indicate various conditions like anemia, dehydration, or low blood sugar. However, these are non-critical symptoms and do not warrant immediate attention (Level 3).\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"70%\", \"reason\": \"The patient reports symptoms of general weakness, tiredness, and dizziness which may indicate a non-emergency neurological issue. However, the presence of dizziness could potentially indicate a more urgent condition if it's accompanied by other severe symptoms.\"}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            70
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            70
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "vanilla_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 76.25,
+        "explanation": " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient's symptoms of weakness, tiredness, and dizziness could indicate a non-emergency condition such as anemia or low blood pressure, but they also may be signs of more serious conditions like a stroke. A thorough examination is necessary to accurately determine the severity.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient's symptoms of weakness, tiredness, and dizziness could indicate a non-emergency condition such as anemia or low blood pressure, but they also may be signs of more serious conditions like a stroke. A thorough examination is necessary to accurately determine the severity.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"70\", \"reason\": \"The patient is experiencing non-acute symptoms such as weakness, tiredness, and dizziness. These symptoms could be indicative of various conditions but are not immediately life-threatening. However, they can significantly affect the patient's quality of life.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient reports symptoms of weakness, fatigue, and dizziness, which may be indicative of a non-emergency condition such as anemia or dehydration. However, the possibility of a more serious issue like cardiovascular disease or inner ear problems cannot be completely ruled out at this stage, hence ESI level 3.\"}",
+          " {\"esi_level\": 3, \"confidence\": 75, \"reason\": \"The patient is experiencing symptoms such as weakness, fatigue, and dizziness, which can be indicative of various conditions like anemia, dehydration, or neurological issues. While not immediately life-threatening, these symptoms warrant further evaluation and potentially urgent care.\"}",
+          " {\"esi_level\": \"2\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing symptoms suggestive of orthostatic hypotension or a mild neurological issue, which may require further evaluation but does not appear immediately life-threatening.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            70
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_misleading_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing non-specific symptoms such as weakness, tiredness, and dizziness. While these can be indicative of serious conditions like heart disease or neurological issues, they are more likely related to common ailments such as dehydration, anemia, or medication side effects. A full evaluation is needed, but the immediate concern does not seem critical.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is experiencing non-specific symptoms such as weakness, tiredness, and dizziness. While these can be indicative of serious conditions like heart disease or neurological issues, they are more likely related to common ailments such as dehydration, anemia, or medication side effects. A full evaluation is needed, but the immediate concern does not seem critical.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient reports non-acute symptoms such as weakness, fatigue, and dizziness without any signs of immediate danger or acuity. The presence of mild pain (3/10) further supports a low acuity level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's chief complaint of weakness, tiredness, and dizziness suggests a potential neurological or cardiovascular issue, which falls within the ESI Level 3 category. However, without additional symptoms or vital signs, this assessment is not definitive.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"While the symptoms could indicate orthostatic hypotension or other underlying conditions, the patient's history of anxiety suggests a higher likelihood of these symptoms being related to anxiety. However, it is important to rule out any potential physical causes as well.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of weakness, tiredness, and dizziness suggest a possible neurological issue or anemia. However, the absence of fever indicates a lower acuity level. The ESI Level 3 is appropriate as it applies to patients who are ambulatory and mildly ill.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of weakness, fatigue, and dizziness could be indicative of an underlying medical condition such as anemia or hypotension, which are generally classified under ESI Level 3.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of weakness, fatigue, and dizziness could be indicative of an underlying medical condition such as anemia or hypotension, which are generally classified under ESI Level 3.\"}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"75\",\n  \"reason\": \"The patient's symptoms of weakness, fatigue, and dizziness could potentially indicate an underlying medical condition such as anemia, low blood pressure, or even a neurological issue. However, further evaluation is required for accurate diagnosis and ESI level determination.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80%\", \"reason\": \"The patient is experiencing symptoms such as weakness, tiredness, and dizziness, which could suggest a possible neurological or cardiovascular issue. These symptoms are not immediately life-threatening but do require medical attention. Therefore, the ESI level for this patient would be 3.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The symptoms described by the patient such as weakness, tiredness and dizziness can be associated with various conditions including anemia, low blood sugar, dehydration or even early signs of cardiovascular disease. However, these are non-specific symptoms and further investigation is required to determine the cause. Hence, an ESI level 3 is appropriate.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of weakness, tiredness, and dizziness could indicate various conditions such as anemia, hypotension, or inner ear problems. However, without more specific information about the patient's vital signs, medical history, or lab results, it's difficult to definitively assign a level. ESI Level 3 is used for patients with non-acute symptoms that may require additional testing or specialist referral.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2,\n \"confidence\": 80,\n \"steps\": [\"1. The patient is not currently dying or about to die. However, the symptoms of weakness, tiredness, dizziness, and spinning room suggest a potential serious condition such as vertigo, inner ear problems, low blood pressure, or anemia.\",\n           \"2. Although the exact diagnosis is not clear, the patient's symptoms are causing distress and discomfort, which falls under ESI level 2 criteria for high-risk situations or severe pain/distress.\",\n           \"3. The patient will likely need medical evaluation, diagnostic tests, and possibly treatment depending on the final diagnosis.\",\n           \"4. Vital signs were not provided in the given information to assess their concern, but based on the symptoms mentioned, they could potentially be abnormal.\"]\n}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2,\n \"confidence\": 80,\n \"steps\": [\"1. The patient is not currently dying or about to die. However, the symptoms of weakness, tiredness, dizziness, and spinning room suggest a potential serious condition such as vertigo, inner ear problems, low blood pressure, or anemia.\",\n           \"2. Although the exact diagnosis is not clear, the patient's symptoms are causing distress and discomfort, which falls under ESI level 2 criteria for high-risk situations or severe pain/distress.\",\n           \"3. The patient will likely need medical evaluation, diagnostic tests, and possibly treatment depending on the final diagnosis.\",\n           \"4. Vital signs were not provided in the given information to assess their concern, but based on the symptoms mentioned, they could potentially be abnormal.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's symptoms of weakness, tiredness, dizziness and room spinning suggest possible neurological or cardiovascular issues, but they do not indicate imminent danger (ESI 1).\\n2. Although the symptoms are concerning, they fall under ESI 2 as they represent a high-risk situation or severe pain/distress due to their potential to affect the patient's ability to perform activities of daily living.\\n3. The number of resources needed for this patient would be moderate, as they likely require initial assessment by medical staff, potentially including tests such as blood work and EKG to determine the cause of symptoms.\\n4. Vital signs were not provided in this case, but if concerning findings are discovered upon examination or through subsequent tests, it could warrant an upgrade to ESI 1.\"] }",
+          " {\"esi_level\": 2,\n \"confidence\": 80,\n \"steps\": [\"1. The patient is not dying or about to die. However, the symptoms of weakness, tiredness, dizziness, and feeling like the room is spinning could potentially indicate a serious condition such as dehydration, anemia, or low blood sugar (hypoglycemia).\",\n           \"2. While not explicitly mentioning severe pain or distress, these symptoms can cause significant discomfort for the patient.\",\n           \"3. The number of resources needed will likely be moderate as the patient will require initial assessment and monitoring, potentially followed by diagnostic tests such as a complete blood count (CBC) or blood glucose test.\",\n           \"4. Vital signs are not provided in the given information, but if the patient's blood pressure, pulse, respiratory rate, temperature, or oxygen saturation were found to be abnormal, it could potentially raise the ESI level.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die. However, the symptoms of weakness, tiredness, and dizziness could indicate a serious condition if they persist. (ESI 1 excluded)\",\n\"2. Although the symptoms are concerning, they do not necessarily represent a high-risk situation or severe pain/distress at this moment. (ESI 2 possible)\",\n\"3. The number of resources required for this patient may increase if their condition worsens or further investigations are needed, but at present, it's not clear how many resources will be necessary. (Factors for ESI 3-5 unclear)\",\n\"4. Vital signs were not provided in the patient information, which could impact the ESI level determination if they were available. However, given the symptoms, the absence of severe vital sign abnormalities is assumed at this point. (ESI level may change based on vital signs)\"]}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not currently experiencing symptoms that suggest they are dying or about to die (ESI 1).\",\n\"2. Although the patient's symptoms of weakness, tiredness, and dizziness could indicate a serious condition such as a neurological issue or low blood pressure, they do not seem to be experiencing severe pain or distress (ESI 2).\",\n\"3. The patient may require some resources for further investigation and treatment, but the initial presentation does not suggest a high level of resource utilization (ESI 3-5).\",\n\"4. Vital signs are not provided in this case, but if they were concerning (e.g., low blood pressure, rapid heart rate), it could move the ESI level to a higher category.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 77.5,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's complaint suggests they might have an underlying condition such as low blood pressure or anemia, but it doesn't indicate that the patient is dying or about to die (ESI 1).\",\n\"2. The patient complains of weakness, tiredness, dizziness, and room spinning, which could be symptoms of a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. While the severity is high, the resources needed for this case are expected to be moderate, as it may require diagnostic tests like blood work and possibly medication adjustments.\",\n\"4. No vital signs are provided in this case. However, symptoms such as dizziness and weakness often show up without any significant changes in vital signs.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's complaint suggests they might have an underlying condition such as low blood pressure or anemia, but it doesn't indicate that the patient is dying or about to die (ESI 1).\",\n\"2. The patient complains of weakness, tiredness, dizziness, and room spinning, which could be symptoms of a high-risk situation or severe pain/distress (ESI 2).\",\n\"3. While the severity is high, the resources needed for this case are expected to be moderate, as it may require diagnostic tests like blood work and possibly medication adjustments.\",\n\"4. No vital signs are provided in this case. However, symptoms such as dizziness and weakness often show up without any significant changes in vital signs.\"] }",
+          " {\"esi_level\": 3, \"confidence\": 80, \"steps\": [\"1. The patient is not showing signs of imminent death or a high-risk situation.\",\n\"2. The symptoms described (weakness, tiredness, and dizziness) are concerning but do not indicate an immediate life-threatening condition.\",\n\"3. This patient will likely require moderate resources for diagnostic testing to determine the cause of their symptoms, such as blood tests or imaging.\",\n\"4. Vital signs were not provided in the given information, but assuming they are within normal ranges, this does not significantly affect the ESI level.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not in immediate danger of death (dying or about to die).\",\n                                               \"2. Although the symptoms such as weakness, tiredness, and dizziness could indicate a serious condition like low blood pressure or anemia, they are not typically high-risk situations or severe pain/distress.\",\n                                               \"3. Resource requirements for this patient would likely be minimal, assuming no further complications.\",\n                                               \"4. Vital signs were not provided in the given information. However, even if vital signs were concerning, they might only slightly alter the ESI level from 2 to a borderline case of ESI 3.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not currently dying or about to die.\",\n\"2. The symptoms of weakness, tiredness, dizziness and room spinning could indicate a serious condition such as low blood pressure, inner ear problems, or even stroke (high-risk situation), but without further information it's hard to definitively label this as severe pain/distress.\",\n\"3. The patient will likely need some resources for evaluation and diagnosis.\",\n\"4. Vital signs were not provided in the given information, but based on the symptoms listed, it is possible that they may be abnormal.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die as their symptoms (weakness, tiredness, dizziness) do not indicate an imminent threat to life.\",\n\"2. Although the symptoms could suggest conditions such as dehydration, anemia, or even a neurological issue, they are still considered high-risk due to the possibility of underlying serious conditions causing these symptoms.\",\n\"3. This patient may require moderate resources for initial assessment and further investigations (blood tests, ECG) to identify the cause of their symptoms.\",\n\"4. Vital signs were not provided in the information given, but normal vital signs would not rule out the possibility of a high-risk situation.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            70
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "cot_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2,\n \"confidence\": 70,\n \"steps\": [\n   \"The patient is reporting symptoms of weakness, tiredness, and dizziness which could indicate a neurological or cardiovascular issue.\",\n   \"There are no immediate life-threatening signs mentioned in the chief complaint, but these symptoms can still be severe and cause distress for the patient.\",\n   \"Given the reported symptoms, the patient may require some resources such as diagnostic tests to determine the underlying cause of their condition. However, the situation does not seem to necessitate immediate high-resource interventions.\",\n   \"Vital signs are not explicitly provided in this case, but based on the symptoms mentioned, further evaluation would be needed to assess the patient's vital signs and overall condition.\"\n ]}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2,\n \"confidence\": 70,\n \"steps\": [\n   \"The patient is reporting symptoms of weakness, tiredness, and dizziness which could indicate a neurological or cardiovascular issue.\",\n   \"There are no immediate life-threatening signs mentioned in the chief complaint, but these symptoms can still be severe and cause distress for the patient.\",\n   \"Given the reported symptoms, the patient may require some resources such as diagnostic tests to determine the underlying cause of their condition. However, the situation does not seem to necessitate immediate high-resource interventions.\",\n   \"Vital signs are not explicitly provided in this case, but based on the symptoms mentioned, further evaluation would be needed to assess the patient's vital signs and overall condition.\"\n ]}",
+          " {\n  \"esi_level\": 2,\n  \"confidence\": 80,\n  \"steps\": [\n    \"Chief Complaint: The patient is experiencing symptoms such as weakness, tiredness, dizziness, and feeling like the room is spinning. These can be indicative of several conditions, such as dehydration, anemia, vertigo, or even more serious conditions like cardiovascular disease.\",\n    \"Patient History: No specific historical data was provided. However, without any known pre-existing conditions or recent traumatic events, the symptoms presented seem to be of moderate concern.\",\n    \"1. Is this patient dying or about to die? (ESI 1): The symptoms do not suggest an immediate life-threatening condition, but it's important to rule out serious underlying causes.\",\n    \"2. Is this a high-risk situation or severe pain/distress? (ESI 2): Given the symptoms of weakness, dizziness, and potential vertigo, the patient may require further evaluation for their condition which puts them in the ESI 2 category.\",\n    \"3. How many resources will this patient need? (For ESI 3-5): Depending on the findings from initial assessments, this patient might need diagnostic tests such as blood tests, electrocardiograms, or imaging studies to determine the cause of their symptoms.\",\n    \"4. Are vital signs concerning? (Can affect ESI level): No specific vital sign data was provided. However, if the patient's blood pressure, pulse rate, oxygen saturation, or temperature are outside the normal range, it could impact the ESI level.\",\n    \"Overall, the patient's symptoms and lack of significant historical information suggest a moderate-risk situation (ESI 2). Further evaluation is necessary to rule out more serious conditions and determine the appropriate course of action.\"\n  ]\n}",
+          " {\"esi_level\": \"2\", \"confidence\": \"75%\", \"steps\": [\"1. The patient's complaint of weakness, tiredness, dizziness and feeling like the room is spinning could indicate a neurological or cardiovascular issue. However, these symptoms alone do not immediately suggest that the patient is dying or about to die (ESI 1).\",\n\"2. Although the symptoms are concerning, they do not yet represent a high-risk situation or severe pain/distress (ESI 2) as there is no mention of acute loss of consciousness, chest pain, shortness of breath, or signs of a stroke.\",\n\"3. The patient may require medical attention and possible hospitalization for further investigations and treatment, but the resources needed are not unusually high (for ESI 3-5).\",\n\"4. Without specific vital sign information provided, it is not possible to determine if they are concerning or not, which could potentially affect the ESI level.\"]",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die. However, the symptoms of weakness, tiredness, dizziness, and feeling like the room is spinning could indicate serious conditions such as vertigo, anemia, or low blood pressure.\",\n\"2. While these symptoms are concerning and may cause significant distress for the patient, they do not immediately qualify this as a high-risk situation.\",\n\"3. This patient may require some resources such as laboratory tests (complete blood count, electrolyte levels, etc.), possibly an EKG if there are associated heart symptoms, or referral to a specialist depending on findings.\",\n\"4. Vital signs were not provided in the case. If concerning vital signs were present (e.g., low blood pressure, rapid heart rate, etc.), it could potentially escalate the ESI level.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 70, \"steps\": [\"1. The patient is not dying or about to die but is experiencing symptoms such as weakness, tiredness, and dizziness which could be indicative of various conditions.\",\n\"2. While the exact cause for these symptoms is unknown at this point, they can be considered a high-risk situation due to potential underlying issues such as cardiovascular disease, neurological disorders, or anemia.\",\n\"3. The patient may require multiple resources including diagnostic tests (e.g., blood tests, EKG) and possibly specialist referrals depending on the results of these tests.\",\n\"4. No vital signs are mentioned in the provided information, so it is not possible to assess their level of concern at this time.\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            70
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            70
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 75,\n \"reasoning\": \"The symptoms of weakness, fatigue, and dizziness could be indicative of several conditions such as anemia, dehydration, low blood pressure, or even neurological issues. However, the initial ESI level assessment seems to focus on musculoskeletal issues (ESI level refers to a system for categorizing spinal nerve roots based on their location and potential injury). Given that no back pain is explicitly mentioned in the chief complaint, the initial assessment may be overlooking other possible causes of the patient's symptoms. Therefore, a reassessment focusing on the reported symptoms might be more appropriate.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 75,\n \"reasoning\": \"The symptoms of weakness, fatigue, and dizziness could be indicative of several conditions such as anemia, dehydration, low blood pressure, or even neurological issues. However, the initial ESI level assessment seems to focus on musculoskeletal issues (ESI level refers to a system for categorizing spinal nerve roots based on their location and potential injury). Given that no back pain is explicitly mentioned in the chief complaint, the initial assessment may be overlooking other possible causes of the patient's symptoms. Therefore, a reassessment focusing on the reported symptoms might be more appropriate.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient is experiencing symptoms such as weakness, tiredness, and dizziness which can suggest various health conditions like anemia, dehydration, low blood sugar, inner ear problems, or even neurological issues. However, the fact that these symptoms are not accompanied by severe headaches, visual disturbances, loss of consciousness, or other specific symptoms that point towards a high ESI level, leads to a moderate confidence in the current ESI level assessment.\"}",
+          " {\"confidence\": 65,\n\"reasoning\": \"The ESI Level 3 assessment could be correct given the symptoms described (weakness, tiredness, and dizziness), which can be indicative of conditions such as anemia, dehydration, or cardiovascular issues. However, without further information like the patient's age, gender, medical history, medication use, or results from recent physical examinations or lab tests, the assessment is not definitive.\"}",
+          " {\"confidence\": 60, \"reason\": \"The ESI level 3 assessment seems plausible given the symptoms described (weakness, fatigue, and dizziness), as these are common with various conditions such as anemia, cardiovascular disease, or neurological disorders. However, a more detailed evaluation would be required to confirm or rule out these possibilities and determine the exact cause.\"}",
+          " {\"confidence\": 75, \"reason\": \"The patient's symptoms such as weakness, tiredness, and dizziness could suggest various conditions including anemia, hypoglycemia, or inner ear problems. However, the presence of no reported severe symptoms like chest pain, shortness of breath, or loss of consciousness suggests a lower ESI level. The patient's age or other significant health history is not provided, which may influence the assessment. Thus, the given ESI level (3) seems plausible but may need further evaluation to rule out more serious conditions.\"}"
+        ],
+        "parsed_data": [
+          75,
+          75,
+          65,
+          60,
+          75
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 62.0,
+        "explanation": " {\"confidence\": 60,\n \"reasoning\": \"The ESI (Emergency Severity Index) Level 3 assessment suggests a moderate acuity patient with a non-urgent condition. The symptoms described - weakness, tiredness, and occasional dizziness - are non-specific and could be indicative of various conditions such as anemia, dehydration, or even early signs of cardiovascular disease. However, the absence of other symptoms that would suggest a more urgent medical need, like chest pain, shortness of breath, or severe headaches, warrants a lower level of urgency.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 60,\n \"reasoning\": \"The ESI (Emergency Severity Index) Level 3 assessment suggests a moderate acuity patient with a non-urgent condition. The symptoms described - weakness, tiredness, and occasional dizziness - are non-specific and could be indicative of various conditions such as anemia, dehydration, or even early signs of cardiovascular disease. However, the absence of other symptoms that would suggest a more urgent medical need, like chest pain, shortness of breath, or severe headaches, warrants a lower level of urgency.\"}",
+          " {\"confidence\": 70,\n \"reasoning\": \"The given symptoms such as weakness, tiredness, and dizziness could indicate various conditions like anemia, low blood pressure, or even neurological issues. However, the ESI level 3 assessment seems plausible as it suggests a moderate acuity level that includes problems requiring active monitoring, diagnostic tests, or both. A more detailed physical examination and further diagnostic tests would be required to confirm the exact diagnosis.\"}",
+          " {\"confidence\": 60, \"reasoning\": \"The patient is complaining of weakness, tiredness, and dizziness, which are common symptoms that can be associated with a variety of medical conditions. However, the ESI level 3 assessment seems to focus primarily on minor injuries or acute illnesses, and it doesn't take into account the patient's symptoms such as dizziness and fatigue, which could indicate more serious conditions like cardiovascular issues, neurological problems, or anemia. Therefore, while there is some likelihood that ESI level 3 might be correct, given the additional symptoms presented, further investigation would be needed to rule out other possible causes.\"}",
+          " {\"confidence\": 60, \"reason\": \"The patient is experiencing symptoms such as weakness, tiredness, and dizziness. These could be indicative of various conditions including anemia, dehydration, low blood sugar, or inner ear problems. However, without further diagnostic tests, it's difficult to definitively determine the cause of these symptoms. Therefore, the ESI level assessment of 3 might not be entirely accurate as it is based on subjective symptoms rather than objective findings.\"}",
+          " {\"confidence\": 60, \"reason\": \"The ESI level 3 assessment is based on the chief complaint of weakness, tiredness, and dizziness. However, these symptoms can be associated with various conditions, some of which may not necessarily indicate a high acuity level. A more thorough physical examination, medical history, and laboratory tests are required to confirm this assessment.\"}"
+        ],
+        "parsed_data": [
+          60,
+          70,
+          60,
+          60,
+          60
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "multi_step_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 73.33333333333333,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 70,\n\"step_confidences\": [65, 80, 50, 90],\n\"reason\": \"The patient's symptoms of weakness, tiredness, dizziness, and feeling like the room is spinning suggest a non-life-threatening condition (Step 1: 65% confidence). The patient's symptoms also indicate a high-risk situation or severe distress (Step 2: 80% confidence). The need for resources will depend on further evaluation (Step 3: 50% confidence), and the vital signs being within normal limits can affect ESI level (Step 4: 90% confidence). Given these symptoms, an Emergency Severity Index (ESI) Level 2 is most appropriate as it corresponds to a patient with acute but treatable illness or injury who requires medical attention within hours to days.\",\n\"overall_confidence\": \"70%\"}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 70,\n\"step_confidences\": [65, 80, 50, 90],\n\"reason\": \"The patient's symptoms of weakness, tiredness, dizziness, and feeling like the room is spinning suggest a non-life-threatening condition (Step 1: 65% confidence). The patient's symptoms also indicate a high-risk situation or severe distress (Step 2: 80% confidence). The need for resources will depend on further evaluation (Step 3: 50% confidence), and the vital signs being within normal limits can affect ESI level (Step 4: 90% confidence). Given these symptoms, an Emergency Severity Index (ESI) Level 2 is most appropriate as it corresponds to a patient with acute but treatable illness or injury who requires medical attention within hours to days.\",\n\"overall_confidence\": \"70%\"}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"step_confidences\": [75, 90, 60, 85], \"reason\": \"The patient's symptoms of weakness, tiredness, dizziness, and feeling as if the room is spinning suggest a possible neurological or cardiovascular issue, which are high-risk situations. However, there is no immediate threat to the patient's life. The required resources will likely exceed minimal but not require intensive care. The vital signs are not provided in this case, but assuming they are abnormal for the patient, it could potentially impact the ESI level.\"}",
+          " {\"esi_level\": \"Not specified\", \"confidence\": 0, \"step_confidences\": [], \"reason\": \"Insufficient patient information provided to accurately determine ESI level or assess confidence in each step.\"}\n\nReasoning: The provided patient information lacks essential details such as vital signs, medical history, and symptoms beyond feeling weak, tired, and occasionally dizzy. Without these details, it's impossible to evaluate the urgency of the situation (ESI 1-5), assess resources required (Step 3), or determine if vital signs are within normal limits (Step 4).",
+          " {\"esi_level\": \"Not Applicable\", \"confidence\": \"NA\", \"step_confidences\": [], \"reason\": \"The provided symptoms do not clearly indicate a life-threatening emergency, high-risk situation, or severe pain/distress (ESI 1, ESI 2). However, the symptoms of weakness, tiredness, and dizziness can be associated with various conditions that might require medical attention. Since we don't have detailed patient history or vital signs, it is not possible to accurately determine resource requirements (ESI 3-5) or evaluate if vital signs are within normal limits (Step 4). Therefore, an ESI level cannot be determined.\"}",
+          " {\"esi_level\": 2,\n\"confidence\": 70,\n\"step_confidences\": [85, 60, 70, 90],\n\"reason\": \"The patient's complaint of weakness, tiredness, dizziness, and feeling like the room is spinning suggests a non-life-threatening condition (Step 1: 85% confidence). However, these symptoms could indicate severe disequilibrium or significant distress (Step 2: 60% confidence). The number of resources needed for this patient's care might be moderate, depending on the underlying cause (Step 3: 70% confidence). The patient's vital signs, not provided in the information, would be important to evaluate as they could affect the ESI level. Given the symptoms, a higher ESI level is possible if there are significant complications.\",\n\"explanation\": \"ESI (Emergency Severity Index) is a tool used for triaging patients based on their urgency of care. It has five levels ranging from 1 (immediate life-threatening conditions) to 5 (non-urgent). In this case, the patient's symptoms suggest a moderate level of urgency (ESI 2), but further information, particularly about vital signs and any underlying causes for the symptoms, would be needed to confirm this assessment. The confidence in each step is based on the interpretations made from the provided patient information.\"}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            70,
+            [
+              65,
+              80,
+              50,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              75,
+              90,
+              60,
+              85
+            ]
+          ],
+          [
+            2,
+            70,
+            [
+              85,
+              60,
+              70,
+              90
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "top_k_self_random_pair_rank": {
         "esi_level": 3,

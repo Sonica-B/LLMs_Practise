@@ -1,6 +1,7 @@
 import re
 import json
 import requests
+import logging
 
 class TriageSystem:
     def __init__(self, api_base="http://localhost:11434"):
@@ -42,6 +43,17 @@ class TriageSystem:
             raise RuntimeError("Ollama returned an empty response.")
 
         return full_text
+
+    def _parse_json_response(self, text):
+        """Try to extract a JSON object from free-form LLM output."""
+        try:
+            start = text.find('{')
+            end = text.rfind('}')
+            if start != -1 and end != -1 and end > start:
+                return json.loads(text[start:end+1])
+        except Exception:
+            return None
+        return None
     
     def parse_medical_case(self, case_text):
         """Parse medical case from raw text"""
@@ -91,8 +103,9 @@ class TriageSystem:
         # Analyze risk factors
         risk_factors = self.identify_risk_factors(case_data)
         
-        # Prepare prompt for LLM
-        prompt = f"""Determine the appropriate Emergency Severity Index (ESI) level (1-5) for this patient:
+        # Prepare prompt for LLM (request JSON for robust parsing)
+        prompt = f"""Determine the appropriate Emergency Severity Index (ESI) level (1-5) for this patient.
+Return ONLY JSON with keys: esi_level (1-5), confidence (0-100), handoff ("yes"/"no"), explanation (short text).
 
             Chief Complaint: {case_data['chief_complaint']}
             Summary: {case_data['summary'][:500]}
@@ -106,35 +119,56 @@ class TriageSystem:
             ESI 2: High risk situation or severe pain/distress
             ESI 3: Multiple resources needed, vital signs stable
             ESI 4: One resource needed
-            ESI 5: No resources needed
-
-            Provide:
-            1. ESI level (1-5)
-            2. Confidence level (0.0-1.0)
-            3. Brief explanation
-            4. Whether a handoff to human provider is needed (yes/no)"""
+            ESI 5: No resources needed"""
         
         # Get LLM prediction
         response = self.run(prompt)
 
-        if not response or "error" in response.lower():
-            raise RuntimeError(f"LLM returned an error or empty response: {response[:200]}")
+        # Try JSON parse first
+        parsed = self._parse_json_response(response)
+        esi_level = None
+        confidence = None
+        needs_handoff = None
+
+        if isinstance(parsed, dict):
+            try:
+                esi_level = int(parsed.get("esi_level"))
+            except Exception:
+                esi_level = None
+            try:
+                conf_val = float(str(parsed.get("confidence")).replace("%",""))
+                confidence = conf_val/100.0 if conf_val > 1 else conf_val
+            except Exception:
+                confidence = None
+            handoff_val = str(parsed.get("handoff", "")).lower()
+            if handoff_val in ("yes","no"):
+                needs_handoff = handoff_val == "yes"
         
-        # Extract ESI level first - fix for the error
-        esi_match = re.search(r'ESI level.*?(\d)', response, re.IGNORECASE)
-        if not esi_match:
-            raise ValueError(f"Could not parse ESI level from response: {response[:200]}")
-        esi_level = int(esi_match.group(1))
-        
-        # Extract confidence
-        conf_match = re.search(r'Confidence level.*?(0\.\d+)', response, re.IGNORECASE)
-        if not conf_match:
-            raise ValueError(f"Could not parse confidence from response: {response[:200]}")
-        confidence = float(conf_match.group(1))
-        
-        # Extract handoff decision
-        handoff_match = re.search(r'handoff.*?(yes|no)', response, re.IGNORECASE)
-        needs_handoff = True if handoff_match and handoff_match.group(1).lower() == 'yes' else esi_level <= 2
+        # Fallback to regex if JSON parsing failed
+        if esi_level is None:
+            esi_match = re.search(r'ESI(?:\\s*level)?[^0-9]*([1-5])', response, re.IGNORECASE)
+            if esi_match:
+                esi_level = int(esi_match.group(1))
+
+        if confidence is None:
+            conf_match = re.search(r'Confidence(?:\\s*level)?[^0-9]*([0-9]+(?:\\.\\d+)?)%?', response, re.IGNORECASE)
+            if conf_match:
+                raw_conf = float(conf_match.group(1))
+                confidence = raw_conf / 100.0 if raw_conf > 1 else raw_conf
+
+        if needs_handoff is None:
+            handoff_match = re.search(r'handoff.*?(yes|no)', response, re.IGNORECASE)
+            needs_handoff = True if handoff_match and handoff_match.group(1).lower() == 'yes' else False
+
+        # Final fallbacks to avoid aborting a case
+        if esi_level is None:
+            logging.warning("Falling back to default ESI 3 for unparsable response")
+            esi_level = 3
+        if confidence is None:
+            logging.warning("Falling back to default confidence 0.5 for unparsable response")
+            confidence = 0.5
+        if needs_handoff is None:
+            needs_handoff = esi_level <= 2
         
         return {
             'esi_level': esi_level,

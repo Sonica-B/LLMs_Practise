@@ -2,9 +2,9 @@
   "case_id": "30000202.txt",
   "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
   "predicted": {
-    "esi_level": 3,
-    "confidence": 0.7,
-    "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+    "esi_level": 4,
+    "confidence": 0.8,
+    "explanation": " {\n  \"esi_level\": \"4\",\n  \"confidence\": \"80\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient has a history of hives and an allergy to nuts, and has developed itching and hives after using a new shampoo and eating shellfish. While there are no immediate life-threatening symptoms, the patient's condition seems to be recurrent and may require medical attention due to potential allergic reaction. Therefore, ESI level 4 is appropriate.\"\n}",
     "risk_factors": [],
     "needs_handoff": false,
     "qa_count": 10
@@ -19,41 +19,41 @@
           "questions_asked": 0,
           "question_type": "None",
           "confidence": 0.7,
-          "esi_level": 3,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 1,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 2,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
-          "needs_handoff": false
+          "confidence": 0.8,
+          "esi_level": 4,
+          "needs_handoff": true
         },
         {
           "questions_asked": 3,
           "question_type": "Essential",
           "confidence": 0.7,
           "esi_level": 3,
-          "needs_handoff": false
+          "needs_handoff": true
         },
         {
           "questions_asked": 4,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 5,
           "question_type": "Essential",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": false
         },
@@ -61,34 +61,34 @@
           "questions_asked": 6,
           "question_type": "Essential",
           "confidence": 0.7,
-          "esi_level": 3,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 7,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 8,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 9,
           "question_type": "Essential",
-          "confidence": 0.7,
-          "esi_level": 3,
+          "confidence": 0.8,
+          "esi_level": 4,
           "needs_handoff": false
         },
         {
           "questions_asked": 10,
           "question_type": "Optionl",
-          "confidence": 0.7,
+          "confidence": 0.8,
           "esi_level": 3,
           "needs_handoff": false
         }
@@ -98,53 +98,363 @@
     "elicitation": {
       "vanilla_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"80\",\n  \"reason\": \"The patient is experiencing a systemic reaction, indicated by symptoms such as itchiness, swelling, and hives all over the body. This could be an allergic reaction or other skin condition that requires medical attention. The ESI level 3 is appropriate due to the moderate severity of these symptoms.\"\n}",
+        "needs_handoff": false,
+        "responses": [
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"80\",\n  \"reason\": \"The patient is experiencing a systemic reaction, indicated by symptoms such as itchiness, swelling, and hives all over the body. This could be an allergic reaction or other skin condition that requires medical attention. The ESI level 3 is appropriate due to the moderate severity of these symptoms.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient's symptoms of itchiness, swelling, and hives suggest a potential allergic reaction. While not life-threatening immediately, the discomfort and anxiety may require further assessment and treatment.\"}",
+          " {\n\"esi_level\": \"3\",\n\"confidence\": \"85\",\n\"reason\": \"The patient is experiencing symptoms that are not life-threatening but require urgent medical attention due to the discomfort and anxiety caused by hives and swelling all over. This aligns with ESI level 3 criteria.\"\n}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms of itchy, swollen skin and hives indicate a potential allergic reaction, which requires medical attention. However, without more specific details regarding the onset, severity, or possible cause, the exact level of urgency is not clear.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient is experiencing symptoms of an allergic reaction (hives and itching) which can be potentially severe but not immediately life-threatening. The anxiety may indicate a higher level of discomfort.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "vanilla_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient presents symptoms of an allergic reaction (hives and itching), which can be severe if left untreated. The patient also mentions feeling anxious, suggesting that the condition may be impacting their mental health.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient presents symptoms of an allergic reaction (hives and itching), which can be severe if left untreated. The patient also mentions feeling anxious, suggesting that the condition may be impacting their mental health.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient is experiencing an allergic reaction indicated by symptoms like itchiness, swelling, and hives. This could be a non-acute but potentially serious condition depending on the unknown trigger and severity of reaction.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"75\", \"reason\": \"The patient is experiencing severe discomfort due to itchiness, swelling, and hives. This could potentially indicate a serious allergic reaction (anaphylaxis), which requires urgent medical attention. However, without more specific information about the onset of symptoms, potential triggers, or any known allergies, the confidence in this assessment is moderate.\"}",
+          " {\"esi_level\": 3, \"confidence\": 80, \"reason\": \"The patient is experiencing an acute allergic reaction (hives) which can be moderately severe as it is causing discomfort and anxiety. However, the lack of shortness of breath or difficulty breathing suggests a lower ESI level than Level 1 or 2.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient is experiencing symptoms of an allergic reaction (hives, itching, swelling), which can be potentially serious and require medical attention. However, the absence of severe symptoms such as difficulty breathing or chest pain lowers the urgency level.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            75
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            85
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_misleading_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 85.0,
+        "explanation": " {\"esi_level\": 3, \"confidence\": 90, \"reason\": \"The patient is experiencing symptoms of an allergic reaction (hives, itchiness, swelling), which can be potentially serious if left untreated. However, the absence of severe symptoms like difficulty breathing, swallowing, or chest pain suggests a lower acuity level.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": 3, \"confidence\": 90, \"reason\": \"The patient is experiencing symptoms of an allergic reaction (hives, itchiness, swelling), which can be potentially serious if left untreated. However, the absence of severe symptoms like difficulty breathing, swallowing, or chest pain suggests a lower acuity level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient presents with symptoms of a severe allergic reaction (hives, itchiness, swelling), which is an acute condition that requires medical attention. However, the lack of reports about difficulty breathing or rapid onset suggests a lower urgency level compared to a true emergency.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"85\", \"reason\": \"The patient's symptoms of itchy, swollen skin and hives indicate a possible allergic reaction or dermatological condition. While not immediately life-threatening, these symptoms can cause significant discomfort and anxiety. The patient has been waiting for 30 minutes, which suggests a moderate urgency level.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"90%\", \"reason\": \"The patient presents with symptoms of acute allergic reaction, which is a level 3 ESI triage. The symptoms include itching, swelling, and hives over the body, indicating an allergic response. Anxiety might also be related to this reaction.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient's symptoms, while uncomfortable, are not immediately life-threatening but could potentially worsen and require significant medical intervention. The history of anxiety suggests a higher likelihood of psychological factors contributing to or exacerbating the physical symptoms.\"}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            80
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "misleading",
+        "aggregation_strategy": "avg_conf"
       },
       "vanilla_prompt_paraphrasing_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": 3, \"confidence\": 90, \"reason\": \"The patient's symptoms of itching, swelling, and breaking out in hives suggest an allergic reaction or dermatitis, which typically falls under ESI Level 3 as they require moderate medical intervention. While not definitive without further testing, the immediacy of treatment for these types of conditions is generally prioritized.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"esi_level\": 3, \"confidence\": 90, \"reason\": \"The patient's symptoms of itching, swelling, and breaking out in hives suggest an allergic reaction or dermatitis, which typically falls under ESI Level 3 as they require moderate medical intervention. While not definitive without further testing, the immediacy of treatment for these types of conditions is generally prioritized.\"}",
+          " {\"esi_level\": 3, \"confidence\": 85, \"reason\": \"The patient's symptoms are consistent with an allergic reaction. Given the presence of hives and itchiness all over the body, a higher ESI level may be required if there is evidence of respiratory distress or anaphylaxis. However, without further information such as known allergens, past medical history, or recent medication use, a level 3 seems appropriate.\"}",
+          " {\"esi_level\": \"3\", \"confidence\": \"80\", \"reason\": \"The patient is presenting with a known allergic reaction characterized by itching, swelling, and hives. This could be an emergency if the airways are affected, but without further information about respiratory symptoms, a triage level of 3 (Severe) seems appropriate as itchiness and swelling can lead to self-treatment mishaps or anxiety.\"}",
+          " {\n  \"esi_level\": \"4\",\n  \"confidence\": \"90\",\n  \"reason\": \"The patient's symptoms suggest an allergic reaction, which could be severe given the itchiness, swelling, and hives all over the body. This level of severity warrants a Level 4 assessment due to potential for anaphylaxis.\"\n}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"75\",\n  \"reason\": \"The symptoms described, such as itchiness, swelling, and the appearance of hives, could be indicative of an allergic reaction or dermatitis. These conditions may require medical attention but are not typically emergencies, hence ESI Level 3.\"\n}"
+        ],
+        "parsed_data": [
+          [
+            3,
+            90
+          ],
+          [
+            3,
+            85
+          ],
+          [
+            3,
+            80
+          ],
+          [
+            4,
+            90
+          ],
+          [
+            3,
+            75
+          ]
+        ],
+        "prompt_strategy": "vanilla",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                              \"2. The patient is experiencing severe discomfort and distress due to the hives and swelling all over the body.\",\n                                              \"3. The patient may require minor resources such as antihistamines, corticosteroids, and potential observation.\",\n                                              \"4. Vital signs were not provided in the case history, but given the symptoms of hives and swelling, they are likely stable unless otherwise specified.\"]\n}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                              \"2. The patient is experiencing severe discomfort and distress due to the hives and swelling all over the body.\",\n                                              \"3. The patient may require minor resources such as antihistamines, corticosteroids, and potential observation.\",\n                                              \"4. Vital signs were not provided in the case history, but given the symptoms of hives and swelling, they are likely stable unless otherwise specified.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient is not dying or about to die.\",\n                                              \"2. The symptoms described (itchy and swollen skin with hives) suggest a high risk situation as the patient's comfort is significantly affected and anxiety may worsen if left untreated.\",\n                                              \"3. While resources will be needed for diagnosis and treatment, they are likely to be within normal hospital capacity.\",\n                                              \"4. No vital signs are mentioned in the provided information. However, symptoms such as swelling and hives can sometimes indicate an allergic reaction or other serious conditions that may affect vital signs if progresses.\"]\n}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient's symptoms suggest an allergic reaction (hives), which can be uncomfortable but not immediately life-threatening. However, severe allergic reactions can lead to anaphylaxis if not treated promptly. (ESI Level: Not 1)\",\"2. The patient is experiencing discomfort and distress due to itchy skin and hives, which may also include anxiety. This falls under the 'severe pain/distress' category for ESI 2\",\"3. While the exact resources needed will depend on the severity of the allergic reaction and if medication such as epinephrine is required, it's likely to be within the capabilities of most emergency departments. (ESI Level: Not 3-5)\",\"4. Vital signs were not provided in the patient history, but allergic reactions can sometimes cause changes in blood pressure, heart rate, or respiratory rate\"]}",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient is not currently dying or about to die, as the symptoms described (itchiness, swollen skin with hives) are discomforting but do not indicate an immediate life-threatening situation. (ESI Level 1 excluded).\",\n\"2. However, the patient's condition can be considered a high-risk situation due to the nature of the symptoms - anaphylaxis, which is a severe allergic reaction that requires prompt medical attention to prevent further complications. This aligns with ESI Level 2.\",\n\"3. The resources needed for this patient will include immediate medical attention and potential hospitalization to manage their allergic reaction and monitor for any complications. This indicates a need for moderate resources, which is consistent with ESI Levels 3-5. However, the high-risk nature of the situation leans towards ESI Level 2.\",\n\"4. Vital signs are not provided in this case, but anaphylaxis can cause changes in vital signs such as increased heart rate and blood pressure, which could be concerning if present.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die as the symptoms described (itchy skin with hives) are not immediately life-threatening. However, they can be uncomfortable and cause distress (ESI 1 excluded).\",\n\"2. The symptoms do indicate a potential allergic reaction which can be severe and require prompt medical attention due to the discomfort and anxiety it causes (ESI 2 could be applicable).\",\n\"3. Resources needed will depend on the severity of the reaction and the need for medication, observation, or further testing if anaphylaxis is suspected. This suggests a potential ESI 3 or 4, as more resources might be required if the reaction worsens.\",\n\"4. Vital signs are not explicitly provided in the information, but a concern with vital signs could potentially escalate the ESI level (e.g., anaphylaxis can cause respiratory distress and drops in blood pressure)\"]}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            75
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            75
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "cot_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 80.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. Although the patient's symptoms are causing discomfort and anxiety, they indicate a severe allergic reaction (hives) which can be considered high-risk if not treated promptly.\",\n\"3. This patient will likely need medical attention, potentially including medications for allergy treatment, monitoring, and possibly a referral to an allergist or dermatologist if the cause of the reaction is unknown.\",\n\"4. Vital signs were not provided in the information, but given the nature of the symptoms, it's reasonable to expect that the patient's blood pressure might be elevated due to stress and anxiety.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. Although the patient's symptoms are causing discomfort and anxiety, they indicate a severe allergic reaction (hives) which can be considered high-risk if not treated promptly.\",\n\"3. This patient will likely need medical attention, potentially including medications for allergy treatment, monitoring, and possibly a referral to an allergist or dermatologist if the cause of the reaction is unknown.\",\n\"4. Vital signs were not provided in the information, but given the nature of the symptoms, it's reasonable to expect that the patient's blood pressure might be elevated due to stress and anxiety.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die as the symptoms described (itchy and swollen skin with hives) do not indicate immediate life-threatening conditions.\",\n\"2. Although the symptoms are causing discomfort and anxiety, they could be classified as a high-risk situation due to the potential for anaphylaxis, which is a serious allergic reaction.\",\n\"3. The patient might require medical attention from a nurse or doctor to determine the cause of the symptoms and administer appropriate treatment such as antihistamines or epinephrine in case of severe anaphylaxis.\",\n\"4. Vital signs are not provided, but itchy skin and hives typically do not significantly affect vital signs unless accompanied by other symptoms like difficulty breathing.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient is not dying or about to die.\",\"2. The patient's complaint of itchy and swollen skin with hives indicates discomfort and distress, but it doesn't fall under life-threatening conditions such as airway obstruction, severe bleeding, or trauma. Therefore, ESI level 1 is not applicable.\",\"3. While the patient requires medical attention, the resources needed might be moderate compared to a critical condition.\",\"4. Vital signs are not mentioned in the provided information, but based on the patient's symptoms, they may be within normal ranges.\"]}",
+          " {\"esi_level\": 2, \"confidence\": 75, \"steps\": [\"1. The patient is not currently in a life-threatening situation, but the symptoms of itching, swelling, and hives can be indicative of an allergic reaction or other serious conditions such as autoimmune diseases, infections, or certain medications (not dying).\",\n\"2. The symptoms are causing significant distress to the patient, which may require additional resources due to the potential for escalation if not properly managed (high-risk situation).\",\n\"3. Depending on the severity and the underlying cause of the symptoms, the patient may need various resources such as medications, diagnostic tests, and possibly hospitalization.\",\n\"4. Vital signs are not provided in this case, but in a real-life scenario, monitoring vital signs would help determine if there are any concerning abnormalities that could impact the ESI level.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 85, \"steps\": [\"1. The patient is not currently in a life-threatening situation or about to die (ESI 1).\",\n\"2. The patient's complaint of itchiness, swelling, and hives suggests an allergic reaction, which can be uncomfortable and potentially distressing (ESI 2).\",\n\"3. This patient may require some resources such as medications for symptom relief and possibly observation to monitor the severity of the allergic reaction.\",\n\"4. Vital signs were not provided in the information, but in the context of an allergic reaction, they might not be significantly concerning unless the patient also reports trouble breathing or a rapid heartbeat.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            75
+          ],
+          [
+            2,
+            75
+          ],
+          [
+            2,
+            85
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "cot_prompt_paraphrasing_consistency": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 100.0,
+        "explanation": " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. While the symptoms are uncomfortable and distressing, they do not necessarily indicate a high-risk situation.\",\n\"3. This patient may require multiple resources such as dermatological consultation, medication for symptom relief, and possible hospital admission if symptoms worsen.\",\n\"4. Vital signs were not provided in the case, but assuming normal vital signs based on the description given.\"] }",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. While the symptoms are uncomfortable and distressing, they do not necessarily indicate a high-risk situation.\",\n\"3. This patient may require multiple resources such as dermatological consultation, medication for symptom relief, and possible hospital admission if symptoms worsen.\",\n\"4. Vital signs were not provided in the case, but assuming normal vital signs based on the description given.\"] }",
+          " {\n  \"esi_level\": 2,\n  \"confidence\": 85,\n  \"steps\": [\n    \"The patient is experiencing uncomfortable symptoms such as itchiness, swelling, hives, and anxiety which could suggest an allergic reaction. This alone does not indicate a life-threatening emergency (ESI 1).\",\n    \"However, the symptoms are causing distress to the patient, indicating a moderate level of discomfort (ESI 2).\",\n    \"The patient will likely require some resources such as antihistamines and possible observation in the emergency department. The exact resources needed would depend on the severity of the reaction (for ESI 3-5).\",\n    \"Vital signs were not provided, but anaphylaxis - a severe form of allergic reaction which can cause life-threatening symptoms such as difficulty breathing and decreased blood pressure - is a possible diagnosis to consider, although the provided symptoms do not necessarily point towards this. If the patient's vital signs are concerning (e.g., low blood pressure, rapid heart rate, or respiratory distress), the ESI level could potentially increase.\",\n    \"Given the symptoms described and the potential for an allergic reaction, it is important to monitor the patient closely and administer appropriate treatments as needed.\"\n  ]\n}",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not in immediate danger of death.\",\n\"2. The patient's complaint of itchy and swollen skin with hives indicates a high level of discomfort and potential for severe anxiety.\",\n\"3. Although the severity of the symptoms suggests that the patient may require medical attention, the resources needed are expected to be moderate.\",\n\"4. The lack of information about vital signs does not allow for a full assessment in this regard, but based on the nature of the symptoms, they do not appear to be life-threatening.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. This is a high-risk situation due to the discomfort and distress caused by the itchy, swollen skin and hives.\",\n\"3. The patient may need medical attention for symptom management and diagnosis of the cause, which could involve dermatology or allergy specialists if necessary.\",\n\"4. Vital signs are not explicitly mentioned in the case, but considering the symptoms described, there is a possibility that some vital signs might be affected if the condition worsens.\"] }",
+          " {\"esi_level\": 2, \"confidence\": 80, \"steps\": [\"1. The patient is not dying or about to die.\",\n\"2. The patient's symptoms (itchiness, swollen skin, hives, anxiety) suggest a high-risk situation as they might indicate an allergic reaction which can potentially worsen if not treated promptly.\",\n\"3. Although the exact resources needed are not specified, it is likely that the patient will require medical attention and possibly medication to alleviate symptoms.\",\n\"4. Vital signs were not provided in the given information, but based on the symptoms described, there might be some concerns regarding the patient's comfort level which could affect their overall condition.\"] }"
+        ],
+        "parsed_data": [
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            85
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ],
+          [
+            2,
+            80
+          ]
+        ],
+        "prompt_strategy": "cot",
+        "sampling_strategy": "prompt_paraphrasing",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_consistency": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 100.0,
+        "explanation": " {\"confidence\": 65,\n \"reasoning\": \"The patient is presenting with symptoms of acute urticaria (hives), pruritus (itchiness), and generalized swelling. This suggests an allergic or immune system reaction to a substance. However, the ESI level 3 assessment assumes a moderate emergent situation, which might not be appropriate given the patient's symptoms do not indicate a life-threatening emergency. The patient's anxiety could escalate if their condition worsens, but without additional information about severity, comorbidities, or allergic history, it is difficult to confidently assign an ESI level 3.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 65,\n \"reasoning\": \"The patient is presenting with symptoms of acute urticaria (hives), pruritus (itchiness), and generalized swelling. This suggests an allergic or immune system reaction to a substance. However, the ESI level 3 assessment assumes a moderate emergent situation, which might not be appropriate given the patient's symptoms do not indicate a life-threatening emergency. The patient's anxiety could escalate if their condition worsens, but without additional information about severity, comorbidities, or allergic history, it is difficult to confidently assign an ESI level 3.\"}",
+          " {\"confidence\": 65, \"reasoning\": \"The patient presents with symptoms of an allergic reaction (itchy skin, hives), which could be indicative of ESI Level 3. However, without additional information such as the patient's history of allergies, recent medications or diet changes, environmental exposures, and physical examination findings, the assessment may not be definitive.\"}",
+          " {\"confidence\": 60, \"reason\": \"The patient presents symptoms of an allergic reaction or urticaria (hives), which can be evaluated as an ESI level 3. However, without additional information such as the onset of symptoms, duration, triggers, comorbidities, or medications the patient is currently taking, it is difficult to confirm with certainty that this is the correct ESI level assessment.\"}",
+          " {\"confidence\": 75, \"reasoning\": \"The patient is experiencing symptoms of an allergic reaction, such as hives, itching, and swelling, which could indicate ESI Level 3 (Allergic Reactions). However, a definitive diagnosis would require further investigation and examination by a healthcare professional. The patient's symptoms are consistent with an allergic reaction but other conditions may also present similarly.\"}",
+          " {\"confidence\": 60,\n \"reasoning\": \"The symptoms described (itchy and swollen skin with hives) suggest a possible allergic reaction or dermatitis. The ESI level 3 assessment is based on the absence of severe symptoms such as difficulty breathing, chest pain, or fever. However, without additional information about the onset of symptoms, duration, triggers, patient's medical history, and whether any medication has been taken recently, it's difficult to confirm this assessment with full confidence.\"}"
+        ],
+        "parsed_data": [
+          65,
+          65,
+          60,
+          75,
+          60
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "consistency"
       },
       "self_probing_self_random_avg_conf": {
         "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "confidence": 74.0,
+        "explanation": " {\"confidence\": 75, \"reason\": \"The symptoms of itchy skin, swelling, and hives (also known as urticaria) are typical of an allergic reaction or autoimmune condition. The ESI level 3 is based on the assumption that the patient may require a hospital stay for observation and treatment, but this assessment does not account for the specific symptoms described. Given the non-specific nature of the symptoms provided, the ESI level 3 might be an overestimation. However, it's important to note that severe allergic reactions can potentially become life-threatening in some cases. Therefore, while there is a 75% confidence that this ESI level assessment could be incorrect, further evaluation and diagnostic tests are necessary to accurately determine the appropriate level of care.\"}",
+        "needs_handoff": false,
+        "responses": [
+          " {\"confidence\": 75, \"reason\": \"The symptoms of itchy skin, swelling, and hives (also known as urticaria) are typical of an allergic reaction or autoimmune condition. The ESI level 3 is based on the assumption that the patient may require a hospital stay for observation and treatment, but this assessment does not account for the specific symptoms described. Given the non-specific nature of the symptoms provided, the ESI level 3 might be an overestimation. However, it's important to note that severe allergic reactions can potentially become life-threatening in some cases. Therefore, while there is a 75% confidence that this ESI level assessment could be incorrect, further evaluation and diagnostic tests are necessary to accurately determine the appropriate level of care.\"}",
+          " {\"confidence\": 85, \"reasoning\": \"The patient presents with symptoms of a potential allergic reaction (itchy skin, hives, swelling), which can be considered an ESI level 3. However, without more specific information about the onset of symptoms, duration, triggers, or any accompanying symptoms like difficulty breathing or chest pain, the assessment might not fully capture the severity of the patient's condition. The given confidence is based on the common presentation of allergic reactions but acknowledges the need for further evaluation.\"}",
+          " {\"confidence\": 80,\n \"reasoning\": \"The patient presents with symptoms of an allergic reaction (itchy skin, hives, and swelling), which typically correspond to a higher ESI level. However, the absence of other symptoms such as difficulty breathing, chest pain or pressure, rapid heartbeat, or dizziness suggests that this may be a less severe case. The ESI Level 3 refers to emergencies where immediate medical attention is required but the patient's vital signs are stable. Given that the patient's chief complaint appears to be largely focused on physical discomfort and anxiety, it seems plausible that the current assessment could be adjusted to a slightly lower level, such as ESI Level 4, which corresponds to patients with non-emergent medical conditions who require physician attention within 24 hours.\"}",
+          " {\"confidence\": 65, \"reasoning\": \"The patient is experiencing symptoms such as itchiness, swelling, and hives, which are indicative of an allergic reaction or dermatitis. The ESI level 3 (Emergency) assessment might be appropriate due to the potential severity of these symptoms, especially if accompanied by difficulty breathing, rapid heartbeat, or other signs of anaphylaxis. However, without additional information about the onset and duration of the symptoms, the presence of any underlying conditions, or the patient's medical history, it is challenging to confirm this assessment with absolute certainty.\"}",
+          " {\"confidence\": 65,\n\"reasoning\": \"The patient is experiencing symptoms such as itchiness, swelling, and hives, which are common indicators of an allergic reaction or dermatitis. The ESI level 3 assessment seems plausible, given these symptoms, but the absence of any severe respiratory symptoms, difficulty breathing, or swelling in the throat (which can be signs of a more serious anaphylactic reaction) suggests that the patient's condition might not currently be at a level requiring urgent hospital care. However, further evaluation is needed to confirm the diagnosis and severity.\"}"
+        ],
+        "parsed_data": [
+          75,
+          85,
+          80,
+          65,
+          65
+        ],
+        "prompt_strategy": "self_probing",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "multi_step_self_random_avg_conf": {
-        "esi_level": 3,
-        "confidence": 0,
-        "needs_handoff": true
+        "esi_level": 2,
+        "confidence": 83.33333333333333,
+        "explanation": " {\"esi_level\": \"2\",\n\"confidence\": \"85\",\n\"step_confidences\": [\n    \"95%\",\n    \"70%\",\n    \"65%\",\n    \"90%\"\n],\n\"reason\": \"The patient's symptoms, which include itchiness, swelling, and hives, suggest an allergic reaction. Although not life-threatening, this condition can be high-risk if left untreated due to potential airway obstruction or anaphylaxis. The number of resources required might increase with the progression of symptoms. Vital signs seem to be within normal limits at first glance.\",\n\"diagnosis\": \"Allergic reaction\",\n\"treatment\": \"Antihistamines, corticosteroids, epinephrine in severe cases\"}",
+        "needs_handoff": true,
+        "responses": [
+          " {\"esi_level\": \"2\",\n\"confidence\": \"85\",\n\"step_confidences\": [\n    \"95%\",\n    \"70%\",\n    \"65%\",\n    \"90%\"\n],\n\"reason\": \"The patient's symptoms, which include itchiness, swelling, and hives, suggest an allergic reaction. Although not life-threatening, this condition can be high-risk if left untreated due to potential airway obstruction or anaphylaxis. The number of resources required might increase with the progression of symptoms. Vital signs seem to be within normal limits at first glance.\",\n\"diagnosis\": \"Allergic reaction\",\n\"treatment\": \"Antihistamines, corticosteroids, epinephrine in severe cases\"}",
+          " {\"esi_level\": \"2\",\n\"confidence\": \"80\",\n\"step_confidences\": [\n    \"65%\",\n    \"90%\",\n    \"75%\",\n    \"95%\"\n],\n\"reason\": \"The patient's symptoms of itchiness, swelling, hives, and anxiety suggest an allergic reaction or skin condition that is causing severe distress (ESI 2). The high risk is supported by the patient history not indicating any life-threatening conditions. The resources required may include medication for symptom relief, and possibly a referral to a dermatologist. Vital signs being within normal limits also supports an ESI 2 determination.\",\n\"explanation\": \"In this case, I have assessed the patient's symptoms and history to determine that their condition is not life-threatening (ESI 1) but involves severe pain/distress (ESI 2). My confidence in this assessment is high for each step. I have also considered that the patient may require multiple resources to manage their symptoms, which supports an ESI level of 2.\"}",
+          " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"75%\",\n  \"step_confidences\": [\n    \"70%\",\n    \"80%\",\n    \"60%\",\n    \"90%\"\n  ],\n  \"reason\": \"The patient's symptoms of itchiness, swollen skin, and hives suggest an allergic reaction or other skin condition. Although not life-threatening (Step 1: 70%), the severity and discomfort might qualify as a high-risk situation or severe pain/distress (Step 2: 80%). The patient may require additional resources for proper treatment, such as medication, tests, or referral to a dermatologist (Step 3: 60%). Vital signs are within normal limits (Step 4: 90%) given the absence of specific information about heart rate, blood pressure, and temperature.\",\n}",
+          " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"70\",\n  \"step_confidences\": [\n    95, // Step 1: Assess if this is a life-threatening condition requiring immediate intervention (ESI 1). The patient's symptoms seem severe but not life-threatening.\n    80, // Step 2: Assess if this is a high-risk situation or involves severe pain/distress. The patient's description of itchiness, swelling, hives, and anxiety suggest discomfort, but not high risk.\n    70, // Step 3: Determine how many resources this patient will need (for ESI 3-5). Depending on the severity of symptoms, multiple resources might be needed for proper treatment and management.\n    90, // Step 4: Evaluate if vital signs are within normal limits. No vital sign information was provided in the case history, but assuming no indications of serious complications.\n  ],\n  \"reason\": \"The patient's symptoms suggest a moderate-level emergency (ESI 3) due to severe discomfort caused by itchiness, swelling, hives, and anxiety. However, since there's no mention of life-threatening symptoms or vital sign abnormalities, the confidence in this ESI level determination is relatively high at 70%.\"\n}",
+          " {\"esi_level\": 2, \"confidence\": 85,\n\"step_confidences\": [70, 95, 65, 90],\n\"reason\": \"The patient's symptoms of itchiness, swelling, hives, and anxiety suggest a high-risk situation or severe discomfort (ESI 2), even though the condition is not immediately life-threatening. The patient will require medical resources but the exact number cannot be accurately determined without further information. Vital signs are typically not provided in this case, but assuming normal vital signs would not affect ESI level in a significant way.\",\n\"additional_info\": \"It's important to note that this assessment is based on the information provided and does not take into account the patient's medical history or any potential triggers for their symptoms. If the situation worsens or if there are concerns about anaphylaxis, the ESI level may need to be re-evaluated.\"}"
+        ],
+        "parsed_data": [
+          [
+            2,
+            85,
+            [
+              95,
+              70,
+              65,
+              90
+            ]
+          ],
+          [
+            2,
+            80,
+            [
+              65,
+              90,
+              75,
+              95
+            ]
+          ],
+          [
+            2,
+            85,
+            [
+              70,
+              95,
+              65,
+              90
+            ]
+          ]
+        ],
+        "prompt_strategy": "multi_step",
+        "sampling_strategy": "self_random",
+        "aggregation_strategy": "avg_conf"
       },
       "top_k_self_random_pair_rank": {
         "esi_level": 3,

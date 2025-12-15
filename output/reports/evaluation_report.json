@@ -1,25 +1,25 @@
 {
   "metrics": {
     "total_cases": 10,
-    "accuracy": 0.5,
-    "accuracy_within_one": 0.9,
+    "accuracy": 0.3,
+    "accuracy_within_one": 0.7,
     "esi_distribution": {
       "1": 0.0,
-      "2": 0.0,
-      "3": 1.0,
-      "4": 0.0,
+      "2": 0.5,
+      "3": 0.4,
+      "4": 0.1,
       "5": 0.0
     },
-    "handoff_rate": 0.0
+    "handoff_rate": 0.4
   },
   "case_results": [
     {
       "case_id": "30000012.txt",
       "chief_complaint": "I feel mentally foggy and confused, like I'm in a haze, and I have trouble remembering things and finding the right words, which is really scary and unsettling for me.",
       "predicted": {
-        "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "esi_level": 2,
+        "confidence": 0.8,
+        "explanation": " {\n  \"esi_level\": \"ESI 2\",\n  \"confidence\": \"80\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient presents with symptoms of hepatic encephalopathy, a known complication of alcoholic cirrhosis. The patient's mental fogginess, confusion, and forgetfulness are attributed to this condition, possibly triggered by a urinary tract infection. Given the high-risk condition of confusion and the need for multiple resources, the Emergency Severity Index (ESI) level is 2.\"\n}",
         "risk_factors": [
           "High-risk condition: confusion",
           "Ambulance arrival"
@@ -28,22 +28,22 @@
         "qa_count": 10
       },
       "ground_truth": 2,
-      "correct": false,
+      "correct": true,
       "arrival_method": "AMBULANCE"
     },
     {
       "case_id": "30000017.txt",
       "chief_complaint": "I feel extremely disoriented and unsteady, like the room is spinning, and my legs won't cooperate, making it impossible for me to walk.",
       "predicted": {
-        "esi_level": 3,
+        "esi_level": 2,
         "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"70\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient is experiencing symptoms of acute vertigo, nausea, double vision, and unsteady legs. Although there's no history of head injuries or recent medication changes, the onset of symptoms after drinking suggests alcohol-induced vestibulotoxicity (drunken sailor syndrome). This condition can lead to severe disorientation and falls if left untreated. Therefore, a high risk situation exists and immediate attention is necessary.\"\n}",
         "risk_factors": [],
-        "needs_handoff": false,
+        "needs_handoff": true,
         "qa_count": 10
       },
       "ground_truth": 3,
-      "correct": true,
+      "correct": false,
       "arrival_method": "WALK IN"
     },
     {
@@ -52,7 +52,7 @@
       "predicted": {
         "esi_level": 3,
         "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"70\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient has a persistent cough, congestion, and fever for over a week. They also have a history of chronic conditions, including possible COPD indicated by a chest X-ray. The patient finds it hard to catch their breath when speaking, suggesting some respiratory distress. However, they don't report severe symptoms like chest pain or significant difficulty breathing. This seems to indicate a moderate severity level (ESI 3) requiring multiple resources.\"\n}",
         "risk_factors": [
           "Ambulance arrival"
         ],
@@ -67,15 +67,15 @@
       "case_id": "30000039.txt",
       "chief_complaint": "My back hurts severely, especially when I breathe in or move, and I've been experiencing a lot of pain and discomfort since my fall.",
       "predicted": {
-        "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "esi_level": 2,
+        "confidence": 0.8,
+        "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"80\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient reports severe lower back pain, difficulty walking or standing due to the pain, and has a history of recent falls. These symptoms suggest a high risk situation or severe pain/distress (ESI level 2). The patient should be assessed urgently by medical professionals.\"\n}",
         "risk_factors": [],
-        "needs_handoff": false,
+        "needs_handoff": true,
         "qa_count": 10
       },
       "ground_truth": 3,
-      "correct": true,
+      "correct": false,
       "arrival_method": "WALK IN"
     },
     {
@@ -83,8 +83,8 @@
       "chief_complaint": "I have a sharp, annoying pain in my left ear that feels plugged up and won't go away.",
       "predicted": {
         "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "confidence": 0.8,
+        "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"80\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient is experiencing constant, sharp ear pain that worsens with swallowing and chewing. The patient has a history of ear problems and impacted cerumen, but there's no fever or headache. The current symptoms suggest an urgent need for evaluation and treatment (ESI 3).\"\n}",
         "risk_factors": [],
         "needs_handoff": false,
         "qa_count": 10
@@ -99,7 +99,7 @@
       "predicted": {
         "esi_level": 3,
         "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"70\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient is experiencing palpitations and mild-moderate shortness of breath, which could indicate an arrhythmia. However, the symptoms have been present for a few days and there's no history of heart conditions or current medication usage that would significantly impact the heart rate. The recent consumption of caffeine and stress could potentially be contributing factors. Given the severity of symptoms and the need for further evaluation, an ESI level 3 is appropriate.\"\n}",
         "risk_factors": [
           "Ambulance arrival"
         ],
@@ -115,8 +115,8 @@
       "chief_complaint": "I've been feeling weak and tired lately, and sometimes I get dizzy, like the room is spinning around me.",
       "predicted": {
         "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "confidence": 0.8,
+        "explanation": " {\n  \"esi_level\": \"3\",\n  \"confidence\": \"80\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient is experiencing weakness, dizziness, and imbalance. While there are no immediate life-threatening symptoms or high levels of pain/distress, the patient's condition requires multiple resources due to the need for diagnostic tests and potential management of underlying conditions such as anemia. The symptoms of stumbling and holding onto objects for support suggest a possible balance issue.\"\n}",
         "risk_factors": [],
         "needs_handoff": false,
         "qa_count": 10
@@ -129,24 +129,24 @@
       "case_id": "30000177.txt",
       "chief_complaint": "I have been experiencing severe nausea and vomiting along with abdominal pain, which feels like it's getting worse and is accompanied by an inability to keep down even minimal amounts of food or liquids.",
       "predicted": {
-        "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "esi_level": 2,
+        "confidence": 0.9,
+        "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"90\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient's symptoms of severe nausea, vomiting, and abdominal pain (particularly the sharp nature of the pain and its localization to the upper part of the abdomen) suggest a high risk situation or severe pain/distress. Given the duration of the symptoms (3 days), it is appropriate to consider this patient as ESI level 2.\"\n}",
         "risk_factors": [],
-        "needs_handoff": false,
+        "needs_handoff": true,
         "qa_count": 3
       },
       "ground_truth": 3,
-      "correct": true,
+      "correct": false,
       "arrival_method": "WALK IN"
     },
     {
       "case_id": "30000202.txt",
       "chief_complaint": "I feel itchy and swollen all over, and my skin is breaking out in hives, which is really uncomfortable and making me feel anxious.",
       "predicted": {
-        "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "esi_level": 4,
+        "confidence": 0.8,
+        "explanation": " {\n  \"esi_level\": \"4\",\n  \"confidence\": \"80\",\n  \"handoff\": \"no\",\n  \"explanation\": \"The patient has a history of hives and an allergy to nuts, and has developed itching and hives after using a new shampoo and eating shellfish. While there are no immediate life-threatening symptoms, the patient's condition seems to be recurrent and may require medical attention due to potential allergic reaction. Therefore, ESI level 4 is appropriate.\"\n}",
         "risk_factors": [],
         "needs_handoff": false,
         "qa_count": 10
@@ -159,13 +159,13 @@
       "case_id": "30000204.txt",
       "chief_complaint": "I feel overwhelmed with emotional pain and hopelessness, like a heavy weight is crushing me, and it's hard to find any relief from the darkness that's been following me since the assault.",
       "predicted": {
-        "esi_level": 3,
-        "confidence": 0.7,
-        "explanation": "Error: 404 - {\"error\":\"model 'mistral' not found\"}",
+        "esi_level": 2,
+        "confidence": 0.9,
+        "explanation": " {\n  \"esi_level\": \"2\",\n  \"confidence\": \"90\",\n  \"handoff\": \"yes\",\n  \"explanation\": \"The patient is experiencing severe emotional distress, including symptoms of depression, anxiety, and suicidal ideation. They have also mentioned a history of mental health conditions. This situation requires immediate attention from a psychiatric professional.\"\n}",
         "risk_factors": [
           "Ambulance arrival"
         ],
-        "needs_handoff": false,
+        "needs_handoff": true,
         "qa_count": 10
       },
       "ground_truth": 4,
